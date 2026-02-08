@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NueEra Help Center - FAQs, how it works, and support resources.">
+    <title>Help Center - NueEra</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Page Loader -->
+    <div id="page-loader">
+        <div class="loader-content">
+            <div class="loader-circle"></div>
+            <img src="assets/images/logo.png" alt="Loading..." class="loader-logo">
+        </div>
+    </div>
+
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <header>
+        <!-- Navigation -->
+        <nav class="navbar" role="navigation" aria-label="Main Navigation">
+            <div class="container">
+                <div class="nav-container">
+                    <div class="nav-left">
+                        <a href="index.html" class="logo" aria-label="NueEra home">
+                            <div class="logo-icon"><img src="assets/images/logo.png" alt="NueEra Logo" loading="lazy"></div>
+                            <span>NueEra</span>
+                        </a>
+                    </div>
+
+                    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-controls="mobileMenu" aria-expanded="false" aria-label="Open menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+
+                    <div class="nav-center">
+                        <ul class="nav-links" role="menubar" aria-label="Primary">
+                            <li role="none"><a role="menuitem" href="index.html">Home</a></li>
+                            <li role="none"><a role="menuitem" href="about.html">About</a></li>
+                            <li role="none"><a role="menuitem" href="services.html">Services</a></li>
+                            <li role="none"><a role="menuitem" href="pricing.html">Pricing</a></li>
+                            <li role="none"><a role="menuitem" href="blog.html">Blog</a></li>
+                            <li role="none"><a role="menuitem" href="help-center.html" class="active">Help Center</a></li>
+                            <li role="none"><a role="menuitem" href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="nav-right">
+                        <button class="theme-toggle" title="Toggle theme" aria-pressed="false">🌙</button>
+                        <a href="contact.html" class="btn btn-primary">Get Free Consultation</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Mobile full-screen menu overlay -->
+        <div id="mobileMenu" class="mobile-menu-overlay" aria-hidden="true">
+            <div class="mobile-menu-inner">
+                <div class="mobile-menu-top">
+                    <a href="index.html" class="logo mobile-logo" aria-label="NueEra home">
+                        <div class="logo-icon"><img src="assets/images/logo.png" alt="NueEra Logo" loading="lazy"></div>
+                        <span>NueEra</span>
+                    </a>
+                    <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Close menu">Close</button>
+                </div>
+                <nav class="mobile-nav" aria-label="Mobile primary">
+                    <ul class="mobile-nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="help-center.html">Help Center</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <div class="mobile-menu-footer">
+                    <div class="mobile-cta-wrap">
+                        <a href="contact.html" class="btn btn-primary btn-block">Get Free Consultation</a>
+                    </div>
+                    <div class="mobile-theme-toggle">
+                        <button class="theme-toggle">Toggle theme</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main id="main">
+
+    <!-- 1. Help Center Hero -->
+    <section class="page-header" style="background: transparent; padding-bottom: 2rem;">
+        <div class="container">
+            <h1 style="margin-bottom: 1rem; animation: fadeUp 600ms ease-out both;">How can we help you?</h1>
+            <p style="max-width: 700px; margin: 0 auto 2rem; font-size: 1.2rem; animation: fadeUp 600ms ease-out 100ms both;">Find answers, explore our process, or get in touch with the NueEra team.</p>
+            <div style="max-width: 600px; margin: 0 auto; position: relative; animation: fadeIn 600ms ease-out 200ms both;">
+                <input type="text" placeholder="Search for topics, services, or common questions…" style="width: 100%; padding: 16px 24px 16px 50px; border-radius: 50px; border: 1px solid var(--border-color); background: var(--bg-main); color: var(--text-primary); font-size: 1rem; box-shadow: var(--shadow-soft);">
+                <i class="fas fa-search" style="position: absolute; left: 20px; top: 50%; transform: translateY(-50%); color: var(--text-muted);"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Quick Help Categories -->
+    <section class="section" style="padding-top: 2rem;">
+        <div class="container">
+            <div class="services-grid" style="margin-top: 0;">
+                <div class="service-card reveal" style="padding: 2rem;">
+                    <div class="service-icon"><i class="fas fa-rocket"></i></div>
+                    <h3>Getting Started</h3>
+                    <p style="margin-bottom: 0;">Project onboarding, timelines, first steps</p>
+                </div>
+                <div class="service-card reveal" style="padding: 2rem;">
+                    <div class="service-icon"><i class="fas fa-tags"></i></div>
+                    <h3>Services & Pricing</h3>
+                    <p style="margin-bottom: 0;">What we offer, pricing models, engagement types</p>
+                </div>
+                <div class="service-card reveal" style="padding: 2rem;">
+                    <div class="service-icon"><i class="fas fa-cogs"></i></div>
+                    <h3>Process & Delivery</h3>
+                    <p style="margin-bottom: 0;">How we work, milestones, communication</p>
+                </div>
+                <div class="service-card reveal" style="padding: 2rem;">
+                    <div class="service-icon"><i class="fas fa-tools"></i></div>
+                    <h3>Technical & Support</h3>
+                    <p style="margin-bottom: 0;">Maintenance, hosting, updates, security</p>
+                </div>
+                <div class="service-card reveal" style="padding: 2rem;">
+                    <div class="service-icon"><i class="fas fa-file-invoice-dollar"></i></div>
+                    <h3>Billing & Contracts</h3>
+                    <p style="margin-bottom: 0;">Invoices, payments, agreements</p>
+                </div>
+                <div class="service-card reveal" style="padding: 2rem;">
+                    <div class="service-icon"><i class="fas fa-question-circle"></i></div>
+                    <h3>General Questions</h3>
+                    <p style="margin-bottom: 0;">Everything else</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Popular Questions (FAQ Core) -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Popular Questions</h2>
+                <p>Most commonly asked questions</p>
+            </div>
+            
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div class="faq-item">
+                    <div class="faq-question"><h3>How do I get started with NueEra?</h3><span class="faq-toggle">▼</span></div>
+                    <div class="faq-answer"><p>Simply book a free strategy call or contact us via email. We'll schedule a discovery session to understand your needs and propose a tailored solution.</p></div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question"><h3>What happens after project launch?</h3><span class="faq-toggle">▼</span></div>
+                    <div class="faq-answer"><p>We don't just hand over the keys and leave. We offer a warranty period followed by optional support and maintenance packages to ensure your system continues to perform.</p></div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question"><h3>Do you offer ongoing support?</h3><span class="faq-toggle">▼</span></div>
+                    <div class="faq-answer"><p>Yes. We provide various tiers of ongoing support, from security updates and hosting management to continuous feature development and optimization.</p></div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question"><h3>Can I upgrade my service later?</h3><span class="faq-toggle">▼</span></div>
+                    <div class="faq-answer"><p>Absolutely. Our systems are built to scale. You can start with a core package and add features, integrations, or marketing services as your business grows.</p></div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question"><h3>How do you handle security and data privacy?</h3><span class="faq-toggle">▼</span></div>
+                    <div class="faq-answer"><p>Security is foundational to our process. We use industry-standard encryption, secure hosting environments, and regular audits to protect your data and your customers' privacy.</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. How We Work (Process Summary) -->
+    <section class="section alternate">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Delivery Process</h2>
+                <p>A proven process refined through real-world delivery.</p>
+            </div>
+            <div class="process-steps">
+                <div class="process-step"><div class="step-number">1</div><h3>Discovery</h3><p>We understand your goals and challenges</p></div>
+                <div class="process-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="process-step"><div class="step-number">2</div><h3>Strategy</h3><p>Detailed plan and pricing</p></div>
+                <div class="process-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="process-step"><div class="step-number">3</div><h3>Design</h3><p>Begin strategy and planning</p></div>
+                <div class="process-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="process-step"><div class="step-number">4</div><h3>Build</h3><p>Build your solution</p></div>
+                <div class="process-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="process-step"><div class="step-number">5</div><h3>Test</h3><p>Go live and celebrate</p></div>
+                <div class="process-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="process-step"><div class="step-number">6</div><h3>Launch & Support</h3><p>Ongoing partnership</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Guides & Resources -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Guides & Resources</h2>
+                <p>Self-serve knowledge to help you succeed.</p>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+                <a href="#" class="resource-card" style="display: block; padding: 1.5rem; background: var(--bg-glass); border: 1px solid var(--border-color); border-radius: 12px; text-decoration: none; color: var(--text-primary); transition: border-color 0.3s;">
+                    <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Client Onboarding Guide</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary); margin: 0;">What to expect in your first 30 days</p>
+                </a>
+                <a href="#" class="resource-card" style="display: block; padding: 1.5rem; background: var(--bg-glass); border: 1px solid var(--border-color); border-radius: 12px; text-decoration: none; color: var(--text-primary); transition: border-color 0.3s;">
+                    <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Project Timeline Explained</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary); margin: 0;">How milestones and reviews work</p>
+                </a>
+                <a href="#" class="resource-card" style="display: block; padding: 1.5rem; background: var(--bg-glass); border: 1px solid var(--border-color); border-radius: 12px; text-decoration: none; color: var(--text-primary); transition: border-color 0.3s;">
+                    <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Support & Maintenance Overview</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary); margin: 0;">What’s included after launch</p>
+                </a>
+                <a href="#" class="resource-card" style="display: block; padding: 1.5rem; background: var(--bg-glass); border: 1px solid var(--border-color); border-radius: 12px; text-decoration: none; color: var(--text-primary); transition: border-color 0.3s;">
+                    <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Security & Compliance</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary); margin: 0;">How we protect your systems and data</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Still Need Help? (Human Escalation) -->
+    <section class="section cta-section">
+        <div class="container">
+            <h2>Still have questions?</h2>
+            <p class="cta-subtitle">Our team is here to help — whether you’re exploring options or already working with us.</p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="contact.html" class="btn btn-secondary">Contact Support</a>
+                <a href="contact.html" class="btn btn-primary">Book a Strategy Call</a>
+            </div>
+            <p class="cta-microcopy" style="margin-top: 1rem; font-size: 0.85rem; color: var(--text-tertiary);">We usually respond within 24 hours.</p>
+        </div>
+    </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Nue<span class="footer-brand-accent">Era</span></h3>
+                    <p class="tagline">A New Era of Digital Growth</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-icon" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon" title="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html#web">Web Development</a></li>
+                        <li><a href="services.html#app">App Development</a></li>
+                        <li><a href="services.html#marketing">Digital Marketing</a></li>
+                        <li><a href="services.html#design">UI/UX Design</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Get in Touch</h4>
+                    <ul>
+                        <li>Email: <a href="mailto:hello@nueera.io">hello@nueera.io</a></li>
+                        <li>Phone: <a href="tel:+1234567890">+1 (234) 567-890</a></li>
+                        <li>WhatsApp: <a href="https://wa.me/1234567890">Chat with us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 NueEra. All rights reserved. | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

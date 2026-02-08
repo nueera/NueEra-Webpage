@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact NueEra - Get a free consultation for your digital project.">
+    <title>Contact - NueEra</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Page Loader -->
+    <div id="page-loader">
+        <div class="loader-content">
+            <div class="loader-circle"></div>
+            <img src="assets/images/logo.png" alt="Loading..." class="loader-logo">
+        </div>
+    </div>
+
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <header>
+        <!-- Navigation -->
+        <nav class="navbar" role="navigation" aria-label="Main Navigation">
+            <div class="container">
+                <div class="nav-container">
+                    <div class="nav-left">
+                        <a href="index.html" class="logo" aria-label="NueEra home">
+                            <div class="logo-icon"><img src="assets/images/logo.png" alt="NueEra Logo" loading="lazy"></div>
+                            <span>NueEra</span>
+                        </a>
+                    </div>
+
+                    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-controls="mobileMenu" aria-expanded="false" aria-label="Open menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+
+                    <div class="nav-center">
+                        <ul class="nav-links" role="menubar" aria-label="Primary">
+                            <li role="none"><a role="menuitem" href="index.html">Home</a></li>
+                            <li role="none"><a role="menuitem" href="about.html">About</a></li>
+                            <li role="none"><a role="menuitem" href="services.html">Services</a></li>
+                            <li role="none"><a role="menuitem" href="pricing.html">Pricing</a></li>
+                            <li role="none"><a role="menuitem" href="blog.html">Blog</a></li>
+                            <li role="none"><a role="menuitem" href="help-center.html">Help Center</a></li>
+                            <li role="none"><a role="menuitem" href="contact.html" class="active">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="nav-right">
+                        <button class="theme-toggle" title="Toggle theme" aria-pressed="false">🌙</button>
+                        <a href="contact.html" class="btn btn-primary">Get Free Consultation</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Mobile full-screen menu overlay -->
+        <div id="mobileMenu" class="mobile-menu-overlay" aria-hidden="true">
+            <div class="mobile-menu-inner">
+                <div class="mobile-menu-top">
+                    <a href="index.html" class="logo mobile-logo" aria-label="NueEra home">
+                        <div class="logo-icon"><img src="assets/images/logo.png" alt="NueEra Logo" loading="lazy"></div>
+                        <span>NueEra</span>
+                    </a>
+                    <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Close menu">Close</button>
+                </div>
+                <nav class="mobile-nav" aria-label="Mobile primary">
+                    <ul class="mobile-nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="help-center.html">Help Center</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <div class="mobile-menu-footer">
+                    <div class="mobile-cta-wrap">
+                        <a href="contact.html" class="btn btn-primary btn-block">Get Free Consultation</a>
+                    </div>
+                    <div class="mobile-theme-toggle">
+                        <button class="theme-toggle">Toggle theme</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main id="main">
+
+    <!-- 1. Contact Hero -->
+    <section class="page-header" style="background: transparent; padding-bottom: 2rem;">
+        <div class="container" style="max-width: 720px; text-align: center;">
+            <h1 style="margin-bottom: 1rem; animation: fadeUp 600ms cubic-bezier(0.16,1,0.3,1) both;">Let’s Talk About Your Next Step</h1>
+            <p style="font-size: 1.2rem; margin-bottom: 1.5rem; animation: fadeUp 600ms cubic-bezier(0.16,1,0.3,1) 100ms both;">Tell us about your goals, challenges, or ideas — we’ll help you explore the right path forward.</p>
+            <p style="font-size: 0.9rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; animation: fadeUp 600ms cubic-bezier(0.16,1,0.3,1) 200ms both;">Free consultation · No obligation · Response within 24 hours</p>
+        </div>
+    </section>
+
+    <!-- 2. Contact Options (Choice Cards) -->
+    <section class="section" style="padding-top: 0; padding-bottom: 4rem;">
+        <div class="container">
+            <div class="contact-options-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
+                <!-- Option 1 -->
+                <div class="contact-option-card glass reveal" style="padding: 24px; border-radius: 16px; transition: transform 360ms ease-out;">
+                    <div style="margin-bottom: 1rem; font-size: 1.5rem; color: var(--accent-blue);"><i class="fas fa-chess-knight"></i></div>
+                    <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Strategy Call</h3>
+                    <p style="font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 1.5rem;">Best for projects & long-term goals</p>
+                    <a href="#form" style="font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem;">Book a Free Strategy Call <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Option 2 -->
+                <div class="contact-option-card glass reveal" style="padding: 24px; border-radius: 16px; transition: transform 360ms ease-out; transition-delay: 80ms;">
+                    <div style="margin-bottom: 1rem; font-size: 1.5rem; color: var(--accent-orange);"><i class="fas fa-envelope-open-text"></i></div>
+                    <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">General Inquiry</h3>
+                    <p style="font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 1.5rem;">Questions, partnerships, or general info</p>
+                    <a href="#form" style="font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem;">Send a Message <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Option 3 -->
+                <div class="contact-option-card glass reveal" style="padding: 24px; border-radius: 16px; transition: transform 360ms ease-out; transition-delay: 160ms;">
+                    <div style="margin-bottom: 1rem; font-size: 1.5rem; color: var(--text-primary);"><i class="fas fa-life-ring"></i></div>
+                    <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Support</h3>
+                    <p style="font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 1.5rem;">Existing clients & technical help</p>
+                    <a href="help-center.html" style="font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem;">Contact Support <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Contact Form (Core Interaction) -->
+    <section class="section" id="form" style="padding-top: 0;">
+        <div class="container" style="max-width: 720px;">
+            <div class="contact-form-container" style="background: var(--bg-glass); border: 1px solid var(--border-color); border-radius: 16px; padding: 2.5rem;">
+                <!-- No entrance animation for form container per blueprint -->
+                    <form name="contact">
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px;">
+                            <div class="form-group" style="margin-bottom: 0;">
+                                <label for="name">Full Name *</label>
+                                <input type="text" id="name" name="name" required style="border-radius: 10px;">
+                            </div>
+                            <div class="form-group" style="margin-bottom: 0;">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required style="border-radius: 10px;">
+                            </div>
+                        </div>
+
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px;">
+                            <div class="form-group" style="margin-bottom: 0;">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" style="border-radius: 10px;">
+                            </div>
+                            <div class="form-group" style="margin-bottom: 0;">
+                                <label for="company">Company</label>
+                                <input type="text" id="company" name="company" style="border-radius: 10px;">
+                            </div>
+                        </div>
+
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px;">
+                            <div class="form-group" style="margin-bottom: 0;">
+                                <label for="service">Service Interested In *</label>
+                                <select id="service" name="service" required style="border-radius: 10px;">
+                                    <option value="">Select a service</option>
+                                    <option value="web">Web Development</option>
+                                    <option value="app">App Development</option>
+                                    <option value="marketing">Digital Marketing</option>
+                                    <option value="design">UI/UX Design</option>
+                                    <option value="branding">Branding & Strategy</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group" style="margin-bottom: 0;">
+                                <label for="budget">Estimated Budget</label>
+                                <select id="budget" name="budget" style="border-radius: 10px;">
+                                    <option value="">Select a range</option>
+                                    <option value="<5k">Less than ₹5,000</option>
+                                    <option value="5k-10k">₹5,000 - ₹10,000</option>
+                                    <option value="10k-25k">₹10,000 - ₹25,000</option>
+                                    <option value="25k-50k">₹25,000 - ₹50,000</option>
+                                     <option value="50k-100k">₹50,000 - ₹1,50,000</option>
+                                    <option value="50k+">₹150,000+</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Your Message *</label>
+                            <textarea id="message" name="message" placeholder="Tell us about your project..." required style="border-radius: 10px;"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+                                <input type="checkbox" id="consent" name="consent" required style="width: auto; height: auto;">
+                                <span style="font-size: 0.9rem;">I agree to be contacted regarding my inquiry</span>
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                        <p style="font-size: 0.85rem; color: var(--text-tertiary); margin-top: 1rem; text-align: center;">We respect your privacy. Your information is only used to respond to your request.</p>
+                    </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Contact Details (Trust Block) -->
+    <section class="section" style="padding-top: 0;">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; text-align: center; max-width: 900px; margin: 0 auto;">
+                <div>
+                    <h4 style="margin-bottom: 0.5rem; color: var(--text-secondary);">Email</h4>
+                    <a href="mailto:hello@nueera.io" style="font-weight: 600; font-size: 1.1rem;">hello@nueera.io</a>
+                </div>
+                <div>
+                    <h4 style="margin-bottom: 0.5rem; color: var(--text-secondary);">WhatsApp</h4>
+                    <a href="https://wa.me/1234567890" style="font-weight: 600; font-size: 1.1rem;">+91 9284966345</a>
+                </div>
+                <div>
+                    <h4 style="margin-bottom: 0.5rem; color: var(--text-secondary);">Phone</h4>
+                    <a href="tel:+919284966345" style="font-weight: 600; font-size: 1.1rem;">+91 9284966345</a>
+                </div>
+                <div>
+                    <h4 style="margin-bottom: 0.5rem; color: var(--text-secondary);">Response Time</h4>
+                    <span style="font-weight: 600; font-size: 1.1rem;">Within 24 hours</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Why Contact NueEra -->
+    <section class="section alternate">
+        <div class="container">
+            <div class="section-header reveal" style="margin-bottom: 3rem;">
+                <h2>Why Contact NueEra?</h2>
+            </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; max-width: 900px; margin: 0 auto;">
+                <div class="reveal">
+                    <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--text-primary);">Free Discovery Call</h3>
+                    <p style="color: var(--text-secondary);">30-minute consultation to understand your goals.</p>
+                </div>
+                <div class="reveal">
+                    <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--text-primary);">Expert Consultation</h3>
+                    <p style="color: var(--text-secondary);">Direct guidance from senior team members.</p>
+                </div>
+                <div class="reveal">
+                    <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--text-primary);">Custom Proposal</h3>
+                    <p style="color: var(--text-secondary);">Clear roadmap with transparent pricing.</p>
+                </div>
+                <div class="reveal">
+                    <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--text-primary);">No Pressure</h3>
+                    <p style="color: var(--text-secondary);">You decide if we’re the right fit.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Final Reassurance CTA -->
+    <section class="section cta-section">
+        <div class="container">
+            <h2>Prefer a quick conversation?</h2>
+            <p class="cta-subtitle">Book a free 30-minute strategy call with our team.</p>
+            <a href="#" class="btn btn-primary">👉 Book a Strategy Call</a>
+        </div>
+    </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Nue<span class="footer-brand-accent">Era</span></h3>
+                    <p class="tagline">A New Era of Digital Growth</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-icon" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon" title="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html#web">Web Development</a></li>
+                        <li><a href="services.html#app">App Development</a></li>
+                        <li><a href="services.html#marketing">Digital Marketing</a></li>
+                        <li><a href="services.html#design">UI/UX Design</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Get in Touch</h4>
+                    <ul>
+                        <li>Email: <a href="mailto:hello@nueera.io">hello@nueera.io</a></li>
+                        <li>Phone: <a href="tel:+1234567890">+1 (234) 567-890</a></li>
+                        <li>WhatsApp: <a href="https://wa.me/1234567890">Chat with us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 NueEra. All rights reserved. | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

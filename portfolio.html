@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NueEra Portfolio - Showcasing our best work in web development, app design, and digital marketing.">
+    <title>Portfolio - NueEra</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Page Loader -->
+    <div id="page-loader">
+        <div class="loader-content">
+            <div class="loader-circle"></div>
+            <img src="assets/images/logo.png" alt="Loading..." class="loader-logo">
+        </div>
+    </div>
+
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <header>
+        <!-- Navigation -->
+        <nav class="navbar" role="navigation" aria-label="Main Navigation">
+            <div class="container">
+                <div class="nav-container">
+                    <div class="nav-left">
+                        <a href="index.html" class="logo" aria-label="NueEra home">
+                            <div class="logo-icon"><img src="assets/images/logo.png" alt="NueEra Logo" loading="lazy"></div>
+                            <span>NueEra</span>
+                        </a>
+                    </div>
+
+                    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-controls="mobileMenu" aria-expanded="false" aria-label="Open menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+
+                    <div class="nav-center">
+                        <ul class="nav-links" role="menubar" aria-label="Primary">
+                            <li role="none"><a role="menuitem" href="index.html">Home</a></li>
+                            <li role="none"><a role="menuitem" href="about.html">About</a></li>
+                            <li role="none"><a role="menuitem" href="services.html">Services</a></li>
+                            <li role="none"><a role="menuitem" href="portfolio.html" class="active">Portfolio</a></li>
+                            <li role="none"><a role="menuitem" href="pricing.html">Pricing</a></li>
+                            <li role="none"><a role="menuitem" href="blog.html">Blog</a></li>
+                            <li role="none"><a role="menuitem" href="help-center.html">Help Center</a></li>
+                            <li role="none"><a role="menuitem" href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="nav-right">
+                        <button class="theme-toggle" title="Toggle theme" aria-pressed="false">🌙</button>
+                        <a href="contact.html" class="btn btn-primary">Get Free Consultation</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Mobile full-screen menu overlay -->
+        <div id="mobileMenu" class="mobile-menu-overlay" aria-hidden="true">
+            <div class="mobile-menu-inner">
+                <div class="mobile-menu-top">
+                    <a href="index.html" class="logo mobile-logo" aria-label="NueEra home">
+                        <div class="logo-icon"><img src="assets/images/logo.png" alt="NueEra Logo" loading="lazy"></div>
+                        <span>NueEra</span>
+                    </a>
+                    <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Close menu">Close</button>
+                </div>
+                <nav class="mobile-nav" aria-label="Mobile primary">
+                    <ul class="mobile-nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="help-center.html">Help Center</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <div class="mobile-menu-footer">
+                    <div class="mobile-cta-wrap">
+                        <a href="contact.html" class="btn btn-primary btn-block">Get Free Consultation</a>
+                    </div>
+                    <div class="mobile-theme-toggle">
+                        <button class="theme-toggle">Toggle theme</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main id="main">
+        <section class="page-header">
+            <div class="container">
+                <h1>Our <span class="gradient-text">Portfolio</span></h1>
+                <p>Selected works and success stories</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="portfolio-filters">
+                    <button class="filter-btn active" data-filter="all">All Projects</button>
+                    <button class="filter-btn" data-filter="web">Web Development</button>
+                    <button class="filter-btn" data-filter="app">Mobile Apps</button>
+                    <button class="filter-btn" data-filter="marketing">Marketing</button>
+                    <button class="filter-btn" data-filter="design">UI/UX Design</button>
+                </div>
+
+                <div class="portfolio-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card" data-category="web">
+                        <div class="project-image">
+                            <i class="fas fa-laptop-code"></i>
+                            <div class="project-overlay">
+                                <a href="contact.html" class="btn btn-primary btn-sm">View Details</a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <span class="project-category">Web Development</span>
+                            <h3>FinTech Analytics Dashboard</h3>
+                            <p>A comprehensive data visualization platform for a leading financial services provider.</p>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card" data-category="app">
+                        <div class="project-image">
+                            <i class="fas fa-mobile-alt"></i>
+                            <div class="project-overlay">
+                                <a href="contact.html" class="btn btn-primary btn-sm">View Details</a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <span class="project-category">Mobile App</span>
+                            <h3>HealthTrack Mobile</h3>
+                            <p>Cross-platform fitness tracking application with real-time health monitoring integration.</p>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-card" data-category="marketing">
+                        <div class="project-image">
+                            <i class="fas fa-chart-pie"></i>
+                            <div class="project-overlay">
+                                <a href="contact.html" class="btn btn-primary btn-sm">View Details</a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <span class="project-category">Digital Marketing</span>
+                            <h3>Global E-commerce Scale</h3>
+                            <p>SEO and paid acquisition strategy that drove 200% growth for a retail brand.</p>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="project-card" data-category="design">
+                        <div class="project-image">
+                            <i class="fas fa-paint-brush"></i>
+                            <div class="project-overlay">
+                                <a href="contact.html" class="btn btn-primary btn-sm">View Details</a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <span class="project-category">UI/UX Design</span>
+                            <h3>NeoBank Interface</h3>
+                            <p>User-centric design system and interface for a next-generation digital banking app.</p>
+                        </div>
+                    </div>
+
+                    <!-- Project 5 -->
+                    <div class="project-card" data-category="web">
+                        <div class="project-image">
+                            <i class="fas fa-shopping-cart"></i>
+                            <div class="project-overlay">
+                                <a href="contact.html" class="btn btn-primary btn-sm">View Details</a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <span class="project-category">Web Development</span>
+                            <h3>Luxury Retail Platform</h3>
+                            <p>High-performance e-commerce solution with immersive product experiences.</p>
+                        </div>
+                    </div>
+
+                    <!-- Project 6 -->
+                    <div class="project-card" data-category="app">
+                        <div class="project-image">
+                            <i class="fas fa-map-marked-alt"></i>
+                            <div class="project-overlay">
+                                <a href="contact.html" class="btn btn-primary btn-sm">View Details</a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <span class="project-category">Mobile App</span>
+                            <h3>CityGuide AR</h3>
+                            <p>Augmented reality tourism application for smart city exploration.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Case Studies Section -->
+        <section class="section alternate" id="case-studies">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Featured Case Studies</h2>
+                    <p>Deep dives into how we solve complex problems</p>
+                </div>
+
+                <div class="case-studies-list">
+                    <!-- Case Study 1 -->
+                    <div class="case-study-item">
+                        <div class="case-study-image">
+                            <div class="placeholder-image" style="background: linear-gradient(135deg, var(--bg-tertiary), var(--bg-secondary)); height: 100%; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-building" style="font-size: 4rem; color: var(--text-tertiary);"></i>
+                            </div>
+                        </div>
+                        <div class="case-study-content">
+                            <span class="case-study-tag">FinTech</span>
+                            <h3>Scaling a Neo-Bank to 1M Users</h3>
+                            <p>How we re-architected a legacy banking platform to handle massive scale while maintaining 99.99% uptime and bank-grade security.</p>
+                            
+                            <div class="case-study-metrics">
+                                <div class="cs-metric">
+                                    <span class="cs-value">10x</span>
+                                    <span class="cs-label">User Growth</span>
+                                </div>
+                                <div class="cs-metric">
+                                    <span class="cs-value">-40%</span>
+                                    <span class="cs-label">Infra Cost</span>
+                                </div>
+                                <div class="cs-metric">
+                                    <span class="cs-value">99.99%</span>
+                                    <span class="cs-label">Uptime</span>
+                                </div>
+                            </div>
+                            
+                            <a href="contact.html" class="btn btn-ghost">Read Case Study <i class="fas fa-arrow-right" style="margin-left: 0.5rem; font-size: 0.8rem;"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Case Study 2 -->
+                    <div class="case-study-item reverse">
+                        <div class="case-study-image">
+                            <div class="placeholder-image" style="background: linear-gradient(135deg, var(--bg-tertiary), var(--bg-secondary)); height: 100%; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-shopping-bag" style="font-size: 4rem; color: var(--text-tertiary);"></i>
+                            </div>
+                        </div>
+                        <div class="case-study-content">
+                            <span class="case-study-tag">E-Commerce</span>
+                            <h3>Global Retail Digital Transformation</h3>
+                            <p>Helping a traditional brick-and-mortar retailer pivot to a unified commerce experience, integrating online and offline inventory in real-time.</p>
+                            
+                            <div class="case-study-metrics">
+                                <div class="cs-metric">
+                                    <span class="cs-value">215%</span>
+                                    <span class="cs-label">Online Sales</span>
+                                </div>
+                                <div class="cs-metric">
+                                    <span class="cs-value">3.5s</span>
+                                    <span class="cs-label">Load Time</span>
+                                </div>
+                                <div class="cs-metric">
+                                    <span class="cs-value">24/7</span>
+                                    <span class="cs-label">Support</span>
+                                </div>
+                            </div>
+                            
+                            <a href="contact.html" class="btn btn-ghost">Read Case Study <i class="fas fa-arrow-right" style="margin-left: 0.5rem; font-size: 0.8rem;"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section cta-section">
+            <div class="container">
+                <h2>Have a Project in Mind?</h2>
+                <p class="cta-subtitle">Let's build something amazing together</p>
+                <a href="contact.html" class="btn btn-primary">Start Your Project</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Nue<span class="footer-brand-accent">Era</span></h3>
+                    <p class="tagline">A New Era of Digital Growth</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-icon" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon" title="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html#web">Web Development</a></li>
+                        <li><a href="services.html#app">App Development</a></li>
+                        <li><a href="services.html#marketing">Digital Marketing</a></li>
+                        <li><a href="services.html#design">UI/UX Design</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Get in Touch</h4>
+                    <ul>
+                        <li>Email: <a href="mailto:hello@nueera.io">hello@nueera.io</a></li>
+                        <li>Phone: <a href="tel:+1234567890">+1 (234) 567-890</a></li>
+                        <li>WhatsApp: <a href="https://wa.me/1234567890">Chat with us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 NueEra. All rights reserved. | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

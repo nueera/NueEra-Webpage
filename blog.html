@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NueEra Blog - Latest insights on digital transformation and technology trends.">
+    <title>Blog - NueEra</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Page Loader -->
+    <div id="page-loader">
+        <div class="loader-content">
+            <div class="loader-circle"></div>
+            <img src="assets/images/logo.png" alt="Loading..." class="loader-logo">
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-container">
+                <a href="index.html" class="logo"><div class="logo-icon"><img src="assets/images/logo.png" alt="NueEra Logo"></div><span>NueEra</span></a>
+                <button class="mobile-menu-btn"><span></span><span></span><span></span></button>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="help-center.html">Help Center</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="blog.html" class="active">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="nav-cta"><button class="theme-toggle">🌙</button><a href="contact.html" class="btn btn-primary">Get Free Consultation</a></div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="blog-hero">
+        <div class="container">
+            <h1 class="hero-title" style="animation: fadeUp 600ms cubic-bezier(0.16,1,0.3,1) both;">Insights for Digital Growth</h1>
+            <p class="hero-subtitle" style="animation: fadeIn 600ms ease-out 120ms both;">Trends, strategies, and practical perspectives on building scalable digital systems.</p>
+            <p class="hero-micro" style="animation: fadeIn 600ms ease-out 200ms both;">Written by practitioners · Shaped by real-world delivery</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <!-- Category Filter -->
+            <nav class="category-filter" aria-label="Blog categories">
+                <div class="category-filter-inner glass">
+                    <div class="category-pills" role="tablist">
+                        <button role="tab" class="pill active" data-cat="all">All</button>
+                        <button role="tab" class="pill" data-cat="development">Development</button>
+                        <button role="tab" class="pill" data-cat="marketing">Marketing</button>
+                        <button role="tab" class="pill" data-cat="ai">AI &amp; Innovation</button>
+                        <button role="tab" class="pill" data-cat="strategy">Strategy</button>
+                        <button role="tab" class="pill" data-cat="design">Design</button>
+                    </div>
+                    <div class="pill-indicator" aria-hidden="true"></div>
+                </div>
+            </nav>
+
+            <!-- Featured Article -->
+            <div class="featured-article">
+                <article class="featured-card glass reveal" style="transition: transform 360ms ease-out, opacity 360ms ease-out;">
+                    <div class="featured-media" aria-hidden="true"></div>
+                    <div class="featured-body">
+                        <span class="featured-category">Development</span>
+                        <h2 class="featured-title">The Future of Web Development in 2026</h2>
+                        <p class="featured-excerpt">How AI-powered tooling, performance budgets, and edge computing are reshaping modern web systems.</p>
+                        <div class="featured-meta">
+                            <span>15 Jan 2026</span>
+                            <span> • 6 min read</span>
+                            <a href="blog-post.html" class="read-more" aria-label="Read featured article">Read Article →</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="article-grid">
+                <article class="blog-card">
+                    <div class="blog-image"><i class="fas fa-code"></i></div>
+                    <div class="blog-content">
+                        <span class="blog-category">Development</span>
+                        <h3>The Future of Web Development in 2026</h3>
+                        <p class="blog-excerpt">Explore the latest web development trends including AI-powered development tools, edge computing, and advanced performance optimization techniques.</p>
+                        <div class="blog-meta">
+                            <span>15 Jan 2026</span>
+                            <span>• 6 min read</span>
+                            <a href="#" style="color: var(--accent-blue);">Read More →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-image"><i class="fas fa-mobile-alt"></i></div>
+                    <div class="blog-content">
+                        <span class="blog-category">Mobile</span>
+                        <h3>Building Mobile-First Applications</h3>
+                        <p class="blog-excerpt">Learn how to design and develop applications that prioritize mobile users with responsive design, touch-optimized interfaces, and offline capabilities.</p>
+                        <div class="blog-meta">
+                            <span>12 Jan 2026</span>
+                            <span>• 5 min read</span>
+                            <a href="#" style="color: var(--accent-blue);">Read More →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-image"><i class="fas fa-chart-line"></i></div>
+                    <div class="blog-content">
+                        <span class="blog-category">Marketing</span>
+                        <h3>Digital Marketing ROI: Measuring What Matters</h3>
+                        <p class="blog-excerpt">Discover how to track, measure, and optimize your digital marketing campaigns for maximum ROI and meaningful business impact.</p>
+                        <div class="blog-meta">
+                            <span>10 Jan 2026</span>
+                            <span>• 4 min read</span>
+                            <a href="#" style="color: var(--accent-blue);">Read More →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-image"><i class="fas fa-paint-brush"></i></div>
+                    <div class="blog-content">
+                        <span class="blog-category">Design</span>
+                        <h3>UX Design Principles That Convert</h3>
+                        <p class="blog-excerpt">Understand the core principles of user-centered design that increase conversions, engagement, and customer satisfaction.</p>
+                        <div class="blog-meta">
+                            <span>8 Jan 2026</span>
+                            <span>• 7 min read</span>
+                            <a href="#" style="color: var(--accent-blue);">Read More →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-image"><i class="fas fa-shield-alt"></i></div>
+                    <div class="blog-content">
+                        <span class="blog-category">Security</span>
+                        <h3>Web Security Best Practices for 2026</h3>
+                        <p class="blog-excerpt">Essential security practices for protecting your digital assets including encryption, authentication, compliance, and threat prevention.</p>
+                        <div class="blog-meta">
+                            <span>5 Jan 2026</span>
+                            <span>• 5 min read</span>
+                            <a href="#" style="color: var(--accent-blue);">Read More →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-image"><i class="fas fa-brain"></i></div>
+                    <div class="blog-content">
+                        <span class="blog-category">AI & Innovation</span>
+                        <h3>AI in Business: A Practical Guide</h3>
+                        <p class="blog-excerpt">Explore practical applications of artificial intelligence and machine learning for business automation, analytics, and competitive advantage.</p>
+                        <div class="blog-meta">
+                            <span>2 Jan 2026</span>
+                            <span>• 8 min read</span>
+                            <a href="#" style="color: var(--accent-blue);">Read More →</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="padding-top: 0; padding-bottom: 4rem;">
+        <div class="container" style="max-width: 800px; text-align: center; animation: fadeIn 360ms ease-out both;">
+            <h2 style="font-size: 1.5rem; margin-bottom: 1rem;">Why we share insights</h2>
+            <p style="font-size: 1.1rem; color: var(--text-secondary);">We write to document what works — and what doesn’t — when building digital systems for growth. Our insights come from real projects, not theory.</p>
+        </div>
+    </section>
+
+    <section class="section alternate" style="text-align: center;">
+        <div class="container">
+            <h2>Have a challenge you’re thinking through?</h2>
+            <p style="margin-bottom: 2rem; font-size: 1.1rem; color: var(--text-secondary);">Let’s explore it together — strategy first, execution second.</p>
+            <a href="contact.html" class="btn btn-primary">👉 Get a Free Strategy Call</a>
+            <p style="margin-top: 1rem; font-size: 0.85rem; color: var(--text-muted);">Free · No obligation · 30-minute conversation</p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section"><h3>Nue<span style="color: var(--accent-orange);">Era</span></h3><p class="tagline">A New Era of Digital Growth</p></div>
+                <div class="footer-section"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+                <div class="footer-section"><h4>Services</h4><ul><li><a href="services.html#web">Web Development</a></li><li><a href="services.html#app">App Development</a></li><li><a href="services.html#marketing">Digital Marketing</a></li><li><a href="services.html#design">UI/UX Design</a></li></ul></div>
+                <div class="footer-section"><h4>Get in Touch</h4><ul><li>Email: <a href="mailto:hello@nueera.io">hello@nueera.io</a></li><li>Phone: <a href="tel:+1234567890">+1 (234) 567-890</a></li><li>WhatsApp: <a href="https://wa.me/1234567890">Chat with us</a></li></ul></div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2026 NueEra. All rights reserved. | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p></div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/blog.js"></script>
+</body>
+</html>

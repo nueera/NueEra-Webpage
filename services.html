@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NueEra Services - Web Development, App Development, Digital Marketing, UI/UX Design, and Branding.">
+    <title>Services - NueEra</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Page Loader -->
+    <div id="page-loader">
+        <div class="loader-content">
+            <div class="loader-circle"></div>
+            <img src="assets/images/logo.png" alt="Loading..." class="loader-logo">
+        </div>
+    </div>
+
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <header>
+        <!-- Navigation -->
+        <nav class="navbar" role="navigation" aria-label="Main Navigation">
+            <div class="container">
+                <div class="nav-container">
+                    <div class="nav-left">
+                        <a href="index.html" class="logo" aria-label="NueEra home">
+                            <div class="logo-icon"><img src="assets/images/logo.png" alt="NueEra Logo" loading="lazy"></div>
+                            <span>NueEra</span>
+                        </a>
+                    </div>
+
+                    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-controls="mobileMenu" aria-expanded="false" aria-label="Open menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+
+                    <div class="nav-center">
+                        <ul class="nav-links" role="menubar" aria-label="Primary">
+                            <li role="none"><a role="menuitem" href="index.html">Home</a></li>
+                            <li role="none"><a role="menuitem" href="about.html">About</a></li>
+                            <li role="none"><a role="menuitem" href="services.html" class="active">Services</a></li>
+                            <li role="none"><a role="menuitem" href="pricing.html">Pricing</a></li>
+                            <li role="none"><a role="menuitem" href="blog.html">Blog</a></li>
+                            <li role="none"><a role="menuitem" href="help-center.html">Help Center</a></li>
+                            <li role="none"><a role="menuitem" href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="nav-right">
+                        <button class="theme-toggle" title="Toggle theme" aria-pressed="false"><i class="fas fa-moon"></i></button>
+                        <a href="contact.html" class="btn btn-primary">Get Free Consultation</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Mobile full-screen menu overlay -->
+        <div id="mobileMenu" class="mobile-menu-overlay" aria-hidden="true">
+            <div class="mobile-menu-inner">
+                <div class="mobile-menu-top">
+                    <a href="index.html" class="logo mobile-logo" aria-label="NueEra home">
+                        <div class="logo-icon"><img src="assets/images/logo.png" alt="NueEra Logo" loading="lazy"></div>
+                        <span>NueEra</span>
+                    </a>
+                    <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Close menu">Close</button>
+                </div>
+                <nav class="mobile-nav" aria-label="Mobile primary">
+                    <ul class="mobile-nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="help-center.html">Help Center</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <div class="mobile-menu-footer">
+                    <div class="mobile-cta-wrap">
+                        <a href="contact.html" class="btn btn-primary btn-block">Get Free Consultation</a>
+                    </div>
+                    <div class="mobile-theme-toggle">
+                        <button class="theme-toggle">Toggle theme</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main id="main">
+
+    <!-- 1. Services Hero -->
+    <section class="page-header" style="background: transparent; padding-bottom: 2rem;">
+        <div class="container">
+            <h1 style="margin-bottom: 1rem; animation: fadeUp 600ms ease-out both;">Engineered for growth, built for scale</h1>
+            <p style="max-width: 700px; margin: 0 auto 1.5rem; font-size: 1.2rem; animation: fadeUp 600ms ease-out 100ms both;">We don't just build websites or apps. We engineer interconnected digital systems that drive predictable business outcomes.</p>
+            <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 2rem; text-transform: uppercase; letter-spacing: 1px; animation: fadeUp 600ms ease-out 200ms both;">Strategy-led · Performance-first · Outcome-based</p>
+        </div>
+    </section>
+
+    <!-- 2. Philosophy -->
+    <section class="section" style="padding-top: 0; padding-bottom: 4rem;">
+        <div class="container" style="text-align: center; max-width: 800px; animation: fadeIn 600ms ease-out both;">
+            <h2 style="font-size: 2rem; margin-bottom: 1rem;">Systems over silos</h2>
+            <p style="font-size: 1.1rem; margin-bottom: 1rem;">Isolated digital tools create friction. We build integrated ecosystems where design, technology, and marketing work together to compound your growth.</p>
+        </div>
+    </section>
+
+    <!-- 2. Service Nav / Quick Jump (Auto-layout: Horizontal) -->
+    <div class="service-nav-wrapper" data-component="nav/services">
+        <div class="container">
+            <nav class="service-nav" role="navigation" aria-label="Service categories">
+                <a href="#web" class="service-nav-link">Web Development</a>
+                <a href="#app" class="service-nav-link">App Development</a>
+                <a href="#marketing" class="service-nav-link">Digital Marketing</a>
+                <a href="#design" class="service-nav-link">UI / UX Design</a>
+                <a href="#branding" class="service-nav-link">Branding & Strategy</a>
+            </nav>
+        </div>
+    </div>
+
+    <!-- 3. Service Blocks -->
+    
+    <!-- Web Development (Component: Service / Block) -->
+    <section id="web" class="service-block section" data-component="service/block">
+        <div class="container">
+            <div class="service-header">
+                <h2>Web Development</h2>
+                <p>Scalable web ecosystems that convert visitors into customers.</p>
+            </div>
+            <div class="service-cards-grid" data-layout="auto">
+                <div class="service-card challenge-card reveal" data-component="card/glass" style="position: relative; overflow: hidden;">
+                    <img src="assets/images/img5.png" alt="Web Development" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.85; z-index: 0;">
+                    <span class="ui-label" style="position: relative; z-index: 1; text-shadow: 0 2px 4px rgba(0,0,0,0.8); font-weight: bold; color: white;">The Challenge</span>
+                    <p style="position: relative; z-index: 1; text-shadow: 0 2px 4px rgba(0,0,0,0.8); font-weight: bold; color: white;">Your website needs to convert visitors into customers while maintaining top performance and security standards.</p>
+                </div>
+                <div class="service-card deliverables-card accent-blue reveal" data-component="card/glass" style="background: rgba(255, 255, 255, 0.05);">
+                    <span class="ui-label">What We Deliver</span>
+                    <ul class="detail-list">
+                        <li>High-performance business websites</li>
+                        <li>E-commerce platforms with payment integration</li>
+                        <li>Custom web applications and dashboards</li>
+                        <li>SEO-optimized architecture</li>
+                        <li>Mobile-first responsive design</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- App Development -->
+    <section id="app" class="service-block section" data-component="service/block">
+        <div class="container">
+            <div class="service-header">
+                <h2>App Development</h2>
+                <p>Mobile product systems designed for retention and scale.</p>
+            </div>
+            <div class="service-cards-grid" data-layout="auto">
+                <div class="service-card challenge-card reveal" data-component="card/glass" style="position: relative; overflow: hidden;">
+                    <img src="assets/images/img9.png" alt="App Development" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.85; z-index: 0;">
+                    <span class="ui-label" style="position: relative; z-index: 1; text-shadow: 0 2px 4px rgba(0,0,0,0.8); font-weight: bold; color: white;">The Challenge</span>
+                    <p style="position: relative; z-index: 1; text-shadow: 0 2px 4px rgba(0,0,0,0.8); font-weight: bold; color: white;">Building apps that users love requires expertise in design, performance, and platform-specific requirements.</p>
+                </div>
+                <div class="service-card deliverables-card accent-blue reveal" data-component="card/glass" style="background: rgba(255, 255, 255, 0.05);">
+                    <span class="ui-label">What We Deliver</span>
+                    <ul class="detail-list">
+                        <li>Native iOS and Android applications</li>
+                        <li>Cross-platform solutions with React Native & Flutter</li>
+                        <li>Enterprise mobile solutions</li>
+                        <li>Real-time data synchronization</li>
+                        <li>App store optimization and deployment</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Digital Marketing -->
+    <section id="marketing" class="service-block section" data-component="service/block">
+        <div class="container">
+            <div class="service-header">
+                <h2>Digital Marketing</h2>
+                <p>Growth engines that drive predictable acquisition.</p>
+            </div>
+            <div class="service-cards-grid" data-layout="auto">
+                <div class="service-card challenge-card reveal" data-component="card/glass" style="position: relative; overflow: hidden;">
+                    <img src="assets/images/img8.png" alt="Digital Marketing" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.85; z-index: 0;">
+                    <span class="ui-label" style="position: relative; z-index: 1; text-shadow: 0 2px 4px rgba(0,0,0,0.8); font-weight: bold; color: white;">The Challenge</span>
+                    <p style="position: relative; z-index: 1; text-shadow: 0 2px 4px rgba(0,0,0,0.8); font-weight: bold; color: white;">Getting your message to the right audience with measurable ROI requires strategic planning and execution.</p>
+                </div>
+                <div class="service-card deliverables-card accent-orange reveal" data-component="card/glass" style="background: rgba(255, 255, 255, 0.05);">
+                    <span class="ui-label">What We Deliver</span>
+                    <ul class="detail-list">
+                        <li>SEO strategy and optimization</li>
+                        <li>Paid advertising campaigns (Google, Meta, LinkedIn)</li>
+                        <li>Social media marketing and content strategy</li>
+                        <li>Email marketing automation</li>
+                        <li>Analytics and performance tracking</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- UI/UX Design -->
+    <section id="design" class="service-block section" data-component="service/block">
+        <div class="container">
+            <div class="service-header">
+                <h2>UI / UX Design</h2>
+                <p>User-centric design systems that balance aesthetics with utility.</p>
+            </div>
+            <div class="service-cards-grid" data-layout="auto">
+                <div class="service-card challenge-card reveal" data-component="card/glass" style="position: relative; overflow: hidden;">
+                    <img src="assets/images/img4.png" alt="UI / UX Design" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.85; z-index: 0;">
+                    <span class="ui-label" style="position: relative; z-index: 1; text-shadow: 0 2px 4px rgba(0,0,0,0.8); font-weight: bold; color: white;">The Challenge</span>
+                    <p style="position: relative; z-index: 1; text-shadow: 0 2px 4px rgba(0,0,0,0.8); font-weight: bold; color: white;">Beautiful design means nothing without usability. We balance aesthetics with user behavior and conversion optimization.</p>
+                </div>
+                <div class="service-card deliverables-card accent-blue reveal" data-component="card/glass" style="background: rgba(255, 255, 255, 0.05);">
+                    <span class="ui-label">What We Deliver</span>
+                    <ul class="detail-list">
+                        <li>User research and testing</li>
+                        <li>Wireframing and prototyping</li>
+                        <li>Visual design and branding</li>
+                        <li>Interaction design and animations</li>
+                        <li>Usability testing and optimization</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Branding & Strategy -->
+    <section id="branding" class="service-block section" data-component="service/block">
+        <div class="container">
+            <div class="service-header">
+                <h2>Branding & Strategy</h2>
+                <p>Strategic foundations for long-term market leadership.</p>
+            </div>
+            <div class="service-cards-grid" data-layout="auto">
+                <div class="service-card challenge-card reveal" data-component="card/glass" style="position: relative; overflow: hidden;">
+                    <img src="assets/images/img5.png" alt="Branding & Strategy" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.85; z-index: 0;">
+                    <span class="ui-label" style="position: relative; z-index: 1; text-shadow: 0 2px 4px rgba(0,0,0,0.8); font-weight: bold; color: white;">The Challenge</span>
+                    <p style="position: relative; z-index: 1; text-shadow: 0 2px 4px rgba(0,0,0,0.8); font-weight: bold; color: white;">In a crowded market, a strong brand identity and clear strategy are essential for standing out and succeeding.</p>
+                </div>
+                <div class="service-card deliverables-card accent-gold reveal" data-component="card/glass" style="background: rgba(255, 255, 255, 0.05);">
+                    <span class="ui-label">What We Deliver</span>
+                    <ul class="detail-list">
+                        <li>Brand identity design and guidelines</li>
+                        <li>Market positioning strategy</li>
+                        <li>Digital transformation roadmap</li>
+                        <li>Brand messaging and storytelling</li>
+                        <li>Competitive analysis and insights</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Supporting Services -->
+    <section class="section supporting-services">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Supporting Capabilities</h2>
+                <p>Specialized expertise to round out your digital ecosystem.</p>
+            </div>
+            <div class="supporting-grid">
+                <div class="supporting-col">
+                    <h4>Design & Experience</h4>
+                    <ul>
+                        <li>UX Audits</li>
+                        <li>Design Systems</li>
+                        <li>Accessibility Compliance</li>
+                    </ul>
+                </div>
+                <div class="supporting-col">
+                    <h4>Marketing & Growth</h4>
+                    <ul>
+                        <li>Content Strategy</li>
+                        <li>CRO (Conversion Rate Optimization)</li>
+                        <li>Marketing Automation</li>
+                    </ul>
+                </div>
+                <div class="supporting-col">
+                    <h4>Engineering</h4>
+                    <ul>
+                        <li>API Integration</li>
+                        <li>Cloud Infrastructure</li>
+                        <li>Legacy Migration</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Process Snapshot (Component: Process / Steps) -->
+    <section class="section process-snapshot-section" data-component="process/steps">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Our Process</h2>
+                <p>A proven path from concept to launch.</p>
+            </div>
+            <div class="process-snapshot" data-layout="auto">
+                <div class="process-step-snap">
+                    <span class="step-num">01</span>
+                    <span class="step-name">Discover</span>
+                </div>
+                <div class="process-step-snap">
+                    <span class="step-num">02</span>
+                    <span class="step-name">Strategize</span>
+                </div>
+                <div class="process-step-snap">
+                    <span class="step-num">03</span>
+                    <span class="step-name">Design</span>
+                </div>
+                <div class="process-step-snap">
+                    <span class="step-num">04</span>
+                    <span class="step-name">Build</span>
+                </div>
+                <div class="process-step-snap">
+                    <span class="step-num">05</span>
+                    <span class="step-name">Optimize</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Qualification -->
+    <section class="section qualification-section" data-component="qualification">
+        <div class="container">
+            <div class="qualification-grid" data-layout="auto">
+                <div class="qual-card for-you reveal" data-component="card/glass">
+                    <h3>This is for you if...</h3>
+                    <ul>
+                        <li>You value quality and long-term reliability over quick fixes.</li>
+                        <li>You need a strategic partner, not just an order taker.</li>
+                        <li>You are ready to scale your business operations.</li>
+                    </ul>
+                </div>
+                <div class="qual-card not-for-you reveal" data-component="card/glass">
+                    <h3>This may not be for you if...</h3>
+                    <ul>
+                        <li>You are looking for the cheapest possible option.</li>
+                        <li>You need a project done "yesterday" without planning.</li>
+                        <li>You prefer templates over custom-built solutions.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. Services CTA (Component: CTA / Primary) -->
+    <section class="services-cta" data-component="cta/primary">
+        <div class="container">
+            <h2>Ready to build a system that scales?</h2>
+            <p>Let's explore how NueEra can support your growth.</p>
+            <a href="contact.html" class="btn btn-primary">👉 Get a Free Strategy Call</a>
+        </div>
+    </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Nue<span class="footer-brand-accent">Era</span></h3>
+                    <p class="tagline">A New Era of Digital Growth</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-icon" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon" title="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html#web">Web Development</a></li>
+                        <li><a href="services.html#app">App Development</a></li>
+                        <li><a href="services.html#marketing">Digital Marketing</a></li>
+                        <li><a href="services.html#design">UI/UX Design</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Get in Touch</h4>
+                    <ul>
+                        <li>Email: <a href="mailto:hello@nueera.io">hello@nueera.io</a></li>
+                        <li>Phone: <a href="tel:+1234567890">+1 (234) 567-890</a></li>
+                        <li>WhatsApp: <a href="https://wa.me/1234567890">Chat with us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 NueEra. All rights reserved. | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

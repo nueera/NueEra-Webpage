@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="NueEra - A New Era of Digital Growth. Premium IT & Digital Solutions for ambitious businesses.">
+    <meta name="theme-color" content="#0a0e27">
+    <title>NueEra - A New Era of Digital Growth</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style"
+        onload="this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    </noscript>
+    <style>
+        @keyframes colorCycle {
+            0%, 25% { color: #ff9500; } /* Orange */
+            33%, 58% { color: #00a8ff; } /* Blue */
+            66%, 91% { color: #ffffff; } /* White */
+            100% { color: #ff9500; } /* Back to Orange */
+        }
+        .cycling-text {
+            background: none !important;
+            -webkit-text-fill-color: initial !important;
+            animation: colorCycle 3s linear infinite;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Page Loader -->
+    <div id="page-loader">
+        <div class="loader-content">
+            <div class="loader-circle"></div>
+            <img src="assets/images/logo.png" alt="Loading..." class="loader-logo">
+        </div>
+    </div>
+
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <header>
+        <!-- Navigation -->
+        <nav class="navbar" role="navigation" aria-label="Main Navigation">
+            <div class="container">
+                <div class="nav-container">
+                    <div class="nav-left">
+                        <a href="index.html" class="logo" aria-label="NueEra home">
+                            <div class="logo-icon"><img src="assets/images/logo.png" alt="NueEra Logo" loading="lazy">
+                            </div>
+                            <span>NueEra</span>
+                        </a>
+                    </div>
+
+                    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-controls="mobileMenu" aria-expanded="false"
+                        aria-label="Open menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+
+                    <div class="nav-center">
+                        <ul class="nav-links" role="menubar" aria-label="Primary">
+                            <li role="none"><a role="menuitem" href="index.html" class="active">Home</a></li>
+                            <li role="none"><a role="menuitem" href="about.html">About</a></li>
+                            <li role="none"><a role="menuitem" href="services.html">Services</a></li>
+                            <li role="none"><a role="menuitem" href="portfolio.html">Portfolio</a></li>
+                            <li role="none"><a role="menuitem" href="pricing.html">Pricing</a></li>
+                            <li role="none"><a role="menuitem" href="blog.html">Blog</a></li>
+                            <li role="none"><a role="menuitem" href="help-center.html">Help Center</a></li>
+                            <li role="none"><a role="menuitem" href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="nav-right">
+                        <button class="theme-toggle" title="Toggle theme" aria-pressed="false">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                        </button>
+                        <a href="contact.html" class="btn btn-primary nav-cta-btn">Get Strategy Call</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Mobile full-screen menu overlay -->
+        <div id="mobileMenu" class="mobile-menu-overlay" aria-hidden="true">
+            <div class="mobile-menu-inner">
+                <div class="mobile-menu-top">
+                    <a href="index.html" class="logo mobile-logo" aria-label="NueEra home">
+                        <div class="logo-icon"><img src="assets/images/logo.png" alt="NueEra Logo" loading="lazy"></div>
+                        <span>NueEra</span>
+                    </a>
+                    <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Close menu">Close</button>
+                </div>
+                <nav class="mobile-nav" aria-label="Mobile primary">
+                    <ul class="mobile-nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="help-center.html">Help Center</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <div class="mobile-menu-footer">
+                    <div class="mobile-cta-wrap">
+                        <a href="contact.html" class="btn btn-primary btn-block">Get Free Consultation</a>
+                    </div>
+                    <div class="mobile-theme-toggle">
+                        <button class="theme-toggle">Toggle theme</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main id="main">
+
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-background">
+                <img class="hero-bg-img" src="assets/images/home2.png" alt="Digital Growth Background" aria-hidden="true">
+                <div class="glow-orb glow-orb-blue" aria-hidden="true"></div>
+                <div class="glow-orb glow-orb-orange" aria-hidden="true"></div>
+                <canvas id="hero-particles" aria-hidden="true"></canvas>
+            </div>
+
+            <div class="container hero-container">
+                <div class="hero-layout">
+                    <!-- Left Column: Content -->
+                    <div class="hero-content">
+                        <div class="hero-badge">
+                            <span class="badge-icon">✨</span>
+                            <span>Premium Digital Solutions</span>
+                        </div>
+
+                        <h1 class="hero-title">A New Era of<br><span class="gradient-text cycling-text">Digital Growth</span></h1>
+                        <p class="hero-subtitle">We build premium digital systems that help ambitious businesses scale. From strategy to execution, NueEra is your long-term partner in sustainable growth.</p>
+
+                        <div class="hero-buttons">
+                            <a href="contact.html" class="btn btn-primary">
+                                <span>👉 Get a Free Consultation</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                            <a href="services.html" class="btn btn-ghost">
+                                <span>Explore Services →</span>
+                            </a>
+                        </div>
+
+                        <!-- Proven by Results -->
+                        <div class="hero-stats">
+                            <div class="stat-heading">Proven by Results</div>
+                            <div class="stat-item">
+                                <div class="stat-number">500+</div>
+                                <div class="stat-label">Projects Delivered</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">98%</div>
+                                <div class="stat-label">Client Satisfaction</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">15+</div>
+                                <div class="stat-label">Years Industry Experience</div>
+                            </div>
+                            <div class="stat-trusted">Trusted by innovative companies worldwide</div>
+                        </div>
+                    </div>
+
+                  
+                </div>
+            </div>
+        </section>
+
+        <!-- Trusted By Strip -->
+        <section class="logo-strip">
+            <div class="container">
+                <p class="text-center mb-2 opacity-75" style="font-size: 0.9rem; letter-spacing: 1px; text-transform: uppercase;">Trusted by innovative companies</p>
+                <div class="logo-grid">
+                    <i class="fab fa-aws" title="AWS"></i>
+                    <i class="fab fa-google" title="Google"></i>
+                    <i class="fab fa-meta" title="Meta"></i>
+                    <i class="fab fa-stripe" title="Stripe"></i>
+                    <i class="fab fa-spotify" title="Spotify"></i>
+                </div>
+                
+            </div>
+        </section>
+
+        <!-- Brand Introduction -->
+        <section class="section" id="intro">
+            <div class="container">
+                <div class="section-grid">
+                    <div class="section-content">
+                        <h2>Why NueEra?</h2>
+                        <p class="brand-narrative">We design digital systems that help businesses grow — not just look good.</p>
+                        <p>NueEra is more than a digital agency. We are a strategic partner invested in your long-term success. Our ecosystem-driven approach ensures every solution is designed to connect, scale, and evolve with your business.</p>
+                        <p>From innovative web solutions to enterprise-grade digital transformation, we focus on outcomes that truly matter.</p>
+                    </div>
+                    <div class="section-visual">
+                        <div style="width: 200px; height: 200px; background: var(--bg-glass); border-radius: 50%; display: flex; align-items: center; justify-content: center; border: 1px solid var(--border-color); box-shadow: 0 0 40px rgba(0,168,255,0.1);">
+                            <i class="fas fa-network-wired" style="font-size: 4rem; background: linear-gradient(135deg, var(--accent-blue), var(--accent-orange)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Approach / Authority Layer -->
+        <section class="section" id="approach">
+            <div class="container">
+                <div class="section-header">
+                    <h2>How We Think</h2>
+                    <p class="section-sub">Principles that guide our work — clear, pragmatic, and outcome-focused.</p>
+                </div>
+                <div class="approach-grid">
+                    <div class="approach-item">
+                        <div class="approach-icon"><i class="fas fa-layer-group"></i></div>
+                        <h4>Systems Over Features</h4>
+                        <p>We build connected systems that scale, instead of isolated features that break over time.</p>
+                    </div>
+                    <div class="approach-item">
+                        <div class="approach-icon"><i class="fas fa-chart-pie"></i></div>
+                        <h4>Measure, Then Move</h4>
+                        <p>Every decision is guided by data and clear KPIs — no guesswork, only insight.</p>
+                    </div>
+                    <div class="approach-item">
+                        <div class="approach-icon"><i class="fas fa-shield-virus"></i></div>
+                        <h4>Design for Reliability</h4>
+                        <p>Performance, security, and stability are non-negotiable foundations of everything we build.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Overview -->
+        <section class="services-section" id="services">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Our Services</h2>
+                    <p>Complete digital solutions designed for your success</p>
+                </div>
+                <div class="services-grid">
+                    <!-- Productized service: Website Launch System -->
+                    <div class="service-card" data-service="website-launch">
+                        <div class="service-card-content">
+                            <div class="service-icon"><i class="fas fa-rocket"></i></div>
+                            <h3>Website Launch System</h3>
+                            <p class="service-sub">What it solves: Fast, conversion-focused web launches for growth-stage companies.</p>
+                            <a href="services.html#web" class="btn btn-ghost">👉 See more →</a>
+                        </div>
+                    </div>
+
+                    <!-- Productized service: Growth Marketing System -->
+                    <div class="service-card" data-service="growth-marketing">
+                        <div class="service-card-content">
+                            <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+                            <h3>Growth Marketing System</h3>
+                            <p class="service-sub">What it solves: Predictable acquisition, measurable ROI, and scalable funnels.</p>
+                            <a href="services.html#marketing" class="btn btn-ghost">👉 See more →</a>
+                        </div>
+                    </div>
+
+                    <!-- Productized service: Tech Modernization System -->
+                    <div class="service-card" data-service="tech-modernization">
+                        <div class="service-card-content">
+                            <div class="service-icon"><i class="fas fa-cogs"></i></div>
+                            <h3>Tech Modernization System</h3>
+                            <p class="service-sub">What it solves: Legacy bottlenecks, performance issues, and inefficient processes.</p>
+                            <a href="services.html#web" class="btn btn-ghost">👉 See more →</a>
+                        </div>
+                    </div>
+
+                    <div class="service-card" data-service="ui-ux-design">
+                        <div class="service-card-content">
+                            <div class="service-icon">
+                                <i class="fas fa-paint-brush"></i>
+                            </div>
+                            <h3>UI/UX Design</h3>
+                            <p>Beautiful, intuitive interfaces that maximize engagement and conversion.</p>
+                        </div>
+                    </div>
+
+                    <div class="service-card" data-service="branding-strategy">
+                        <div class="service-card-content">
+                            <div class="service-icon">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <h3>Branding & Strategy</h3>
+                            <p>Distinctive brand identity and digital roadmaps built for long-term growth.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="centered mt-3">
+                    <a href="services.html" class="btn btn-secondary">View All Services</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose NueEra -->
+        <section class="why-choose-section" id="why">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Why Choose NueEra</h2>
+                    <p>What sets us apart</p>
+                </div>
+                <div class="why-grid">
+                    <div class="why-item">
+                        <div class="why-icon">
+                            <i class="fas fa-medal"></i>
+                        </div>
+                        <h3>Expert Team</h3>
+                        <p>Award-winning engineers and designers with proven track records in digital transformation</p>
+                    </div>
+
+                    <div class="why-item">
+                        <div class="why-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Enterprise Security</h3>
+                        <p>Bank-grade security, compliance standards, and 99.9% uptime guarantees</p>
+                    </div>
+
+                    <div class="why-item">
+                        <div class="why-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h3>Performance First</h3>
+                        <p>Lightning-fast solutions optimized for scale, built on modern technology stack</p>
+                    </div>
+
+                    <div class="why-item">
+                        <div class="why-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3>True Partnership</h3>
+                        <p>Transparent collaboration with regular updates, strategic guidance, and ongoing support</p>
+                    </div>
+
+                    <div class="why-item">
+                        <div class="why-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h3>Fast Delivery</h3>
+                        <p>Agile methodology ensures quick turnaround without compromising on quality</p>
+                    </div>
+
+                    <div class="why-item">
+                        <div class="why-icon">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <h3>Proven Results</h3>
+                        <p>Data-driven approach with measurable ROI and impact on your bottom line</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section class="process-section" id="process">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Our Process</h2>
+                    <p>From concept to success, we follow a proven methodology</p>
+                </div>
+                <ol class="process-steps">
+                    <li class="process-step">
+                        <div class="step-number">01</div>
+                        <h3>Discovery</h3>
+                        <p>We understand your business, goals, and challenges</p>
+                    </li>
+
+                    <div class="process-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+
+                    <li class="process-step">
+                        <div class="step-number">02</div>
+                        <h3>Strategy</h3>
+                        <p>Develop a tailored roadmap for your digital growth</p>
+                    </li>
+
+                    <div class="process-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+
+                    <li class="process-step">
+                        <div class="step-number">03</div>
+                        <h3>Design</h3>
+                        <p>Create beautiful, user-centric experiences</p>
+                    </li>
+
+                    <div class="process-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+
+                    <li class="process-step">
+                        <div class="step-number">04</div>
+                        <h3>Build</h3>
+                        <p>Develop scalable, high-performance solutions</p>
+                    </li>
+
+                    <div class="process-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+
+                    <li class="process-step">
+                        <div class="step-number">05</div>
+                        <h3>Test</h3>
+                        <p>Rigorous QA and optimization for excellence</p>
+                    </li>
+
+                    <div class="process-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+
+                    <li class="process-step">
+                        <div class="step-number">06</div>
+                        <h3>Launch</h3>
+                        <p>Seamless deployment and ongoing support</p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Trusted by Business Leaders</h2>
+                    <p>See how we've helped companies like yours grow</p>
+                </div>
+                <div class="testimonial-grid">
+                    <div class="testimonial-card">
+                        <p class="testimonial-quote">"Within three months, project tracking time dropped by 40%. Our team moved faster, and we finally had clarity."</p>
+                        <div class="testimonial-meta">
+                            <div class="avatar-badge">SC</div>
+                            <div>
+                                <p class="testimonial-person">Sarah Chen</p>
+                                <p class="testimonial-title">COO, TechVenture Solutions</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <p class="testimonial-quote">"We’ve had zero downtime since the rebuild. More importantly, I sleep better knowing our platform is solid."</p>
+                        <div class="testimonial-meta">
+                            <div class="avatar-badge">MR</div>
+                            <div>
+                                <p class="testimonial-person">Michael Rodriguez</p>
+                                <p class="testimonial-title">Founder, DigitalFlow</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <p class="testimonial-quote">"Conversion rates increased by 28% in six months. The real win was understanding our customers better."</p>
+                        <div class="testimonial-meta">
+                            <div class="avatar-badge">LH</div>
+                            <div>
+                                <p class="testimonial-person">Lisa Hampton</p>
+                                <p class="testimonial-title">Marketing Director, Heritage Retail</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="centered mt-3">
+                    <a href="testimonials.html" class="btn btn-primary" style="display: inline-block;">Read More
+                        Stories</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Latest from Blog -->
+        <section class="section" id="latest-blog">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Latest Insights</h2>
+                    <p>Trends and strategies for digital growth</p>
+                </div>
+                <div class="blog-grid">
+                    <!-- Article 1 -->
+                    <article class="blog-card">
+                        <div class="blog-image"><i class="fas fa-code"></i></div>
+                        <div class="blog-content">
+                            <span class="blog-category">Development</span>
+                            <h3>The Future of Web Development in 2026</h3>
+                            <p class="blog-excerpt">Explore the latest web development trends including AI-powered development tools and edge computing.</p>
+                            <div class="blog-meta">
+                                <span>15 Jan 2026</span>
+                                <a href="blog-post.html" style="color: var(--accent-blue);">Read More →</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Article 2 -->
+                    <article class="blog-card">
+                        <div class="blog-image"><i class="fas fa-chart-line"></i></div>
+                        <div class="blog-content">
+                            <span class="blog-category">Marketing</span>
+                            <h3>Digital Marketing ROI: Measuring What Matters</h3>
+                            <p class="blog-excerpt">Discover how to track, measure, and optimize your digital marketing campaigns for maximum ROI.</p>
+                            <div class="blog-meta">
+                                <span>10 Jan 2026</span>
+                                <a href="blog-post.html" style="color: var(--accent-blue);">Read More →</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Article 3 -->
+                    <article class="blog-card">
+                        <div class="blog-image"><i class="fas fa-brain"></i></div>
+                        <div class="blog-content">
+                            <span class="blog-category">AI & Innovation</span>
+                            <h3>AI in Business: A Practical Guide</h3>
+                            <p class="blog-excerpt">Explore practical applications of artificial intelligence for business automation and analytics.</p>
+                            <div class="blog-meta">
+                                <span>2 Jan 2026</span>
+                                <a href="blog-post.html" style="color: var(--accent-blue);">Read More →</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="centered mt-3">
+                    <a href="blog.html" class="btn btn-secondary">View All Articles</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="section cta-section" aria-labelledby="cta-heading">
+            <div class="container">
+                <h2 id="cta-heading">Ready to Transform Your Business?</h2>
+                <p class="cta-subtitle">Let's discuss how NueEra can accelerate your digital growth</p>
+                <div class="intent-cta">
+                    <a href="contact.html" class="btn btn-primary" data-intent="end">
+                        <span class="cta-label">Get a Free Strategy Call</span>
+                    </a>
+                    <span class="cta-microcopy">Free · No obligation · We respond within 24 hours</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Nue<span class="footer-brand-accent">Era</span></h3>
+                    <p class="tagline">A New Era of Digital Growth</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-icon" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon" title="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html#web">Web Development</a></li>
+                        <li><a href="services.html#app">App Development</a></li>
+                        <li><a href="services.html#marketing">Digital Marketing</a></li>
+                        <li><a href="services.html#design">UI/UX Design</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Get in Touch</h4>
+                    <ul>
+                        <li>Email: <a href="mailto:hello@nueera.io">hello@nueera.io</a></li>
+                        <li>Phone: <a href="tel:+1234567890">+1 (234) 567-890</a></li>
+                        <li>WhatsApp: <a href="https://wa.me/1234567890">Chat with us</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 NueEra. All rights reserved. | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <!-- Hero parallax removed to honor 'no parallax' motion principle -->
+</body>
+
+</html>
