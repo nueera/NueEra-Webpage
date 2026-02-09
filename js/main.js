@@ -559,6 +559,7 @@ document.addEventListener('DOMContentLoaded', () => {
 class ParallaxEffect {
     constructor() {
         this.elements = document.querySelectorAll('.glow-orb');
+        this.heroBg = document.querySelector('.hero-bg-img');
         this.ticking = false;
         this.prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
         if (!this.prefersReduced) {
@@ -579,6 +580,10 @@ class ParallaxEffect {
             const speed = 0.18 + (index * 0.08);
             element.style.transform = `translate3d(0, ${Math.round(scrolled * speed)}px, 0)`;
         });
+
+        if (this.heroBg) {
+            this.heroBg.style.transform = `translate3d(0, ${Math.round(scrolled * 0.4)}px, 0)`;
+        }
         this.ticking = false;
     }
 }
