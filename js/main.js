@@ -149,7 +149,7 @@ class NavigationManager {
         // Stagger mobile links
         if (open) {
             this.mobileNavItems.forEach((li, i) => {
-                li.style.transitionDelay = `${i * 0.08 + 0.06}s`;
+                li.style.transitionDelay = `${i * 0.1}s`;
             });
         } else {
             this.mobileNavItems.forEach(li => li.style.transitionDelay = '0s');
