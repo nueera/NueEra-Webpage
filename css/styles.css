@@ -767,7 +767,8 @@ a:hover {
 }
 
 .mobile-nav-links a:hover, 
-.mobile-nav-links a:focus { 
+.mobile-nav-links a:focus,
+.mobile-nav-links a.active { 
     color: #fff; 
     text-shadow: 0 0 30px rgba(0,168,255,0.8); /* Sci-fi glow */
     transform: scale(1.1);
