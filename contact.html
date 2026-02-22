@@ -9,69 +9,7 @@
     <meta name="description" content="Contact NueEra - Get a free consultation for your digital project.">
     <title>Contact - NueEra</title>
     <link rel="stylesheet" href="css/styles.css">
-        <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        .contact-form-row {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 16px;
-            margin-bottom: 16px;
-        }
-
-        .contact-benefits-grid {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 3rem;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        @media (max-width: 768px) {
-            .contact-options-grid {
-                grid-template-columns: 1fr !important;
-                gap: 16px !important;
-            }
-
-            .contact-option-card {
-                padding: 18px !important;
-            }
-
-            .contact-option-card a {
-                flex-wrap: wrap;
-            }
-
-            .contact-form-container {
-                padding: 1.25rem !important;
-            }
-
-            .contact-form-row {
-                grid-template-columns: 1fr;
-                gap: 12px;
-                margin-bottom: 12px;
-            }
-
-            .contact-benefits-grid {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-
-            .page-header .container p {
-                font-size: 1rem !important;
-            }
-        }
-
-        @media (max-width: 480px) {
-            #form .container {
-                padding-left: 12px;
-                padding-right: 12px;
-            }
-
-            .contact-form-container {
-                padding: 1rem !important;
-                border-radius: 12px !important;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <!-- Page Loader -->
@@ -114,7 +52,7 @@
                     </div>
 
                     <div class="nav-right">
-                        <button class="theme-toggle" title="Toggle theme" aria-pressed="false">ðŸŒ™</button>
+                        <button class="theme-toggle" title="Toggle theme" aria-pressed="false">🌙</button>
                     </div>
                 </div>
             </div>
@@ -141,12 +79,6 @@
                         <li><a href='contact.html'>Contact</a></li>
                     </ul>
                 </nav>
-
-                <div class="mobile-menu-footer">
-                    <div class="mobile-theme-toggle">
-                        <button class="theme-toggle">Toggle theme</button>
-                    </div>
-                </div>
             </div>
         </div>
     </header>
@@ -156,16 +88,16 @@
     <!-- 1. Contact Hero -->
     <section class="page-header" style="background: transparent; padding-bottom: 2rem;">
         <div class="container" style="max-width: 720px; text-align: center;">
-            <h1 style="margin-bottom: 1rem; animation: fadeUp 600ms cubic-bezier(0.16,1,0.3,1) both;">Letâ€™s Talk About Your Next Step</h1>
-            <p style="font-size: 1.2rem; margin-bottom: 1.5rem; animation: fadeUp 600ms cubic-bezier(0.16,1,0.3,1) 100ms both;">Tell us about your goals, challenges, or ideas â€” weâ€™ll help you explore the right path forward.</p>
-            <p style="font-size: 0.9rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; animation: fadeUp 600ms cubic-bezier(0.16,1,0.3,1) 200ms both;">Free consultation Â· No obligation Â· Response within 24 hours</p>
+            <h1 style="margin-bottom: 1rem; animation: fadeUp 600ms cubic-bezier(0.16,1,0.3,1) both;">Let’s Talk About Your Next Step</h1>
+            <p style="font-size: 1.2rem; margin-bottom: 1.5rem; animation: fadeUp 600ms cubic-bezier(0.16,1,0.3,1) 100ms both;">Tell us about your goals, challenges, or ideas — we’ll help you explore the right path forward.</p>
+            <p style="font-size: 0.9rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; animation: fadeUp 600ms cubic-bezier(0.16,1,0.3,1) 200ms both;">Free consultation · No obligation · Response within 24 hours</p>
         </div>
     </section>
 
     <!-- 2. Contact Options (Choice Cards) -->
     <section class="section" style="padding-top: 0; padding-bottom: 4rem;">
         <div class="container">
-            <div class="contact-options-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
+            <div class="contact-options-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px;">
                 <!-- Option 1 -->
                 <div class="contact-option-card glass reveal" style="padding: 24px; border-radius: 16px; transition: transform 360ms ease-out;">
                     <div style="margin-bottom: 1rem; font-size: 1.5rem; color: var(--accent-blue);"><i class="fas fa-chess-knight"></i></div>
@@ -196,10 +128,10 @@
     <!-- 3. Contact Form (Core Interaction) -->
     <section class="section" id="form" style="padding-top: 0;">
         <div class="container" style="max-width: 720px;">
-            <div class="contact-form-container" style="background: var(--bg-glass); border: 1px solid var(--border-color); border-radius: 16px; padding: 2.5rem;">
+            <div class="contact-form-container" style="background: var(--bg-glass); border: 1px solid var(--border-color); border-radius: 16px; padding: clamp(1.5rem, 5vw, 2.5rem);">
                 <!-- No entrance animation for form container per blueprint -->
                     <form name="contact">
-                        <div class="contact-form-row">
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px; margin-bottom: 16px;">
                             <div class="form-group" style="margin-bottom: 0;">
                                 <label for="name">Full Name *</label>
                                 <input type="text" id="name" name="name" required style="border-radius: 10px;">
@@ -210,7 +142,7 @@
                             </div>
                         </div>
 
-                        <div class="contact-form-row">
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px; margin-bottom: 16px;">
                             <div class="form-group" style="margin-bottom: 0;">
                                 <label for="phone">Phone Number</label>
                                 <input type="tel" id="phone" name="phone" style="border-radius: 10px;">
@@ -221,7 +153,7 @@
                             </div>
                         </div>
 
-                        <div class="contact-form-row">
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px; margin-bottom: 16px;">
                             <div class="form-group" style="margin-bottom: 0;">
                                 <label for="service">Service Interested In *</label>
                                 <select id="service" name="service" required style="border-radius: 10px;">
@@ -238,12 +170,12 @@
                                 <label for="budget">Estimated Budget</label>
                                 <select id="budget" name="budget" style="border-radius: 10px;">
                                     <option value="">Select a range</option>
-                                    <option value="<5k">Less than â‚¹5,000</option>
-                                    <option value="5k-10k">â‚¹5,000 - â‚¹10,000</option>
-                                    <option value="10k-25k">â‚¹10,000 - â‚¹25,000</option>
-                                    <option value="25k-50k">â‚¹25,000 - â‚¹50,000</option>
-                                     <option value="50k-100k">â‚¹50,000 - â‚¹1,50,000</option>
-                                    <option value="50k+">â‚¹150,000+</option>
+                                    <option value="<5k">Less than ₹5,000</option>
+                                    <option value="5k-10k">₹5,000 - ₹10,000</option>
+                                    <option value="10k-25k">₹10,000 - ₹25,000</option>
+                                    <option value="25k-50k">₹25,000 - ₹50,000</option>
+                                     <option value="50k-100k">₹50,000 - ₹1,50,000</option>
+                                    <option value="50k+">₹150,000+</option>
                                 </select>
                             </div>
                         </div>
@@ -297,7 +229,7 @@
             <div class="section-header reveal" style="margin-bottom: 3rem;">
                 <h2>Why Contact NueEra?</h2>
             </div>
-            <div class="contact-benefits-grid">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 3rem; max-width: 900px; margin: 0 auto;">
                 <div class="reveal">
                     <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--text-primary);">Free Discovery Call</h3>
                     <p style="color: var(--text-secondary);">30-minute consultation to understand your goals.</p>
@@ -312,7 +244,7 @@
                 </div>
                 <div class="reveal">
                     <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--text-primary);">No Pressure</h3>
-                    <p style="color: var(--text-secondary);">You decide if weâ€™re the right fit.</p>
+                    <p style="color: var(--text-secondary);">You decide if we’re the right fit.</p>
                 </div>
             </div>
         </div>
@@ -323,7 +255,7 @@
         <div class="container">
             <h2>Prefer a quick conversation?</h2>
             <p class="cta-subtitle">Book a free 30-minute strategy call with our team.</p>
-            <a href="#" class="btn btn-primary">ðŸ‘‰ Book a Strategy Call</a>
+            <a href="#" class="btn btn-primary">👉 Book a Strategy Call</a>
         </div>
     </section>
 
@@ -379,4 +311,3 @@
 
 <!-- Mirrored from nueera.netlify.app/contact by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 22 Feb 2026 06:29:25 GMT -->
 </html>
-

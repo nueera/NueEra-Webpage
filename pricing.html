@@ -1,341 +1,588 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" data-theme="dark">
-
-<!-- Mirrored from nueera.netlify.app/pricing by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 22 Feb 2026 06:29:24 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="NueEra Pricing - Flexible plans for startups to enterprises.">
+  <!-- Mirrored from nueera.netlify.app/pricing by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 22 Feb 2026 06:29:24 GMT -->
+  <!-- Added by HTTrack --><meta
+    http-equiv="content-type"
+    content="text/html;charset=UTF-8"
+  /><!-- /Added by HTTrack -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="NueEra Pricing - Flexible plans for startups to enterprises."
+    />
     <title>Pricing - NueEra</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="../cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
     <!-- Page Loader -->
     <div id="page-loader">
-        <div class="loader-content">
-            <div class="loader-circle"></div>
-            <img src="assets/images/logo.png" alt="Loading..." class="loader-logo">
-        </div>
+      <div class="loader-content">
+        <div class="loader-circle"></div>
+        <img
+          src="assets/images/logo.png"
+          alt="Loading..."
+          class="loader-logo"
+        />
+      </div>
     </div>
 
     <a class="skip-link" href="#main">Skip to main content</a>
     <header>
-        <!-- Navigation -->
-        <nav class="navbar" role="navigation" aria-label="Main Navigation">
-            <div class="container">
-                <div class="nav-container">
-                    <div class="nav-left">
-                        <a aria-label='NueEra home' class='logo' href='index.html'>
-                            <div class="logo-icon"><img src="assets/images/logo.png" alt="NueEra Logo" loading="lazy"></div>
-                            <span>NueEra</span>
-                        </a>
-                    </div>
-
-                    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-controls="mobileMenu" aria-expanded="false" aria-label="Open menu">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
-
-                    <div class="nav-center">
-                        <ul class="nav-links" role="menubar" aria-label="Primary">
-                            <li role="none"><a href='index.html' role='menuitem'>Home</a></li>
-                            <li role="none"><a href='about.html' role='menuitem'>About</a></li>
-                            <li role="none"><a href='services.html' role='menuitem'>Services</a></li>
-                            <li role="none"><a class='active' href='pricing.html' role='menuitem'>Pricing</a></li>
-                            <li role="none"><a href='blog.html' role='menuitem'>Blog</a></li>
-                            <li role="none"><a href='help-center.html' role='menuitem'>Help Center</a></li>
-                            <li role="none"><a href='contact.html' role='menuitem'>Contact</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="nav-right">
-                        <button class="theme-toggle" title="Toggle theme" aria-pressed="false">🌙</button>
-                    </div>
+      <!-- Navigation -->
+      <nav class="navbar" role="navigation" aria-label="Main Navigation">
+        <div class="container">
+          <div class="nav-container">
+            <div class="nav-left">
+              <a aria-label="NueEra home" class="logo" href="index.html">
+                <div class="logo-icon">
+                  <img
+                    src="assets/images/logo.png"
+                    alt="NueEra Logo"
+                    loading="lazy"
+                  />
                 </div>
+                <span>NueEra</span>
+              </a>
             </div>
-        </nav>
 
-        <!-- Mobile full-screen menu overlay -->
-        <div id="mobileMenu" class="mobile-menu-overlay" aria-hidden="true">
-            <div class="mobile-menu-inner">
-                <div class="mobile-menu-top">
-                    <a aria-label='NueEra home' class='logo mobile-logo' href='index.html'>
-                        <div class="logo-icon"><img src="assets/images/logo.png" alt="NueEra Logo" loading="lazy"></div>
-                        <span>NueEra</span>
-                    </a>
-                    <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Close menu">Close</button>
-                </div>
-                <nav class="mobile-nav" aria-label="Mobile primary">
-                    <ul class="mobile-nav-links">
-                        <li><a href='index.html'>Home</a></li>
-                        <li><a href='about.html'>About</a></li>
-                        <li><a href='services.html'>Services</a></li>
-                        <li><a href='pricing.html'>Pricing</a></li>
-                        <li><a href='blog.html'>Blog</a></li>
-                        <li><a href='help-center.html'>Help Center</a></li>
-                        <li><a href='contact.html'>Contact</a></li>
-                    </ul>
-                </nav>
+            <button
+              class="mobile-menu-btn"
+              id="mobileMenuBtn"
+              aria-controls="mobileMenu"
+              aria-expanded="false"
+              aria-label="Open menu"
+            >
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
 
-                <div class="mobile-menu-footer">
-                    <div class="mobile-theme-toggle">
-                        <button class="theme-toggle">Toggle theme</button>
-                    </div>
-                </div>
+            <div class="nav-center">
+              <ul class="nav-links" role="menubar" aria-label="Primary">
+                <li role="none">
+                  <a href="index.html" role="menuitem">Home</a>
+                </li>
+                <li role="none">
+                  <a href="about.html" role="menuitem">About</a>
+                </li>
+                <li role="none">
+                  <a href="services.html" role="menuitem">Services</a>
+                </li>
+                <li role="none">
+                  <a class="active" href="pricing.html" role="menuitem"
+                    >Pricing</a
+                  >
+                </li>
+                <li role="none">
+                  <a href="blog.html" role="menuitem">Blog</a>
+                </li>
+                <li role="none">
+                  <a href="help-center.html" role="menuitem">Help Center</a>
+                </li>
+                <li role="none">
+                  <a href="contact.html" role="menuitem">Contact</a>
+                </li>
+              </ul>
             </div>
+
+            <div class="nav-right">
+              <button
+                class="theme-toggle"
+                title="Toggle theme"
+                aria-pressed="false"
+              >
+                🌙
+              </button>
+            </div>
+          </div>
         </div>
+      </nav>
+
+      <!-- Mobile full-screen menu overlay -->
+      <div id="mobileMenu" class="mobile-menu-overlay" aria-hidden="true">
+        <div class="mobile-menu-inner">
+          <div class="mobile-menu-top">
+            <a
+              aria-label="NueEra home"
+              class="logo mobile-logo"
+              href="index.html"
+            >
+              <div class="logo-icon">
+                <img
+                  src="assets/images/logo.png"
+                  alt="NueEra Logo"
+                  loading="lazy"
+                />
+              </div>
+              <span>NueEra</span>
+            </a>
+            <button
+              class="mobile-menu-close"
+              id="mobileMenuClose"
+              aria-label="Close menu"
+            >
+              Close
+            </button>
+          </div>
+          <nav class="mobile-nav" aria-label="Mobile primary">
+            <ul class="mobile-nav-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="pricing.html">Pricing</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="help-center.html">Help Center</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
     </header>
 
     <main id="main">
-
-    <!-- 1. Pricing Hero -->
-    <section class="page-header" style="background: transparent; padding-bottom: 4rem;">
+      <!-- 1. Pricing Hero -->
+      <section
+        class="page-header"
+        style="background: transparent; padding-bottom: 4rem"
+      >
         <div class="container">
-            <h1 style="margin-bottom: 1rem; animation: fadeUp 600ms ease-out both;">Transparent pricing for scalable digital systems</h1>
-            <p style="max-width: 700px; margin: 0 auto 1.5rem; font-size: 1.2rem; animation: fadeUp 600ms ease-out 100ms both;">Choose a plan aligned with your growth stage. Every engagement is tailored — pricing reflects outcomes, not effort.</p>
-            <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 2rem; text-transform: uppercase; letter-spacing: 1px; animation: fadeUp 600ms ease-out 200ms both;">No hidden fees · No long-term lock-in · Strategy included</p>
-            <div style="animation: fadeUp 600ms ease-out 300ms both;">
-                <a class='btn btn-secondary' href='contact.html'>👉 Talk to an Expert →</a>
-            </div>
+          <h1
+            style="margin-bottom: 1rem; animation: fadeUp 600ms ease-out both"
+          >
+            Transparent pricing for scalable digital systems
+          </h1>
+          <p
+            style="
+              max-width: 700px;
+              margin: 0 auto 1.5rem;
+              font-size: 1.2rem;
+              animation: fadeUp 600ms ease-out 100ms both;
+            "
+          >
+            Choose a plan aligned with your growth stage. Every engagement is
+            tailored — pricing reflects outcomes, not effort.
+          </p>
+          <p
+            style="
+              font-size: 0.9rem;
+              color: var(--text-muted);
+              margin-bottom: 2rem;
+              text-transform: uppercase;
+              letter-spacing: 1px;
+              animation: fadeUp 600ms ease-out 200ms both;
+            "
+          >
+            No hidden fees · No long-term lock-in · Strategy included
+          </p>
+          <div style="animation: fadeUp 600ms ease-out 300ms both">
+            <a class="btn btn-secondary" href="contact.html"
+              >👉 Talk to an Expert →</a
+            >
+          </div>
         </div>
-    </section>
+      </section>
 
-    <!-- 2. Pricing Model Explanation -->
-    <section class="section" style="padding-top: 0; padding-bottom: 4rem;">
-        <div class="container" style="text-align: center; max-width: 800px; animation: fadeIn 600ms ease-out both;">
-            <h2 style="font-size: 2rem; margin-bottom: 1rem;">How our pricing works</h2>
-            <p style="font-size: 1.1rem; margin-bottom: 1rem;">We offer system-based pricing rather than hourly billing. Each plan reflects the scope, complexity, and business impact of the solution — ensuring alignment between effort and outcomes.</p>
-            <p style="font-size: 0.9rem; color: var(--text-muted); font-style: italic;">Built for clarity, not negotiation.</p>
+      <!-- 2. Pricing Model Explanation -->
+      <section class="section" style="padding-top: 0; padding-bottom: 4rem">
+        <div
+          class="container"
+          style="
+            text-align: center;
+            max-width: 800px;
+            animation: fadeIn 600ms ease-out both;
+          "
+        >
+          <h2 style="font-size: 2rem; margin-bottom: 1rem">
+            How our pricing works
+          </h2>
+          <p style="font-size: 1.1rem; margin-bottom: 1rem">
+            We offer system-based pricing rather than hourly billing. Each plan
+            reflects the scope, complexity, and business impact of the solution
+            — ensuring alignment between effort and outcomes.
+          </p>
+          <p
+            style="
+              font-size: 0.9rem;
+              color: var(--text-muted);
+              font-style: italic;
+            "
+          >
+            Built for clarity, not negotiation.
+          </p>
         </div>
-    </section>
+      </section>
 
-    <!-- 3. Pricing Tiers -->
-    <section class="section">
+      <!-- 3. Pricing Tiers -->
+      <section class="section">
         <div class="container">
-            <div class="pricing-grid">
-                <!-- Starter -->
-                <div class="pricing-card reveal">
-                    <div class="pricing-badge">Starter System</div>
-                    <h3>Starter</h3>
-                    <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1rem;">Best for early-stage businesses launching their digital presence.</p>
-                    <div class="price">$4,999<span class="price-period">/project</span></div>
-                    <ul class="pricing-features">
-                        <li>Website launch system</li>
-                        <li>Core UI/UX design</li>
-                        <li>Performance optimization</li>
-                        <li>Basic SEO setup</li>
-                        <li>Launch support</li>
-                    </ul>
-                    <a class='btn btn-secondary' href='contact.html' style='width: 100%; margin-top: 1.5rem;'>Get Started</a>
-                </div>
-
-                <!-- Growth -->
-                <div class="pricing-card featured reveal">
-                    <div class="pricing-badge" style="background: linear-gradient(135deg, #ff9500, #ffa500);">Recommended</div>
-                    <h3>Growth System</h3>
-                    <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1rem;">Best for scaling businesses ready to grow predictably.</p>
-                    <div class="price">$12,999<span class="price-period">/project</span></div>
-                    <ul class="pricing-features">
-                        <li>Everything in Starter</li>
-                        <li>Growth marketing system</li>
-                        <li>Conversion optimization</li>
-                        <li>Advanced analytics</li>
-                        <li>Priority support</li>
-                    </ul>
-                    <a class='btn btn-primary' href='contact.html' style='width: 100%; margin-top: 1.5rem;'>Book Strategy Call</a>
-                </div>
-
-                <!-- Enterprise -->
-                <div class="pricing-card reveal">
-                    <div class="pricing-badge">Enterprise System</div>
-                    <h3>Enterprise</h3>
-                    <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1rem;">Best for organizations with complex needs and scale requirements.</p>
-                    <div class="price">Custom<span class="price-period">/quote</span></div>
-                    <ul class="pricing-features">
-                        <li>Custom digital systems</li>
-                        <li>Tech modernization</li>
-                        <li>Security & compliance</li>
-                        <li>Dedicated team</li>
-                        <li>Ongoing optimization</li>
-                    </ul>
-                    <a class='btn btn-secondary' href='contact.html' style='width: 100%; margin-top: 1.5rem;'>Talk to Sales</a>
-                </div>
+          <div class="pricing-grid">
+            <!-- Starter -->
+            <div class="pricing-card reveal">
+              <div class="pricing-badge">Starter System</div>
+              <h3>Starter</h3>
+              <p
+                style="
+                  font-size: 0.9rem;
+                  color: var(--text-secondary);
+                  margin-bottom: 1rem;
+                "
+              >
+                Best for early-stage businesses launching their digital
+                presence.
+              </p>
+              <div class="price">
+                Custom<span class="price-period">/project</span>
+              </div>
+              <ul class="pricing-features">
+                <li>Website launch system</li>
+                <li>Core UI/UX design</li>
+                <li>Performance optimization</li>
+                <li>Basic SEO setup</li>
+                <li>Launch support</li>
+              </ul>
+              <a
+                class="btn btn-secondary"
+                href="contact.html"
+                style="width: 100%; margin-top: 1.5rem"
+                >Get Started</a
+              >
             </div>
-        </div>
-    </section>
 
-    <!-- 4. What's Included -->
-    <section class="section alternate">
+            <!-- Growth -->
+            <div class="pricing-card featured reveal">
+              <div
+                class="pricing-badge"
+                style="background: linear-gradient(135deg, #ff9500, #ffa500)"
+              >
+                Recommended
+              </div>
+              <h3>Growth System</h3>
+              <p
+                style="
+                  font-size: 0.9rem;
+                  color: var(--text-secondary);
+                  margin-bottom: 1rem;
+                "
+              >
+                Best for scaling businesses ready to grow predictably.
+              </p>
+              <div class="price">
+                Custom<span class="price-period">/project</span>
+              </div>
+              <ul class="pricing-features">
+                <li>Everything in Starter</li>
+                <li>Growth marketing system</li>
+                <li>Conversion optimization</li>
+                <li>Advanced analytics</li>
+                <li>Priority support</li>
+              </ul>
+              <a
+                class="btn btn-primary"
+                href="contact.html"
+                style="width: 100%; margin-top: 1.5rem"
+                >Book Strategy Call</a
+              >
+            </div>
+
+            <!-- Enterprise -->
+            <div class="pricing-card reveal">
+              <div class="pricing-badge">Enterprise System</div>
+              <h3>Enterprise</h3>
+              <p
+                style="
+                  font-size: 0.9rem;
+                  color: var(--text-secondary);
+                  margin-bottom: 1rem;
+                "
+              >
+                Best for organizations with complex needs and scale
+                requirements.
+              </p>
+              <div class="price">
+                Custom<span class="price-period">/project</span>
+              </div>
+              <ul class="pricing-features">
+                <li>Custom digital systems</li>
+                <li>Tech modernization</li>
+                <li>Security & compliance</li>
+                <li>Dedicated team</li>
+                <li>Ongoing optimization</li>
+              </ul>
+              <a
+                class="btn btn-secondary"
+                href="contact.html"
+                style="width: 100%; margin-top: 1.5rem"
+                >Talk to Sales</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. What's Included -->
+      <section class="section alternate">
         <div class="container">
-            <div class="section-header">
-                <h2>What's Included</h2>
-                <p>No hidden costs. No surprises.</p>
+          <div class="section-header">
+            <h2>What's Included</h2>
+            <p>No hidden costs. No surprises.</p>
+          </div>
+          <div
+            style="
+              display: grid;
+              grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+              gap: 2rem;
+              max-width: 800px;
+              margin: 0 auto;
+              animation: fadeIn 600ms ease-out both;
+            "
+          >
+            <div>
+              <ul class="detail-list">
+                <li>Strategy & planning</li>
+                <li>Performance optimization</li>
+                <li>Security best practices</li>
+              </ul>
             </div>
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; max-width: 800px; margin: 0 auto; animation: fadeIn 600ms ease-out both;">
-                <div>
-                    <ul class="detail-list">
-                        <li>Strategy & planning</li>
-                        <li>Performance optimization</li>
-                        <li>Security best practices</li>
-                    </ul>
-                </div>
-                <div>
-                    <ul class="detail-list">
-                        <li>Clear documentation</li>
-                        <li>Transparent communication</li>
-                        <li>Post-launch support</li>
-                    </ul>
-                </div>
+            <div>
+              <ul class="detail-list">
+                <li>Clear documentation</li>
+                <li>Transparent communication</li>
+                <li>Post-launch support</li>
+              </ul>
             </div>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <!-- 5. Comparison Snapshot -->
-    <section class="section">
+      <!-- 5. Comparison Snapshot -->
+      <section class="section">
         <div class="container">
-            <div class="section-header">
-                <h2>Compare Plans</h2>
-                <p>Find the right fit for your business</p>
-            </div>
-            <div style="overflow-x: auto;">
-                <table style="width: 100%; border-collapse: collapse; min-width: 600px;">
-                    <thead>
-                        <tr style="border-bottom: 1px solid var(--border-color);">
-                            <th style="text-align: left; padding: 1rem;">Feature</th>
-                            <th style="text-align: center; padding: 1rem;">Starter</th>
-                            <th style="text-align: center; padding: 1rem; color: var(--accent-orange);">Growth</th>
-                            <th style="text-align: center; padding: 1rem;">Enterprise</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr style="border-bottom: 1px solid var(--border-color);">
-                            <td style="padding: 1rem;">Strategy Included</td>
-                            <td style="text-align: center; padding: 1rem;">Basic</td>
-                            <td style="text-align: center; padding: 1rem;">Advanced</td>
-                            <td style="text-align: center; padding: 1rem;">Comprehensive</td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid var(--border-color);">
-                            <td style="padding: 1rem;">Performance Optimization</td>
-                            <td style="text-align: center; padding: 1rem;">Standard</td>
-                            <td style="text-align: center; padding: 1rem;">Advanced</td>
-                            <td style="text-align: center; padding: 1rem;">Custom</td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid var(--border-color);">
-                            <td style="padding: 1rem;">Analytics & Reporting</td>
-                            <td style="text-align: center; padding: 1rem;">Setup Only</td>
-                            <td style="text-align: center; padding: 1rem;">Monthly</td>
-                            <td style="text-align: center; padding: 1rem;">Real-time Dashboard</td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid var(--border-color);">
-                            <td style="padding: 1rem;">Support Level</td>
-                            <td style="text-align: center; padding: 1rem;">Email</td>
-                            <td style="text-align: center; padding: 1rem;">Priority Email</td>
-                            <td style="text-align: center; padding: 1rem;">Dedicated Manager</td>
-                        </tr>
-                        <tr>
-                            <td style="padding: 1rem;">Customization</td>
-                            <td style="text-align: center; padding: 1rem;">Limited</td>
-                            <td style="text-align: center; padding: 1rem;">Flexible</td>
-                            <td style="text-align: center; padding: 1rem;">Fully Custom</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+          <div class="section-header">
+            <h2>Compare Plans</h2>
+            <p>Find the right fit for your business</p>
+          </div>
+          <div style="overflow-x: auto">
+            <table
+              style="width: 100%; border-collapse: collapse; min-width: 600px"
+            >
+              <thead>
+                <tr style="border-bottom: 1px solid var(--border-color)">
+                  <th style="text-align: left; padding: 1rem">Feature</th>
+                  <th style="text-align: center; padding: 1rem">Starter</th>
+                  <th
+                    style="
+                      text-align: center;
+                      padding: 1rem;
+                      color: var(--accent-orange);
+                    "
+                  >
+                    Growth
+                  </th>
+                  <th style="text-align: center; padding: 1rem">Enterprise</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="border-bottom: 1px solid var(--border-color)">
+                  <td style="padding: 1rem">Strategy Included</td>
+                  <td style="text-align: center; padding: 1rem">Basic</td>
+                  <td style="text-align: center; padding: 1rem">Advanced</td>
+                  <td style="text-align: center; padding: 1rem">
+                    Comprehensive
+                  </td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--border-color)">
+                  <td style="padding: 1rem">Performance Optimization</td>
+                  <td style="text-align: center; padding: 1rem">Standard</td>
+                  <td style="text-align: center; padding: 1rem">Advanced</td>
+                  <td style="text-align: center; padding: 1rem">Custom</td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--border-color)">
+                  <td style="padding: 1rem">Analytics & Reporting</td>
+                  <td style="text-align: center; padding: 1rem">Setup Only</td>
+                  <td style="text-align: center; padding: 1rem">Monthly</td>
+                  <td style="text-align: center; padding: 1rem">
+                    Real-time Dashboard
+                  </td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--border-color)">
+                  <td style="padding: 1rem">Support Level</td>
+                  <td style="text-align: center; padding: 1rem">Email</td>
+                  <td style="text-align: center; padding: 1rem">
+                    Priority Email
+                  </td>
+                  <td style="text-align: center; padding: 1rem">
+                    Dedicated Manager
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 1rem">Customization</td>
+                  <td style="text-align: center; padding: 1rem">Limited</td>
+                  <td style="text-align: center; padding: 1rem">Flexible</td>
+                  <td style="text-align: center; padding: 1rem">
+                    Fully Custom
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <!-- 6. FAQ -->
-    <section class="section alternate">
+      <!-- 6. FAQ -->
+      <section class="section alternate">
         <div class="container">
-            <div class="section-header">
-                <h2>Frequently Asked Questions</h2>
-                <p>Common questions about our pricing and process</p>
+          <div class="section-header">
+            <h2>Frequently Asked Questions</h2>
+            <p>Common questions about our pricing and process</p>
+          </div>
+          <div style="max-width: 800px; margin: 0 auto">
+            <div class="faq-item">
+              <div class="faq-question">
+                <h3>Do you offer custom pricing?</h3>
+                <span class="faq-toggle">▼</span>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  Yes, for our Enterprise clients or projects with unique
+                  requirements, we provide custom quotes based on the specific
+                  scope and complexity.
+                </p>
+              </div>
             </div>
-            <div style="max-width: 800px; margin: 0 auto;">
-                <div class="faq-item">
-                    <div class="faq-question"><h3>Do you offer custom pricing?</h3><span class="faq-toggle">▼</span></div>
-                    <div class="faq-answer"><p>Yes, for our Enterprise clients or projects with unique requirements, we provide custom quotes based on the specific scope and complexity.</p></div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question"><h3>What happens after launch?</h3><span class="faq-toggle">▼</span></div>
-                    <div class="faq-answer"><p>We offer ongoing support and maintenance packages. You can choose a retainer model for continuous improvement or ad-hoc support as needed.</p></div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question"><h3>Can I upgrade later?</h3><span class="faq-toggle">▼</span></div>
-                    <div class="faq-answer"><p>Absolutely. Many clients start with the Starter System and upgrade to Growth as their business scales and needs evolve.</p></div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question"><h3>Do you provide ongoing support?</h3><span class="faq-toggle">▼</span></div>
-                    <div class="faq-answer"><p>Yes, all our plans include a warranty period. Beyond that, we offer dedicated support plans to ensure your system remains secure and performant.</p></div>
-                </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                <h3>What happens after launch?</h3>
+                <span class="faq-toggle">▼</span>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  We offer ongoing support and maintenance packages. You can
+                  choose a retainer model for continuous improvement or ad-hoc
+                  support as needed.
+                </p>
+              </div>
             </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                <h3>Can I upgrade later?</h3>
+                <span class="faq-toggle">▼</span>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  Absolutely. Many clients start with the Starter System and
+                  upgrade to Growth as their business scales and needs evolve.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                <h3>Do you provide ongoing support?</h3>
+                <span class="faq-toggle">▼</span>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  Yes, all our plans include a warranty period. Beyond that, we
+                  offer dedicated support plans to ensure your system remains
+                  secure and performant.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <!-- 7. Final CTA -->
-    <section class="section cta-section">
+      <!-- 7. Final CTA -->
+      <section class="section cta-section">
         <div class="container">
-            <h2>Not sure which plan fits your needs?</h2>
-            <p class="cta-subtitle">Let’s discuss your goals and recommend the right system.</p>
-            <a class='btn btn-primary' href='contact.html'>Get a Free Strategy Call</a>
-            <p class="cta-microcopy" style="margin-top: 1rem; font-size: 0.85rem; color: var(--text-tertiary);">Free · No obligation · 30-minute call</p>
+          <h2>Not sure which plan fits your needs?</h2>
+          <p class="cta-subtitle">
+            Let’s discuss your goals and recommend the right system.
+          </p>
+          <a class="btn btn-primary" href="contact.html"
+            >Get a Free Strategy Call</a
+          >
+          <p
+            class="cta-microcopy"
+            style="
+              margin-top: 1rem;
+              font-size: 0.85rem;
+              color: var(--text-tertiary);
+            "
+          >
+            Free · No obligation · 30-minute call
+          </p>
         </div>
-    </section>
-
+      </section>
     </main>
 
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Nue<span class="footer-brand-accent">Era</span></h3>
-                    <p class="tagline">A New Era of Digital Growth</p>
-                    <div class="social-icons">
-                        <a href="#" class="social-icon" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="social-icon" title="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-icon" title="GitHub"><i class="fab fa-github"></i></a>
-                    </div>
-                </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href='index.html'>Home</a></li>
-                        <li><a href='about.html'>About Us</a></li>
-                        <li><a href='blog.html'>Blog</a></li>
-                        <li><a href='contact.html'>Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href='services.html#web'>Web Development</a></li>
-                        <li><a href='services.html#app'>App Development</a></li>
-                        <li><a href='services.html#marketing'>Digital Marketing</a></li>
-                        <li><a href='services.html#design'>UI/UX Design</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Get in Touch</h4>
-                    <ul>
-                        <li>Email: <a href="mailto:hello@nueera.io">hello@nueera.io</a></li>
-                        <li>Phone: <a href="tel:+1234567890">+1 (234) 567-890</a></li>
-                        <li>WhatsApp: <a href="https://wa.me/1234567890">Chat with us</a></li>
-                    </ul>
-                </div>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>Nue<span class="footer-brand-accent">Era</span></h3>
+            <p class="tagline">A New Era of Digital Growth</p>
+            <div class="social-icons">
+              <a href="#" class="social-icon" title="LinkedIn"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+              <a href="#" class="social-icon" title="Twitter"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" class="social-icon" title="GitHub"
+                ><i class="fab fa-github"></i
+              ></a>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 NueEra. All rights reserved. | <a href='privacy.html'>Privacy Policy</a> | <a href='terms.html'>Terms of Service</a></p>
-            </div>
+          </div>
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="services.html#web">Web Development</a></li>
+              <li><a href="services.html#app">App Development</a></li>
+              <li><a href="services.html#marketing">Digital Marketing</a></li>
+              <li><a href="services.html#design">UI/UX Design</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Get in Touch</h4>
+            <ul>
+              <li>
+                Email: <a href="mailto:hello@nueera.io">hello@nueera.io</a>
+              </li>
+              <li>Phone: <a href="tel:+1234567890">+1 (234) 567-890</a></li>
+              <li>
+                WhatsApp: <a href="https://wa.me/1234567890">Chat with us</a>
+              </li>
+            </ul>
+          </div>
         </div>
+        <div class="footer-bottom">
+          <p>
+            &copy; 2026 NueEra. All rights reserved. |
+            <a href="privacy.html">Privacy Policy</a> |
+            <a href="terms.html">Terms of Service</a>
+          </p>
+        </div>
+      </div>
     </footer>
 
     <script src="js/main.js"></script>
     <script src="js/pricing.js"></script>
+  </body>
 
-</body>
-
-<!-- Mirrored from nueera.netlify.app/pricing by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 22 Feb 2026 06:29:24 GMT -->
+  <!-- Mirrored from nueera.netlify.app/pricing by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 22 Feb 2026 06:29:24 GMT -->
 </html>

@@ -2452,6 +2452,10 @@ button:focus, .btn:focus, a:focus { outline: 3px solid rgba(0,168,255,0.12); out
         min-width: unset;
     }
 
+    .pricing-card.featured {
+        transform: none;
+    }
+
     /* Buttons */
     .btn {
         width: 100%;
@@ -2539,7 +2543,7 @@ button:focus, .btn:focus, a:focus { outline: 3px solid rgba(0,168,255,0.12); out
     }
 
     /* Cards */
-    .service-card, .why-item, .blog-card {  
+    .service-card, .why-item, .blog-card, .pricing-card {  
         padding: 1.5rem 1rem;
     }
 
