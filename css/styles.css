@@ -95,6 +95,9 @@
     /* Transitions */
     --transition: all var(--motion-base) var(--ease-standard);
     --transition-fast: all var(--motion-fast) var(--ease-out);
+
+    /* Glass Shine - Light Theme (Stronger visibility) */
+    --glass-shine: linear-gradient(90deg, transparent, rgba(255,255,255,0.6), transparent);
 }
 
 /* Dark Theme Override */
@@ -130,6 +133,9 @@
     --bg-navbar: var(--bg-glass);
     --bg-mobile-btn: rgba(255, 255, 255, 0.05);
     --border-mobile-btn: rgba(255, 255, 255, 0.1);
+
+    /* Glass Shine - Dark Theme (Subtle) */
+    --glass-shine: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
 
     /* Legacy Mapping for Dark */
     --bg-primary: var(--bg-main);
@@ -1949,17 +1955,24 @@ button:focus, .btn:focus, a:focus { outline: 3px solid rgba(0,168,255,0.12); out
     box-shadow: var(--shadow-soft);
 }
 
+@keyframes glassShine {
+    0% { left: -100%; }
+    30% { left: 200%; }
+    100% { left: 200%; }
+}
+
 /* Glass Sliding Shine Effect */
-.service-card::after, .why-item::after, .blog-card::after, .pricing-card::after, .team-card::after, .testimonial-card::after {
+.service-card::after, .why-item::after, .blog-card::after, .pricing-card::after, .team-card::after, .testimonial-card::after, .slider-card::after {
     content: "";
     position: absolute;
     top: 0;
     left: -100%;
     width: 50%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.05), transparent);
+    background: var(--glass-shine);
     transform: skewX(-20deg);
-    transition: 0.5s;
+    animation: glassShine 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    z-index: 10;
     pointer-events: none;
 }
 .service-card:hover::after, .why-item:hover::after, .blog-card:hover::after, .pricing-card:hover::after, .team-card:hover::after, .testimonial-card:hover::after {
