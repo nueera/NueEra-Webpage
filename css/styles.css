@@ -473,10 +473,18 @@ a:hover {
     transition: transform var(--motion-instant) var(--ease-out);
 }
 
+@keyframes btnPulse {
+    0% { box-shadow: 0 8px 24px var(--glow-blue), 0 0 0 0 var(--blue-glow); }
+    50% { box-shadow: 0 8px 24px var(--glow-blue), 0 0 0 8px rgba(31, 106, 255, 0); }
+    100% { box-shadow: 0 8px 24px var(--glow-blue), 0 0 0 0 rgba(31, 106, 255, 0); }
+}
+
+
 .btn-primary {
     background: linear-gradient(135deg, var(--accent-blue), var(--accent-orange));
     color: #ffffff;
     box-shadow: 0 8px 24px var(--glow-blue);
+    animation: btnPulse 3s infinite;
 }
 
 .btn-primary::before {
@@ -497,6 +505,7 @@ a:hover {
     .btn-primary:hover {
         transform: translateY(-2px);
         box-shadow: 0 12px 36px var(--glow-blue);
+        animation: none;
     }
     .btn-primary:hover::before {
         left: 100%;
@@ -549,7 +558,7 @@ a:hover {
     padding: 0 24px;
     display: flex;
     align-items: center;
-    transition: background-color var(--motion-slow) var(--ease-standard), box-shadow var(--motion-slow) var(--ease-standard), padding var(--motion-slow) var(--ease-standard);
+    transition: background-color var(--motion-fast) var(--ease-standard), box-shadow var(--motion-fast) var(--ease-standard), padding var(--motion-fast) var(--ease-standard);
 }
 
 .nav-container {
@@ -652,11 +661,6 @@ a:hover {
 .nav-links a.active::after { width: 56%; }
 
 /* Navbar scrolled (glassmorphic) */
-.navbar.scrolled {
-    background: var(--bg-glass);
-    backdrop-filter: blur(12px);
-    box-shadow: var(--shadow-soft);
-}
 
 /* Theme toggle and CTA */
 .nav-right .theme-toggle { 
@@ -715,7 +719,7 @@ a:hover {
     opacity: 0;
     visibility: hidden;
     transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-    z-index: 2000;
+    z-index: 2005;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -747,6 +751,22 @@ a:hover {
     align-items:center; 
     justify-content:space-between; 
     z-index: 10;
+}
+
+.mobile-menu-close {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+.mobile-menu-close:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.3);
 }
 
 .mobile-nav-links { 
@@ -1980,6 +2000,13 @@ button:focus, .btn:focus, a:focus { outline: 3px solid rgba(0,168,255,0.12); out
     transition: 0.7s ease-in-out;
 }
 
+/* Disable glass shine on mobile for performance */
+@media (max-width: 768px) {
+    .service-card::after, .why-item::after, .blog-card::after, .pricing-card::after, .team-card::after, .testimonial-card::after, .slider-card::after {
+        display: none;
+    }
+}
+
 .service-card:hover {
     border-color: var(--border-active);
     transform: translateY(-4px);
@@ -2593,6 +2620,10 @@ button:focus, .btn:focus, a:focus { outline: 3px solid rgba(0,168,255,0.12); out
     .footer-section h4 {
         font-size: 1rem;
     }
+
+    .mobile-nav-links a {
+        font-size: 1.75rem;
+    }
 }
 
 /* ==========================================
@@ -3195,6 +3226,10 @@ button:focus, .btn:focus, a:focus { outline: 3px solid rgba(0,168,255,0.12); out
     .contact-method {
         padding: 1rem;
     }
+
+    .contact-form {
+        padding: 1.5rem;
+    }
 }
 
 /* ==========================================
@@ -3356,7 +3391,8 @@ input:checked + .slider:before {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
-    animation: pulse 2s infinite;
+    animation: scrollBtnPulse 3s infinite;
+    animation-delay: 0.5s;
 }
 
 .scroll-top-btn:hover {
@@ -3366,6 +3402,12 @@ input:checked + .slider:before {
     transform: translateY(-5px);
     box-shadow: 0 8px 24px var(--glow-blue);
     animation: none;
+}
+
+@keyframes scrollBtnPulse {
+    0% { transform: translateY(0) scale(1); box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); }
+    50% { transform: translateY(0) scale(1.1); box-shadow: 0 10px 25px var(--glow-blue); }
+    100% { transform: translateY(0) scale(1); box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); }
 }
 
 /* ==========================================
