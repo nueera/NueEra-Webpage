@@ -173,7 +173,7 @@ class NavigationManager {
         let current = '';
         for (let i = 0; i < this.sectionPositions.length; i++) {
             const s = this.sectionPositions[i];
-            if (scrollPos >= s.top && s.id) current = s.id;
+            if (scrollPos >= s.top) current = s.id;
         }
 
         this.navItems.forEach(link => {

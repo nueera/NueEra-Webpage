@@ -1,19 +1,84 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
+
+<!-- Mirrored from nueera.netlify.app/contact by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 22 Feb 2026 06:29:25 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Contact NueEra - Get a free consultation for your digital project.">
     <title>Contact - NueEra</title>
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .contact-form-row {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+
+        .contact-benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 3rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 768px) {
+            .contact-options-grid {
+                grid-template-columns: 1fr !important;
+                gap: 16px !important;
+            }
+
+            .contact-option-card {
+                padding: 18px !important;
+            }
+
+            .contact-option-card a {
+                flex-wrap: wrap;
+            }
+
+            .contact-form-container {
+                padding: 1.25rem !important;
+            }
+
+            .contact-form-row {
+                grid-template-columns: 1fr;
+                gap: 12px;
+                margin-bottom: 12px;
+            }
+
+            .contact-benefits-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .page-header .container p {
+                font-size: 1rem !important;
+            }
+        }
+
+        @media (max-width: 480px) {
+            #form .container {
+                padding-left: 12px;
+                padding-right: 12px;
+            }
+
+            .contact-form-container {
+                padding: 1rem !important;
+                border-radius: 12px !important;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Page Loader -->
     <div id="page-loader">
         <div class="loader-content">
             <div class="loader-circle"></div>
-            <img src="assets\images\loader.png" alt="Loading..." class="loader-logo">
+            <img src="assets/images/logo.png" alt="Loading..." class="loader-logo">
         </div>
     </div>
 
@@ -24,7 +89,7 @@
             <div class="container">
                 <div class="nav-container">
                     <div class="nav-left">
-                        <a href="index.html" class="logo" aria-label="NueEra home">
+                        <a aria-label='NueEra home' class='logo' href='index.html'>
                             <div class="logo-icon"><img src="assets/images/logo.png" alt="NueEra Logo" loading="lazy"></div>
                             <span>NueEra</span>
                         </a>
@@ -38,18 +103,18 @@
 
                     <div class="nav-center">
                         <ul class="nav-links" role="menubar" aria-label="Primary">
-                            <li role="none"><a role="menuitem" href="index.html">Home</a></li>
-                            <li role="none"><a role="menuitem" href="about.html">About</a></li>
-                            <li role="none"><a role="menuitem" href="services.html">Services</a></li>
-                            <li role="none"><a role="menuitem" href="pricing.html">Pricing</a></li>
-                            <li role="none"><a role="menuitem" href="blog.html">Blog</a></li>
-                            <li role="none"><a role="menuitem" href="help-center.html">Help Center</a></li>
-                            <li role="none"><a role="menuitem" href="contact.html" class="active">Contact</a></li>
+                            <li role="none"><a href='index.html' role='menuitem'>Home</a></li>
+                            <li role="none"><a href='about.html' role='menuitem'>About</a></li>
+                            <li role="none"><a href='services.html' role='menuitem'>Services</a></li>
+                            <li role="none"><a href='pricing.html' role='menuitem'>Pricing</a></li>
+                            <li role="none"><a href='blog.html' role='menuitem'>Blog</a></li>
+                            <li role="none"><a href='help-center.html' role='menuitem'>Help Center</a></li>
+                            <li role="none"><a class='active' href='contact.html' role='menuitem'>Contact</a></li>
                         </ul>
                     </div>
 
                     <div class="nav-right">
-                        <button class="theme-toggle" title="Toggle theme" aria-pressed="false">🌙</button>
+                        <button class="theme-toggle" title="Toggle theme" aria-pressed="false">ðŸŒ™</button>
                     </div>
                 </div>
             </div>
@@ -59,7 +124,7 @@
         <div id="mobileMenu" class="mobile-menu-overlay" aria-hidden="true">
             <div class="mobile-menu-inner">
                 <div class="mobile-menu-top">
-                    <a href="index.html" class="logo mobile-logo" aria-label="NueEra home">
+                    <a aria-label='NueEra home' class='logo mobile-logo' href='index.html'>
                         <div class="logo-icon"><img src="assets/images/logo.png" alt="NueEra Logo" loading="lazy"></div>
                         <span>NueEra</span>
                     </a>
@@ -67,13 +132,13 @@
                 </div>
                 <nav class="mobile-nav" aria-label="Mobile primary">
                     <ul class="mobile-nav-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="pricing.html">Pricing</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="help-center.html">Help Center</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href='index.html'>Home</a></li>
+                        <li><a href='about.html'>About</a></li>
+                        <li><a href='services.html'>Services</a></li>
+                        <li><a href='pricing.html'>Pricing</a></li>
+                        <li><a href='blog.html'>Blog</a></li>
+                        <li><a href='help-center.html'>Help Center</a></li>
+                        <li><a href='contact.html'>Contact</a></li>
                     </ul>
                 </nav>
 
@@ -91,9 +156,9 @@
     <!-- 1. Contact Hero -->
     <section class="page-header" style="background: transparent; padding-bottom: 2rem;">
         <div class="container" style="max-width: 720px; text-align: center;">
-            <h1 style="margin-bottom: 1rem; animation: fadeUp 600ms cubic-bezier(0.16,1,0.3,1) both;">Let’s Talk About Your Next Step</h1>
-            <p style="font-size: 1.2rem; margin-bottom: 1.5rem; animation: fadeUp 600ms cubic-bezier(0.16,1,0.3,1) 100ms both;">Tell us about your goals, challenges, or ideas — we’ll help you explore the right path forward.</p>
-            <p style="font-size: 0.9rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; animation: fadeUp 600ms cubic-bezier(0.16,1,0.3,1) 200ms both;">Free consultation · No obligation · Response within 24 hours</p>
+            <h1 style="margin-bottom: 1rem; animation: fadeUp 600ms cubic-bezier(0.16,1,0.3,1) both;">Letâ€™s Talk About Your Next Step</h1>
+            <p style="font-size: 1.2rem; margin-bottom: 1.5rem; animation: fadeUp 600ms cubic-bezier(0.16,1,0.3,1) 100ms both;">Tell us about your goals, challenges, or ideas â€” weâ€™ll help you explore the right path forward.</p>
+            <p style="font-size: 0.9rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; animation: fadeUp 600ms cubic-bezier(0.16,1,0.3,1) 200ms both;">Free consultation Â· No obligation Â· Response within 24 hours</p>
         </div>
     </section>
 
@@ -122,7 +187,7 @@
                     <div style="margin-bottom: 1rem; font-size: 1.5rem; color: var(--text-primary);"><i class="fas fa-life-ring"></i></div>
                     <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Support</h3>
                     <p style="font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 1.5rem;">Existing clients & technical help</p>
-                    <a href="help-center.html" style="font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem;">Contact Support <i class="fas fa-arrow-right"></i></a>
+                    <a href='help-center.html' style='font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem;'>Contact Support <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
@@ -134,7 +199,7 @@
             <div class="contact-form-container" style="background: var(--bg-glass); border: 1px solid var(--border-color); border-radius: 16px; padding: 2.5rem;">
                 <!-- No entrance animation for form container per blueprint -->
                     <form name="contact">
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px;">
+                        <div class="contact-form-row">
                             <div class="form-group" style="margin-bottom: 0;">
                                 <label for="name">Full Name *</label>
                                 <input type="text" id="name" name="name" required style="border-radius: 10px;">
@@ -145,7 +210,7 @@
                             </div>
                         </div>
 
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px;">
+                        <div class="contact-form-row">
                             <div class="form-group" style="margin-bottom: 0;">
                                 <label for="phone">Phone Number</label>
                                 <input type="tel" id="phone" name="phone" style="border-radius: 10px;">
@@ -156,7 +221,7 @@
                             </div>
                         </div>
 
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px;">
+                        <div class="contact-form-row">
                             <div class="form-group" style="margin-bottom: 0;">
                                 <label for="service">Service Interested In *</label>
                                 <select id="service" name="service" required style="border-radius: 10px;">
@@ -173,12 +238,12 @@
                                 <label for="budget">Estimated Budget</label>
                                 <select id="budget" name="budget" style="border-radius: 10px;">
                                     <option value="">Select a range</option>
-                                    <option value="<5k">Less than ₹5,000</option>
-                                    <option value="5k-10k">₹5,000 - ₹10,000</option>
-                                    <option value="10k-25k">₹10,000 - ₹25,000</option>
-                                    <option value="25k-50k">₹25,000 - ₹50,000</option>
-                                     <option value="50k-100k">₹50,000 - ₹1,50,000</option>
-                                    <option value="50k+">₹150,000+</option>
+                                    <option value="<5k">Less than â‚¹5,000</option>
+                                    <option value="5k-10k">â‚¹5,000 - â‚¹10,000</option>
+                                    <option value="10k-25k">â‚¹10,000 - â‚¹25,000</option>
+                                    <option value="25k-50k">â‚¹25,000 - â‚¹50,000</option>
+                                     <option value="50k-100k">â‚¹50,000 - â‚¹1,50,000</option>
+                                    <option value="50k+">â‚¹150,000+</option>
                                 </select>
                             </div>
                         </div>
@@ -232,7 +297,7 @@
             <div class="section-header reveal" style="margin-bottom: 3rem;">
                 <h2>Why Contact NueEra?</h2>
             </div>
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; max-width: 900px; margin: 0 auto;">
+            <div class="contact-benefits-grid">
                 <div class="reveal">
                     <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--text-primary);">Free Discovery Call</h3>
                     <p style="color: var(--text-secondary);">30-minute consultation to understand your goals.</p>
@@ -247,7 +312,7 @@
                 </div>
                 <div class="reveal">
                     <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--text-primary);">No Pressure</h3>
-                    <p style="color: var(--text-secondary);">You decide if we’re the right fit.</p>
+                    <p style="color: var(--text-secondary);">You decide if weâ€™re the right fit.</p>
                 </div>
             </div>
         </div>
@@ -258,7 +323,7 @@
         <div class="container">
             <h2>Prefer a quick conversation?</h2>
             <p class="cta-subtitle">Book a free 30-minute strategy call with our team.</p>
-            <a href="#" class="btn btn-primary">👉 Book a Strategy Call</a>
+            <a href="#" class="btn btn-primary">ðŸ‘‰ Book a Strategy Call</a>
         </div>
     </section>
 
@@ -279,19 +344,19 @@
                 <div class="footer-section">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href='index.html'>Home</a></li>
+                        <li><a href='about.html'>About Us</a></li>
+                        <li><a href='blog.html'>Blog</a></li>
+                        <li><a href='contact.html'>Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h4>Services</h4>
                     <ul>
-                        <li><a href="services.html#web">Web Development</a></li>
-                        <li><a href="services.html#app">App Development</a></li>
-                        <li><a href="services.html#marketing">Digital Marketing</a></li>
-                        <li><a href="services.html#design">UI/UX Design</a></li>
+                        <li><a href='services.html#web'>Web Development</a></li>
+                        <li><a href='services.html#app'>App Development</a></li>
+                        <li><a href='services.html#marketing'>Digital Marketing</a></li>
+                        <li><a href='services.html#design'>UI/UX Design</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
@@ -304,11 +369,14 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 NueEra. All rights reserved. | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+                <p>&copy; 2026 NueEra. All rights reserved. | <a href='privacy.html'>Privacy Policy</a> | <a href='terms.html'>Terms of Service</a></p>
             </div>
         </div>
     </footer>
 
     <script src="js/main.js"></script>
 </body>
+
+<!-- Mirrored from nueera.netlify.app/contact by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 22 Feb 2026 06:29:25 GMT -->
 </html>
+

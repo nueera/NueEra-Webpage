@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Page not found - NueEra">
+    <title>404 - Page Not Found - NueEra</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Page Loader -->
+    <div id="page-loader">
+        <div class="loader-content">
+            <div class="loader-circle"></div>
+           <img src="assets\images\loader.png" alt="Loading..." class="loader-logo">
+        </div>
+    </div>
+
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <header>
+        <!-- Navigation -->
+        <nav class="navbar" role="navigation" aria-label="Main Navigation">
+            <div class="container">
+                <div class="nav-container">
+                    <div class="nav-left">
+                        <a aria-label='NueEra home' class='logo' href='/'>
+                            <div class="logo-icon"><img src="assets/images/logo.png" alt="NueEra Logo" loading="lazy"></div>
+                        </a>
+                    </div>
+
+                    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-controls="mobileMenu" aria-expanded="false" aria-label="Open menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+
+                    <div class="nav-center">
+                        <ul class="nav-links" role="menubar" aria-label="Primary">
+                            <li role="none"><a href='/' role='menuitem'>Home</a></li>
+                            <li role="none"><a href='/about' role='menuitem'>About</a></li>
+                            <li role="none"><a href='/services' role='menuitem'>Services</a></li>
+                            <li role="none"><a href='/pricing' role='menuitem'>Pricing</a></li>
+                            <li role="none"><a href='/blog' role='menuitem'>Blog</a></li>
+                            <li role="none"><a href='/help-center' role='menuitem'>Help Center</a></li>
+                            <li role="none"><a href='/contact' role='menuitem'>Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="nav-right">
+                        <button class="theme-toggle" title="Toggle theme" aria-pressed="false">🌙</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Mobile full-screen menu overlay -->
+        <div id="mobileMenu" class="mobile-menu-overlay" aria-hidden="true">
+            <div class="mobile-menu-inner">
+                <div class="mobile-menu-top">
+                    <a aria-label='NueEra home' class='logo mobile-logo' href='/'>
+                        <div class="logo-icon"><img src="assets/images/logo.png" alt="NueEra Logo" loading="lazy"></div>
+                    </a>
+                    <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Close menu">Close</button>
+                </div>
+                <nav class="mobile-nav" aria-label="Mobile primary">
+                    <ul class="mobile-nav-links">
+                        <li><a href='/'>Home</a></li>
+                        <li><a href='/about'>About</a></li>
+                        <li><a href='/services'>Services</a></li>
+                        <li><a href='/pricing'>Pricing</a></li>
+                        <li><a href='/blog'>Blog</a></li>
+                        <li><a href='/help-center'>Help Center</a></li>
+                        <li><a href='/contact'>Contact</a></li>
+                    </ul>
+                </nav>
+
+                <div class="mobile-menu-footer">
+                    <div class="mobile-theme-toggle">
+                        <button class="theme-toggle">Toggle theme</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main id="main">
+        <section class="hero" style="min-height: 80vh; align-items: center;">
+             <div class="hero-background">
+                <div class="glow-orb glow-orb-blue" aria-hidden="true"></div>
+                <div class="glow-orb glow-orb-orange" aria-hidden="true"></div>
+            </div>
+            <div class="container" style="text-align: center; position: relative; z-index: 2;">
+                <div style="font-size: 8rem; font-weight: 900; line-height: 1; margin-bottom: 1rem;" class="gradient-text">404</div>
+                <h1 style="margin-bottom: 1.5rem;">Page Not Found</h1>
+                <p style="max-width: 600px; margin: 0 auto 2.5rem; font-size: 1.2rem;">The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.</p>
+                <a class='btn btn-primary' href='/'>
+                    <i class="fas fa-home" style="margin-right: 0.5rem;"></i> Go Home
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Nue<span class="footer-brand-accent">Era</span></h3>
+                    <p class="tagline">A New Era of Digital Growth</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-icon" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon" title="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href='/'>Home</a></li>
+                        <li><a href='/about'>About Us</a></li>
+                        <li><a href='/blog'>Blog</a></li>
+                        <li><a href='/contact'>Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href='/services#web'>Web Development</a></li>
+                        <li><a href='/services#app'>App Development</a></li>
+                        <li><a href='/services#marketing'>Digital Marketing</a></li>
+                        <li><a href='/services#design'>UI/UX Design</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Get in Touch</h4>
+                    <ul>
+                        <li>Email: <a href="mailto:hello@nueera.io">hello@nueera.io</a></li>
+                        <li>Phone: <a href="tel:+1234567890">+1 (234) 567-890</a></li>
+                        <li>WhatsApp: <a href="https://wa.me/1234567890">Chat with us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 NueEra. All rights reserved. | <a href='/privacy'>Privacy Policy</a> | <a href='/terms'>Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

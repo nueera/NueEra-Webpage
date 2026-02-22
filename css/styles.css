@@ -767,8 +767,7 @@ a:hover {
 }
 
 .mobile-nav-links a:hover, 
-.mobile-nav-links a:focus,
-.mobile-nav-links a.active { 
+.mobile-nav-links a:focus { 
     color: #fff; 
     text-shadow: 0 0 30px rgba(0,168,255,0.8); /* Sci-fi glow */
     transform: scale(1.1);
@@ -945,7 +944,7 @@ a:hover {
     bottom: 0;
     z-index: 0;
     overflow: hidden;
-    background-image: url('assets/images/home_img.jpg');
+    background-image: url('assets/images/home_img.html');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
