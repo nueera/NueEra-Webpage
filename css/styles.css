@@ -4072,12 +4072,14 @@ input:checked + .slider:before {
 .team-avatar {
     width: 100%;
     height: 340px; /* Fixed height for uniform grid */
+    height: auto;
     border-radius: 12px;
     background: linear-gradient(135deg, var(--bg-tertiary), var(--bg-secondary));
     margin-bottom: 1.25rem;
     display: block;
     object-fit: cover;
     object-position: center;
+    object-fit: contain;
     font-size: 1rem;
     color: var(--accent-blue);
     border: none;
@@ -5216,6 +5218,8 @@ html, body {
     height: 340px; /* Fixed height for uniform grid */
     object-fit: cover;
     object-position: center;
+    height: auto;
+    object-fit: contain;
     border-radius: 12px;
 }
 
@@ -5234,6 +5238,7 @@ html, body {
 
     .team-avatar {
         height: 280px; /* Make image shorter on mobile for more compact cards */
+        height: auto;
     }
 
     .team-card-content {
