@@ -337,7 +337,8 @@
             "
           >
             <!-- No entrance animation for form container per blueprint -->
-            <form id="contactForm" name="contact" netlify>
+            <form id="contactForm" name="contact" method="POST" netlify>
+              <input type="hidden" name="form-name" value="contact" />
               <div
                 style="
                   display: grid;
@@ -671,8 +672,7 @@
     </footer>
 
     <script src="js/main.js"></script>
-
-    <!-- Scroll to Top Button -->
+    <script src="js/contact.js"></script>
     <button class="scroll-top-btn" aria-label="Scroll to top">
       <i class="fas fa-arrow-up"></i>
     </button>

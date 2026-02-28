@@ -95,20 +95,33 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         if (isValid) {
-            // Simulate Submission
             const submitBtn = contactForm.querySelector('button[type="submit"]');
             const originalText = submitBtn.innerHTML;
-            
+
             submitBtn.disabled = true;
             submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
 
-            setTimeout(() => {
+            // Build form-encoded body for Netlify Forms
+            const formData = new FormData(contactForm);
+            const body = new URLSearchParams(formData).toString();
+
+            fetch('/', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: body
+            })
+            .then(() => {
                 contactForm.style.display = 'none';
                 successMessage.style.display = 'block';
                 contactForm.reset();
                 submitBtn.disabled = false;
                 submitBtn.innerHTML = originalText;
-            }, 1500);
+            })
+            .catch(() => {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalText;
+                alert('Something went wrong. Please try again or email us directly at hello@nueera.io');
+            });
         }
     });
 });
