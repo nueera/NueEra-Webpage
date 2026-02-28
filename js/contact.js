@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const formData = new FormData(contactForm);
             const body = new URLSearchParams(formData).toString();
 
-            fetch('/', {
+            fetch('/contact', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
                 body: body
