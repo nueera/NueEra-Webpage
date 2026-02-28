@@ -37,8 +37,15 @@ document.addEventListener('DOMContentLoaded', () => {
         const type = field.type;
         let error = '';
 
+        // Checkboxes: just check required
+        if (type === 'checkbox') {
+            return field.checked || !field.hasAttribute('required');
+        }
+
         // Remove existing error
         const formGroup = field.closest('.form-group');
+        if (!formGroup) return true; // no form-group wrapper, skip validation
+
         const existingError = formGroup.querySelector('.error-message');
         if (existingError) existingError.remove();
         formGroup.classList.remove('error');
@@ -68,8 +75,8 @@ document.addEventListener('DOMContentLoaded', () => {
         return true;
     };
 
-    // Attach Real-time Validation
-    const inputs = contactForm.querySelectorAll('input, textarea, select');
+    // Attach Real-time Validation (exclude hidden inputs)
+    const inputs = contactForm.querySelectorAll('input:not([type="hidden"]), textarea, select');
     inputs.forEach(input => {
         // Validate on blur (when leaving the field)
         input.addEventListener('blur', () => validateField(input));
