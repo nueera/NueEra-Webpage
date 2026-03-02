@@ -176,13 +176,21 @@ class NavigationManager {
             if (scrollPos >= s.top) current = s.id;
         }
 
-        this.navItems.forEach(link => {
+        const toggleActive = link => {
             link.classList.toggle('active', (() => {
                 const href = link.getAttribute('href') || '';
                 if (!href) return false;
                 if (href === '/' && !current) return true;
                 return current && href.includes(current);
             })());
+        };
+
+        this.navItems.forEach(toggleActive);
+
+        // also update mobile menu links (anchors inside list items)
+        this.mobileNavItems.forEach(li => {
+            const mlink = li.querySelector('a');
+            if (mlink) toggleActive(mlink);
         });
     }
 
