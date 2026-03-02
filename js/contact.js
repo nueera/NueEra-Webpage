@@ -37,8 +37,15 @@ document.addEventListener('DOMContentLoaded', () => {
         const type = field.type;
         let error = '';
 
+        // Checkboxes: just check required
+        if (type === 'checkbox') {
+            return field.checked || !field.hasAttribute('required');
+        }
+
         // Remove existing error
         const formGroup = field.closest('.form-group');
+        if (!formGroup) return true; // no form-group wrapper, skip validation
+
         const existingError = formGroup.querySelector('.error-message');
         if (existingError) existingError.remove();
         formGroup.classList.remove('error');
@@ -68,8 +75,8 @@ document.addEventListener('DOMContentLoaded', () => {
         return true;
     };
 
-    // Attach Real-time Validation
-    const inputs = contactForm.querySelectorAll('input, textarea, select');
+    // Attach Real-time Validation (exclude hidden inputs)
+    const inputs = contactForm.querySelectorAll('input:not([type="hidden"]), textarea, select');
     inputs.forEach(input => {
         // Validate on blur (when leaving the field)
         input.addEventListener('blur', () => validateField(input));
@@ -95,20 +102,33 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         if (isValid) {
-            // Simulate Submission
             const submitBtn = contactForm.querySelector('button[type="submit"]');
             const originalText = submitBtn.innerHTML;
-            
+
             submitBtn.disabled = true;
             submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
 
-            setTimeout(() => {
+            // Build form-encoded body for Netlify Forms
+            const formData = new FormData(contactForm);
+            const body = new URLSearchParams(formData).toString();
+
+            fetch('/contact', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: body
+            })
+            .then(() => {
                 contactForm.style.display = 'none';
                 successMessage.style.display = 'block';
                 contactForm.reset();
                 submitBtn.disabled = false;
                 submitBtn.innerHTML = originalText;
-            }, 1500);
+            })
+            .catch(() => {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalText;
+                alert('Something went wrong. Please try again or email us directly at hello@nueera.io');
+            });
         }
     });
 });
