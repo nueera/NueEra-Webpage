@@ -20,24 +20,62 @@
         </div>
     </div>
 
-    <nav class="navbar">
+    <nav class="navbar" role="navigation" aria-label="Main Navigation">
         <div class="container">
             <div class="nav-container">
-                <a class='logo' href='index.html'><div class="logo-icon"><img src="assets/images/logo.png" alt="NueEra Logo"></div></a>
-                <button class="mobile-menu-btn"><span></span><span></span><span></span></button>
-                <ul class="nav-links">
-                    <li><a href='index.html'>Home</a></li>
-                    <li><a href='about.html'>About</a></li>
-                    <li><a href='services.html'>Services</a></li>
-                    <li><a href='help-center.html'>Help Center</a></li>
-                    <li><a href='pricing.html'>Pricing</a></li>
-                    <li><a class='active' href='blog.html'>Blog</a></li>
-                    <li><a href='contact.html'>Contact</a></li>
-                </ul>
-                <div class="nav-cta"><button class="theme-toggle">🌙</button></div>
+                <div class="nav-left">
+                    <a aria-label='NueEra home' class='logo' href='index.html'>
+                        <div class="logo-icon"><img src="assets/images/logo.png" alt="NueEra Logo" loading="lazy"></div>
+                    </a>
+                </div>
+
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-controls="mobileMenu" aria-expanded="false" aria-label="Open menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <div class="nav-center">
+                    <ul class="nav-links" role="menubar" aria-label="Primary">
+                        <li role="none"><a href='index.html' role='menuitem'>Home</a></li>
+                        <li role="none"><a href='about.html' role='menuitem'>About</a></li>
+                        <li role="none"><a href='services.html' role='menuitem'>Services</a></li>
+                        <li role="none"><a href='pricing.html' role='menuitem'>Pricing</a></li>
+                        <li role="none"><a class='active' href='blog.html' role='menuitem'>Blog</a></li>
+                        <li role="none"><a href='help-center.html' role='menuitem'>Help Center</a></li>
+                        <li role="none"><a href='contact.html' role='menuitem'>Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="nav-right">
+                    <button class="theme-toggle" title="Toggle theme" aria-pressed="false">🌙</button>
+                </div>
             </div>
         </div>
     </nav>
+
+    <!-- Mobile full-screen menu overlay -->
+    <div id="mobileMenu" class="mobile-menu-overlay" aria-hidden="true">
+        <div class="mobile-menu-inner">
+            <div class="mobile-menu-top">
+                <a aria-label='NueEra home' class='logo mobile-logo' href='index.html'>
+                    <div class="logo-icon"><img src="assets/images/logo.png" alt="NueEra Logo" loading="lazy"></div>
+                </a>
+                <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Close menu"></button>
+            </div>
+            <nav class="mobile-nav" aria-label="Mobile primary">
+                <ul class="mobile-nav-links">
+                    <li><a href='index.html'>Home</a></li>
+                    <li><a href='about.html'>About</a></li>
+                    <li><a href='services.html'>Services</a></li>
+                    <li><a href='pricing.html'>Pricing</a></li>
+                    <li><a class='active' href='blog.html'>Blog</a></li>
+                    <li><a href='help-center.html'>Help Center</a></li>
+                    <li><a href='contact.html'>Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
 
     <section class="blog-hero">
         <div class="container">
