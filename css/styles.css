@@ -25,7 +25,7 @@
     --core-light: rgba(255,209,102,0.6);
 
     --text-primary: #0B0F14;
-    --text-secondary: #5e78a0;
+    --text-secondary: #333b45;;
     --text-muted: #6B7280;
 
     --border-soft: rgba(0,0,0,0.08);
@@ -114,7 +114,7 @@
     --orange-glow: rgba(255,154,31,0.45);
 
     --text-primary: #FFFFFF;
-    --text-secondary: #C9D1D9;
+    --text-secondary: #282b30;
     --text-muted: #8B949E;
 
     --border-soft: rgba(255,255,255,0.08);
@@ -391,7 +391,7 @@ p {
    ========================================== */
 
 img {
-    max-width: 100%;
+    max-width: 60%;
     height: auto;
     display: block;
 }
@@ -622,6 +622,22 @@ a:hover {
     filter: drop-shadow(0 4px 8px rgba(0, 168, 255, 0.15));
 }
 
+.logo-light {
+    display: block;
+}
+
+.logo-dark {
+    display: none;
+}
+
+[data-theme="dark"] .logo-light {
+    display: none;
+}
+
+[data-theme="dark"] .logo-dark {
+    display: block;
+}
+
 .logo:hover .logo-icon {
     background: transparent;
     border-color: transparent;
@@ -784,32 +800,48 @@ a:hover {
 }
 
 .mobile-menu-close {
-    background: transparent;
-    border: 2px solid rgba(255, 255, 255, 0.6);
-    color: #fff;
-    width: 40px;
-    height: 40px;
+    background: rgba(255, 255, 255, 0.95);
+    border: none;
+    width: 48px;
+    height: 48px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 50%;
+    border-radius: 12px;
     cursor: pointer;
-    font-size: 1.6rem;
-    font-weight: 700;
-    transition: transform 0.3s ease, border-color 0.3s ease;
-    text-indent: -9999px;
-    overflow: hidden;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    position: relative;
 }
+
 .mobile-menu-close:hover {
-    transform: scale(1.1);
-    border-color: #fff;
+    background: rgba(255, 255, 255, 1);
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
 }
+
+.mobile-menu-close:hover::before,
+.mobile-menu-close:hover::after {
+    background: #333;
+}
+
+.mobile-menu-close::before,
+.mobile-menu-close::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    background: #000;
+    transition: all 0.3s ease;
+}
+
 .mobile-menu-close::before {
-    content: '\00d7';
+    transform: rotate(45deg);
 }
-.mobile-menu-close:hover {
-    background: rgba(255, 255, 255, 0.2);
-    border-color: rgba(255, 255, 255, 0.3);
+
+.mobile-menu-close::after {
+    transform: rotate(-45deg);
 }
 
 .mobile-nav-links { 
@@ -1048,10 +1080,10 @@ a:hover {
     bottom: 0;
     z-index: 0;
     overflow: hidden;
-    background-image: url('../assets/images/hero1.png');
+    background-image: url('../assets/images/home.png');
     background-size: cover;
     background-position: center;
-    background-attachment: scroll;
+    background-attachment: fixed;
     background-repeat: no-repeat;
 }
 
@@ -1061,6 +1093,13 @@ a:hover {
 
 .hero-background::after {
     display: none;
+}
+
+/* Mobile: disable fixed background for better performance */
+@media (max-width: 768px) {
+    .hero-background {
+        background-attachment: scroll;
+    }
 }
 
 .glow-orb {
@@ -2343,6 +2382,16 @@ body.hero-animated .hero-stats {
     min-width: 0;
 }
 
+.footer-logo {
+    margin-bottom: 0.5rem;
+}
+
+.footer-logo-img {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+}
+
 .footer-section p.tagline {
     margin: 0.5rem 0 1rem;
     color: var(--text-secondary);
@@ -2460,21 +2509,23 @@ button:focus, .btn:focus, a:focus { outline: 3px solid rgba(0,168,255,0.12); out
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 8px;
-    background: transparent;
-    border: 1px solid transparent;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid var(--border-color);
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     color: var(--text-primary);
-    transition: var(--transition);
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .social-icon:hover {
     background: var(--accent-blue);
     color: white;
-    transform: translateY(-3px);
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 168, 255, 0.3);
+    border-color: var(--accent-blue);
 }
 
 .footer-bottom {
@@ -2851,6 +2902,13 @@ button:focus, .btn:focus, a:focus { outline: 3px solid rgba(0,168,255,0.12); out
     font-size: 5rem;
     color: var(--accent-blue);
     opacity: 0.15;
+}
+
+#who-we-are .section-visual {
+    background-image: url('../assets/images/about.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .services-section {
@@ -3787,6 +3845,25 @@ button:focus, .btn:focus, a:focus { outline: 3px solid rgba(0,168,255,0.12); out
         right: auto !important;
         bottom: auto !important;
         left: auto !important;
+        padding: 0.8rem !important;
+    }
+
+    .card-icon {
+        width: 40px !important;
+        height: 40px !important;
+        font-size: 1.2rem !important;
+    }
+
+    .card-inner {
+        gap: 0.8rem !important;
+    }
+
+    .card-title {
+        font-size: 0.9rem !important;
+    }
+
+    .card-desc {
+        font-size: 0.8rem !important;
     }
 
     .floating-card-1,
@@ -7405,6 +7482,27 @@ a { transition: color 160ms cubic-bezier(0,0,0.2,1); }
 .challenge-card {
     background: var(--bg-glass);
     border: 1px solid var(--border-soft);
+    min-height: 400px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.challenge-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.1) 100%);
+    z-index: 0;
+}
+
+.challenge-card > * {
+    position: relative;
+    z-index: 1;
 }
 
 .deliverables-card {
@@ -7683,6 +7781,10 @@ a { transition: color 160ms cubic-bezier(0,0,0.2,1); }
     .qualification-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
+    }
+
+    .challenge-card {
+        min-height: 300px;
     }
 
     .service-header {

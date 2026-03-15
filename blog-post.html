@@ -9,7 +9,7 @@
     <meta name="description" content="Why Your Digital Systems Cost More Than They Should — and how to fix it. NueEra blog.">
     <title>Blog: Digital Systems Cost - NueEra</title>
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <!-- Page Loader -->
@@ -28,7 +28,15 @@
                 <div class="nav-container">
                     <div class="nav-left">
                         <a aria-label='NueEra home' class='logo' href='index.html'>
-                            <div class="logo-icon"><img src="assets/images/logo.png" alt="NueEra Logo" loading="lazy"></div>
+                            <div class="logo-icon">
+                                <img src="assets/images/lightlogo.png" alt="NueEra Logo" class="logo-light" loading="eager">
+                                <img src="assets/images/darklogo.png" alt="NueEra Logo" class="logo-dark" loading="eager">
+                            </div>
+                            <span>NueEra</span
+                                <img src="assets/images/lightlogo.png" alt="NueEra Logo" class="logo-light" loading="eager">
+                                <img src="assets/images/darklogo.png" alt="NueEra Logo" class="logo-dark" loading="eager">
+                            </div>
+                            <span>NueEra</span>
                         </a>
                     </div>
 
@@ -281,14 +289,18 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>Nue<span class="footer-brand-accent">Era</span></h3>
+                    <div class="footer-logo">
+                        <img src="assets/images/lightlogo.png" alt="NueEra Logo" class="footer-logo-img logo-light">
+                        <img src="assets/images/darklogo.png" alt="NueEra Logo" class="footer-logo-img logo-dark">
+                    </div>
                     <p class="tagline">A New Era of Digital Growth</p>
                     <div class="social-icons">
-                        <a href="#" class="social-icon" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="social-icon" title="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-icon" title="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-icon" title="Facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon" title="Instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon" title="LinkedIn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
+
                 <div class="footer-section">
                     <h4>Quick Links</h4>
                     <ul>
@@ -298,6 +310,7 @@
                         <li><a href='contact.html'>Contact</a></li>
                     </ul>
                 </div>
+
                 <div class="footer-section">
                     <h4>Services</h4>
                     <ul>
@@ -307,15 +320,16 @@
                         <li><a href='services.html#design'>UI/UX Design</a></li>
                     </ul>
                 </div>
+
                 <div class="footer-section">
                     <h4>Get in Touch</h4>
                     <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Kothrud, Pune, Maharashtra</li>
                         <li>Email: <a href="mailto:hello@nueera.io">hello@nueera.io</a></li>
-                        <li>Phone: <a href="tel:+1234567890">+1 (234) 567-890</a></li>
-                        <li>WhatsApp: <a href="https://wa.me/1234567890">Chat with us</a></li>
                     </ul>
                 </div>
             </div>
+
             <div class="footer-bottom">
                 <p>&copy; 2026 NueEra. All rights reserved. | <a href='privacy.html'>Privacy Policy</a> | <a href='terms.html'>Terms of Service</a></p>
             </div>

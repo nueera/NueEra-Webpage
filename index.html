@@ -15,10 +15,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;900&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="preload" href="../cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style"
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style"
         onload="this.rel='stylesheet'">
     <noscript>
-        <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     </noscript>
     <style>
         @keyframes colorCycle {
@@ -52,7 +52,9 @@
                 <div class="nav-container">
                     <div class="nav-left">
                         <a aria-label='NueEra home' class='logo' href='index.html'>
-                            <div class="logo-icon"><img src="assets/images/logo.png" alt="NueEra Logo" loading="lazy">
+                            <div class="logo-icon">
+                                <img src="assets/images/lightlogo.png" alt="NueEra Logo" class="logo-light" loading="lazy">
+                                <img src="assets/images/darklogo.png" alt="NueEra Logo" class="logo-dark" loading="lazy">
                             </div>
                         </a>
                     </div>
@@ -91,9 +93,12 @@
             <div class="mobile-menu-inner">
                 <div class="mobile-menu-top">
                     <a aria-label='NueEra home' class='logo mobile-logo' href='index.html'>
-                        <div class="logo-icon"><img src="assets/images/logo.png" alt="NueEra Logo" loading="lazy"></div>
+                        <div class="logo-icon">
+                            <img src="assets/images/lightlogo.png" alt="NueEra Logo" class="logo-light" loading="lazy">
+                            <img src="assets/images/darklogo.png" alt="NueEra Logo" class="logo-dark" loading="lazy">
+                        </div>
                     </a>
-                    <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Close menu">Close</button>
+                    <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Close menu"></button>
                 </div>
                 <nav class="mobile-nav" aria-label="Mobile primary">
                     <ul class="mobile-nav-links">
@@ -115,7 +120,6 @@
         <!-- Hero Section -->
         <section class="hero" id="home">
             <div class="hero-background">
-                <img class="hero-bg-img" src="assets/images/home.png" alt="Digital Growth Background" aria-hidden="true">
                 <div class="glow-orb glow-orb-blue" aria-hidden="true"></div>
                 <div class="glow-orb glow-orb-orange" aria-hidden="true"></div>
                 <canvas id="hero-particles" aria-hidden="true"></canvas>
@@ -234,23 +238,17 @@
                     <p class="welcome-description">At NueEra, we don't just build digital solutions—we architect the future. Combining cutting-edge technology with innovative thinking, we transform ambitious ideas into industry-leading digital experiences that drive real results.</p>
                     <div class="welcome-grid">
                         <div class="welcome-item">
-                            <div class="welcome-item-icon gradient-icon-1">
-                                <i class="fas fa-bolt"></i>
-                            </div>
+                            
                             <h4>Lightning Innovation</h4>
                             <p>Speed meets excellence in every project we undertake</p>
                         </div>
                         <div class="welcome-item">
-                            <div class="welcome-item-icon gradient-icon-2">
-                                <i class="fas fa-shield-alt"></i>
-                            </div>
+                           
                             <h4>Fortress Security</h4>
                             <p>Your data protected with enterprise-grade standards</p>
                         </div>
                         <div class="welcome-item">
-                            <div class="welcome-item-icon gradient-icon-3">
-                                <i class="fas fa-chart-line"></i>
-                            </div>
+                           
                             <h4>Data Intelligence</h4>
                             <p>Every decision backed by powerful insights and analytics</p>
                         </div>
@@ -270,54 +268,42 @@
                 <div class="features-grid">
                     <div class="feature-card feature-card-1">
                         <div class="feature-card-bg"></div>
-                        <div class="feature-icon gradient-icon-blue">
-                            <i class="fas fa-rocket"></i>
-                        </div>
+                       
                         <h3>Lightning Fast</h3>
                         <p>Optimized performance with modern tech stack ensuring blazing-fast load times and seamless user experiences.</p>
                         <div class="feature-card-corner"></div>
                     </div>
                     <div class="feature-card feature-card-2">
                         <div class="feature-card-bg"></div>
-                        <div class="feature-icon gradient-icon-orange">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
+                       
                         <h3>Enterprise Security</h3>
                         <p>Bank-grade security protocols, SSL encryption, and compliance standards protecting your data 24/7.</p>
                         <div class="feature-card-corner"></div>
                     </div>
                     <div class="feature-card feature-card-3">
                         <div class="feature-card-bg"></div>
-                        <div class="feature-icon gradient-icon-cyan">
-                            <i class="fas fa-mobile-alt"></i>
-                        </div>
+                        
                         <h3>Mobile First</h3>
                         <p>Responsive design that looks perfect on all devices, from smartphones to desktops and everything in between.</p>
                         <div class="feature-card-corner"></div>
                     </div>
                     <div class="feature-card feature-card-4">
                         <div class="feature-card-bg"></div>
-                        <div class="feature-icon gradient-icon-purple">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
+                        
                         <h3>Data Driven</h3>
                         <p>Every decision backed by analytics and user insights, ensuring maximum ROI and conversion rates.</p>
                         <div class="feature-card-corner"></div>
                     </div>
                     <div class="feature-card feature-card-5">
                         <div class="feature-card-bg"></div>
-                        <div class="feature-icon gradient-icon-pink">
-                            <i class="fas fa-users"></i>
-                        </div>
+                       
                         <h3>Expert Team</h3>
                         <p>Dedicated professionals with years of experience in digital transformation and modern web technologies.</p>
                         <div class="feature-card-corner"></div>
                     </div>
                     <div class="feature-card feature-card-6">
                         <div class="feature-card-bg"></div>
-                        <div class="feature-icon gradient-icon-teal">
-                            <i class="fas fa-headset"></i>
-                        </div>
+                       
                         <h3>24/7 Support</h3>
                         <p>Round-the-clock technical support and maintenance to keep your digital presence running smoothly.</p>
                         <div class="feature-card-corner"></div>
@@ -349,17 +335,17 @@
                 </div>
                 <div class="approach-grid">
                     <div class="approach-item">
-                        <div class="approach-icon"><i class="fas fa-layer-group"></i></div>
+                        
                         <h4>Systems Over Features</h4>
                         <p>We build connected systems that scale, instead of isolated features that break over time.</p>
                     </div>
                     <div class="approach-item">
-                        <div class="approach-icon"><i class="fas fa-chart-pie"></i></div>
+                        
                         <h4>Measure, Then Move</h4>
                         <p>Every decision is guided by data and clear KPIs — no guesswork, only insight.</p>
                     </div>
                     <div class="approach-item">
-                        <div class="approach-icon"><i class="fas fa-shield-virus"></i></div>
+                        
                         <h4>Design for Reliability</h4>
                         <p>Performance, security, and stability are non-negotiable foundations of everything we build.</p>
                     </div>
@@ -380,9 +366,10 @@
                     <div class="service-card service-card-gradient-1">
                         <div class="service-card-bg"></div>
                         <div class="service-card-content">
-                            <div class="service-icon service-icon-blue"><i class="fas fa-rocket"></i></div>
-                            <h3>Website Launch System</h3>
-                            <p class="service-sub">What it solves: Fast, conversion-focused web launches for growth-stage companies.</p>
+                            
+                            <h3>Website And Mobile App Launch System</h3>
+                            <p class="service-sub">What it solves:
+Rapid, high-performance website and mobile app launches designed for growth-stage companies. We focus on speed, scalability, and conversion-optimized user experiences to help your business go live faster and perform better.</p>
                             <a class='btn btn-ghost' href='services.html#web'>👉 See more →</a>
                         </div>
                     </div>
@@ -391,9 +378,10 @@
                     <div class="service-card service-card-gradient-2">
                         <div class="service-card-bg"></div>
                         <div class="service-card-content">
-                            <div class="service-icon service-icon-orange"><i class="fas fa-chart-line"></i></div>
+                            
                             <h3>Growth Marketing System</h3>
-                            <p class="service-sub">What it solves: Predictable acquisition, measurable ROI, and scalable funnels.</p>
+                            <p class="service-sub">What it solves:
+Predictable customer acquisition with measurable ROI. We design scalable marketing funnels and data-driven campaigns that continuously generate leads, sales, and sustainable growth.</p>
                             <a class='btn btn-ghost' href='services.html#marketing'>👉 See more →</a>
                         </div>
                     </div>
@@ -402,9 +390,10 @@
                     <div class="service-card service-card-gradient-3">
                         <div class="service-card-bg"></div>
                         <div class="service-card-content">
-                            <div class="service-icon service-icon-purple"><i class="fas fa-cogs"></i></div>
-                            <h3>Tech Modernization System</h3>
-                            <p class="service-sub">What it solves: Legacy bottlenecks, performance issues, and inefficient processes.</p>
+                            
+                            <h3>Tech Automation System</h3>
+                            <p class="service-sub">What it solves:
+Eliminate legacy bottlenecks, improve system performance, and automate inefficient processes. Our automation solutions streamline operations and boost productivity across your business.</p>
                             <a class='btn btn-ghost' href='services.html#web'>👉 See more →</a>
                         </div>
                     </div>
@@ -412,22 +401,18 @@
                     <div class="service-card service-card-gradient-4">
                         <div class="service-card-bg"></div>
                         <div class="service-card-content">
-                            <div class="service-icon service-icon-cyan">
-                                <i class="fas fa-paint-brush"></i>
-                            </div>
+                            
                             <h3>UI/UX Design</h3>
-                            <p>Beautiful, intuitive interfaces that maximize engagement and conversion.</p>
+                            <p>We craft beautiful, intuitive, and user-centered interfaces that enhance user engagement and maximize conversion rates across websites and mobile applications.</p>
                         </div>
                     </div>
 
                     <div class="service-card service-card-gradient-5">
                         <div class="service-card-bg"></div>
                         <div class="service-card-content">
-                            <div class="service-icon service-icon-pink">
-                                <i class="fas fa-lightbulb"></i>
-                            </div>
+                            
                             <h3>Branding & Strategy</h3>
-                            <p>Distinctive brand identity and digital roadmaps built for long-term growth.</p>
+                            <p>Build a powerful brand identity and long-term digital strategy that differentiates your business and positions it for sustainable growth in competitive markets.</p>
                         </div>
                     </div>
                 </div>
@@ -706,12 +691,15 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>Nue<span class="footer-brand-accent">Era</span></h3>
+                    <div class="footer-logo">
+                        <img src="assets/images/lightlogo.png" alt="NueEra Logo" class="footer-logo-img logo-light">
+                        <img src="assets/images/darklogo.png" alt="NueEra Logo" class="footer-logo-img logo-dark">
+                    </div>
                     <p class="tagline">A New Era of Digital Growth</p>
                     <div class="social-icons">
-                        <a href="#" class="social-icon" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="social-icon" title="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-icon" title="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-icon" title="Facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon" title="Instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon" title="LinkedIn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
 
@@ -738,9 +726,8 @@
                 <div class="footer-section">
                     <h4>Get in Touch</h4>
                     <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Kothrud, Pune, Maharashtra</li>
                         <li>Email: <a href="mailto:hello@nueera.io">hello@nueera.io</a></li>
-                        <li>Phone: <a href="tel:+1234567890">+1 (234) 567-890</a></li>
-                        <li>WhatsApp: <a href="https://wa.me/1234567890">Chat with us</a></li>
                     </ul>
                 </div>
             </div>
