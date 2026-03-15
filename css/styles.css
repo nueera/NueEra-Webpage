@@ -2080,12 +2080,11 @@ body.hero-animated .hero-stats {
 }
 
 .gradient-future {
-    background: linear-gradient(135deg, #1f6aff 0%, #ffffff 50%, #ff9a1f 100%);
+    background: linear-gradient(135deg, #1f6aff 0%, #c7a3a3 50%, #ff9a1f 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
-
 .welcome-description {
     font-size: 1.1rem;
     color: var(--text-secondary);
