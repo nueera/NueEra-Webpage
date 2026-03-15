@@ -25,7 +25,7 @@
     --core-light: rgba(255,209,102,0.6);
 
     --text-primary: #0B0F14;
-    --text-secondary: #4B5563;
+    --text-secondary: #5e78a0;
     --text-muted: #6B7280;
 
     --border-soft: rgba(0,0,0,0.08);
@@ -548,9 +548,11 @@ a:hover {
     height: 80px;
     z-index: 2001;
     background: rgba(255,255,255,0.2);
+    background: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     border-bottom: 1px solid rgba(255,255,255,0.2);
+    border-bottom: 1px solid var(--border-color);
     box-shadow: 0 2px 30px rgba(0,0,0,0.15);
     padding: 0 32px;
     display: flex;
@@ -723,6 +725,7 @@ a:hover {
 
 /* Mobile hamburger button */
 .mobile-menu-btn { display:none; background: rgba(255,255,255,0.03); border-radius: 10px; padding:10px; border:1px solid transparent; }
+.mobile-menu-btn { display:none; background: var(--bg-mobile-btn); border-radius: 10px; padding:10px; border:1px solid transparent; }
 .mobile-menu-btn span { display:block; width:20px; height:2px; background:var(--accent-blue); margin:4px 0; transition: transform 0.35s cubic-bezier(0.4,0,0.2,1), opacity 0.2s; }
 .mobile-menu-btn.open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
 .mobile-menu-btn.open span:nth-child(2) { opacity:0; }
@@ -933,9 +936,11 @@ a:hover {
     justify-content: center;
     align-items: center;
     background: rgba(255, 255, 255, 0.05);
+    background: var(--bg-mobile-btn);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--border-mobile-btn);
     border-radius: 12px;
     cursor: pointer;
     width: 48px;
@@ -948,6 +953,7 @@ a:hover {
 
 .mobile-menu-btn:hover {
     background: rgba(255, 255, 255, 0.1);
+    background: var(--bg-tertiary);
     border-color: var(--accent-blue);
     box-shadow: 0 4px 12px rgba(0, 168, 255, 0.15);
 }
@@ -1045,7 +1051,7 @@ a:hover {
     background-image: url('../assets/images/hero1.png');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+    background-attachment: scroll;
     background-repeat: no-repeat;
 }
 
@@ -1219,14 +1225,25 @@ a:hover {
 .hero-background { position: absolute; inset: 0; overflow: hidden; z-index: 0; }
 .hero-bg-img { position: absolute; top: -10%; left: 0; width: 100%; height: 120%; object-fit: cover; object-position: center; transform: translateZ(0); will-change: transform; }
 
-/* Reduce expensive effects on small screens */
+/* Mobile responsive hero background fixes */
 @media (max-width: 768px) {
+    .hero-background {
+        background-attachment: scroll; /* Fixed attachment doesn't work well on mobile */
+    }
+    .hero-bg-img {
+        top: 0; /* Remove negative offset on mobile */
+        height: 100%; /* Fit within viewport */
+        object-position: center top; /* Better positioning for mobile screens */
+    }
     .glow-orb { filter: blur(18px); opacity: 0.22; }
     .card-glow { filter: blur(10px); }
     .navbar.scrolled { box-shadow: 0 6px 18px rgba(2,6,23,0.18); }
 }
 
 @media (max-width: 480px) {
+    .hero-bg-img {
+        object-position: center center; /* Center the image on very small screens */
+    }
     .glow-orb { display: none; }
     .card-glow { display: none; }
 }
@@ -4879,7 +4896,8 @@ button:focus, .btn:focus, a:focus { outline: 3px solid rgba(0,168,255,0.12); out
 }
 
 .page-header p {
-    color: var(--text-secondary);
+    color: #ffffff;
+   
     font-size: 1.1rem;
 }
 
@@ -6025,14 +6043,18 @@ input:checked + .slider:before {
     -webkit-backdrop-filter: blur(18px);
     background: rgba(255,255,255,0.2);
     border-bottom: 1px solid rgba(255,255,255,0.2);
+    background: rgba(255, 255, 255, 0.85);
+    border-bottom: 1px solid var(--border-color);
     transition: box-shadow 240ms ease-out, background 240ms ease-out;
 }
 [data-theme="dark"] .navbar {
     background: rgba(10,14,39,0.45);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 .navbar.scrolled {
     box-shadow: var(--shadow-soft);
     background: rgba(255,255,255,0.85);
+    background: rgba(255, 255, 255, 0.95);
 }
 
 [data-theme="dark"] .navbar.scrolled {
