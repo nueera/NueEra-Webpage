@@ -5860,41 +5860,66 @@ input:checked + .slider:before {
    ========================================== */
 
 .team-card {
-    background: linear-gradient(135deg, rgba(0, 168, 255, 0.03), rgba(255, 149, 0, 0.03));
+    background: linear-gradient(135deg, rgba(0,168,255,0.03), rgba(255,149,0,0.03));
     backdrop-filter: blur(14px);
-    border: 1px solid transparent;
+
     border-radius: 16px;
-    padding: 12px;
-    text-align: center;
-    transition: transform 360ms var(--ease-out), box-shadow 360ms var(--ease-out), opacity 360ms var(--ease-out);
-    position: relative;
-    overflow: hidden;
+    padding: 14px;
+    width: 100%;
+
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
+
+    position: relative;
+    overflow: hidden;
+
     box-shadow: var(--shadow-soft);
-    width: 100%;
-    animation: floatCard 6s ease-in-out infinite;
+
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
+/* gradient border */
 .team-card::before {
     content: "";
     position: absolute;
     inset: -1px;
     border-radius: 16px;
     padding: 2px;
-    background: linear-gradient(135deg, #0038a8 0%, var(--blue-primary) 35%, var(--orange-primary) 65%, #e65100 100%);
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+
+    background: linear-gradient(
+        135deg,
+        #0038a8 0%,
+        var(--blue-primary) 35%,
+        var(--orange-primary) 65%,
+        #e65100 100%
+    );
+
+    -webkit-mask: linear-gradient(#fff 0 0) content-box,
+                   linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
-    opacity: 0.95;
-    transition: opacity 360ms var(--ease-out), box-shadow 360ms var(--ease-out);
+
+    opacity: 0.7;
     pointer-events: none;
     z-index: 1;
-    box-shadow: 
-        0 0 20px rgba(31, 106, 255, 0.3),
-        0 0 40px rgba(255, 154, 31, 0.2),
-        inset 0 0 20px rgba(31, 106, 255, 0.1);
+
+    transition: opacity 0.35s ease, box-shadow 0.35s ease;
+}
+
+/* hover animation */
+.team-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.15);
+}
+
+/* glow increase on hover */
+.team-card:hover::before {
+    opacity: 1;
+    box-shadow:
+        0 0 20px rgba(31,106,255,0.35),
+        0 0 40px rgba(255,154,31,0.25);
 }
 
 /* Stagger team card animations */
@@ -5918,24 +5943,36 @@ input:checked + .slider:before {
 
 .team-avatar {
     width: 100%;
-    height: 340px; /* Fixed height for uniform grid */
-    height: auto;
+    height: 300px; /* slightly smaller for better layout */
     border-radius: 12px;
-    background: linear-gradient(135deg, var(--bg-tertiary), var(--bg-secondary));
-    margin-bottom: 1.25rem;
-    display: block;
+
+    /* image display */
     object-fit: cover;
     object-position: center;
-    object-fit: contain;
-    font-size: 1rem;
-    color: var(--accent-blue);
+    display: block;
+
+    /* styling */
+    background: linear-gradient(135deg, var(--bg-tertiary), var(--bg-secondary));
+    margin-bottom: 8px; /* reduced gap */
     border: none;
     position: relative;
     z-index: 1;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.06);
-    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.4s ease;
+
+    /* effects */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
+/* optional hover effect */
+.team-avatar:hover {
+    transform: scale(1.02);
+    box-shadow: 0 14px 30px rgba(0,0,0,0.12);
+}
+/* hover effect *
+.team-avatar:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 16px 40px rgba(0,0,0,0.12);
+}
 .team-card:hover .team-avatar {
     box-shadow: 0 12px 32px rgba(0,0,0,0.15);
     transform: scale(1.02);
@@ -7067,15 +7104,36 @@ html, body {
 .team-grid .team-card-slide { min-width: 0; width: 100%; }
 
 .team-card {
-    padding: 18px;
-    border-radius: 14px;
-    align-items: stretch;
+    text-align: center;
+    overflow: hidden;
+     background: linear-gradient(135deg, rgba(0,168,255,0.03), rgba(255,149,0,0.03));
+    backdrop-filter: blur(14px);
+    border-radius: 16px;
+
+    padding: 14px 14px 18px;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+
+    box-shadow: var(--shadow-soft);
+
+    /* remove large gaps */
+    gap: 6px;
+
+    transition: transform .35s ease, box-shadow .35s ease;
 }
 
 .team-card .team-card-content { padding: 0 6px 12px; display: flex; flex-direction: column; align-items: center; }
 
 .team-card h3 { 
-    margin: 0 0 6px; 
+    margin: 4px 0 4px;
     font-size: 1.25rem; 
     color: #4D8DFF;
     font-weight: 800; 
@@ -7106,11 +7164,11 @@ html, body {
     .team-grid { grid-template-columns: 1fr; gap: 18px; }
 
     .team-card {
-        padding: 12px; /* Reduce outer padding on mobile */
+        padding: 5px; /* Reduce outer padding on mobile */
     }
 
     .team-avatar {
-        height: 280px; /* Make image shorter on mobile for more compact cards */
+        height: 300px; /* Make image shorter on mobile for more compact cards */
         height: auto;
     }
 
