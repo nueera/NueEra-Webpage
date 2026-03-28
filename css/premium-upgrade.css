@@ -1928,3 +1928,196 @@ body[data-theme='dark'] .floating-theme-toggle {
     bottom: max(72px, env(safe-area-inset-bottom)) !important;
   }
 }
+
+/* ==========================================
+   INDEX PREMIUM INFORMATION + 3D SHOWCASE
+   ========================================== */
+.strategic-architecture {
+  position: relative;
+}
+
+.architecture-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.architecture-card {
+  padding: 1.3rem;
+  border-radius: 18px;
+  border: 1px solid rgba(31, 106, 255, 0.16);
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.95), rgba(241, 248, 255, 0.9));
+}
+
+html[data-theme='dark'] .architecture-card {
+  border-color: rgba(116, 160, 255, 0.22);
+  background: linear-gradient(160deg, rgba(17, 27, 51, 0.92), rgba(10, 17, 34, 0.92));
+}
+
+.architecture-kicker {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--accent-blue);
+  margin-bottom: 0.5rem;
+}
+
+.architecture-card h3 {
+  margin-bottom: 0.5rem;
+}
+
+.architecture-card ul {
+  margin: 0.8rem 0 0;
+  padding-left: 1.1rem;
+}
+
+.architecture-card li {
+  margin-bottom: 0.35rem;
+  color: var(--text-secondary);
+}
+
+.premium-3d-showcase {
+  position: relative;
+  overflow: hidden;
+}
+
+.showcase-layout {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 1.2rem;
+  align-items: center;
+}
+
+.showcase-copy {
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.95), rgba(240, 248, 255, 0.92));
+  border: 1px solid rgba(31, 106, 255, 0.16);
+  border-radius: 22px;
+  padding: 1.4rem;
+}
+
+html[data-theme='dark'] .showcase-copy {
+  background: linear-gradient(160deg, rgba(16, 26, 50, 0.93), rgba(10, 17, 34, 0.92));
+  border-color: rgba(116, 160, 255, 0.26);
+}
+
+.showcase-metrics {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.6rem;
+}
+
+.showcase-metric {
+  border: 1px solid rgba(31, 106, 255, 0.16);
+  border-radius: 14px;
+  padding: 0.7rem 0.6rem;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+html[data-theme='dark'] .showcase-metric {
+  border-color: rgba(116, 160, 255, 0.2);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.showcase-metric strong {
+  display: block;
+  font-size: 1.1rem;
+  color: var(--accent-blue);
+}
+
+.showcase-metric span {
+  display: block;
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+}
+
+.showcase-visual {
+  position: relative;
+  min-height: 320px;
+  display: grid;
+  place-items: center;
+}
+
+.showcase-cube-wrap {
+  perspective: 900px;
+}
+
+.showcase-cube {
+  position: relative;
+  width: 170px;
+  height: 170px;
+  transform-style: preserve-3d;
+  animation: cubeSpin 14s linear infinite;
+}
+
+.cube-face {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  border-radius: 18px;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: linear-gradient(145deg, rgba(31, 106, 255, 0.75), rgba(255, 154, 31, 0.65));
+  box-shadow: inset 0 0 26px rgba(255, 255, 255, 0.14), 0 12px 24px rgba(6, 16, 34, 0.28);
+}
+
+.cube-front { transform: translateZ(85px); }
+.cube-back { transform: rotateY(180deg) translateZ(85px); }
+.cube-right { transform: rotateY(90deg) translateZ(85px); }
+.cube-left { transform: rotateY(-90deg) translateZ(85px); }
+.cube-top { transform: rotateX(90deg) translateZ(85px); }
+.cube-bottom { transform: rotateX(-90deg) translateZ(85px); }
+
+.showcase-glow {
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(31, 106, 255, 0.35), rgba(255, 154, 31, 0.2), transparent 70%);
+  filter: blur(20px);
+  z-index: -1;
+}
+
+@keyframes cubeSpin {
+  0% { transform: rotateX(-18deg) rotateY(0deg); }
+  100% { transform: rotateX(-18deg) rotateY(360deg); }
+}
+
+@media (max-width: 1024px) {
+  .architecture-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .showcase-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .showcase-copy {
+    padding: 1.1rem;
+  }
+
+  .showcase-metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .showcase-visual {
+    min-height: 260px;
+  }
+
+  .showcase-cube {
+    width: 138px;
+    height: 138px;
+  }
+
+  .cube-front { transform: translateZ(69px); }
+  .cube-back { transform: rotateY(180deg) translateZ(69px); }
+  .cube-right { transform: rotateY(90deg) translateZ(69px); }
+  .cube-left { transform: rotateY(-90deg) translateZ(69px); }
+  .cube-top { transform: rotateX(90deg) translateZ(69px); }
+  .cube-bottom { transform: rotateX(-90deg) translateZ(69px); }
+}
