@@ -9941,3 +9941,84 @@ img, video, canvas, svg {
   50% { color: #ff9a1f; }
   100% { color: #1f6aff; }
 }
+
+/* ==========================================
+   MOBILE NAV SQUARE CARDS + VISIBLE TEXT (ULTIMATE OVERRIDE)
+   ========================================== */
+@media (max-width: 1024px) {
+  html body .mobile-menu-overlay .mobile-nav-links,
+  html body .mobile-nav-links {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 8px !important;
+    padding: 8px !important;
+  }
+
+  html body .mobile-menu-overlay .mobile-nav-links li,
+  html body .mobile-nav-links li {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+  }
+
+  html body .mobile-menu-overlay .mobile-nav-links a,
+  html body .mobile-nav-links a {
+    display: grid !important;
+    place-items: center !important;
+    width: 100% !important;
+    aspect-ratio: 1 / 1 !important;
+    min-height: 0 !important;
+    padding: 10px !important;
+    text-align: center !important;
+    border-radius: 14px !important;
+    font-size: clamp(0.82rem, 2.6vw, 0.96rem) !important;
+    line-height: 1.2 !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.015em !important;
+    word-break: normal !important;
+    overflow-wrap: anywhere !important;
+
+    background-image: none !important;
+    background: rgba(20, 31, 56, 0.58) !important;
+    -webkit-background-clip: border-box !important;
+    background-clip: border-box !important;
+    -webkit-text-fill-color: initial !important;
+    color: #2f7cff !important;
+    border: 1px solid rgba(67, 131, 255, 0.36) !important;
+
+    animation: mobileNavColorCycleStrong 2.8s linear infinite !important;
+  }
+
+  html[data-theme='light'] body .mobile-menu-overlay .mobile-nav-links a,
+  html[data-theme='light'] body .mobile-nav-links a {
+    background: rgba(255, 255, 255, 0.98) !important;
+    border: 1px solid rgba(27, 91, 214, 0.22) !important;
+  }
+
+  html body .mobile-menu-overlay .mobile-nav-links a.active,
+  html body .mobile-nav-links a.active {
+    border-color: rgba(255, 154, 31, 0.65) !important;
+    box-shadow: 0 10px 18px rgba(8, 18, 38, 0.28) !important;
+    animation-duration: 2.1s !important;
+  }
+}
+
+@media (max-width: 520px) {
+  html body .mobile-menu-overlay .mobile-nav-links,
+  html body .mobile-nav-links {
+    gap: 7px !important;
+    padding: 7px !important;
+  }
+
+  html body .mobile-menu-overlay .mobile-nav-links a,
+  html body .mobile-nav-links a {
+    border-radius: 12px !important;
+    font-size: clamp(0.78rem, 2.9vw, 0.9rem) !important;
+  }
+}
+
+@keyframes mobileNavColorCycleStrong {
+  0% { color: #1f6aff; }
+  50% { color: #ff9a1f; }
+  100% { color: #1f6aff; }
+}
