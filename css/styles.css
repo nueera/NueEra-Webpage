@@ -9472,8 +9472,12 @@ body.reduce-animations * {
 @media (max-width: 1024px) {
   .mobile-nav-links a::before,
   .mobile-nav-links a::after,
+  .mobile-nav-links li::before,
+  .mobile-nav-links li::after,
   .mobile-menu-overlay .mobile-nav-links a::before,
-  .mobile-menu-overlay .mobile-nav-links a::after {
+  .mobile-menu-overlay .mobile-nav-links a::after,
+  .mobile-menu-overlay .mobile-nav-links li::before,
+  .mobile-menu-overlay .mobile-nav-links li::after {
     content: none !important;
     display: none !important;
     width: 0 !important;
@@ -9496,4 +9500,46 @@ body.reduce-animations * {
     min-height: 54px !important;
     padding: 12px 10px !important;
   }
+
+  .mobile-nav-links a i,
+  .mobile-nav-links a svg,
+  .mobile-menu-overlay i,
+  .mobile-menu-overlay svg,
+  .mobile-menu-overlay .mobile-nav-links a i,
+  .mobile-menu-overlay .mobile-nav-links a svg {
+    display: none !important;
+    opacity: 0 !important;
+    width: 0 !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .mobile-menu-overlay .profile-btn {
+    display: none !important;
+  }
+}
+
+/* Footer social icons -> text-only labels */
+.footer .social-icon i {
+  display: none !important;
+}
+
+.footer .social-icon {
+  width: auto !important;
+  height: auto !important;
+  min-width: 0 !important;
+  border-radius: 10px !important;
+  padding: 8px 10px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 0 !important;
+}
+
+.footer .social-icon::after {
+  content: attr(title);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-primary);
 }
