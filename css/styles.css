@@ -10153,3 +10153,99 @@ img, video, canvas, svg {
     font-size: clamp(0.96rem, 4vw, 1.12rem) !important;
   }
 }
+
+/* ==========================================
+   MOBILE MENU HEADER FIX (LOGO + CLOSE BUTTON)
+   ========================================== */
+@media (max-width: 1024px) {
+  html body .mobile-menu-overlay .mobile-menu-top {
+    display: grid !important;
+    grid-template-columns: 48px 1fr 48px !important;
+    align-items: center !important;
+    gap: 8px !important;
+    min-height: 72px !important;
+    padding: 6px 2px 10px !important;
+    position: relative !important;
+    z-index: 8 !important;
+  }
+
+  html body .mobile-menu-overlay .mobile-theme-switch {
+    grid-column: 1 !important;
+    justify-self: start !important;
+    width: 46px !important;
+    height: 46px !important;
+    border-radius: 12px !important;
+    z-index: 9 !important;
+  }
+
+  html body .mobile-menu-overlay .mobile-logo {
+    grid-column: 2 !important;
+    justify-self: center !important;
+    margin: 0 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    max-width: 170px !important;
+    z-index: 9 !important;
+  }
+
+  html body .mobile-menu-overlay .mobile-logo .logo-icon {
+    width: auto !important;
+    height: 52px !important;
+    min-height: 52px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    border: 0 !important;
+    padding: 0 !important;
+  }
+
+  html body .mobile-menu-overlay .mobile-logo .logo-icon img,
+  html body .mobile-menu-overlay .mobile-logo img {
+    display: block !important;
+    height: 48px !important;
+    width: auto !important;
+    max-width: 160px !important;
+    object-fit: contain !important;
+  }
+
+  html body .mobile-menu-overlay .mobile-menu-close {
+    grid-column: 3 !important;
+    justify-self: end !important;
+    width: 46px !important;
+    height: 46px !important;
+    border-radius: 12px !important;
+    position: relative !important;
+    right: 0 !important;
+    left: auto !important;
+    z-index: 10 !important;
+    background: rgba(255, 255, 255, 0.96) !important;
+    border: 1px solid rgba(12, 26, 52, 0.18) !important;
+    box-shadow: 0 8px 16px rgba(6, 16, 34, 0.24) !important;
+  }
+
+  html[data-theme='dark'] body .mobile-menu-overlay .mobile-menu-close {
+    background: rgba(18, 29, 54, 0.92) !important;
+    border-color: rgba(116, 160, 255, 0.28) !important;
+  }
+
+  html body .mobile-menu-overlay .mobile-menu-close::before,
+  html body .mobile-menu-overlay .mobile-menu-close::after {
+    width: 20px !important;
+    height: 2.5px !important;
+    border-radius: 2px !important;
+    background: #0f2240 !important;
+  }
+
+  html[data-theme='dark'] body .mobile-menu-overlay .mobile-menu-close::before,
+  html[data-theme='dark'] body .mobile-menu-overlay .mobile-menu-close::after {
+    background: #f3f7ff !important;
+  }
+
+  /* keep header clean */
+  html body .mobile-menu-overlay .mobile-nav-action-btn {
+    display: none !important;
+  }
+}
