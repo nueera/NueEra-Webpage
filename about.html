@@ -1,553 +1,935 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" data-theme="light">
-
-
-<!-- Mirrored from nueera.netlify.app/about by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 22 Feb 2026 06:29:13 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="About NueEra - Our vision, mission, and values for digital transformation.">
+  <!-- Mirrored from nueera.netlify.app/about by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 22 Feb 2026 06:29:13 GMT -->
+  <!-- Added by HTTrack --><meta
+    http-equiv="content-type"
+    content="text/html;charset=UTF-8"
+  /><!-- /Added by HTTrack -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="About NueEra - Our vision, mission, and values for digital transformation."
+    />
     <title>About NueEra - A New Era of Digital Growth</title>
-    <link rel="icon" type="image/png" href="assets/images/logo.png">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
+    <link rel="icon" type="image/png" href="assets/images/logo.png" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/premium-upgrade.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
 
-<body>
+  <body>
     <!-- Page Loader -->
     <div id="page-loader">
-        <div class="loader-content">
-            <div class="loader-circle"></div>
-            <img src="assets/images/loader.png" alt="Loading..." class="loader-logo">
-        </div>
+      <div class="loader-content">
+        <div class="loader-circle"></div>
+        <img
+          src="assets/images/loader.png"
+          alt="Loading..."
+          class="loader-logo"
+        />
+      </div>
     </div>
 
     <header>
-        <!-- Navigation -->
-        <nav class="navbar" role="navigation" aria-label="Main Navigation">
-            <div class="container">
-                <div class="nav-container">
-                    <div class="nav-left">
-                        <a aria-label='NueEra home' class='logo' href='index.html'>
-                            <div class="logo-icon">
-                                <img src="assets/images/lightlogo.png" alt="NueEra Logo" class="logo-light" loading="lazy">
-                                <img src="assets/images/darklogo.png" alt="NueEra Logo" class="logo-dark" loading="lazy">
-                            </div>
-                        </a>
-                    </div>
-
-                    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-controls="mobileMenu" aria-expanded="false" aria-label="Open menu">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
-
-                    <div class="nav-center">
-                        <ul class="nav-links" role="menubar" aria-label="Primary">
-                            <li role="none"><a href='index.html' role='menuitem'>Home</a></li>
-                            <li role="none"><a class='active' href='about.html' role='menuitem'>About</a></li>
-                            <li role="none"><a href='services.html' role='menuitem'>Services</a></li>
-                            <li role="none"><a href='pricing.html' role='menuitem'>Pricing</a></li>
-                            <li role="none"><a href='blog.html' role='menuitem'>Blog</a></li>
-                            <li role="none"><a href='help-center.html' role='menuitem'>Help Center</a></li>
-                            <li role="none"><a href='contact.html' role='menuitem'>Contact</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="nav-right">
-                        <button class="theme-toggle" title="Toggle theme" aria-pressed="false">🌙</button>
-                    </div>
+      <!-- Navigation -->
+      <nav class="navbar" role="navigation" aria-label="Main Navigation">
+        <div class="container">
+          <div class="nav-container">
+            <div class="nav-left">
+              <a aria-label="NueEra home" class="logo" href="index.html">
+                <div class="logo-icon">
+                  <img
+                    src="assets/images/lightlogo.png"
+                    alt="NueEra Logo"
+                    class="logo-light"
+                    loading="lazy"
+                  />
+                  <img
+                    src="assets/images/darklogo.png"
+                    alt="NueEra Logo"
+                    class="logo-dark"
+                    loading="lazy"
+                  />
                 </div>
+              </a>
             </div>
-        </nav>
 
-        <!-- Mobile full-screen menu overlay -->
-        <div id="mobileMenu" class="mobile-menu-overlay" aria-hidden="true">
-            <div class="mobile-menu-inner">
-                <div class="mobile-menu-top">
-                    <a aria-label='NueEra home' class='logo mobile-logo' href='index.html'>
-                        <div class="logo-icon">
-                            <img src="assets/images/lightlogo.png" alt="NueEra Logo" class="logo-light" loading="lazy">
-                            <img src="assets/images/darklogo.png" alt="NueEra Logo" class="logo-dark" loading="lazy">
-                        </div>
-                    </a>
-                    <button class="theme-toggle mobile-theme-switch" type="button" aria-label="Toggle theme"></button>
-                    <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Close menu"></button>
-                </div>
-                <nav class="mobile-nav" aria-label="Mobile primary">
-                    <ul class="mobile-nav-links">
-                        <li><a href='index.html'>Home</a></li>
-                        <li><a href='about.html'>About</a></li>
-                        <li><a href='services.html'>Services</a></li>
-                        <li><a href='pricing.html'>Pricing</a></li>
-                        <li><a href='blog.html'>Blog</a></li>
-                        <li><a href='help-center.html'>Help Center</a></li>
-                        <li><a href='contact.html'>Contact</a></li>
-                    </ul>
-                </nav>
+            <button
+              class="mobile-menu-btn"
+              id="mobileMenuBtn"
+              aria-controls="mobileMenu"
+              aria-expanded="false"
+              aria-label="Open menu"
+            >
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+
+            <div class="nav-center">
+              <ul class="nav-links" role="menubar" aria-label="Primary">
+                <li role="none">
+                  <a href="index.html" role="menuitem">Home</a>
+                </li>
+                <li role="none">
+                  <a class="active" href="about.html" role="menuitem">About</a>
+                </li>
+                <li role="none">
+                  <a href="services.html" role="menuitem">Services</a>
+                </li>
+                <li role="none">
+                  <a href="pricing.html" role="menuitem">Pricing</a>
+                </li>
+                <li role="none">
+                  <a href="blog.html" role="menuitem">Blog</a>
+                </li>
+                <li role="none">
+                  <a href="help-center.html" role="menuitem">Help Center</a>
+                </li>
+                <li role="none">
+                  <a href="contact.html" role="menuitem">Contact</a>
+                </li>
+              </ul>
             </div>
+
+            <div class="nav-right">
+              <button
+                class="theme-toggle"
+                title="Toggle theme"
+                aria-pressed="false"
+              ></button>
+            </div>
+          </div>
         </div>
+      </nav>
+
+      <!-- Mobile full-screen menu overlay -->
+      <div id="mobileMenu" class="mobile-menu-overlay" aria-hidden="true">
+        <div class="mobile-menu-inner">
+          <div class="mobile-menu-top">
+            <a
+              aria-label="NueEra home"
+              class="logo mobile-logo"
+              href="index.html"
+            >
+              <div class="logo-icon">
+                <img
+                  src="assets/images/lightlogo.png"
+                  alt="NueEra Logo"
+                  class="logo-light"
+                  loading="lazy"
+                />
+                <img
+                  src="assets/images/darklogo.png"
+                  alt="NueEra Logo"
+                  class="logo-dark"
+                  loading="lazy"
+                />
+              </div>
+            </a>
+            <button
+              class="theme-toggle mobile-theme-switch"
+              type="button"
+              aria-label="Toggle theme"
+            ></button>
+            <button
+              class="mobile-menu-close"
+              id="mobileMenuClose"
+              aria-label="Close menu"
+            ></button>
+          </div>
+          <nav class="mobile-nav" aria-label="Mobile primary">
+            <ul class="mobile-nav-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="pricing.html">Pricing</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="help-center.html">Help Center</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
     </header>
 
     <main id="main">
-
-    <!-- Page Header -->
-    <section class="page-header" style="padding-bottom: 2rem;">
+      <!-- Page Header -->
+      <section class="page-header" style="padding-bottom: 2rem">
         <div class="container">
-            <h1 style="margin-bottom: 1rem; animation: fadeUp 600ms ease-out both;">Building the future of digital business</h1>
-            <p style="max-width: 700px; margin: 0 auto 1.5rem; font-size: 1.2rem; animation: fadeUp 600ms ease-out 100ms both;">We are a collective of engineers, designers, and strategists partnering with ambitious businesses to build digital systems that scale.</p>
-            <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 2rem; text-transform: uppercase; letter-spacing: 1px; animation: fadeUp 600ms ease-out 200ms both;">Strategy · Design · Engineering</p>
+          <h1
+            style="margin-bottom: 1rem; animation: fadeUp 600ms ease-out both"
+          >
+            Building the future of digital business
+          </h1>
+          <p
+            style="
+              max-width: 700px;
+              margin: 0 auto 1.5rem;
+              font-size: 1.2rem;
+              animation: fadeUp 600ms ease-out 100ms both;
+            "
+          >
+            We are a collective of engineers, designers, and strategists
+            partnering with ambitious businesses to build digital systems that
+            scale.
+          </p>
+          <p
+            style="
+              font-size: 0.9rem;
+              color: var(--text-muted);
+              margin-bottom: 2rem;
+              text-transform: uppercase;
+              letter-spacing: 1px;
+              animation: fadeUp 600ms ease-out 200ms both;
+            "
+          >
+            Strategy · Design · Engineering
+          </p>
         </div>
-    </section>
+      </section>
 
-    <!-- Philosophy Section -->
-    <section class="section" style="padding-top: 0; padding-bottom: 4rem;">
-        <div class="container" style="text-align: center; max-width: 800px; animation: fadeIn 600ms ease-out both;">
-            <h2 style="font-size: 2rem; margin-bottom: 1rem;">Our Philosophy</h2>
-            <p style="font-size: 1.1rem; margin-bottom: 1rem;">We believe technology should be an asset, not an expense. Every line of code, every pixel, and every strategy we deploy is designed to drive measurable business growth.</p>
+      <!-- Philosophy Section -->
+      <section class="section" style="padding-top: 0; padding-bottom: 4rem">
+        <div
+          class="container"
+          style="
+            text-align: center;
+            max-width: 800px;
+            animation: fadeIn 600ms ease-out both;
+          "
+        >
+          <h2 style="font-size: 2rem; margin-bottom: 1rem">Our Philosophy</h2>
+          <p style="font-size: 1.1rem; margin-bottom: 1rem">
+            We believe technology should be an asset, not an expense. Every line
+            of code, every pixel, and every strategy we deploy is designed to
+            drive measurable business growth.
+          </p>
         </div>
-    </section>
+      </section>
 
-    <!-- Who We Are -->
-    <section class="section" id="who-we-are">
+      <!-- Who We Are -->
+      <section class="section" id="who-we-are">
         <div class="container">
-            <div class="section-grid">
-                <div class="section-content reveal">
-                    <h2>Who We Are</h2>
-                    <p class="section-subtitle">Building systems, not just digital products.</p>
-                    <p>NueEra is a premium digital agency built on a simple belief: technology should be beautiful,
-                        strategic, and transformative. We are a collective of engineers, designers, and strategists
-                        partnering with ambitious businesses to build digital systems that scale.</p>
-                    <p>Our work goes beyond launching websites or applications — we design connected digital ecosystems
-                        that evolve with your business and support long-term growth. Every solution we deliver is
-                        grounded in clarity, performance, and measurable impact.</p>
-                </div>
-                <div class="section-visual reveal">
-                    <div class="abstract-shape">
-                        <i class="fas fa-fingerprint"></i>
-                    </div>
-                </div>
+          <div class="section-grid">
+            <div class="section-content reveal">
+              <h2>Who We Are</h2>
+              <p class="section-subtitle">
+                Building systems, not just digital products.
+              </p>
+              <p>
+                NueEra is a premium digital agency built on a simple belief:
+                technology should be beautiful, strategic, and transformative.
+                We are a collective of engineers, designers, and strategists
+                partnering with ambitious businesses to build digital systems
+                that scale.
+              </p>
+              <p>
+                Our work goes beyond launching websites or applications — we
+                design connected digital ecosystems that evolve with your
+                business and support long-term growth. Every solution we deliver
+                is grounded in clarity, performance, and measurable impact.
+              </p>
             </div>
+            <div class="section-visual reveal">
+              <div class="abstract-shape">
+                <i class="fas fa-fingerprint"></i>
+              </div>
+            </div>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <!-- Stats Section -->
-    <section class="stats-section">
+      <!-- Stats Section -->
+      <section class="stats-section">
         <div class="container">
-            <div class="section-header reveal">
-                <h2>Our Impact</h2>
-                <p>Measured by outcomes, trusted by partners.</p>
+          <div class="section-header reveal">
+            <h2>Our Impact</h2>
+            <p>Measured by outcomes, trusted by partners.</p>
+          </div>
+          <div class="stats-grid">
+            <div class="stat-card reveal">
+              <div class="stat-number">2+</div>
+              <div class="stat-microcopy">
+                Built through consistent delivery
+              </div>
+              <div class="stat-label">Years of Innovation</div>
+              <p
+                class="stat-desc"
+                style="
+                  font-size: 0.85rem;
+                  color: var(--text-secondary);
+                  margin-top: 0.5rem;
+                "
+              >
+                Delivering modern, future-ready digital solutions across
+                industries.
+              </p>
             </div>
-            <div class="stats-grid">
-                <div class="stat-card reveal">
-                    <div class="stat-number">2+</div>
-                    <div class="stat-microcopy">Built through consistent delivery</div>
-                    <div class="stat-label">Years of Innovation</div>
-                    <p class="stat-desc" style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.5rem;">
-                        Delivering modern, future-ready digital solutions across industries.</p>
-                </div>
-                <div class="stat-card reveal">
-                    <div class="stat-number">4+</div>
-                    <div class="stat-microcopy">Across multiple markets</div>
-                    <div class="stat-label">Global Partners</div>
-                    <p class="stat-desc" style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.5rem;">
-                        Trusted by startups, scaleups, and enterprise teams worldwide.</p>
-                </div>
-                <div class="stat-card reveal">
-                    <div class="stat-number">16+</div>
-                    <div class="stat-microcopy">Focused on performance & scale</div>
-                    <div class="stat-label">Projects Delivered</div>
-                    <p class="stat-desc" style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.5rem;">
-                        High-performance systems designed to scale and endure.</p>
-                </div>
-                
+            <div class="stat-card reveal">
+              <div class="stat-number">4+</div>
+              <div class="stat-microcopy">Across multiple markets</div>
+              <div class="stat-label">Global Partners</div>
+              <p
+                class="stat-desc"
+                style="
+                  font-size: 0.85rem;
+                  color: var(--text-secondary);
+                  margin-top: 0.5rem;
+                "
+              >
+                Trusted by startups, scaleups, and enterprise teams worldwide.
+              </p>
             </div>
+            <div class="stat-card reveal">
+              <div class="stat-number">16+</div>
+              <div class="stat-microcopy">Focused on performance & scale</div>
+              <div class="stat-label">Projects Delivered</div>
+              <p
+                class="stat-desc"
+                style="
+                  font-size: 0.85rem;
+                  color: var(--text-secondary);
+                  margin-top: 0.5rem;
+                "
+              >
+                High-performance systems designed to scale and endure.
+              </p>
+            </div>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <!-- Vision & Mission -->
-    <section class="section" id="vision-mission">
+      <!-- Vision & Mission -->
+      <section class="section" id="vision-mission">
         <div class="container">
-            <div class="vm-grid">
-                <div class="vm-card vision-card reveal">
-                    <span class="vm-microcopy">Where we're headed.</span>
-                    <h3>Our Vision</h3>
-                    <p>To be a catalyst for digital transformation across industries — empowering businesses of all
-                        sizes to compete, scale, and thrive globally through innovative technology and strategic
-                        insight.</p>
-                </div>
-                <div class="vm-card mission-card reveal">
-                    <span class="vm-microcopy">How we get there.</span>
-                    <h3>Our Mission</h3>
-                    <p>We deliver premium digital solutions that drive measurable business results. As true
-                        collaborators, we combine technical excellence with strategic thinking to create systems that
-                        are reliable, scalable, and built for the future.</p>
-                </div>
+          <div class="vm-grid">
+            <div class="vm-card vision-card reveal">
+              <span class="vm-microcopy">Where we're headed.</span>
+              <h3>Our Vision</h3>
+              <p>
+                To be a catalyst for digital transformation across industries —
+                empowering businesses of all sizes to compete, scale, and thrive
+                globally through innovative technology and strategic insight.
+              </p>
             </div>
+            <div class="vm-card mission-card reveal">
+              <span class="vm-microcopy">How we get there.</span>
+              <h3>Our Mission</h3>
+              <p>
+                We deliver premium digital solutions that drive measurable
+                business results. As true collaborators, we combine technical
+                excellence with strategic thinking to create systems that are
+                reliable, scalable, and built for the future.
+              </p>
+            </div>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <!-- Our Journey Timeline -->
-    <section class="section">
+      <!-- Our Journey Timeline -->
+      <section class="section">
         <div class="container">
-            <div class="section-header reveal">
-                <h2>Our Journey</h2>
-                <p>Progress shaped by intention, not chance.</p>
-            </div>
-            <div class="journey-timeline">
-                <!-- Timeline Progress Line -->
-                <div class="timeline-progress-line"></div>
-                
-                <!-- Item 1 -->
-                <div class="journey-item reveal">
-                    <div class="journey-marker">
-                        <div class="marker-ring"></div>
-                        <div class="marker-number">01</div>
-                    </div>
-                    <div class="journey-content">
-                        <div class="content-header">
-                            <span class="journey-year">2025</span>
-                            <span class="journey-tag">Laying the foundation</span>
-                        </div>
-                        <h3>The Beginning</h3>
-                        <p>NueEra started with a laptop, a coffee shop table, and a clear goal: make digital transformation accessible, effective, and growth-focused for modern businesses.</p>
-                        <div class="journey-milestone-badge">Milestone: Founded</div>
-                    </div>
-                </div>
-                
-                <!-- Item 2 -->
-                <div class="journey-item reveal">
-                    <div class="journey-marker">
-                        <div class="marker-ring"></div>
-                        <div class="marker-number">02</div>
-                    </div>
-                    <div class="journey-content">
-                        <div class="content-header">
-                            <span class="journey-year">2026</span>
-                            <span class="journey-tag">Scaling capabilities</span>
-                        </div>
-                        <h3>Expanding Horizons</h3>
-                        <p>We launched our mobile and enterprise development capabilities, partnering with organizations that required scalable, high-performance digital systems.</p>
-                        <div class="journey-milestone-badge">Milestone: Scaled</div>
-                    </div>
-                </div>
-                
-                <!-- Item 3 -->
-                <div class="journey-item reveal">
-                    <div class="journey-marker">
-                        <div class="marker-ring"></div>
-                        <div class="marker-number">03</div>
-                    </div>
-                    <div class="journey-content">
-                        <div class="content-header">
-                            <span class="journey-year">The Road Ahead</span>
-                            <span class="journey-tag">Expanding impact</span>
-                        </div>
-                        <h3>Global Reach</h3>
-                        <p>As technology evolves, so does NueEra. Our journey continues as we expand our ecosystem, explore emerging technologies, and help businesses grow in an increasingly digital world.</p>
-                        <div class="journey-milestone-badge">Vision: Global</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+          <div class="section-header reveal">
+            <h2>Our Journey</h2>
+            <p>Progress shaped by intention, not chance.</p>
+          </div>
+          <div class="journey-timeline">
+            <!-- Timeline Progress Line -->
+            <div class="timeline-progress-line"></div>
 
-    <!-- Our Culture -->
-    <section class="section" id="culture">
+            <!-- Item 1 -->
+            <div class="journey-item reveal">
+              <div class="journey-marker">
+                <div class="marker-ring"></div>
+                <div class="marker-number">01</div>
+              </div>
+              <div class="journey-content">
+                <div class="content-header">
+                  <span class="journey-year">2025</span>
+                  <span class="journey-tag">Laying the foundation</span>
+                </div>
+                <h3>The Beginning</h3>
+                <p>
+                  NueEra started with a laptop, a coffee shop table, and a clear
+                  goal: make digital transformation accessible, effective, and
+                  growth-focused for modern businesses.
+                </p>
+                <div class="journey-milestone-badge">Milestone: Founded</div>
+              </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="journey-item reveal">
+              <div class="journey-marker">
+                <div class="marker-ring"></div>
+                <div class="marker-number">02</div>
+              </div>
+              <div class="journey-content">
+                <div class="content-header">
+                  <span class="journey-year">2026</span>
+                  <span class="journey-tag">Scaling capabilities</span>
+                </div>
+                <h3>Expanding Horizons</h3>
+                <p>
+                  We launched our mobile and enterprise development
+                  capabilities, partnering with organizations that required
+                  scalable, high-performance digital systems.
+                </p>
+                <div class="journey-milestone-badge">Milestone: Scaled</div>
+              </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="journey-item reveal">
+              <div class="journey-marker">
+                <div class="marker-ring"></div>
+                <div class="marker-number">03</div>
+              </div>
+              <div class="journey-content">
+                <div class="content-header">
+                  <span class="journey-year">The Road Ahead</span>
+                  <span class="journey-tag">Expanding impact</span>
+                </div>
+                <h3>Global Reach</h3>
+                <p>
+                  As technology evolves, so does NueEra. Our journey continues
+                  as we expand our ecosystem, explore emerging technologies, and
+                  help businesses grow in an increasingly digital world.
+                </p>
+                <div class="journey-milestone-badge">Vision: Global</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Our Culture -->
+      <section class="section" id="culture">
         <div class="container">
-            <div class="section-header reveal">
-                <h2>Our Culture</h2>
-                <p>The principles behind every decision.</p>
+          <div class="section-header reveal">
+            <h2>Our Culture</h2>
+            <p>The principles behind every decision.</p>
+          </div>
+
+          <div class="why-grid">
+            <div class="value-card reveal">
+              <div class="why-icon"><i class="fas fa-search"></i></div>
+              <h3>Curiosity</h3>
+              <p>
+                We ask tough questions and aren't satisfied with surface-level
+                solutions. We dig deeper to understand the real problem.
+              </p>
             </div>
 
-            <div class="why-grid">
-                <div class="value-card reveal">
-                    <div class="why-icon"><i class="fas fa-search"></i></div>
-                    <h3>Curiosity</h3>
-                    <p>We ask tough questions and aren't satisfied with surface-level solutions. We dig deeper to
-                        understand the real problem.</p>
-                </div>
-
-                <div class="value-card reveal">
-                    <div class="why-icon"><i class="fas fa-users"></i></div>
-                    <h3>Collaboration</h3>
-                    <p>Our best ideas come from diverse perspectives. We listen, challenge respectfully, and build
-                        together.</p>
-                </div>
-
-                <div class="value-card reveal">
-                    <div class="why-icon"><i class="fas fa-trophy"></i></div>
-                    <h3>Excellence</h3>
-                    <p>We take pride in our work. We care about every detail and every outcome, because it reflects on
-                        our clients.</p>
-                </div>
-
-                <div class="value-card reveal">
-                    <div class="why-icon"><i class="fas fa-handshake"></i></div>
-                    <h3>Integrity</h3>
-                    <p>We're honest about capabilities and limitations. Our word is our bond with clients and team.</p>
-                </div>
+            <div class="value-card reveal">
+              <div class="why-icon"><i class="fas fa-users"></i></div>
+              <h3>Collaboration</h3>
+              <p>
+                Our best ideas come from diverse perspectives. We listen,
+                challenge respectfully, and build together.
+              </p>
             </div>
+
+            <div class="value-card reveal">
+              <div class="why-icon"><i class="fas fa-trophy"></i></div>
+              <h3>Excellence</h3>
+              <p>
+                We take pride in our work. We care about every detail and every
+                outcome, because it reflects on our clients.
+              </p>
+            </div>
+
+            <div class="value-card reveal">
+              <div class="why-icon"><i class="fas fa-handshake"></i></div>
+              <h3>Integrity</h3>
+              <p>
+                We're honest about capabilities and limitations. Our word is our
+                bond with clients and team.
+              </p>
+            </div>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <!-- Why Join NueEra (Careers / Benefits) -->
-    <section class="section" id="careers">
+      <!-- Why Join NueEra (Careers / Benefits) -->
+      <section class="section" id="careers">
         <div class="container">
-            <div class="section-header reveal">
-                <h2>Why Join NueEra?</h2>
-                <p>We build great things, and we take care of our builders</p>
+          <div class="section-header reveal">
+            <h2>Why Join NueEra?</h2>
+            <p>We build great things, and we take care of our builders</p>
+          </div>
+
+          <div class="benefits-grid">
+            <div class="benefit-card reveal">
+              <div class="benefit-icon">
+                <i class="fas fa-laptop-house"></i>
+              </div>
+              <h3>Remote First</h3>
+              <p>
+                Work from anywhere. We care about your output, not your
+                location.
+              </p>
             </div>
 
-            <div class="benefits-grid">
-                <div class="benefit-card reveal">
-                    <div class="benefit-icon"><i class="fas fa-laptop-house"></i></div>
-                    <h3>Remote First</h3>
-                    <p>Work from anywhere. We care about your output, not your location.</p>
-                </div>
-
-                <div class="benefit-card reveal">
-                    <div class="benefit-icon"><i class="fas fa-heartbeat"></i></div>
-                    <h3>Health & Wellness</h3>
-                    <p>Comprehensive health coverage and wellness stipends for you and your family.</p>
-                </div>
-
-                <div class="benefit-card reveal">
-                    <div class="benefit-icon"><i class="fas fa-book-reader"></i></div>
-                    <h3>Continuous Learning</h3>
-                    <p>Annual budget for courses, conferences, and books to keep you sharp.</p>
-                </div>
-
-                <div class="benefit-card reveal">
-                    <div class="benefit-icon"><i class="fas fa-clock"></i></div>
-                    <h3>Flexible Hours</h3>
-                    <p>Manage your own schedule. We respect your time and work-life balance.</p>
-                </div>
+            <div class="benefit-card reveal">
+              <div class="benefit-icon"><i class="fas fa-heartbeat"></i></div>
+              <h3>Health & Wellness</h3>
+              <p>
+                Comprehensive health coverage and wellness stipends for you and
+                your family.
+              </p>
             </div>
+
+            <div class="benefit-card reveal">
+              <div class="benefit-icon"><i class="fas fa-book-reader"></i></div>
+              <h3>Continuous Learning</h3>
+              <p>
+                Annual budget for courses, conferences, and books to keep you
+                sharp.
+              </p>
+            </div>
+
+            <div class="benefit-card reveal">
+              <div class="benefit-icon"><i class="fas fa-clock"></i></div>
+              <h3>Flexible Hours</h3>
+              <p>
+                Manage your own schedule. We respect your time and work-life
+                balance.
+              </p>
+            </div>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <!-- Team Preview Section -->
-    <section class="section" id="team-slider-section" style="position: relative; overflow: hidden;">
-        <div class="container" style="position: relative; z-index: 1;">
-            <div class="section-header reveal">
-                <h2>The Minds Behind NueEra</h2>
-                <p>A collective of specialists leading strategy, technology, creativity, and growth.</p>
+      <!-- Team Preview Section -->
+      <section
+        class="section"
+        id="team-slider-section"
+        style="position: relative; overflow: hidden"
+      >
+        <div class="container" style="position: relative; z-index: 1">
+          <div class="section-header reveal">
+            <h2>The Minds Behind NueEra</h2>
+            <p>
+              A collective of specialists leading strategy, technology,
+              creativity, and growth.
+            </p>
+          </div>
+
+          <div class="team-grid" role="list" aria-label="Team members">
+            <div class="team-card reveal" role="listitem" tabindex="0">
+              <img
+                src="assets/images/profiles/nil_shinde.jpg"
+                srcset="assets/images/profiles/nil_shinde.jpeg 800w"
+                sizes="(max-width: 600px) 90vw, (max-width: 992px) 45vw, 350px"
+                alt="Nil Shinde"
+                class="team-avatar"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="team-card-content">
+                <h3>Nil Shinde</h3>
+                <span class="team-role"
+                  >Founder &amp; Business Growth Lead</span
+                >
+                <p class="team-bio">
+                  Nil drives business strategy and growth initiatives at NueEra.
+                  He focuses on aligning technology with business goals,
+                  ensuring clarity, scalability, and long-term value for
+                  clients.
+                </p>
+                <div class="team-tags">
+                  <span class="team-tag">Strategy</span>
+                  <span class="team-tag">Business Growth</span>
+                  <span class="team-tag">Client Direction</span>
+                </div>
+              </div>
             </div>
 
-            <div class="team-grid" role="list" aria-label="Team members">
-                <div class="team-card reveal" role="listitem" tabindex="0">
-                    <img src="assets/images/profiles/nil_shinde.jpg" srcset="assets/images/profiles/nil_shinde.jpeg 800w" sizes="(max-width: 600px) 90vw, (max-width: 992px) 45vw, 350px" alt="Nil Shinde" class="team-avatar" loading="lazy" decoding="async">
-                    <div class="team-card-content">
-                        <h3>Nil Shinde</h3>
-                        <span class="team-role">Founder &amp; Business Growth Lead</span>
-                        <p class="team-bio">Nil drives business strategy and growth initiatives at NueEra. He focuses on aligning technology with business goals, ensuring clarity, scalability, and long-term value for clients.</p>
-                        <div class="team-tags">
-                            <span class="team-tag">Strategy</span>
-                            <span class="team-tag">Business Growth</span>
-                            <span class="team-tag">Client Direction</span>
-                        </div>
-                    </div>
+            <div class="team-card reveal" role="listitem" tabindex="0">
+              <img
+                src="assets/images/profiles/dipanshu_awandkar.jpg"
+                srcset="assets/images/profiles/dipanshu_awandkar.jpeg 800w"
+                sizes="(max-width: 600px) 90vw, (max-width: 992px) 45vw, 350px"
+                alt="Dipanshu Awandkar"
+                class="team-avatar"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="team-card-content">
+                <h3>Dipanshu Awandkar</h3>
+                <span class="team-role">Co-Founder &amp; Technology Lead</span>
+                <p class="team-bio">
+                  Dipanshu leads all technical decisions at NueEra. With deep
+                  experience in scalable systems, he focuses on clean
+                  architecture, performance, and sustainable engineering
+                  practices.
+                </p>
+                <div class="team-tags">
+                  <span class="team-tag">Architecture</span>
+                  <span class="team-tag">Full-Stack Development</span>
+                  <span class="team-tag">DevOps</span>
                 </div>
-
-                <div class="team-card reveal" role="listitem" tabindex="0">
-                    <img src="assets/images/profiles/dipanshu_awandkar.jpg" srcset="assets/images/profiles/dipanshu_awandkar.jpeg 800w" sizes="(max-width: 600px) 90vw, (max-width: 992px) 45vw, 350px" alt="Dipanshu Awandkar" class="team-avatar" loading="lazy" decoding="async">
-                    <div class="team-card-content">
-                        <h3>Dipanshu Awandkar</h3>
-                        <span class="team-role">Co-Founder &amp; Technology Lead</span>
-                        <p class="team-bio">Dipanshu leads all technical decisions at NueEra. With deep experience in scalable systems, he focuses on clean architecture, performance, and sustainable engineering practices.</p>
-                        <div class="team-tags">
-                            <span class="team-tag">Architecture</span>
-                            <span class="team-tag">Full-Stack Development</span>
-                            <span class="team-tag">DevOps</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="team-card reveal" role="listitem" tabindex="0">
-                    <img src="assets/images/profiles/vikrant_salunke.jpg" srcset="assets/images/profiles/vikrant_salunke.jpeg 800w" sizes="(max-width: 600px) 90vw, (max-width: 992px) 45vw, 350px" alt="Vikrant Salunke" class="team-avatar" loading="lazy" decoding="async">
-                    <div class="team-card-content">
-                        <h3>Vikrant Salunke</h3>
-                        <span class="team-role"> Quality Assurance Lead</span>
-                        <p class="team-bio">Vikrant ensures product quality and reliability across all projects. He focuses on rigorous testing, validation processes, and delivering stable, high-performance solutions.</p>
-                        <div class="team-tags">
-                            <span class="team-tag">Quality Assurance</span>
-                            <span class="team-tag">Testing Strategy</span>
-                            <span class="team-tag">Process Validation</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="team-card reveal" role="listitem" tabindex="0">
-                    <img src="assets/images/profiles/tisha_dalavi.jpg" srcset="assets/images/profiles/tisha_dalavi.jpeg 800w" sizes="(max-width: 600px) 90vw, (max-width: 992px) 45vw, 350px" alt="Tisha Dalavi" class="team-avatar" loading="lazy" decoding="async">
-                    <div class="team-card-content">
-                        <h3>Tisha Dalvi</h3>
-                        <span class="team-role">UI/UX Design Lead</span>
-                        <p class="team-bio">Tisha leads user experience and interface design. She creates intuitive, research-driven designs that balance usability, aesthetics, and real business needs.</p>
-                        <div class="team-tags">
-                            <span class="team-tag">UX Strategy</span>
-                            <span class="team-tag">UI Design</span>
-                            <span class="team-tag">User Research</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="team-card reveal" role="listitem" tabindex="0">
-                    <img src="assets/images/profiles/saurabh_shinde.jpg" srcset="assets/images/profiles/saurabh_shinde.jpeg 800w" sizes="(max-width: 600px) 90vw, (max-width: 992px) 45vw, 350px" alt="Saurabh Shinde" class="team-avatar" loading="lazy" decoding="async">
-                    <div class="team-card-content">
-                        <h3>Saurabh Shinde</h3>
-                        <span class="team-role">Marketing &amp; Growth Lead</span>
-                        <p class="team-bio">Saurabh drives brand growth and visibility. He focuses on storytelling, content, and digital strategies that connect NueEra with the right audience.</p>
-                        <div class="team-tags">
-                            <span class="team-tag">Growth Strategy</span>
-                            <span class="team-tag">Content Marketing</span>
-                            <span class="team-tag">Brand Building</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="team-card reveal" role="listitem" tabindex="0">
-                    <img src="assets/images/profiles/sandhya_shinde.jpg" srcset="assets/images/profiles/sandhya_shinde.jpeg 800w" sizes="(max-width: 600px) 90vw, (max-width: 992px) 45vw, 350px" alt="Sandhya Shinde" class="team-avatar" loading="lazy" decoding="async">
-                    <div class="team-card-content">
-                        <h3>Sandhya Shinde</h3>
-                        <span class="team-role">Sales &amp; Client Partnerships Lead</span>
-                        <p class="team-bio">Sandhya builds strong client relationships by understanding business needs and aligning them with the right digital solutions.</p>
-                        <div class="team-tags">
-                            <span class="team-tag">Sales Strategy</span>
-                            <span class="team-tag">Client Relationships</span>
-                            <span class="team-tag">Partnerships</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="team-card reveal" role="listitem" tabindex="0">
-                    <img src="assets/images/profiles/ravi_kambale.jpg" srcset="assets/images/profiles/ravi_kambale.jpeg 800w" sizes="(max-width: 600px) 90vw, (max-width: 992px) 45vw, 350px" alt="Ravi Kamble" class="team-avatar" loading="lazy" decoding="async">
-                    <div class="team-card-content">
-                        <h3>Ravi Kamble</h3>
-                        <span class="team-role">Operations &amp; Delivery Lead</span>
-                        <p class="team-bio">Ravi ensures smooth project execution across teams. He manages workflows, timelines, and resources to deliver projects efficiently and on schedule.</p>
-                        <div class="team-tags">
-                            <span class="team-tag">Operations Management</span>
-                            <span class="team-tag">Efficiency</span>
-                            <span class="team-tag">Agile Delivery</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="team-card reveal" role="listitem" tabindex="0">
-                    <img src="assets/images/profiles/vaibhav_nijampurkar.jpg" srcset="assets/images/profiles/vaibhav_nijampurkar.jpeg 800w" sizes="(max-width: 600px) 90vw, (max-width: 992px) 45vw, 350px" alt="Vaibhav Nijampurkar" class="team-avatar" loading="lazy" decoding="async">
-                    <div class="team-card-content">
-                        <h3>Vaibhav Nijampurkar</h3>
-                        <span class="team-role">Process &amp; Business Development Lead</span>
-                        <p class="team-bio">Vaibhav focuses on improving internal processes and identifying new business opportunities that help clients and teams scale effectively.</p>
-                        <div class="team-tags">
-                            <span class="team-tag">Process Design</span>
-                            <span class="team-tag">Business Development</span>
-                            <span class="team-tag">Client Solutions</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="team-card reveal" role="listitem" tabindex="0">
-                    <img src="assets/images/profiles/vivek_tethgure.jpg" srcset="assets/images/profiles/vivek_tethgure.jpeg 800w" sizes="(max-width: 600px) 90vw, (max-width: 992px) 45vw, 350px" alt="Vivek Tethgure" class="team-avatar" loading="lazy" decoding="async">
-                    <div class="team-card-content">
-                        <h3>Vivek Tethgure</h3>
-                        <span class="team-role">Process Optimization Lead</span>
-                        <p class="team-bio">Vivek works on improving operational efficiency and consistency. He focuses on refining workflows and ensuring sustainable performance across projects.</p>
-                        <div class="team-tags">
-                            <span class="team-tag">Process Optimization</span>
-                            <span class="team-tag">Operational Strategy</span>
-                            <span class="team-tag">Quality Control</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="team-card reveal" role="listitem" tabindex="0">
-                    <img src="assets/images/profiles/nagesh_banger.jpg" srcset="assets/images/profiles/nagesh_banger.jpeg 800w" sizes="(max-width: 600px) 90vw, (max-width: 992px) 45vw, 350px" alt="Nagesh Banger" class="team-avatar" loading="lazy" decoding="async">
-                    <div class="team-card-content">
-                        <h3>Nagesh Banger</h3>
-                        <span class="team-role">Motion Graphics &amp; Video Content Lead</span>
-                        <p class="team-bio">Nagesh brings ideas to life through animation and video. He creates engaging visual content that strengthens brand communication and storytelling.</p>
-                        <div class="team-tags">
-                            <span class="team-tag">Animation</span>
-                            <span class="team-tag">Video Production</span>
-                            <span class="team-tag">Visual Storytelling</span>
-                        </div>
-                    </div>
-                </div>
+              </div>
             </div>
+
+            <div class="team-card reveal" role="listitem" tabindex="0">
+              <img
+                src="assets/images/profiles/vikrant_salunke.jpg"
+                srcset="assets/images/profiles/vikrant_salunke.jpeg 800w"
+                sizes="(max-width: 600px) 90vw, (max-width: 992px) 45vw, 350px"
+                alt="Vikrant Salunke"
+                class="team-avatar"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="team-card-content">
+                <h3>Vikrant Salunke</h3>
+                <span class="team-role"> Quality Assurance Lead</span>
+                <p class="team-bio">
+                  Vikrant ensures product quality and reliability across all
+                  projects. He focuses on rigorous testing, validation
+                  processes, and delivering stable, high-performance solutions.
+                </p>
+                <div class="team-tags">
+                  <span class="team-tag">Quality Assurance</span>
+                  <span class="team-tag">Testing Strategy</span>
+                  <span class="team-tag">Process Validation</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="team-card reveal" role="listitem" tabindex="0">
+              <img
+                src="assets/images/profiles/tisha_dalavi.jpg"
+                srcset="assets/images/profiles/tisha_dalavi.jpeg 800w"
+                sizes="(max-width: 600px) 90vw, (max-width: 992px) 45vw, 350px"
+                alt="Tisha Dalavi"
+                class="team-avatar"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="team-card-content">
+                <h3>Tisha Dalvi</h3>
+                <span class="team-role">UI/UX Design Lead</span>
+                <p class="team-bio">
+                  Tisha leads user experience and interface design. She creates
+                  intuitive, research-driven designs that balance usability,
+                  aesthetics, and real business needs.
+                </p>
+                <div class="team-tags">
+                  <span class="team-tag">UX Strategy</span>
+                  <span class="team-tag">UI Design</span>
+                  <span class="team-tag">User Research</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="team-card reveal" role="listitem" tabindex="0">
+              <img
+                src="assets/images/profiles/saurabh_shinde.jpg"
+                srcset="assets/images/profiles/saurabh_shinde.jpeg 800w"
+                sizes="(max-width: 600px) 90vw, (max-width: 992px) 45vw, 350px"
+                alt="Saurabh Shinde"
+                class="team-avatar"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="team-card-content">
+                <h3>Saurabh Shinde</h3>
+                <span class="team-role">Marketing &amp; Growth Lead</span>
+                <p class="team-bio">
+                  Saurabh drives brand growth and visibility. He focuses on
+                  storytelling, content, and digital strategies that connect
+                  NueEra with the right audience.
+                </p>
+                <div class="team-tags">
+                  <span class="team-tag">Growth Strategy</span>
+                  <span class="team-tag">Content Marketing</span>
+                  <span class="team-tag">Brand Building</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="team-card reveal" role="listitem" tabindex="0">
+              <img
+                src="assets/images/profiles/sandhya_shinde.jpg"
+                srcset="assets/images/profiles/sandhya_shinde.jpeg 800w"
+                sizes="(max-width: 600px) 90vw, (max-width: 992px) 45vw, 350px"
+                alt="Sandhya Shinde"
+                class="team-avatar"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="team-card-content">
+                <h3>Sandhya Shinde</h3>
+                <span class="team-role"
+                  >Sales &amp; Client Partnerships Lead</span
+                >
+                <p class="team-bio">
+                  Sandhya builds strong client relationships by understanding
+                  business needs and aligning them with the right digital
+                  solutions.
+                </p>
+                <div class="team-tags">
+                  <span class="team-tag">Sales Strategy</span>
+                  <span class="team-tag">Client Relationships</span>
+                  <span class="team-tag">Partnerships</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="team-card reveal" role="listitem" tabindex="0">
+  <img
+    src="assets\images\profiles\mrunmayee_Jawale.jpeg"
+    srcset="assets\images\profiles\mrunmayee_Jawale.jpeg 800w"
+    sizes="(max-width: 600px) 90vw, (max-width: 992px) 45vw, 350px"
+    alt="Mrunmayee Jawale"
+    class="team-avatar"
+    loading="lazy"
+    decoding="async"
+  />
+  <div class="team-card-content">
+    <h3>Mrunmayee Jawale</h3>
+    <span class="team-role">Product Strategy Lead</span>
+    <p class="team-bio">
+      Mrunmayee leads product vision and strategy at NueEra, ensuring every solution aligns with business goals and user needs. She focuses on roadmap planning, feature prioritization, and building scalable digital products.
+    </p>
+    <div class="team-tags">
+      <span class="team-tag">Product Strategy</span>
+      <span class="team-tag">Roadmapping</span>
+      <span class="team-tag">User-Centric Thinking</span>
+    </div>
+  </div>
+</div>
+
+            <div class="team-card reveal" role="listitem" tabindex="0">
+              <img
+                src="assets/images/profiles/ravi_kambale.jpg"
+                srcset="assets/images/profiles/ravi_kambale.jpeg 800w"
+                sizes="(max-width: 600px) 90vw, (max-width: 992px) 45vw, 350px"
+                alt="Ravi Kamble"
+                class="team-avatar"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="team-card-content">
+                <h3>Ravi Kamble</h3>
+                <span class="team-role">Operations &amp; Delivery Lead</span>
+                <p class="team-bio">
+                  Ravi ensures smooth project execution across teams. He manages
+                  workflows, timelines, and resources to deliver projects
+                  efficiently and on schedule.
+                </p>
+                <div class="team-tags">
+                  <span class="team-tag">Operations Management</span>
+                  <span class="team-tag">Efficiency</span>
+                  <span class="team-tag">Agile Delivery</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="team-card reveal" role="listitem" tabindex="0">
+              <img
+                src="assets/images/profiles/vaibhav_nijampurkar.jpg"
+                srcset="assets/images/profiles/vaibhav_nijampurkar.jpeg 800w"
+                sizes="(max-width: 600px) 90vw, (max-width: 992px) 45vw, 350px"
+                alt="Vaibhav Nijampurkar"
+                class="team-avatar"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="team-card-content">
+                <h3>Vaibhav Nijampurkar</h3>
+                <span class="team-role"
+                  >Process &amp; Business Development Lead</span
+                >
+                <p class="team-bio">
+                  Vaibhav focuses on improving internal processes and
+                  identifying new business opportunities that help clients and
+                  teams scale effectively.
+                </p>
+                <div class="team-tags">
+                  <span class="team-tag">Process Design</span>
+                  <span class="team-tag">Business Development</span>
+                  <span class="team-tag">Client Solutions</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="team-card reveal" role="listitem" tabindex="0">
+              <img
+                src="assets/images/profiles/vivek_tethgure.jpg"
+                srcset="assets/images/profiles/vivek_tethgure.jpeg 800w"
+                sizes="(max-width: 600px) 90vw, (max-width: 992px) 45vw, 350px"
+                alt="Vivek Tethgure"
+                class="team-avatar"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="team-card-content">
+                <h3>Vivek Tethgure</h3>
+                <span class="team-role">Process Optimization Lead</span>
+                <p class="team-bio">
+                  Vivek works on improving operational efficiency and
+                  consistency. He focuses on refining workflows and ensuring
+                  sustainable performance across projects.
+                </p>
+                <div class="team-tags">
+                  <span class="team-tag">Process Optimization</span>
+                  <span class="team-tag">Operational Strategy</span>
+                  <span class="team-tag">Quality Control</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="team-card reveal" role="listitem" tabindex="0">
+              <img
+                src="assets/images/profiles/nagesh_banger.jpg"
+                srcset="assets/images/profiles/nagesh_banger.jpeg 800w"
+                sizes="(max-width: 600px) 90vw, (max-width: 992px) 45vw, 350px"
+                alt="Nagesh Banger"
+                class="team-avatar"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="team-card-content">
+                <h3>Nagesh Banger</h3>
+                <span class="team-role"
+                  >Motion Graphics &amp; Video Content Lead</span
+                >
+                <p class="team-bio">
+                  Nagesh brings ideas to life through animation and video. He
+                  creates engaging visual content that strengthens brand
+                  communication and storytelling.
+                </p>
+                <div class="team-tags">
+                  <span class="team-tag">Animation</span>
+                  <span class="team-tag">Video Production</span>
+                  <span class="team-tag">Visual Storytelling</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <!-- Final CTA -->
-    <section class="about-cta">
+      <!-- Final CTA -->
+      <section class="about-cta">
         <div class="container">
-            <p class="cta-text">Ready to build what's next?</p>
-            <p class="cta-subtext">Let's explore how NueEra can support your growth.</p>
-            <a class='btn btn-primary' href='contact.html'>👉 Meet Our Team</a>
+          <p class="cta-text">Ready to build what's next?</p>
+          <p class="cta-subtext">
+            Let's explore how NueEra can support your growth.
+          </p>
+          <a class="btn btn-primary" href="contact.html">👉 Meet Our Team</a>
         </div>
-    </section>
-
+      </section>
     </main>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <div class="footer-logo">
-                        <img src="assets/images/lightlogo.png" alt="NueEra Logo" class="footer-logo-img logo-light">
-                        <img src="assets/images/darklogo.png" alt="NueEra Logo" class="footer-logo-img logo-dark">
-                    </div>
-                    <p class="tagline">A New Era of Digital Growth</p>
-                    <div class="social-icons">
-                        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" class="social-icon" title="Facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="social-icon" title="Instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.linkedin.com/company/nueera" target="_blank" rel="noopener noreferrer" class="social-icon" title="LinkedIn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href='index.html'>Home</a></li>
-                        <li><a href='about.html'>About Us</a></li>
-                        <li><a href='blog.html'>Blog</a></li>
-                        <li><a href='contact.html'>Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href='services.html#product'>Web Development</a></li>
-                        <li><a href='services.html#product'>App Development</a></li>
-                        <li><a href='services.html#marketing'>Digital Marketing</a></li>
-                        <li><a href='services.html#design'>UI/UX Design</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Get in Touch</h4>
-                    <ul>
-                        <li><i class="fas fa-map-marker-alt"></i> Kothrud, Pune, Maharashtra</li>
-                        <li>Email: <a href="mailto:hello@nueera.io">hello@nueera.io</a></li>
-                    </ul>
-                </div>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <div class="footer-logo">
+              <img
+                src="assets/images/lightlogo.png"
+                alt="NueEra Logo"
+                class="footer-logo-img logo-light"
+              />
+              <img
+                src="assets/images/darklogo.png"
+                alt="NueEra Logo"
+                class="footer-logo-img logo-dark"
+              />
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 NueEra. All rights reserved. | <a href='privacy.html'>Privacy Policy</a> | <a href='terms.html'>Terms of Service</a></p>
+            <p class="tagline">A New Era of Digital Growth</p>
+            <div class="social-icons">
+              <a
+                href="https://www.facebook.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-icon"
+                title="Facebook"
+                aria-label="Facebook"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-icon"
+                title="Instagram"
+                aria-label="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/company/nueera"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-icon"
+                title="LinkedIn"
+                aria-label="LinkedIn"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
             </div>
+          </div>
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="services.html#product">Web Development</a></li>
+              <li><a href="services.html#product">App Development</a></li>
+              <li><a href="services.html#marketing">Digital Marketing</a></li>
+              <li><a href="services.html#design">UI/UX Design</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Get in Touch</h4>
+            <ul>
+              <li>
+                <i class="fas fa-map-marker-alt"></i> Kothrud, Pune, Maharashtra
+              </li>
+              <li>
+                Email: <a href="mailto:hello@nueera.io">hello@nueera.io</a>
+              </li>
+            </ul>
+          </div>
         </div>
+        <div class="footer-bottom">
+          <p>
+            &copy; 2026 NueEra. All rights reserved. |
+            <a href="privacy.html">Privacy Policy</a> |
+            <a href="terms.html">Terms of Service</a>
+          </p>
+        </div>
+      </div>
     </footer>
 
+    <script src="js/premium-upgrade.js"></script>
     <script src="js/main.js"></script>
 
     <!-- Scroll to Top Button -->
     <button class="scroll-top-btn" aria-label="Scroll to top">
-        <i class="fas fa-arrow-up"></i>
+      <i class="fas fa-arrow-up"></i>
     </button>
-</body>
+  </body>
 
-
-<!-- Mirrored from nueera.netlify.app/about by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 22 Feb 2026 06:29:21 GMT -->
+  <!-- Mirrored from nueera.netlify.app/about by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 22 Feb 2026 06:29:21 GMT -->
 </html>
+
 
