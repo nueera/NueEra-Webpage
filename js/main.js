@@ -1,4 +1,4 @@
-// ==========================================
+﻿// ==========================================
 // NUEERA - PREMIUM JAVASCRIPT
 // Theme Toggle, Navigation, Interactivity
 // ==========================================
@@ -41,9 +41,21 @@ class ThemeManager {
         document.documentElement.setAttribute('data-theme', this.theme);
         this.updateToggleButton();
         
-        // Listen for theme toggle (all toggle buttons)
+        // Listen for theme toggle (buttons present at init)
         const toggleBtns = document.querySelectorAll('.theme-toggle');
         toggleBtns.forEach(btn => btn.addEventListener('click', () => this.toggle()));
+
+        // Delegated listener so dynamically-added toggles (e.g. floating button) also work
+        document.addEventListener('click', (e) => {
+            const btn = e.target.closest('.theme-toggle');
+            if (!btn) return;
+            e.preventDefault();
+            this.toggle();
+        });
+
+        // Ensure icons/labels update after full DOM parse
+        document.addEventListener('DOMContentLoaded', () => this.updateToggleButton());
+        window.addEventListener('load', () => this.updateToggleButton());
 
         // Listen for system theme changes
         window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
@@ -664,7 +676,7 @@ if (document.readyState === 'complete') {
 
 // Add console welcome message
 console.log(
-    '%cNueEra%c — A New Era of Digital Growth',
+    '%cNueEra%c â€” A New Era of Digital Growth',
     'font-size: 24px; font-weight: bold; color: #00a8ff;',
     'font-size: 14px; color: #ff9500;'
 );
@@ -783,7 +795,7 @@ class CookieConsent {
         banner.className = 'cookie-banner';
         banner.innerHTML = `
             <div class="cookie-content">
-                <h3>🍪 Cookie Settings</h3>
+                <h3>ðŸª Cookie Settings</h3>
                 <p>We use cookies to enhance your browsing experience, serve personalized ads or content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.</p>
             </div>
             <div class="cookie-buttons">
@@ -1260,3 +1272,4 @@ class CategoryFilterManager {
 }
 
 document.addEventListener('DOMContentLoaded', () => new CategoryFilterManager());
+

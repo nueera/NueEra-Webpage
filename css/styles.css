@@ -10508,3 +10508,40 @@ body[data-theme='dark'] .floating-theme-toggle {
 .mobile-theme-switch {
   display: none !important;
 }
+
+/* ==========================================
+   FLOATING THEME BUTTON VISIBILITY HOTFIX
+   ========================================== */
+.floating-theme-toggle {
+  right: 14px !important;
+  bottom: max(84px, env(safe-area-inset-bottom)) !important;
+  z-index: 10050 !important;
+  color: #1f6aff !important;
+  border-color: rgba(31, 106, 255, 0.55) !important;
+}
+
+html[data-theme='dark'] .floating-theme-toggle,
+body[data-theme='dark'] .floating-theme-toggle {
+  color: #ffb14d !important;
+  border-color: rgba(255, 177, 77, 0.55) !important;
+}
+
+.floating-theme-toggle svg {
+  width: 24px !important;
+  height: 24px !important;
+  stroke-width: 2.2 !important;
+}
+
+.floating-theme-toggle:empty::before {
+  content: '◐';
+  font-size: 1.35rem;
+  line-height: 1;
+  color: currentColor;
+}
+
+@media (max-width: 640px) {
+  .floating-theme-toggle {
+    right: 10px !important;
+    bottom: max(72px, env(safe-area-inset-bottom)) !important;
+  }
+}
