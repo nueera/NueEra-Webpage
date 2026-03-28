@@ -626,22 +626,32 @@ class MobileEnhancer {
     }
 
     optimizeMobileNav() {
+        // Keep homepage navbar fixed/sticky and always visible.
+        if (document.body.classList.contains('page-home')) {
+            return;
+        }
+
+        // Only auto-hide/show on small/mobile views
+        if (window.innerWidth > 1024) {
+            return;
+        }
+
         const navbar = document.querySelector('.navbar');
         let lastScrollY = window.scrollY;
         let scrollTimeout;
 
         window.addEventListener('scroll', () => {
             const currentScrollY = window.scrollY;
-            
-            // Hide/show navbar on scroll
+
+            // Hide/show navbar on scroll (mobile behavior)
             if (currentScrollY > lastScrollY && currentScrollY > 100) {
                 navbar.style.transform = 'translateY(-100%)';
             } else {
                 navbar.style.transform = 'translateY(0)';
             }
-            
+
             lastScrollY = currentScrollY;
-            
+
             // Add shadow when scrolled
             clearTimeout(scrollTimeout);
             scrollTimeout = setTimeout(() => {
