@@ -3496,3 +3496,196 @@ html[data-theme='dark'] .services-cta .container {
     radial-gradient(circle at 15% 15%, rgba(31, 106, 255, 0.25), transparent 44%),
     radial-gradient(circle at 88% 88%, rgba(255, 154, 31, 0.2), transparent 44%);
 }
+
+/* Services V2: distinct command-deck animation (different from About) */
+.services-command-stage {
+  position: relative;
+  min-height: 320px;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+}
+
+.services-grid-lines {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px) 0 0/100% 26px,
+    linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px) 0 0/26px 100%;
+  opacity: 0.45;
+  z-index: 1;
+}
+
+.service-live-chip {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 5;
+  border-radius: 999px;
+  padding: 0.34rem 0.64rem;
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  background: rgba(8, 22, 42, 0.76);
+  color: #e8f2ff;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+.service-command-card {
+  position: absolute;
+  z-index: 4;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  background: rgba(10, 22, 42, 0.78);
+  backdrop-filter: blur(8px);
+  padding: 0.62rem 0.72rem;
+  width: min(170px, 46%);
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.28);
+  animation: serviceCardPulse 5.2s ease-in-out infinite;
+}
+
+.service-command-card h4 {
+  margin: 0 0 0.2rem;
+  font-size: 0.84rem;
+  color: #ffffff;
+}
+
+.service-command-card p {
+  margin: 0;
+  font-size: 0.72rem;
+  color: #cfe0ff;
+  line-height: 1.35;
+}
+
+.card-core {
+  left: 50%;
+  top: 62px;
+  transform: translateX(-50%);
+}
+
+.card-growth {
+  left: 16px;
+  bottom: 72px;
+  animation-delay: 0.8s;
+}
+
+.card-ops {
+  right: 16px;
+  bottom: 72px;
+  animation-delay: 1.5s;
+}
+
+.service-data-rail {
+  position: absolute;
+  left: -36%;
+  width: 170%;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, transparent, rgba(31, 106, 255, 0.95), rgba(255, 154, 31, 0.9), transparent);
+  z-index: 2;
+  animation: serviceRailMove 4.6s linear infinite;
+}
+
+.rail-one {
+  top: 124px;
+}
+
+.rail-two {
+  top: 172px;
+  animation-duration: 5.1s;
+}
+
+.rail-three {
+  top: 220px;
+  animation-duration: 5.6s;
+}
+
+.service-ticker-wrap {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 10px;
+  height: 28px;
+  overflow: hidden;
+  z-index: 5;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(7, 18, 34, 0.62);
+}
+
+.service-ticker {
+  white-space: nowrap;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #d5e6ff;
+  line-height: 28px;
+  padding-left: 100%;
+  animation: serviceTickerMove 11s linear infinite;
+}
+
+@keyframes serviceRailMove {
+  from { transform: translateX(-12%); opacity: 0.2; }
+  30% { opacity: 0.9; }
+  to { transform: translateX(20%); opacity: 0.2; }
+}
+
+@keyframes serviceTickerMove {
+  from { transform: translateX(0); }
+  to { transform: translateX(-100%); }
+}
+
+@keyframes serviceCardPulse {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+.card-core {
+  animation-name: serviceCardPulseCentered;
+}
+
+@keyframes serviceCardPulseCentered {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(-4px); }
+}
+
+@media (max-width: 680px) {
+  .services-command-stage {
+    min-height: 265px;
+    padding: 0.75rem;
+  }
+
+  .service-command-card {
+    width: min(150px, 45%);
+    padding: 0.5rem 0.55rem;
+  }
+
+  .service-command-card h4 {
+    font-size: 0.74rem;
+  }
+
+  .service-command-card p {
+    font-size: 0.65rem;
+  }
+
+  .card-core {
+    top: 56px;
+  }
+
+  .card-growth,
+  .card-ops {
+    bottom: 64px;
+  }
+
+  .rail-one {
+    top: 106px;
+  }
+
+  .rail-two {
+    top: 146px;
+  }
+
+  .rail-three {
+    top: 186px;
+  }
+}
