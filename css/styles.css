@@ -10066,3 +10066,53 @@ img, video, canvas, svg {
     font-size: clamp(0.9rem, 3.8vw, 1.04rem) !important;
   }
 }
+
+/* ==========================================
+   MOBILE NAV TEXT VISIBILITY FIX (NO TRANSPARENT FILL)
+   ========================================== */
+@media (max-width: 1024px) {
+  html body .mobile-menu-overlay .mobile-nav-links a,
+  html body .mobile-nav-links a {
+    background: none !important;
+    background-image: none !important;
+    -webkit-background-clip: border-box !important;
+    background-clip: border-box !important;
+    -webkit-text-fill-color: currentColor !important;
+
+    font-size: clamp(1.02rem, 3.9vw, 1.22rem) !important;
+    font-weight: 900 !important;
+    letter-spacing: 0.02em !important;
+    line-height: 1.24 !important;
+
+    color: #1f6aff !important;
+    animation: mobileNavH2StrongCycle 2.6s linear infinite !important;
+    text-shadow:
+      0 1px 0 rgba(255, 255, 255, 0.18),
+      0 0 10px rgba(31, 106, 255, 0.24) !important;
+  }
+
+  html body .mobile-menu-overlay .mobile-nav-links a.active,
+  html body .mobile-nav-links a.active {
+    animation-duration: 1.9s !important;
+    filter: saturate(1.15) brightness(1.06) !important;
+  }
+
+  html[data-theme='light'] body .mobile-menu-overlay .mobile-nav-links a,
+  html[data-theme='light'] body .mobile-nav-links a {
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7), 0 0 10px rgba(31, 106, 255, 0.2) !important;
+  }
+}
+
+@media (max-width: 520px) {
+  html body .mobile-menu-overlay .mobile-nav-links a,
+  html body .mobile-nav-links a {
+    font-size: clamp(0.96rem, 4vw, 1.12rem) !important;
+  }
+}
+
+@keyframes mobileNavH2StrongCycle {
+  0% { color: #0038a8; }
+  35% { color: #1f6aff; }
+  65% { color: #ff9a1f; }
+  100% { color: #e65100; }
+}
