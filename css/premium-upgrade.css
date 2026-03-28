@@ -2121,3 +2121,113 @@ html[data-theme='dark'] .showcase-metric {
   .cube-top { transform: rotateX(90deg) translateZ(69px); }
   .cube-bottom { transform: rotateX(-90deg) translateZ(69px); }
 }
+
+/* ==========================================
+   INDEX REDESIGN: INFORMATION + PREMIUM UI
+   ========================================== */
+.hero-proof-strip {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.hero-proof-strip span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.46rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border: 1px solid rgba(31, 106, 255, 0.25);
+  background: rgba(255, 255, 255, 0.72);
+  color: #163257;
+}
+
+html[data-theme='dark'] .hero-proof-strip span {
+  border-color: rgba(116, 160, 255, 0.24);
+  background: rgba(255, 255, 255, 0.06);
+  color: #dbe9ff;
+}
+
+.trust-chip {
+  border: 1px solid rgba(31, 106, 255, 0.2);
+  border-radius: 999px;
+  padding: 0.58rem 0.85rem;
+  font-weight: 700;
+  font-size: 0.82rem;
+  text-align: center;
+  background: linear-gradient(135deg, rgba(31, 106, 255, 0.1), rgba(255, 154, 31, 0.1));
+}
+
+.trust-statement {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.9rem;
+  padding: 1rem;
+}
+
+.trust-statement-item strong {
+  display: block;
+  margin-bottom: 0.35rem;
+  color: var(--text-primary);
+}
+
+.trust-statement-item p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.premium-faq-section .premium-faq-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+
+.premium-faq-section .faq-item {
+  margin: 0;
+  border-radius: 16px;
+  border: 1px solid rgba(31, 106, 255, 0.16);
+}
+
+.premium-faq-section .faq-question {
+  pointer-events: none;
+  cursor: default;
+}
+
+.premium-faq-section .faq-answer {
+  max-height: none;
+  opacity: 1;
+}
+
+@media (max-width: 1024px) {
+  .hero-proof-strip {
+    gap: 0.5rem;
+  }
+
+  .hero-proof-strip span {
+    font-size: 0.76rem;
+  }
+
+  .trust-statement {
+    grid-template-columns: 1fr;
+  }
+
+  .premium-faq-section .premium-faq-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .trust-chip {
+    font-size: 0.76rem;
+    padding: 0.5rem 0.68rem;
+  }
+
+  .trust-statement {
+    gap: 0.7rem;
+    padding: 0.8rem;
+  }
+}
