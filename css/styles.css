@@ -10249,3 +10249,46 @@ img, video, canvas, svg {
     display: none !important;
   }
 }
+
+/* ==========================================
+   MOBILE NAV HOTFIX: VISIBLE TEXT + SINGLE LOGO
+   ========================================== */
+@media (max-width: 1024px) {
+  /* 1) Force visible color-cycle text (no transparent clipping) */
+  html body .mobile-menu-overlay .mobile-nav-links a,
+  html body .mobile-nav-links a {
+    background: none !important;
+    background-image: none !important;
+    -webkit-background-clip: border-box !important;
+    background-clip: border-box !important;
+    -webkit-text-fill-color: currentColor !important;
+    color: #1f6aff !important;
+    text-shadow: none !important;
+    animation: mobileNavVisibleCycle 2.4s linear infinite !important;
+  }
+
+  html body .mobile-menu-overlay .mobile-nav-links a.active,
+  html body .mobile-nav-links a.active {
+    animation-duration: 1.9s !important;
+  }
+
+  /* 2) Show only one logo by theme in mobile menu */
+  html body .mobile-menu-overlay .mobile-logo .logo-light,
+  html body .mobile-menu-overlay .mobile-logo .logo-dark {
+    display: none !important;
+  }
+
+  html[data-theme='light'] body .mobile-menu-overlay .mobile-logo .logo-light {
+    display: block !important;
+  }
+
+  html[data-theme='dark'] body .mobile-menu-overlay .mobile-logo .logo-dark {
+    display: block !important;
+  }
+}
+
+@keyframes mobileNavVisibleCycle {
+  0% { color: #1f6aff; }
+  50% { color: #ff9a1f; }
+  100% { color: #1f6aff; }
+}
