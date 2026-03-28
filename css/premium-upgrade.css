@@ -1098,3 +1098,146 @@ h1, h2, h3, h4 { letter-spacing: -0.02em; }
     box-shadow: 0 8px 18px rgba(31, 106, 255, 0.16) !important;
   }
 }
+
+/* ==========================================
+   FINAL MOBILE NAV + RESPONSIVE OVERRIDES
+   ========================================== */
+@media (max-width: 1024px) {
+  html, body {
+    overflow-x: hidden !important;
+  }
+
+  .container {
+    width: min(100% - 1rem, 1200px) !important;
+  }
+
+  .mobile-menu-overlay .mobile-nav-links {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+    padding: 10px !important;
+  }
+
+  .mobile-menu-overlay .mobile-nav-links a,
+  .mobile-nav-links a {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    min-height: 52px !important;
+    padding: 12px 10px !important;
+    border-radius: 14px !important;
+    font-size: clamp(0.9rem, 2.8vw, 1rem) !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.02em !important;
+    line-height: 1.2 !important;
+    gap: 0 !important;
+  }
+
+  /* Remove all nav icons and pseudo-icons */
+  .mobile-nav-links a::before,
+  .mobile-nav-links a::after,
+  .mobile-nav-links li::before,
+  .mobile-nav-links li::after,
+  .mobile-menu-overlay .mobile-nav-links a::before,
+  .mobile-menu-overlay .mobile-nav-links a::after,
+  .mobile-menu-overlay .mobile-nav-links li::before,
+  .mobile-menu-overlay .mobile-nav-links li::after,
+  .mobile-nav-links a i,
+  .mobile-nav-links a svg,
+  .mobile-menu-overlay .mobile-nav-links a i,
+  .mobile-menu-overlay .mobile-nav-links a svg {
+    content: none !important;
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    background: none !important;
+    box-shadow: none !important;
+    opacity: 0 !important;
+    font-size: 0 !important;
+  }
+
+  /* Light theme alignment for mobile menu */
+  html[data-theme="light"] .mobile-menu-overlay {
+    background: rgba(236, 244, 253, 0.9) !important;
+  }
+
+  html[data-theme="light"] .mobile-menu-overlay .mobile-menu-inner {
+    background: linear-gradient(165deg, #ffffff, #eef6ff) !important;
+    border: 1px solid rgba(17, 39, 88, 0.14) !important;
+    box-shadow: 0 12px 28px rgba(17, 39, 88, 0.14) !important;
+  }
+
+  html[data-theme="light"] .mobile-menu-overlay .mobile-nav-links {
+    background: linear-gradient(165deg, rgba(255, 255, 255, 0.98), rgba(240, 248, 255, 0.95)) !important;
+    border: 1px solid rgba(17, 39, 88, 0.14) !important;
+  }
+
+  html[data-theme="light"] .mobile-menu-overlay .mobile-nav-links a {
+    background: linear-gradient(165deg, #ffffff, #eef6ff) !important;
+    border: 1px solid rgba(17, 39, 88, 0.14) !important;
+    color: #13243d !important;
+  }
+
+  html[data-theme="light"] .mobile-menu-overlay .mobile-nav-links a:hover,
+  html[data-theme="light"] .mobile-menu-overlay .mobile-nav-links a:focus,
+  html[data-theme="light"] .mobile-menu-overlay .mobile-nav-links a.active {
+    background: linear-gradient(150deg, rgba(31, 106, 255, 0.16), rgba(255, 154, 31, 0.12)) !important;
+    border-color: rgba(31, 106, 255, 0.3) !important;
+    color: #10233f !important;
+  }
+
+  .hero-title,
+  .premium-title,
+  h1 {
+    font-size: clamp(1.6rem, 6vw, 2.35rem) !important;
+    line-height: 1.14 !important;
+    word-break: break-word !important;
+  }
+
+  .hero-subtitle,
+  .premium-subtitle,
+  p {
+    font-size: clamp(0.95rem, 2.9vw, 1.05rem) !important;
+    line-height: 1.55 !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    width: calc(100% - 0.9rem) !important;
+  }
+
+  .navbar {
+    width: calc(100% - 0.6rem) !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+  }
+
+  .mobile-menu-inner {
+    width: 100% !important;
+    border-radius: 14px !important;
+  }
+
+  .mobile-menu-top .mobile-logo {
+    margin: 0 auto !important;
+  }
+}
+
+@media (max-width: 390px) {
+  .mobile-menu-top .mobile-nav-action-btn,
+  .mobile-menu-top .mobile-menu-close,
+  .mobile-menu-top .mobile-theme-switch {
+    width: 42px !important;
+    height: 42px !important;
+  }
+
+  .mobile-menu-overlay .mobile-nav-links a,
+  .mobile-nav-links a {
+    min-height: 50px !important;
+    font-size: 0.88rem !important;
+  }
+}
