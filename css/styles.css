@@ -9543,3 +9543,43 @@ body.reduce-animations * {
   font-weight: 700;
   color: var(--text-primary);
 }
+
+/* ==========================================
+   SMALL PREMIUM ICON MODE (MOBILE NAV + FOOTER)
+   ========================================== */
+@media (max-width: 1024px) {
+  .mobile-nav-links a {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    min-height: 52px !important;
+    text-align: center !important;
+  }
+
+  .mobile-nav-links a::before {
+    content: "" !important;
+    display: inline-flex !important;
+    width: 16px !important;
+    height: 16px !important;
+    border-radius: 999px !important;
+    background: linear-gradient(135deg, rgba(31,106,255,0.95), rgba(255,154,31,0.95)) !important;
+    box-shadow: 0 2px 8px rgba(31,106,255,0.35) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    font-size: 0 !important;
+  }
+}
+
+.footer .social-icon i {
+  display: inline-flex !important;
+  font-size: 0.82rem !important;
+  line-height: 1 !important;
+  color: var(--text-primary) !important;
+}
+
+.footer .social-icon::after {
+  content: none !important;
+}
