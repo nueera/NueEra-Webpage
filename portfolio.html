@@ -101,17 +101,73 @@
         </div>
     </header>
 
-    <main id="main">
-        <section class="page-header">
+    <main id="main" class="portfolio-v4-page">
+        <section class="section portfolio-v4-hero">
             <div class="container">
-                <h1>Our <span class="gradient-text">Portfolio</span></h1>
-                <p>Selected works and success stories</p>
+                <div class="portfolio-v4-hero-grid">
+                    <div class="portfolio-v4-copy reveal">
+                        <span class="portfolio-v4-kicker">Portfolio Intelligence</span>
+                        <h1>Work That Moves <span class="gradient-text">Revenue, Retention, and Reach</span></h1>
+                        <p>
+                            We design and ship digital systems with measurable impact. Explore selected
+                            launches across web, product, growth, and customer experience.
+                        </p>
+                        <div class="portfolio-v4-actions">
+                            <a class="btn btn-primary" href="#portfolio-projects">Explore Projects</a>
+                            <a class="btn btn-secondary" href="#case-studies">View Case Stories</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-v4-visual reveal" aria-hidden="true">
+                        <div class="signal-map">
+                            <div class="signal-ring ring-one"></div>
+                            <div class="signal-ring ring-two"></div>
+                            <div class="signal-ring ring-three"></div>
+                            <div class="signal-core">NueEra</div>
+                            <div class="signal-node node-a">Web</div>
+                            <div class="signal-node node-b">Apps</div>
+                            <div class="signal-node node-c">Growth</div>
+                            <div class="signal-node node-d">Design</div>
+                            <div class="signal-beam beam-a"></div>
+                            <div class="signal-beam beam-b"></div>
+                            <div class="signal-beam beam-c"></div>
+                            <div class="signal-beam beam-d"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section class="section">
+        <section class="section portfolio-v4-proof">
             <div class="container">
-                <div class="portfolio-filters">
+                <div class="portfolio-proof-grid">
+                    <article class="portfolio-proof-card reveal">
+                        <strong>120+</strong>
+                        <span>Projects Delivered</span>
+                    </article>
+                    <article class="portfolio-proof-card reveal">
+                        <strong>96%</strong>
+                        <span>Client Retention</span>
+                    </article>
+                    <article class="portfolio-proof-card reveal">
+                        <strong>3.8x</strong>
+                        <span>Avg. ROI Growth</span>
+                    </article>
+                    <article class="portfolio-proof-card reveal">
+                        <strong>24h</strong>
+                        <span>Response Promise</span>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section portfolio-v4-projects" id="portfolio-projects">
+            <div class="container">
+                <div class="section-header reveal portfolio-v4-header">
+                    <h2>Project Command Deck</h2>
+                    <p>Filter by capability and inspect outcomes, stack direction, and execution quality.</p>
+                </div>
+
+                <div class="portfolio-filters portfolio-v4-filters reveal">
                     <button class="filter-btn active" data-filter="all">All Projects</button>
                     <button class="filter-btn" data-filter="web">Web Development</button>
                     <button class="filter-btn" data-filter="app">Mobile Apps</button>
@@ -119,11 +175,11 @@
                     <button class="filter-btn" data-filter="design">UI/UX Design</button>
                 </div>
 
-                <div class="portfolio-grid">
-                    <!-- Project 1 -->
-                    <div class="project-card" data-category="web">
+                <div class="portfolio-grid portfolio-v4-grid">
+                    <article class="project-card portfolio-v4-card reveal" data-category="web">
                         <div class="project-image">
-                            <i class="fas fa-laptop-code"></i>
+                            <div class="project-image-glow glow-blue"></div>
+                            <i class="fas fa-chart-line"></i>
                             <div class="project-overlay">
                                 <a class='btn btn-primary btn-sm' href='contact.html'>View Details</a>
                             </div>
@@ -131,14 +187,18 @@
                         <div class="project-content">
                             <span class="project-category">Web Development</span>
                             <h3>FinTech Analytics Dashboard</h3>
-                            <p>A comprehensive data visualization platform for a leading financial services provider.</p>
+                            <p>Unified investment reporting and forecasting workspace for multi-market operations.</p>
+                            <div class="portfolio-card-meta">
+                                <span>+47% decision speed</span>
+                                <span>12-week delivery</span>
+                            </div>
                         </div>
-                    </div>
+                    </article>
 
-                    <!-- Project 2 -->
-                    <div class="project-card" data-category="app">
+                    <article class="project-card portfolio-v4-card reveal" data-category="app">
                         <div class="project-image">
-                            <i class="fas fa-mobile-alt"></i>
+                            <div class="project-image-glow glow-orange"></div>
+                            <i class="fas fa-heart-pulse"></i>
                             <div class="project-overlay">
                                 <a class='btn btn-primary btn-sm' href='contact.html'>View Details</a>
                             </div>
@@ -146,14 +206,18 @@
                         <div class="project-content">
                             <span class="project-category">Mobile App</span>
                             <h3>HealthTrack Mobile</h3>
-                            <p>Cross-platform fitness tracking application with real-time health monitoring integration.</p>
+                            <p>Habit coaching app with wearable sync and adaptive retention journeys.</p>
+                            <div class="portfolio-card-meta">
+                                <span>+62% DAU retention</span>
+                                <span>4.8 app rating</span>
+                            </div>
                         </div>
-                    </div>
+                    </article>
 
-                    <!-- Project 3 -->
-                    <div class="project-card" data-category="marketing">
+                    <article class="project-card portfolio-v4-card reveal" data-category="marketing">
                         <div class="project-image">
-                            <i class="fas fa-chart-pie"></i>
+                            <div class="project-image-glow glow-blue"></div>
+                            <i class="fas fa-bullseye"></i>
                             <div class="project-overlay">
                                 <a class='btn btn-primary btn-sm' href='contact.html'>View Details</a>
                             </div>
@@ -161,29 +225,37 @@
                         <div class="project-content">
                             <span class="project-category">Digital Marketing</span>
                             <h3>Global E-commerce Scale</h3>
-                            <p>SEO and paid acquisition strategy that drove 200% growth for a retail brand.</p>
+                            <p>Full-funnel campaign system with SEO, paid media, and CRO experimentation.</p>
+                            <div class="portfolio-card-meta">
+                                <span>3.2x ROAS</span>
+                                <span>+210% MQL volume</span>
+                            </div>
                         </div>
-                    </div>
+                    </article>
 
-                    <!-- Project 4 -->
-                    <div class="project-card" data-category="design">
+                    <article class="project-card portfolio-v4-card reveal" data-category="design">
                         <div class="project-image">
-                            <i class="fas fa-paint-brush"></i>
+                            <div class="project-image-glow glow-orange"></div>
+                            <i class="fas fa-object-group"></i>
                             <div class="project-overlay">
                                 <a class='btn btn-primary btn-sm' href='contact.html'>View Details</a>
                             </div>
                         </div>
                         <div class="project-content">
                             <span class="project-category">UI/UX Design</span>
-                            <h3>NeoBank Interface</h3>
-                            <p>User-centric design system and interface for a next-generation digital banking app.</p>
+                            <h3>NeoBank Interface System</h3>
+                            <p>Cross-platform design language and accessibility-first transaction workflows.</p>
+                            <div class="portfolio-card-meta">
+                                <span>-35% support tickets</span>
+                                <span>AA accessibility</span>
+                            </div>
                         </div>
-                    </div>
+                    </article>
 
-                    <!-- Project 5 -->
-                    <div class="project-card" data-category="web">
+                    <article class="project-card portfolio-v4-card reveal" data-category="web">
                         <div class="project-image">
-                            <i class="fas fa-shopping-cart"></i>
+                            <div class="project-image-glow glow-blue"></div>
+                            <i class="fas fa-store"></i>
                             <div class="project-overlay">
                                 <a class='btn btn-primary btn-sm' href='contact.html'>View Details</a>
                             </div>
@@ -191,14 +263,18 @@
                         <div class="project-content">
                             <span class="project-category">Web Development</span>
                             <h3>Luxury Retail Platform</h3>
-                            <p>High-performance e-commerce solution with immersive product experiences.</p>
+                            <p>High-speed commerce architecture with dynamic catalog and personalized bundles.</p>
+                            <div class="portfolio-card-meta">
+                                <span>+58% conversion lift</span>
+                                <span>1.9s page load</span>
+                            </div>
                         </div>
-                    </div>
+                    </article>
 
-                    <!-- Project 6 -->
-                    <div class="project-card" data-category="app">
+                    <article class="project-card portfolio-v4-card reveal" data-category="app">
                         <div class="project-image">
-                            <i class="fas fa-map-marked-alt"></i>
+                            <div class="project-image-glow glow-orange"></div>
+                            <i class="fas fa-location-dot"></i>
                             <div class="project-overlay">
                                 <a class='btn btn-primary btn-sm' href='contact.html'>View Details</a>
                             </div>
@@ -206,34 +282,39 @@
                         <div class="project-content">
                             <span class="project-category">Mobile App</span>
                             <h3>CityGuide AR</h3>
-                            <p>Augmented reality tourism application for smart city exploration.</p>
+                            <p>Location-aware AR navigator for cultural discovery, events, and tourism commerce.</p>
+                            <div class="portfolio-card-meta">
+                                <span>+3.1x session depth</span>
+                                <span>9-city rollout</span>
+                            </div>
                         </div>
-                    </div>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <!-- Case Studies Section -->
-        <section class="section alternate" id="case-studies">
+        <section class="section alternate portfolio-v4-casewrap" id="case-studies">
             <div class="container">
-                <div class="section-header">
-                    <h2>Featured Case Studies</h2>
-                    <p>Deep dives into how we solve complex problems</p>
+                <div class="section-header reveal">
+                    <h2>Case Study Highlights</h2>
+                    <p>From challenge to execution to outcomes, with a clear strategic throughline.</p>
                 </div>
 
-                <div class="case-studies-list">
-                    <!-- Case Study 1 -->
-                    <div class="case-study-item">
+                <div class="case-studies-list portfolio-v4-cases">
+                    <article class="case-study-item portfolio-v4-case reveal">
                         <div class="case-study-image">
-                            <div class="placeholder-image" style="background: linear-gradient(135deg, var(--bg-tertiary), var(--bg-secondary)); height: 100%; display: flex; align-items: center; justify-content: center;">
-                                <i class="fas fa-building" style="font-size: 4rem; color: var(--text-tertiary);"></i>
+                            <div class="portfolio-case-stage" aria-hidden="true">
+                                <span class="stage-line line-1"></span>
+                                <span class="stage-line line-2"></span>
+                                <span class="stage-dot dot-1"></span>
+                                <span class="stage-dot dot-2"></span>
+                                <span class="stage-dot dot-3"></span>
                             </div>
                         </div>
                         <div class="case-study-content">
                             <span class="case-study-tag">FinTech</span>
                             <h3>Scaling a Neo-Bank to 1M Users</h3>
-                            <p>How we re-architected a legacy banking platform to handle massive scale while maintaining 99.99% uptime and bank-grade security.</p>
-                            
+                            <p>We rebuilt the core platform into event-driven modules and introduced observability by default for security, compliance, and velocity.</p>
                             <div class="case-study-metrics">
                                 <div class="cs-metric">
                                     <span class="cs-value">10x</span>
@@ -248,23 +329,23 @@
                                     <span class="cs-label">Uptime</span>
                                 </div>
                             </div>
-                            
-                            <a class='btn btn-ghost' href='contact.html'>Read Case Study <i class="fas fa-arrow-right" style="margin-left: 0.5rem; font-size: 0.8rem;"></i></a>
+                            <a class='btn btn-ghost' href='contact.html'>Read Case Study <i class="fas fa-arrow-right"></i></a>
                         </div>
-                    </div>
+                    </article>
 
-                    <!-- Case Study 2 -->
-                    <div class="case-study-item reverse">
+                    <article class="case-study-item portfolio-v4-case reverse reveal">
                         <div class="case-study-image">
-                            <div class="placeholder-image" style="background: linear-gradient(135deg, var(--bg-tertiary), var(--bg-secondary)); height: 100%; display: flex; align-items: center; justify-content: center;">
-                                <i class="fas fa-shopping-bag" style="font-size: 4rem; color: var(--text-tertiary);"></i>
+                            <div class="portfolio-case-stage case-stage-alt" aria-hidden="true">
+                                <span class="stage-grid"></span>
+                                <span class="stage-pulse pulse-1"></span>
+                                <span class="stage-pulse pulse-2"></span>
+                                <span class="stage-pulse pulse-3"></span>
                             </div>
                         </div>
                         <div class="case-study-content">
                             <span class="case-study-tag">E-Commerce</span>
                             <h3>Global Retail Digital Transformation</h3>
-                            <p>Helping a traditional brick-and-mortar retailer pivot to a unified commerce experience, integrating online and offline inventory in real-time.</p>
-                            
+                            <p>Unified POS, inventory, and digital storefront experience with regional localization and performance-focused delivery pipelines.</p>
                             <div class="case-study-metrics">
                                 <div class="cs-metric">
                                     <span class="cs-value">215%</span>
@@ -279,19 +360,21 @@
                                     <span class="cs-label">Support</span>
                                 </div>
                             </div>
-                            
-                            <a class='btn btn-ghost' href='contact.html'>Read Case Study <i class="fas fa-arrow-right" style="margin-left: 0.5rem; font-size: 0.8rem;"></i></a>
+                            <a class='btn btn-ghost' href='contact.html'>Read Case Study <i class="fas fa-arrow-right"></i></a>
                         </div>
-                    </div>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <section class="section cta-section">
+        <section class="section portfolio-v4-cta">
             <div class="container">
-                <h2>Have a Project in Mind?</h2>
-                <p class="cta-subtitle">Let's build something amazing together</p>
-                <a class='btn btn-primary' href='contact.html'>Start Your Project</a>
+                <div class="portfolio-v4-cta-card reveal">
+                    <span class="portfolio-v4-cta-kicker">Ready To Build?</span>
+                    <h2>Let’s Turn Your Next Idea Into a High-Performance Product</h2>
+                    <p>Share your goal and constraints. We’ll return with strategy, scope, and a practical execution path.</p>
+                    <a class='btn btn-primary' href='contact.html'>Start Your Project</a>
+                </div>
             </div>
         </section>
     </main>
