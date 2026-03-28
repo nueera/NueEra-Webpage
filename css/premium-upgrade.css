@@ -3073,6 +3073,20 @@ html[data-theme='dark'] #team-slider-section .team-tag {
   background: rgba(116, 160, 255, 0.12);
 }
 
+/* Force full-size team photos on About page (override conflicting global rules) */
+#team-slider-section .team-avatar {
+  width: 100% !important;
+  height: clamp(300px, 33vw, 360px) !important;
+  max-height: none !important;
+  object-fit: cover !important;
+  object-position: center top !important;
+  display: block !important;
+}
+
+#team-slider-section .team-card .team-card-content {
+  margin: 0.75rem 0.75rem 0.95rem !important;
+}
+
 @media (max-width: 900px) {
   .about-team-overview {
     grid-template-columns: 1fr;
@@ -3081,5 +3095,9 @@ html[data-theme='dark'] #team-slider-section .team-tag {
 
   #team-slider-section .team-grid {
     gap: 0.85rem !important;
+  }
+
+  #team-slider-section .team-avatar {
+    height: clamp(260px, 62vw, 320px) !important;
   }
 }
