@@ -1825,3 +1825,69 @@ h1, h2, h3, h4 { letter-spacing: -0.02em; }
     z-index: 21 !important;
   }
 }
+
+/* ==========================================
+   FLOATING THEME BUTTON (GLOBAL)
+   ========================================== */
+.floating-theme-toggle {
+  position: fixed !important;
+  right: 16px !important;
+  bottom: max(16px, env(safe-area-inset-bottom)) !important;
+  z-index: 10020 !important;
+  width: 56px !important;
+  height: 56px !important;
+  border-radius: 999px !important;
+  border: 1px solid rgba(31, 106, 255, 0.38) !important;
+  background:
+    linear-gradient(160deg, rgba(255, 255, 255, 0.95), rgba(236, 246, 255, 0.9)),
+    radial-gradient(circle at 28% 18%, rgba(31, 106, 255, 0.24), transparent 55%) !important;
+  box-shadow:
+    0 10px 24px rgba(8, 18, 38, 0.26),
+    inset 0 1px 0 rgba(255, 255, 255, 0.92) !important;
+  backdrop-filter: blur(10px) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease !important;
+}
+
+html[data-theme='dark'] .floating-theme-toggle,
+body[data-theme='dark'] .floating-theme-toggle {
+  border-color: rgba(116, 160, 255, 0.45) !important;
+  background:
+    linear-gradient(160deg, rgba(19, 31, 58, 0.95), rgba(10, 20, 40, 0.92)),
+    radial-gradient(circle at 28% 18%, rgba(31, 106, 255, 0.32), transparent 55%) !important;
+  box-shadow:
+    0 10px 26px rgba(0, 0, 0, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
+}
+
+.floating-theme-toggle:hover {
+  transform: translateY(-2px) scale(1.03) !important;
+  border-color: rgba(255, 154, 31, 0.65) !important;
+  box-shadow:
+    0 14px 26px rgba(8, 18, 38, 0.32),
+    0 0 0 4px rgba(31, 106, 255, 0.12) !important;
+}
+
+.floating-theme-toggle:active {
+  transform: scale(0.96) !important;
+}
+
+@media (max-width: 640px) {
+  .floating-theme-toggle {
+    width: 52px !important;
+    height: 52px !important;
+    right: 12px !important;
+    bottom: max(12px, env(safe-area-inset-bottom)) !important;
+  }
+}
+
+/* remove old nav-based theme buttons area spacing */
+.nav-right {
+  display: none !important;
+}
+
+.mobile-theme-switch {
+  display: none !important;
+}
