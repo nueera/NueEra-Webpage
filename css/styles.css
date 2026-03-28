@@ -1,4 +1,4 @@
-/* ==========================================
+﻿/* ==========================================
    NUEERA - PREMIUM LOGO-ALIGNED DESIGN
    Dark & Light Theme System
    ========================================== */
@@ -1049,11 +1049,6 @@ html[data-theme='light'] .mobile-nav-links a {
 .mobile-nav-links a::before {
     content: none;
 }
-
-.mobile-menu-link-icon {
-    display: none; /* hide icon in nav, keep only name cards */
-}
-
 .mobile-menu-link-text {
     color: var(--text-primary);
     font-size: 1.08rem;
@@ -1083,27 +1078,12 @@ html[data-theme='dark'] .mobile-nav-links a {
     background: rgba(16, 26, 44, 0.72);
     border: 1px solid rgba(131, 164, 240, 0.3);
 }
-
-html[data-theme='dark'] .mobile-menu-link-text {
-    color: #ecf4ff;
-}
-
 html[data-theme='light'] .mobile-nav-links a {
     color: #0a203f;
     background: rgba(255, 255, 255, 0.96);
     border: 1px solid rgba(29, 126, 255, 0.35);
     box-shadow: 0 10px 25px rgba(112, 164, 223, 0.18);
 }
-
-html[data-theme='light'] .mobile-menu-link-text {
-    color: #012447;
-}
-
-.mobile-menu-link-icon {
-    display: none; /* icon removed in mobile nav view */
-    animation: none;
-}
-
 @media (max-width: 768px) {
     .mobile-nav-links {
         padding: 0.85rem 0.35rem;
@@ -1239,20 +1219,6 @@ html[data-theme='light'] .mobile-menu-link-text {
 .mobile-nav-links a::before {
     content: none;
 }
-
-.mobile-menu-link-icon {
-    width: 44px;
-    height: 44px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    color: #ffffff;
-    background: linear-gradient(145deg, rgba(1, 120, 255, 0.95), rgba(255, 145, 0, 0.95));
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.32);
-    font-size: 1rem;
-}
-
 .mobile-menu-link-text {
     color: #ffffff;
     font-size: 1rem;
@@ -1577,7 +1543,7 @@ html[data-theme='light'] .mobile-menu-link-text {
 }
 
 .slider-card:hover {
-    /* No scaling — subtle lift and glow only */
+    /* No scaling â€” subtle lift and glow only */
     background: rgba(255, 255, 255, 0.04);
     border-color: var(--border-active);
     box-shadow: var(--shadow-hover), var(--effect-glow-blue);
@@ -3037,7 +3003,7 @@ button:focus, .btn:focus, a:focus { outline: 3px solid rgba(0,168,255,0.12); out
 }
 
 .pricing-features li::before {
-    content: '✓';
+    content: 'âœ“';
     position: absolute;
     left: 0;
     color: var(--accent-orange);
@@ -4831,7 +4797,7 @@ button:focus, .btn:focus, a:focus { outline: 3px solid rgba(0,168,255,0.12); out
 }
 
 .testimonial-card.featured::before {
-    content: "⭐ Featured";
+    content: "â­ Featured";
     position: absolute;
     top: 1rem;
     right: 1rem;
@@ -5034,7 +5000,7 @@ button:focus, .btn:focus, a:focus { outline: 3px solid rgba(0,168,255,0.12); out
 }
 
 .member-expertise li:before {
-    content: "▸ ";
+    content: "â–¸ ";
     color: var(--accent-blue);
     margin-right: 0.5rem;
 }
@@ -6565,7 +6531,7 @@ input:checked + .slider:before {
 }
 /* ==================================================
      NUEERA - Global Design Tokens & Premium Styles
-     Appended: 2026-02-08 — brand-aligned tokens + UI
+     Appended: 2026-02-08 â€” brand-aligned tokens + UI
      ================================================== */
 
 :root {
@@ -6700,7 +6666,7 @@ p { color: var(--text-secondary); }
 
 /* ===============================================
      NUEERA - Luxury Dark Mode Theme
-     Appended: 2026-02-08 — deep navy-charcoal, soft contrast
+     Appended: 2026-02-08 â€” deep navy-charcoal, soft contrast
      Use via: <body class="dark"> or [data-theme="dark"]
      =============================================== */
 
@@ -7747,7 +7713,7 @@ a { transition: color 160ms cubic-bezier(0,0,0.2,1); }
 
 /* ==========================================
    SERVICES PAGE - FIGMA COMPONENT ARCHITECTURE
-   Auto-layout · Scalable · Dev-friendly
+   Auto-layout Â· Scalable Â· Dev-friendly
    ========================================== */
 
 /* RESPONSIVE BREAKPOINTS
@@ -7969,7 +7935,7 @@ a { transition: color 160ms cubic-bezier(0,0,0.2,1); }
 }
 
 .detail-list li::before {
-    content: '•';
+    content: 'â€¢';
     position: absolute;
     left: 0;
     color: var(--accent-blue);
@@ -8121,7 +8087,7 @@ a { transition: color 160ms cubic-bezier(0,0,0.2,1); }
 }
 
 .for-you li::before {
-    content: '✓';
+    content: 'âœ“';
     position: absolute;
     left: 0;
     color: var(--accent-blue);
@@ -8129,7 +8095,7 @@ a { transition: color 160ms cubic-bezier(0,0,0.2,1); }
 }
 
 .not-for-you li::before {
-    content: '×';
+    content: 'Ã—';
     position: absolute;
     left: 0;
     color: var(--text-muted);
@@ -9891,4 +9857,32 @@ img, video, canvas, svg {
     min-height: 50px !important;
     font-size: 0.88rem !important;
   }
+}
+
+/* ==========================================
+   MOBILE NAV TEXT-ONLY COLOR EFFECT
+   ========================================== */
+@media (max-width: 1024px) {
+  .mobile-nav-links a,
+  .mobile-menu-overlay .mobile-nav-links a {
+    font-weight: 800 !important;
+    letter-spacing: 0.02em !important;
+    background-image: linear-gradient(90deg, #1f6aff, #ff9a1f, #1f6aff) !important;
+    background-size: 220% 100% !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    animation: mobileNavTextShift 4.8s linear infinite !important;
+  }
+
+  .mobile-nav-links a.active,
+  .mobile-menu-overlay .mobile-nav-links a.active {
+    background-image: linear-gradient(90deg, #ff9a1f, #1f6aff, #ff9a1f) !important;
+    animation-duration: 3.6s !important;
+  }
+}
+
+@keyframes mobileNavTextShift {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 220% 50%; }
 }
