@@ -9,10 +9,36 @@
   --space-8: clamp(1.6rem, 1.3rem + 1.4vw, 2.4rem);
   --premium-grad-a: linear-gradient(135deg, rgba(31,106,255,.2), rgba(0,212,255,.08));
   --premium-grad-b: linear-gradient(135deg, rgba(255,154,31,.18), rgba(255,99,72,.08));
+  --logo-blue: #1f6aff;
+  --logo-orange: #ff9a1f;
+  --logo-gold: #f4c44e;
 }
 
 body { font-family: var(--font-display); }
 h1, h2, h3, h4 { letter-spacing: -0.02em; }
+
+/* Global app-logo treatment (blue/orange/gold) */
+.logo-icon {
+  position: relative;
+  border-radius: 14px;
+}
+
+.logo-icon::after {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 16px;
+  background: linear-gradient(125deg, var(--logo-blue), var(--logo-orange), var(--logo-gold));
+  opacity: 0.28;
+  filter: blur(8px);
+  z-index: -1;
+  transition: opacity .25s ease;
+}
+
+.logo:hover .logo-icon::after,
+.mobile-logo:hover .logo-icon::after {
+  opacity: 0.55;
+}
 
 .section-progress {
   position: fixed;
@@ -589,6 +615,14 @@ h1, h2, h3, h4 { letter-spacing: -0.02em; }
     background: linear-gradient(145deg, rgba(255, 255, 255, 0.95), rgba(238, 246, 255, 0.9));
     color: #12243b;
     box-shadow: 0 8px 16px rgba(17, 39, 88, 0.12);
+  }
+
+  .navbar.navbar-app-hover {
+    box-shadow: 0 28px 56px rgba(4, 10, 28, 0.5);
+  }
+
+  [data-theme="light"] .navbar.navbar-app-hover {
+    box-shadow: 0 20px 38px rgba(17, 39, 88, 0.25);
   }
 }
 

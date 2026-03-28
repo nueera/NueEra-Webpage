@@ -46,6 +46,25 @@
     window.addEventListener('scroll', onScroll, { passive: true });
   }
 
+  function initAppNavbarInteractions() {
+    const navbar = document.querySelector('.navbar');
+    if (!navbar || prefersReduced) return;
+
+    navbar.addEventListener('pointerenter', () => navbar.classList.add('navbar-app-hover'));
+    navbar.addEventListener('pointerleave', () => {
+      navbar.classList.remove('navbar-app-hover');
+      navbar.style.transform = '';
+    });
+
+    navbar.addEventListener('pointermove', (e) => {
+      if (window.innerWidth < 1025) return;
+      const rect = navbar.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      navbar.style.transform = `translateX(-50%) rotateX(${(-y * 1.6).toFixed(2)}deg) rotateY(${(x * 1.6).toFixed(2)}deg)`;
+    });
+  }
+
   function initLazyHints() {
     document.querySelectorAll('img').forEach((img) => {
       if (!img.hasAttribute('loading')) img.setAttribute('loading', 'lazy');
@@ -134,5 +153,6 @@
     initParallax();
     initLazyHints();
     initHero3D();
+    initAppNavbarInteractions();
   });
 })();
