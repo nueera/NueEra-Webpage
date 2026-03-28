@@ -5968,7 +5968,7 @@ input:checked + .slider:before {
     transform: scale(1.02);
     box-shadow: 0 14px 30px rgba(0,0,0,0.12);
 }
-/* hover effect *
+/* hover effect */
 .team-avatar:hover {
     transform: translateY(-6px) scale(1.02);
     box-shadow: 0 16px 40px rgba(0,0,0,0.12);
@@ -7135,7 +7135,7 @@ html, body {
 .team-card h3 { 
     margin: 4px 0 4px;
     font-size: 1.25rem; 
-    color: #4D8DFF;
+    color: var(--text-primary);
     font-weight: 800; 
 }
 .team-card .team-role { 
@@ -7173,7 +7173,7 @@ html, body {
     }
 
     .team-card-content {
-        margin: -3rem 0.5rem 1rem; /* Adjust overlap and reduce horizontal margin */
+        margin: 0.5rem 0.5rem 1rem; /* Ensure member names remain visible on mobile */
         padding: 1.25rem; /* Reduce inner padding */
     }
 }
@@ -8907,5 +8907,44 @@ body.reduce-animations * {
     
     .contact-form-container {
         padding: 1.5rem;
+    }
+}
+
+/* ==========================================
+   CHECKLIST FIXES
+   ========================================== */
+
+.challenge-card > img {
+    position: absolute;
+    inset: 0;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover;
+    display: block;
+    border-radius: 16px;
+}
+
+.help-category-card .help-icon {
+    color: var(--accent-blue);
+    background: rgba(31, 106, 255, 0.12);
+    border: 1px solid rgba(31, 106, 255, 0.28);
+    box-shadow: none;
+}
+
+[data-theme="dark"] .help-category-card .help-icon {
+    color: #fff;
+    background: linear-gradient(135deg, #1f6aff, #00d4ff);
+    border-color: transparent;
+}
+
+@media (max-width: 768px) {
+    .process-arrow {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin: -0.25rem 0;
+        transform: rotate(90deg);
+        line-height: 1;
     }
 }
