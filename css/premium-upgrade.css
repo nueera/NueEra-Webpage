@@ -1405,3 +1405,47 @@ h1, h2, h3, h4 { letter-spacing: -0.02em; }
   50% { color: #ff9a1f; }
   100% { color: #1f6aff; }
 }
+
+/* ==========================================
+   MOBILE NAV TEXT = H2 FEATURE STYLE (TOP PRIORITY)
+   ========================================== */
+@media (max-width: 1024px) {
+  html body .mobile-menu-overlay .mobile-nav-links a,
+  html body .mobile-nav-links a {
+    font-size: clamp(0.96rem, 3.6vw, 1.14rem) !important;
+    font-weight: 900 !important;
+    letter-spacing: 0.02em !important;
+    line-height: 1.22 !important;
+    text-align: center !important;
+
+    /* fallback visible color */
+    color: #1f6aff !important;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.08) !important;
+    animation: gradientShift 6s ease infinite alternate !important;
+  }
+
+  @supports ((-webkit-background-clip: text) or (background-clip: text)) {
+    html body .mobile-menu-overlay .mobile-nav-links a,
+    html body .mobile-nav-links a {
+      background: linear-gradient(135deg, #0038a8 0%, #1f6aff 35%, #ff9a1f 65%, #e65100 100%) !important;
+      background-size: 200% 200% !important;
+      -webkit-background-clip: text !important;
+      background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+      color: transparent !important;
+    }
+  }
+
+  html body .mobile-menu-overlay .mobile-nav-links a.active,
+  html body .mobile-nav-links a.active {
+    transform: translateY(-1px) !important;
+    filter: saturate(1.08) brightness(1.03) !important;
+  }
+}
+
+@media (max-width: 520px) {
+  html body .mobile-menu-overlay .mobile-nav-links a,
+  html body .mobile-nav-links a {
+    font-size: clamp(0.9rem, 3.8vw, 1.04rem) !important;
+  }
+}
