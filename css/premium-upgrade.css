@@ -3916,6 +3916,228 @@ html[data-theme='dark'] .contact-why-card {
   }
 }
 
+/* Contact V3: bridge-flow animation (distinct from other pages) */
+.contact-hero-v3 .contact-hero-copy {
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.96), rgba(246, 251, 255, 0.9)),
+    radial-gradient(circle at 16% 14%, rgba(31, 106, 255, 0.15), transparent 44%),
+    radial-gradient(circle at 86% 84%, rgba(255, 154, 31, 0.12), transparent 44%);
+}
+
+html[data-theme='dark'] .contact-hero-v3 .contact-hero-copy {
+  background:
+    linear-gradient(145deg, rgba(14, 24, 44, 0.96), rgba(11, 19, 36, 0.92)),
+    radial-gradient(circle at 16% 14%, rgba(31, 106, 255, 0.22), transparent 44%),
+    radial-gradient(circle at 86% 84%, rgba(255, 154, 31, 0.16), transparent 44%);
+}
+
+.contact-hero-v3 .contact-bridge-stage {
+  position: relative;
+  min-height: 320px;
+  padding: 1rem;
+}
+
+.contact-hero-v3 .bridge-axis {
+  position: absolute;
+  top: 46px;
+  bottom: 28px;
+  width: 2px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.24);
+}
+
+.contact-hero-v3 .axis-left {
+  left: 28%;
+}
+
+.contact-hero-v3 .axis-right {
+  right: 28%;
+}
+
+.contact-hero-v3 .bridge-node {
+  position: absolute;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  background: rgba(8, 20, 40, 0.78);
+  color: #e2eeff;
+  font-size: 0.76rem;
+  font-weight: 800;
+  padding: 0.32rem 0.54rem;
+}
+
+.contact-hero-v3 .node-1 {
+  left: 20px;
+  top: 68px;
+}
+
+.contact-hero-v3 .node-2 {
+  right: 20px;
+  top: 142px;
+}
+
+.contact-hero-v3 .node-3 {
+  left: 20px;
+  top: 216px;
+}
+
+.contact-hero-v3 .bridge-link {
+  position: absolute;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(31, 106, 255, 0.95), rgba(255, 154, 31, 0.9));
+}
+
+.contact-hero-v3 .link-a {
+  left: 28%;
+  width: 44%;
+  top: 92px;
+}
+
+.contact-hero-v3 .link-b {
+  right: 28%;
+  width: 44%;
+  top: 166px;
+}
+
+.contact-hero-v3 .link-c {
+  left: 28%;
+  width: 44%;
+  top: 240px;
+}
+
+.contact-hero-v3 .bridge-packet {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #1f6aff, #ff9a1f);
+  box-shadow: 0 0 0 6px rgba(31, 106, 255, 0.16);
+}
+
+.contact-hero-v3 .packet-a {
+  top: 86px;
+  left: 32%;
+  animation: contactBridgeTravelA 3.8s linear infinite;
+}
+
+.contact-hero-v3 .packet-b {
+  top: 234px;
+  left: 32%;
+  animation: contactBridgeTravelB 4.2s linear infinite 0.8s;
+}
+
+.contact-next-section {
+  padding-top: 0.3rem;
+}
+
+.contact-next-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.85rem;
+}
+
+.contact-next-card {
+  border-radius: 14px;
+  border: 1px solid rgba(31, 106, 255, 0.18);
+  padding: 0.9rem;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+html[data-theme='dark'] .contact-next-card {
+  border-color: rgba(116, 160, 255, 0.2);
+  background: rgba(12, 20, 36, 0.84);
+}
+
+.next-step-no {
+  display: inline-grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+  margin-bottom: 0.62rem;
+  font-size: 0.78rem;
+  font-weight: 900;
+  color: #ffffff;
+  background: linear-gradient(140deg, #1f6aff, #ff9a1f);
+}
+
+.contact-next-card h3 {
+  margin-bottom: 0.32rem;
+}
+
+.contact-next-card p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+@keyframes contactBridgeTravelA {
+  0% { transform: translateX(0); opacity: 0.2; }
+  20% { opacity: 1; }
+  100% { transform: translateX(178px); opacity: 0.2; }
+}
+
+@keyframes contactBridgeTravelB {
+  0% { transform: translateX(0); opacity: 0.2; }
+  20% { opacity: 1; }
+  100% { transform: translateX(178px); opacity: 0.2; }
+}
+
+@media (max-width: 1100px) {
+  .contact-next-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .contact-hero-v3 .contact-bridge-stage {
+    min-height: 262px;
+    padding: 0.75rem;
+  }
+
+  .contact-hero-v3 .bridge-axis {
+    top: 42px;
+    bottom: 20px;
+  }
+
+  .contact-hero-v3 .axis-left {
+    left: 22%;
+  }
+
+  .contact-hero-v3 .axis-right {
+    right: 22%;
+  }
+
+  .contact-hero-v3 .bridge-node {
+    font-size: 0.67rem;
+    padding: 0.25rem 0.4rem;
+  }
+
+  .contact-hero-v3 .node-1 {
+    top: 62px;
+  }
+
+  .contact-hero-v3 .node-2 {
+    top: 118px;
+  }
+
+  .contact-hero-v3 .node-3 {
+    top: 174px;
+  }
+
+  .contact-hero-v3 .link-a {
+    top: 84px;
+  }
+
+  .contact-hero-v3 .link-b {
+    top: 140px;
+  }
+
+  .contact-hero-v3 .link-c {
+    top: 196px;
+  }
+}
+
 /* ==========================================
    BLOG REDESIGN V2: MAGAZINE LAYER SYSTEM
    ========================================== */
