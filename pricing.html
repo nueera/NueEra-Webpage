@@ -23,8 +23,8 @@
       name="description"
       content="NueEra Pricing - Flexible plans for startups to enterprises."
     />
-<link rel="stylesheet" href="css/styles.css?v=20260328h" />
-    <link rel="stylesheet" href="css/premium-upgrade.css?v=20260328h">
+<link rel="stylesheet" href="css/styles.css?v=20260328p" />
+    <link rel="stylesheet" href="css/premium-upgrade.css?v=20260328p">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -141,74 +141,64 @@
 
     <main id="main">
       <!-- 1. Pricing Hero -->
-      <section
-        class="page-header"
-        style="padding-bottom: 4rem"
-      >
+      <section class="section pricing-hero-premium">
         <div class="container">
-          <h1
-            style="margin-bottom: 1rem; animation: fadeUp 600ms ease-out both"
-          >
-            Transparent pricing for scalable digital systems
-          </h1>
-          <p
-            style="
-              max-width: 700px;
-              margin: 0 auto 1.5rem;
-              font-size: 1.2rem;
-              animation: fadeUp 600ms ease-out 100ms both;
-            "
-          >
-            Choose a plan aligned with your growth stage. Every engagement is
-            tailored â€” pricing reflects outcomes, not effort.
-          </p>
-          <p
-            style="
-              font-size: 0.9rem;
-              color: var(--text-muted);
-              margin-bottom: 2rem;
-              text-transform: uppercase;
-              letter-spacing: 1px;
-              animation: fadeUp 600ms ease-out 200ms both;
-            "
-          >
-            No hidden fees Â· No long-term lock-in Â· Strategy included
-          </p>
-          <div style="animation: fadeUp 600ms ease-out 300ms both">
-            <a class="btn btn-secondary" href="contact.html"
-              >ðŸ‘‰ Talk to an Expert â†’</a
-            >
-          </div>
-        </div>
-      </section>
+          <div class="pricing-hero-grid">
+            <div class="pricing-hero-copy reveal">
+              <span class="pricing-kicker">Pricing</span>
+              <h1>Transparent Pricing For Scalable Digital Systems</h1>
+              <p class="pricing-hero-lead">
+                Choose a plan aligned with your growth stage. Every engagement is tailored, outcome-driven,
+                and designed for long-term value instead of hourly uncertainty.
+              </p>
+              <div class="pricing-hero-chips">
+                <span>No Hidden Fees</span>
+                <span>No Long-Term Lock-In</span>
+                <span>Strategy Included</span>
+              </div>
+              <div class="pricing-hero-actions">
+                <a class="btn btn-secondary" href="contact.html">Talk to an Expert</a>
+              </div>
+            </div>
 
-      <!-- 2. Pricing Model Explanation -->
-      <section class="section" style="padding-top: 0; padding-bottom: 4rem">
-        <div
-          class="container"
-          style="
-            text-align: center;
-            max-width: 800px;
-            animation: fadeIn 600ms ease-out both;
-          "
-        >
-          <h2 style="font-size: 2rem; margin-bottom: 1rem">
-            How our pricing works
-          </h2>
-          <p style="font-size: 1.1rem; margin-bottom: 1rem">
-            We offer system-based pricing rather than hourly billing. Each plan
-            reflects the scope, complexity, and business impact of the solution
-            â€” ensuring alignment between effort and outcomes.
-          </p>
-          <p
-            style="
-              font-size: 0.9rem;
-              color: var(--text-muted);
-              font-style: italic;
-            "
-          >
-            Built for clarity, not negotiation.
-          </p>
+            <div class="pricing-hero-visual reveal" aria-hidden="true">
+              <div class="pricing-control-board">
+                <div class="pricing-control-head">Value Calibration</div>
+                <div class="pricing-meter meter-scope">
+                  <span>Scope Depth</span>
+                  <div><i></i></div>
+                </div>
+                <div class="pricing-meter meter-speed">
+                  <span>Delivery Speed</span>
+                  <div><i></i></div>
+                </div>
+                <div class="pricing-meter meter-impact">
+                  <span>Business Impact</span>
+                  <div><i></i></div>
+                </div>
+                <div class="pricing-meter meter-support">
+                  <span>Support Layer</span>
+                  <div><i></i></div>
+                </div>
+                <div class="pricing-board-note">Built for clarity, not negotiation.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="pricing-principles-grid reveal" role="list" aria-label="Pricing principles">
+            <article class="pricing-principle-card" role="listitem">
+              <h3>System-Based, Not Hourly</h3>
+              <p>Pricing reflects complete outcomes and capability improvements, not tracked hours.</p>
+            </article>
+            <article class="pricing-principle-card" role="listitem">
+              <h3>Clear Scope Alignment</h3>
+              <p>Every tier maps to delivery depth, timeline complexity, and expected business value.</p>
+            </article>
+            <article class="pricing-principle-card" role="listitem">
+              <h3>Upgrade-Ready Path</h3>
+              <p>Start lean, then extend into growth and enterprise capabilities without rework.</p>
+            </article>
+          </div>
         </div>
       </section>
 
@@ -320,22 +310,13 @@
       </section>
 
       <!-- 4. What's Included -->
-      <section class="section alternate">
+      <section class="section alternate pricing-included-section">
         <div class="container">
           <div class="section-header">
             <h2>What's Included</h2>
             <p>No hidden costs. No surprises.</p>
           </div>
-          <div
-            style="
-              display: grid;
-              grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-              gap: 2rem;
-              max-width: 800px;
-              margin: 0 auto;
-              animation: fadeIn 600ms ease-out both;
-            "
-          >
+          <div class="pricing-included-grid">
             <div>
               <ul class="detail-list">
                 <li>Strategy & planning</li>
@@ -355,70 +336,62 @@
       </section>
 
       <!-- 5. Comparison Snapshot -->
-      <section class="section">
+      <section class="section pricing-compare-section">
         <div class="container">
           <div class="section-header">
             <h2>Compare Plans</h2>
             <p>Find the right fit for your business</p>
           </div>
-          <div style="overflow-x: auto">
-            <table
-              style="width: 100%; border-collapse: collapse; min-width: 600px"
-            >
+          <div class="pricing-table-wrap">
+            <table class="pricing-compare-table">
               <thead>
-                <tr style="border-bottom: 1px solid var(--border-color)">
-                  <th style="text-align: left; padding: 1rem">Feature</th>
-                  <th style="text-align: center; padding: 1rem">Starter</th>
-                  <th
-                    style="
-                      text-align: center;
-                      padding: 1rem;
-                      color: var(--accent-orange);
-                    "
-                  >
+                <tr>
+                  <th>Feature</th>
+                  <th>Starter</th>
+                  <th class="highlight-col">
                     Growth
                   </th>
-                  <th style="text-align: center; padding: 1rem">Enterprise</th>
+                  <th>Enterprise</th>
                 </tr>
               </thead>
               <tbody>
-                <tr style="border-bottom: 1px solid var(--border-color)">
-                  <td style="padding: 1rem">Strategy Included</td>
-                  <td style="text-align: center; padding: 1rem">Basic</td>
-                  <td style="text-align: center; padding: 1rem">Advanced</td>
-                  <td style="text-align: center; padding: 1rem">
+                <tr>
+                  <td>Strategy Included</td>
+                  <td>Basic</td>
+                  <td>Advanced</td>
+                  <td>
                     Comprehensive
                   </td>
                 </tr>
-                <tr style="border-bottom: 1px solid var(--border-color)">
-                  <td style="padding: 1rem">Performance Optimization</td>
-                  <td style="text-align: center; padding: 1rem">Standard</td>
-                  <td style="text-align: center; padding: 1rem">Advanced</td>
-                  <td style="text-align: center; padding: 1rem">Custom</td>
+                <tr>
+                  <td>Performance Optimization</td>
+                  <td>Standard</td>
+                  <td>Advanced</td>
+                  <td>Custom</td>
                 </tr>
-                <tr style="border-bottom: 1px solid var(--border-color)">
-                  <td style="padding: 1rem">Analytics & Reporting</td>
-                  <td style="text-align: center; padding: 1rem">Setup Only</td>
-                  <td style="text-align: center; padding: 1rem">Monthly</td>
-                  <td style="text-align: center; padding: 1rem">
+                <tr>
+                  <td>Analytics & Reporting</td>
+                  <td>Setup Only</td>
+                  <td>Monthly</td>
+                  <td>
                     Real-time Dashboard
                   </td>
                 </tr>
-                <tr style="border-bottom: 1px solid var(--border-color)">
-                  <td style="padding: 1rem">Support Level</td>
-                  <td style="text-align: center; padding: 1rem">Email</td>
-                  <td style="text-align: center; padding: 1rem">
+                <tr>
+                  <td>Support Level</td>
+                  <td>Email</td>
+                  <td>
                     Priority Email
                   </td>
-                  <td style="text-align: center; padding: 1rem">
+                  <td>
                     Dedicated Manager
                   </td>
                 </tr>
                 <tr>
-                  <td style="padding: 1rem">Customization</td>
-                  <td style="text-align: center; padding: 1rem">Limited</td>
-                  <td style="text-align: center; padding: 1rem">Flexible</td>
-                  <td style="text-align: center; padding: 1rem">
+                  <td>Customization</td>
+                  <td>Limited</td>
+                  <td>Flexible</td>
+                  <td>
                     Fully Custom
                   </td>
                 </tr>
@@ -429,14 +402,24 @@
       </section>
 
       <!-- 6. FAQ -->
-      <section class="section alternate">
+      <section class="section alternate pricing-faq-section">
         <div class="container">
           <div class="section-header">
             <h2>Frequently Asked Questions</h2>
             <p>Common questions about our pricing and process</p>
           </div>
-          <div style="max-width: 800px; margin: 0 auto">
-            <div class="faq-item">
+          <div class="pricing-faq-layout">
+            <aside class="pricing-faq-aside reveal" aria-label="FAQ support">
+              <h3>Need quick guidance?</h3>
+              <p>
+                Share your goals and timeline. We will recommend the best plan
+                and explain the scope clearly before kickoff.
+              </p>
+              <a class="btn btn-secondary" href="contact.html">Ask Pricing Team</a>
+            </aside>
+
+            <div class="pricing-faq-list">
+            <div class="faq-item reveal">
               <div class="faq-question">
                 <h3>Do you offer custom pricing?</h3>
                 <span class="faq-toggle">â–¼</span>
@@ -449,7 +432,7 @@
                 </p>
               </div>
             </div>
-            <div class="faq-item">
+            <div class="faq-item reveal">
               <div class="faq-question">
                 <h3>What happens after launch?</h3>
                 <span class="faq-toggle">â–¼</span>
@@ -462,7 +445,7 @@
                 </p>
               </div>
             </div>
-            <div class="faq-item">
+            <div class="faq-item reveal">
               <div class="faq-question">
                 <h3>Can I upgrade later?</h3>
                 <span class="faq-toggle">â–¼</span>
@@ -474,7 +457,7 @@
                 </p>
               </div>
             </div>
-            <div class="faq-item">
+            <div class="faq-item reveal">
               <div class="faq-question">
                 <h3>Do you provide ongoing support?</h3>
                 <span class="faq-toggle">â–¼</span>
@@ -486,6 +469,7 @@
                   secure and performant.
                 </p>
               </div>
+            </div>
             </div>
           </div>
         </div>
@@ -501,14 +485,7 @@
           <a class="btn btn-primary" href="contact.html"
             >Get a Free Strategy Call</a
           >
-          <p
-            class="cta-microcopy"
-            style="
-              margin-top: 1rem;
-              font-size: 0.85rem;
-              color: var(--text-tertiary);
-            "
-          >
+          <p class="cta-microcopy pricing-cta-microcopy">
             Free Â· No obligation Â· 30-minute call
           </p>
         </div>

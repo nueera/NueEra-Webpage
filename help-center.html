@@ -18,8 +18,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="NueEra Help Center - FAQs, how it works, and support resources.">
-<link rel="stylesheet" href="css/styles.css?v=20260328h">
-    <link rel="stylesheet" href="css/premium-upgrade.css?v=20260328h">
+<link rel="stylesheet" href="css/styles.css?v=20260328u">
+    <link rel="stylesheet" href="css/premium-upgrade.css?v=20260328u">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -108,87 +108,126 @@
     <main id="main">
 
     <!-- 1. Help Center Hero -->
-    <section class="page-header" style="padding-bottom: 2rem;">
+    <section class="section help-hero-premium help-hero-v2">
         <div class="container">
-            <h1 style="margin-bottom: 1rem; animation: fadeUp 600ms ease-out both;">How can we help you?</h1>
-            <p style="max-width: 700px; margin: 0 auto 2rem; font-size: 1.2rem; animation: fadeUp 600ms ease-out 100ms both;">Find answers, explore our process, or get in touch with the NueEra team.</p>
-            <div style="max-width: 600px; margin: 0 auto; position: relative; animation: fadeIn 600ms ease-out 200ms both;">
-                <input type="text" placeholder="Search for topics, services, or common questions..." style="width: 100%; padding: 16px 24px 16px 50px; border-radius: 50px; border: 1px solid var(--border-color); background: var(--bg-main); color: var(--text-primary); font-size: 1rem; box-shadow: var(--shadow-soft);">
-                <i class="fas fa-search" style="position: absolute; left: 20px; top: 50%; transform: translateY(-50%); color: var(--text-muted);"></i>
+            <div class="help-hero-grid">
+                <div class="help-hero-copy reveal">
+                    <span class="help-kicker">Help Center</span>
+                    <h1>How can we help you?</h1>
+                    <p>Find answers, explore our process, or connect directly with the NueEra team.</p>
+                    <div class="help-search-wrap">
+                        <input type="text" placeholder="Search topics, services, or common questions..." class="help-search-input">
+                        <i class="fas fa-search help-search-icon" aria-hidden="true"></i>
+                    </div>
+                </div>
+
+                <div class="help-hero-visual reveal" aria-hidden="true">
+                    <div class="help-route-stage">
+                        <div class="route-title">Support Route Map</div>
+                        <div class="route-line route-line-a"><i></i></div>
+                        <div class="route-line route-line-b"><i></i></div>
+                        <div class="route-line route-line-c"><i></i></div>
+                        <div class="route-node node-intake">Intake</div>
+                        <div class="route-node node-triage">Triage</div>
+                        <div class="route-node node-solve">Solve</div>
+                        <div class="route-node node-followup">Follow-up</div>
+                        <div class="route-pulse route-pulse-a"></div>
+                        <div class="route-pulse route-pulse-b"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="help-support-lanes reveal" role="list" aria-label="Support lanes">
+                <article role="listitem"><strong>Fast Lane</strong><span>Urgent issue triage and status clarity</span></article>
+                <article role="listitem"><strong>Guided Lane</strong><span>Onboarding and decision support for new clients</span></article>
+                <article role="listitem"><strong>Expert Lane</strong><span>Technical escalation with solution ownership</span></article>
             </div>
         </div>
     </section>
 
     <!-- 2. Quick Help Categories -->
-    <section class="section" style="padding-top: 2rem;">
+    <section class="section help-categories-section">
         <div class="container">
-            <div class="services-grid" style="margin-top: 0;">
-                <div class="service-card reveal help-category-card" style="padding: 2rem;">
+            <div class="services-grid help-categories-grid">
+                <div class="service-card reveal help-category-card">
                     <div class="service-icon help-icon"><i class="fas fa-rocket"></i></div>
                     <h3>Getting Started</h3>
-                    <p style="margin-bottom: 0;">Project onboarding, timelines, first steps</p>
+                    <p>Project onboarding, timelines, first steps</p>
                 </div>
-                <div class="service-card reveal help-category-card" style="padding: 2rem;">
+                <div class="service-card reveal help-category-card">
                     <div class="service-icon help-icon"><i class="fas fa-tags"></i></div>
                     <h3>Services & Pricing</h3>
-                    <p style="margin-bottom: 0;">What we offer, pricing models, engagement types</p>
+                    <p>What we offer, pricing models, engagement types</p>
                 </div>
-                <div class="service-card reveal help-category-card" style="padding: 2rem;">
+                <div class="service-card reveal help-category-card">
                     <div class="service-icon help-icon"><i class="fas fa-cogs"></i></div>
                     <h3>Process & Delivery</h3>
-                    <p style="margin-bottom: 0;">How we work, milestones, communication</p>
+                    <p>How we work, milestones, communication</p>
                 </div>
-                <div class="service-card reveal help-category-card" style="padding: 2rem;">
+                <div class="service-card reveal help-category-card">
                     <div class="service-icon help-icon"><i class="fas fa-tools"></i></div>
                     <h3>Technical & Support</h3>
-                    <p style="margin-bottom: 0;">Maintenance, hosting, updates, security</p>
+                    <p>Maintenance, hosting, updates, security</p>
                 </div>
-                <div class="service-card reveal help-category-card" style="padding: 2rem;">
+                <div class="service-card reveal help-category-card">
                     <div class="service-icon help-icon"><i class="fas fa-file-invoice-dollar"></i></div>
                     <h3>Billing & Contracts</h3>
-                    <p style="margin-bottom: 0;">Invoices, payments, agreements</p>
+                    <p>Invoices, payments, agreements</p>
                 </div>
-                <div class="service-card reveal help-category-card" style="padding: 2rem;">
+                <div class="service-card reveal help-category-card">
                     <div class="service-icon help-icon"><i class="fas fa-question-circle"></i></div>
                     <h3>General Questions</h3>
-                    <p style="margin-bottom: 0;">Everything else</p>
+                    <p>Everything else</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- 3. Popular Questions (FAQ Core) -->
-    <section class="section">
+    <section class="section help-faq-section">
         <div class="container">
             <div class="section-header">
                 <h2>Popular Questions</h2>
                 <p>Most commonly asked questions</p>
             </div>
             
-            <div style="max-width: 800px; margin: 0 auto;">
-                <div class="faq-item">
-                    <div class="faq-question"><h3>How do I get started with NueEra?</h3><span class="faq-toggle">â–¼</span></div>
+            <div class="help-faq-layout">
+                <aside class="help-faq-aside reveal" aria-label="Question shortcuts">
+                    <h3>Quick Navigation</h3>
+                    <div class="help-faq-topics">
+                        <span>Getting Started</span>
+                        <span>Support Plans</span>
+                        <span>Security</span>
+                        <span>Scaling</span>
+                    </div>
+                    <p>Can’t find your answer? Contact our support team and we’ll guide you to the right solution path.</p>
+                    <a class='btn btn-secondary' href='contact.html'>Ask a Specific Question</a>
+                </aside>
+
+                <div class="help-faq-wrap">
+                <div class="faq-item reveal">
+                    <div class="faq-question"><h3><span class="faq-tag">Start</span>How do I get started with NueEra?</h3><span class="faq-toggle">â–¼</span></div>
                     <div class="faq-answer"><p>Simply book a free strategy call or contact us via email. We'll schedule a discovery session to understand your needs and propose a tailored solution.</p></div>
                 </div>
 
-                <div class="faq-item">
-                    <div class="faq-question"><h3>What happens after project launch?</h3><span class="faq-toggle">â–¼</span></div>
+                <div class="faq-item reveal">
+                    <div class="faq-question"><h3><span class="faq-tag">Post Launch</span>What happens after project launch?</h3><span class="faq-toggle">â–¼</span></div>
                     <div class="faq-answer"><p>We don't just hand over the keys and leave. We offer a warranty period followed by optional support and maintenance packages to ensure your system continues to perform.</p></div>
                 </div>
 
-                <div class="faq-item">
-                    <div class="faq-question"><h3>Do you offer ongoing support?</h3><span class="faq-toggle">â–¼</span></div>
+                <div class="faq-item reveal">
+                    <div class="faq-question"><h3><span class="faq-tag">Support</span>Do you offer ongoing support?</h3><span class="faq-toggle">â–¼</span></div>
                     <div class="faq-answer"><p>Yes. We provide various tiers of ongoing support, from security updates and hosting management to continuous feature development and optimization.</p></div>
                 </div>
 
-                <div class="faq-item">
-                    <div class="faq-question"><h3>Can I upgrade my service later?</h3><span class="faq-toggle">â–¼</span></div>
+                <div class="faq-item reveal">
+                    <div class="faq-question"><h3><span class="faq-tag">Upgrade</span>Can I upgrade my service later?</h3><span class="faq-toggle">â–¼</span></div>
                     <div class="faq-answer"><p>Absolutely. Our systems are built to scale. You can start with a core package and add features, integrations, or marketing services as your business grows.</p></div>
                 </div>
 
-                <div class="faq-item">
-                    <div class="faq-question"><h3>How do you handle security and data privacy?</h3><span class="faq-toggle">â–¼</span></div>
+                <div class="faq-item reveal">
+                    <div class="faq-question"><h3><span class="faq-tag">Security</span>How do you handle security and data privacy?</h3><span class="faq-toggle">â–¼</span></div>
                     <div class="faq-answer"><p>Security is foundational to our process. We use industry-standard encryption, secure hosting environments, and regular audits to protect your data and your customers' privacy.</p></div>
+                </div>
                 </div>
             </div>
         </div>
@@ -218,43 +257,43 @@
     </section>
 
     <!-- 5. Guides & Resources -->
-    <section class="section">
+    <section class="section help-resources-section">
         <div class="container">
             <div class="section-header">
                 <h2>Guides & Resources</h2>
                 <p>Self-serve knowledge to help you succeed.</p>
             </div>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
-                <a href="#" class="resource-card" style="display: block; padding: 1.5rem; background: var(--bg-glass); border: 1px solid var(--border-color); border-radius: 12px; text-decoration: none; color: var(--text-primary); transition: border-color 0.3s;">
-                    <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Client Onboarding Guide</h3>
-                    <p style="font-size: 0.9rem; color: var(--text-secondary); margin: 0;">What to expect in your first 30 days</p>
+            <div class="help-resource-grid">
+                <a href="#" class="resource-card">
+                    <h3>Client Onboarding Guide</h3>
+                    <p>What to expect in your first 30 days</p>
                 </a>
-                <a href="#" class="resource-card" style="display: block; padding: 1.5rem; background: var(--bg-glass); border: 1px solid var(--border-color); border-radius: 12px; text-decoration: none; color: var(--text-primary); transition: border-color 0.3s;">
-                    <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Project Timeline Explained</h3>
-                    <p style="font-size: 0.9rem; color: var(--text-secondary); margin: 0;">How milestones and reviews work</p>
+                <a href="#" class="resource-card">
+                    <h3>Project Timeline Explained</h3>
+                    <p>How milestones and reviews work</p>
                 </a>
-                <a href="#" class="resource-card" style="display: block; padding: 1.5rem; background: var(--bg-glass); border: 1px solid var(--border-color); border-radius: 12px; text-decoration: none; color: var(--text-primary); transition: border-color 0.3s;">
-                    <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Support & Maintenance Overview</h3>
-                    <p style="font-size: 0.9rem; color: var(--text-secondary); margin: 0;">Whatâ€™s included after launch</p>
+                <a href="#" class="resource-card">
+                    <h3>Support & Maintenance Overview</h3>
+                    <p>Whatâ€™s included after launch</p>
                 </a>
-                <a href="#" class="resource-card" style="display: block; padding: 1.5rem; background: var(--bg-glass); border: 1px solid var(--border-color); border-radius: 12px; text-decoration: none; color: var(--text-primary); transition: border-color 0.3s;">
-                    <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Security & Compliance</h3>
-                    <p style="font-size: 0.9rem; color: var(--text-secondary); margin: 0;">How we protect your systems and data</p>
+                <a href="#" class="resource-card">
+                    <h3>Security & Compliance</h3>
+                    <p>How we protect your systems and data</p>
                 </a>
             </div>
         </div>
     </section>
 
     <!-- 6. Still Need Help? (Human Escalation) -->
-    <section class="section cta-section">
+    <section class="section cta-section help-cta-section">
         <div class="container">
             <h2>Still have questions?</h2>
             <p class="cta-subtitle">Our team is here to help â€” whether youâ€™re exploring options or already working with us.</p>
-            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+            <div class="help-cta-actions">
                 <a class='btn btn-secondary' href='contact.html'>Contact Support</a>
                 <a class='btn btn-primary' href='contact.html'>Book a Strategy Call</a>
             </div>
-            <p class="cta-microcopy" style="margin-top: 1rem; font-size: 0.85rem; color: var(--text-tertiary);">We usually respond within 24 hours.</p>
+            <p class="cta-microcopy help-cta-microcopy">We usually respond within 24 hours.</p>
         </div>
     </section>
 
