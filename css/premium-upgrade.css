@@ -2665,3 +2665,294 @@ html[data-theme='dark'] .about-3d-copy {
     min-height: 230px;
   }
 }
+
+/* ==========================================
+   ABOUT REDESIGN V2: PAGE-SPECIFIC ANIMATION
+   ========================================== */
+.about-hero-visual {
+  min-height: 330px;
+}
+
+.about-network-stage {
+  position: relative;
+  width: 100%;
+  min-height: 330px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.about-network-center {
+  width: 144px;
+  height: 144px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 0.7rem;
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: 0.04em;
+  background: radial-gradient(circle at 28% 22%, #73a5ff, #1f6aff 58%, #0d3b9b);
+  box-shadow:
+    inset 0 -12px 22px rgba(2, 8, 18, 0.35),
+    0 14px 24px rgba(3, 10, 24, 0.38),
+    0 0 36px rgba(31, 106, 255, 0.42);
+  z-index: 4;
+}
+
+.about-connection-line {
+  position: absolute;
+  width: 120px;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(31, 106, 255, 0.95), rgba(255, 154, 31, 0.9));
+  opacity: 0.85;
+  z-index: 2;
+}
+
+.line-one {
+  transform: rotate(-35deg) translate(96px, -54px);
+}
+
+.line-two {
+  transform: rotate(28deg) translate(90px, 68px);
+}
+
+.line-three {
+  transform: rotate(158deg) translate(92px, -6px);
+}
+
+.about-network-node {
+  position: absolute;
+  z-index: 5;
+  border-radius: 12px;
+  padding: 0.45rem 0.72rem;
+  font-size: 0.79rem;
+  font-weight: 800;
+  color: #f2f7ff;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  background: rgba(6, 18, 38, 0.76);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 10px 16px rgba(0, 0, 0, 0.2);
+}
+
+.node-strategy {
+  top: 42px;
+  left: 52%;
+  animation: aboutFloat 4.2s ease-in-out infinite;
+}
+
+.node-design {
+  right: 32px;
+  top: 48%;
+  animation: aboutFloat 4.5s ease-in-out infinite 0.5s;
+}
+
+.node-engineering {
+  left: 34px;
+  top: 52%;
+  animation: aboutFloat 4.8s ease-in-out infinite 0.2s;
+}
+
+.node-growth {
+  left: 50%;
+  bottom: 32px;
+  transform: translateX(-50%);
+  animation: aboutFloatCentered 4.3s ease-in-out infinite 0.7s;
+}
+
+.about-pulse-ring {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  animation: aboutPulse 3.4s ease-out infinite;
+  z-index: 1;
+}
+
+.about-delivery-section {
+  padding-top: 0.2rem;
+}
+
+.about-delivery-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.95fr);
+  gap: 1rem;
+}
+
+.about-delivery-copy {
+  border-radius: 18px;
+  border: 1px solid rgba(31, 106, 255, 0.18);
+  padding: 1.15rem;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+html[data-theme='dark'] .about-delivery-copy {
+  border-color: rgba(116, 160, 255, 0.2);
+  background: rgba(10, 18, 34, 0.84);
+}
+
+.about-delivery-points {
+  margin: 0.8rem 0 0;
+  padding-left: 1.05rem;
+}
+
+.about-delivery-points li {
+  margin: 0.35rem 0;
+  color: var(--text-secondary);
+}
+
+.about-delivery-frame {
+  border-radius: 18px;
+  border: 1px solid rgba(31, 106, 255, 0.2);
+  padding: 1rem;
+  background:
+    radial-gradient(circle at 18% 12%, rgba(31, 106, 255, 0.18), transparent 42%),
+    radial-gradient(circle at 80% 88%, rgba(255, 154, 31, 0.14), transparent 45%),
+    rgba(255, 255, 255, 0.86);
+}
+
+html[data-theme='dark'] .about-delivery-frame {
+  border-color: rgba(116, 160, 255, 0.2);
+  background:
+    radial-gradient(circle at 18% 12%, rgba(31, 106, 255, 0.24), transparent 42%),
+    radial-gradient(circle at 80% 88%, rgba(255, 154, 31, 0.2), transparent 45%),
+    rgba(9, 16, 30, 0.9);
+}
+
+.about-flow-header {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.5rem;
+  margin-bottom: 0.7rem;
+}
+
+.about-flow-header span {
+  text-align: center;
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-primary);
+}
+
+.about-flow-track {
+  height: 12px;
+  border-radius: 999px;
+  background: rgba(31, 106, 255, 0.1);
+  overflow: hidden;
+  margin-bottom: 0.85rem;
+}
+
+.about-flow-bar {
+  height: 100%;
+  width: 34%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #1f6aff, #ff9a1f);
+  animation: aboutFlow 4.8s ease-in-out infinite;
+}
+
+.about-flow-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.6rem;
+}
+
+.about-flow-metrics article {
+  border-radius: 12px;
+  border: 1px solid rgba(31, 106, 255, 0.17);
+  padding: 0.65rem 0.5rem;
+  background: rgba(255, 255, 255, 0.78);
+  text-align: center;
+}
+
+html[data-theme='dark'] .about-flow-metrics article {
+  border-color: rgba(116, 160, 255, 0.18);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.about-flow-metrics strong {
+  display: block;
+  font-size: 0.84rem;
+  margin-bottom: 0.18rem;
+}
+
+.about-flow-metrics p {
+  margin: 0;
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+}
+
+@keyframes aboutFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes aboutFloatCentered {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(-6px); }
+}
+
+@keyframes aboutPulse {
+  0% {
+    transform: scale(0.86);
+    opacity: 0.45;
+  }
+  100% {
+    transform: scale(1.08);
+    opacity: 0;
+  }
+}
+
+@keyframes aboutFlow {
+  0% { transform: translateX(-100%); }
+  45% { transform: translateX(95%); }
+  55% { transform: translateX(95%); }
+  100% { transform: translateX(-100%); }
+}
+
+@media (max-width: 1100px) {
+  .about-delivery-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 680px) {
+  .about-hero-visual,
+  .about-network-stage {
+    min-height: 270px;
+  }
+
+  .about-network-center {
+    width: 118px;
+    height: 118px;
+    font-size: 0.8rem;
+  }
+
+  .about-network-node {
+    font-size: 0.71rem;
+    padding: 0.32rem 0.48rem;
+  }
+
+  .node-strategy {
+    top: 26px;
+  }
+
+  .node-design {
+    right: 10px;
+  }
+
+  .node-engineering {
+    left: 10px;
+  }
+
+  .node-growth {
+    bottom: 20px;
+  }
+
+  .about-flow-metrics {
+    grid-template-columns: 1fr;
+  }
+}
