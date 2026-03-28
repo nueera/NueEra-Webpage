@@ -1,0 +1,170 @@
+:root {
+  --font-display: "Outfit", "Segoe UI", sans-serif;
+  --step--1: clamp(0.82rem, 0.8rem + 0.12vw, 0.92rem);
+  --step-0: clamp(1rem, 0.95rem + 0.25vw, 1.12rem);
+  --step-1: clamp(1.25rem, 1.08rem + 0.6vw, 1.55rem);
+  --step-2: clamp(1.6rem, 1.2rem + 1.2vw, 2.25rem);
+  --space-2: clamp(0.5rem, 0.4rem + 0.4vw, 0.75rem);
+  --space-4: clamp(0.9rem, 0.8rem + 0.7vw, 1.25rem);
+  --space-8: clamp(1.6rem, 1.3rem + 1.4vw, 2.4rem);
+  --premium-grad-a: linear-gradient(135deg, rgba(31,106,255,.2), rgba(0,212,255,.08));
+  --premium-grad-b: linear-gradient(135deg, rgba(255,154,31,.18), rgba(255,99,72,.08));
+}
+
+body { font-family: var(--font-display); }
+h1, h2, h3, h4 { letter-spacing: -0.02em; }
+
+.section-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  z-index: 9999;
+  pointer-events: none;
+  background: rgba(255,255,255,0.04);
+}
+
+.section-progress-fill {
+  display: block;
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #1f6aff, #00d4ff, #ff9a1f);
+  box-shadow: 0 0 14px rgba(31,106,255,.55);
+  transition: width 120ms linear;
+}
+
+.signature-panel {
+  border: 1px solid rgba(31,106,255,.15);
+  background: linear-gradient(160deg, rgba(255,255,255,.65), rgba(255,255,255,.35));
+  backdrop-filter: blur(12px);
+  border-radius: 18px;
+}
+
+[data-theme="dark"] .signature-panel {
+  border: 1px solid rgba(255,255,255,.12);
+  background: linear-gradient(160deg, rgba(20,24,40,.75), rgba(20,24,40,.5));
+}
+
+.hero-3d-shell {
+  position: relative;
+  width: min(560px, 100%);
+  aspect-ratio: 1 / 1;
+  margin: 0 auto var(--space-8);
+  border-radius: 24px;
+  overflow: hidden;
+  background: radial-gradient(circle at 30% 20%, rgba(31,106,255,.3), rgba(10,14,39,.95));
+  border: 1px solid rgba(31,106,255,.25);
+}
+
+#hero-3d-canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.hero-3d-fallback {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity .35s ease;
+}
+
+.hero-3d-shell.three-disabled .hero-3d-fallback,
+.hero-3d-shell.three-disabled #hero-3d-canvas {
+  opacity: 1;
+}
+
+.story-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-4);
+  margin-top: var(--space-8);
+}
+
+.story-step {
+  padding: 1.2rem;
+  transform: translateY(18px);
+  opacity: 0;
+  transition: transform .5s ease, opacity .5s ease;
+}
+
+.story-step.in-view {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.story-step-kicker {
+  display: inline-block;
+  font-size: var(--step--1);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent-orange);
+  margin-bottom: .75rem;
+}
+
+.service-proof .proof-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: var(--space-4);
+  margin: var(--space-8) 0;
+}
+
+.proof-card { padding: 1.4rem; }
+
+.trust-strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--space-4);
+  padding: 1.1rem;
+}
+
+.trust-item {
+  display: grid;
+  gap: .25rem;
+  text-align: center;
+}
+
+.trust-item strong {
+  font-size: var(--step-1);
+  color: var(--accent-blue);
+}
+
+.btn, .service-card, .feature-card, .proof-card, .faq-item {
+  transition: transform .24s ease, box-shadow .24s ease, border-color .24s ease;
+}
+
+.btn:hover,
+.service-card:hover,
+.feature-card:hover,
+.proof-card:hover,
+.faq-item:hover {
+  transform: translateY(-3px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .story-step,
+  .btn,
+  .service-card,
+  .feature-card,
+  .proof-card,
+  .faq-item {
+    transition: none !important;
+    transform: none !important;
+  }
+}
+
+@media (max-width: 960px) {
+  .story-grid,
+  .service-proof .proof-grid,
+  .trust-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-3d-shell {
+    width: min(420px, 100%);
+  }
+}

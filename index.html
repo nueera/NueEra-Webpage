@@ -16,6 +16,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;900&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/premium-upgrade.css">
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style"
         onload="this.rel='stylesheet'">
     <noscript>
@@ -37,6 +38,7 @@
 </head>
 
 <body>
+    <div class="section-progress" aria-hidden="true"><span class="section-progress-fill" id="sectionProgress"></span></div>
     <!-- Page Loader -->
     <div id="page-loader">
         <div class="loader-content">
@@ -152,7 +154,7 @@
                         <!-- Enhanced CTA Buttons -->
                         <div class="hero-buttons premium-buttons">
                             <a class='btn btn-primary premium-cta' href='contact.html'>
-                                <span class="btn-text">Start Free Consultation</span>
+                                <span class="btn-text">Book Strategy Call</span>
                                 <span class="btn-arrow"><i class="fas fa-arrow-right"></i></span>
                             </a>
                             <a class='btn btn-ghost premium-secondary' href='services.html'>
@@ -182,6 +184,10 @@
                     <!-- Right Column: Interactive Visual -->
                     <div class="hero-visual premium-visual">
                         <div class="hero-visual-container enhanced">
+                            <div class="hero-3d-shell" id="hero3dShell">
+                                <canvas id="hero-3d-canvas" aria-label="Interactive 3D visual"></canvas>
+                                <img src="assets/images/home2.png" alt="NueEra visual" class="hero-3d-fallback" loading="lazy" decoding="async">
+                            </div>
                             <!-- Floating Cards with Icons -->
                             <div class="floating-card floating-card-1 animated-float">
                                 <div class="card-inner">
@@ -226,6 +232,32 @@
                 </div>
             </div>
         </section>
+        <section class="section story-section" id="storytelling" data-animate-section>
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-badge">Growth Story</span>
+                    <h2>From Ambition to Scalable Results</h2>
+                    <p>We combine strategy, systems, and execution to move businesses through clear growth stages.</p>
+                </div>
+                <div class="story-grid">
+                    <article class="story-step signature-panel" data-parallax="0.06">
+                        <span class="story-step-kicker">Step 01</span>
+                        <h3>Diagnose</h3>
+                        <p>We audit your funnel, product, and operations to identify the highest-leverage bottlenecks.</p>
+                    </article>
+                    <article class="story-step signature-panel" data-parallax="0.1">
+                        <span class="story-step-kicker">Step 02</span>
+                        <h3>Design</h3>
+                        <p>We craft a conversion-focused roadmap spanning UX, automation, and growth channels.</p>
+                    </article>
+                    <article class="story-step signature-panel" data-parallax="0.14">
+                        <span class="story-step-kicker">Step 03</span>
+                        <h3>Deploy</h3>
+                        <p>We ship fast with measurable KPI checkpoints so every release compounds business impact.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
 
         <!-- Welcome Section -->
         <section class="welcome-section" id="welcome">
@@ -267,42 +299,42 @@
                     <p>Advanced digital solutions that drive measurable results</p>
                 </div>
                 <div class="features-grid">
-                    <div class="feature-card feature-card-1">
+                    <div class="feature-card signature-panel feature-card-1">
                         <div class="feature-card-bg"></div>
                        
                         <h3>Lightning Fast</h3>
                         <p>Optimized performance with modern tech stack ensuring blazing-fast load times and seamless user experiences.</p>
                         <div class="feature-card-corner"></div>
                     </div>
-                    <div class="feature-card feature-card-2">
+                    <div class="feature-card signature-panel feature-card-2">
                         <div class="feature-card-bg"></div>
                        
                         <h3>Enterprise Security</h3>
                         <p>Bank-grade security protocols, SSL encryption, and compliance standards protecting your data 24/7.</p>
                         <div class="feature-card-corner"></div>
                     </div>
-                    <div class="feature-card feature-card-3">
+                    <div class="feature-card signature-panel feature-card-3">
                         <div class="feature-card-bg"></div>
                         
                         <h3>Mobile First</h3>
                         <p>Responsive design that looks perfect on all devices, from smartphones to desktops and everything in between.</p>
                         <div class="feature-card-corner"></div>
                     </div>
-                    <div class="feature-card feature-card-4">
+                    <div class="feature-card signature-panel feature-card-4">
                         <div class="feature-card-bg"></div>
                         
                         <h3>Data Driven</h3>
                         <p>Every decision backed by analytics and user insights, ensuring maximum ROI and conversion rates.</p>
                         <div class="feature-card-corner"></div>
                     </div>
-                    <div class="feature-card feature-card-5">
+                    <div class="feature-card signature-panel feature-card-5">
                         <div class="feature-card-bg"></div>
                        
                         <h3>Expert Team</h3>
                         <p>Dedicated professionals with years of experience in digital transformation and modern web technologies.</p>
                         <div class="feature-card-corner"></div>
                     </div>
-                    <div class="feature-card feature-card-6">
+                    <div class="feature-card signature-panel feature-card-6">
                         <div class="feature-card-bg"></div>
                        
                         <h3>24/7 Support</h3>
@@ -364,7 +396,7 @@
                 </div>
                 <div class="services-grid">
                     <!-- Productized service: Website Launch System -->
-                    <div class="service-card service-card-gradient-1">
+                    <div class="service-card signature-panel service-card-gradient-1">
                         <div class="service-card-bg"></div>
                         <div class="service-card-content">
                             
@@ -376,7 +408,7 @@ Rapid, high-performance website and mobile app launches designed for growth-stag
                     </div>
 
                     <!-- Productized service: Growth Marketing System -->
-                    <div class="service-card service-card-gradient-2">
+                    <div class="service-card signature-panel service-card-gradient-2">
                         <div class="service-card-bg"></div>
                         <div class="service-card-content">
                             
@@ -388,7 +420,7 @@ Predictable customer acquisition with measurable ROI. We design scalable marketi
                     </div>
 
                     <!-- Productized service: Tech Modernization System -->
-                    <div class="service-card service-card-gradient-3">
+                    <div class="service-card signature-panel service-card-gradient-3">
                         <div class="service-card-bg"></div>
                         <div class="service-card-content">
                             
@@ -399,7 +431,7 @@ Eliminate legacy bottlenecks, improve system performance, and automate inefficie
                         </div>
                     </div>
 
-                    <div class="service-card service-card-gradient-4">
+                    <div class="service-card signature-panel service-card-gradient-4">
                         <div class="service-card-bg"></div>
                         <div class="service-card-content">
                             
@@ -408,7 +440,7 @@ Eliminate legacy bottlenecks, improve system performance, and automate inefficie
                         </div>
                     </div>
 
-                    <div class="service-card service-card-gradient-5">
+                    <div class="service-card signature-panel service-card-gradient-5">
                         <div class="service-card-bg"></div>
                         <div class="service-card-content">
                             
@@ -739,6 +771,8 @@ Eliminate legacy bottlenecks, improve system performance, and automate inefficie
         </div>
     </footer>
 
+    <script src="https://unpkg.com/three@0.160.0/build/three.min.js"></script>
+    <script src="js/premium-upgrade.js"></script>
     <script src="js/main.js"></script>
     <script src="js/enhancements.js"></script>
     <!-- Hero parallax removed to honor 'no parallax' motion principle -->
@@ -752,3 +786,4 @@ Eliminate legacy bottlenecks, improve system performance, and automate inefficie
 
 <!-- Mirrored from nueera.netlify.app/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 22 Feb 2026 06:29:11 GMT -->
 </html>
+

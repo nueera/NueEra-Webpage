@@ -10,10 +10,12 @@
     <title>Services - NueEra</title>
     <link rel="icon" type="image/png" href="assets/images/logo.png">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/premium-upgrade.css">
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
 </head>
 <body>
+    <div class="section-progress" aria-hidden="true"><span class="section-progress-fill" id="sectionProgress"></span></div>
     <!-- Page Loader -->
      <div id="page-loader">
         <div class="loader-content">
@@ -110,7 +112,41 @@
         </div>
     </section>
 
-    <!-- 2. Service Nav / Quick Jump (Auto-layout: Horizontal) -->
+        <section class="section service-proof" id="service-proof">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-badge">Before / After</span>
+                <h2>What changes after working with NueEra</h2>
+                <p>Clear capability shifts your team and customers can feel immediately.</p>
+            </div>
+            <div class="proof-grid">
+                <article class="proof-card signature-panel reveal">
+                    <h3>Before</h3>
+                    <ul>
+                        <li>Fragmented tools and manual handoffs</li>
+                        <li>Slow releases and unclear ownership</li>
+                        <li>Low confidence in marketing ROI</li>
+                    </ul>
+                </article>
+                <article class="proof-card signature-panel reveal">
+                    <h3>After</h3>
+                    <ul>
+                        <li>Integrated systems with automated workflows</li>
+                        <li>Predictable launch cadence and KPI visibility</li>
+                        <li>Conversion-focused growth engine</li>
+                    </ul>
+                </article>
+            </div>
+            <div class="trust-strip signature-panel reveal" role="list" aria-label="Trust metrics">
+                <div class="trust-item" role="listitem"><strong>16+</strong><span>Deliveries shipped</span></div>
+                <div class="trust-item" role="listitem"><strong>4+</strong><span>Industries served</span></div>
+                <div class="trust-item" role="listitem"><strong>100%</strong><span>Client satisfaction focus</span></div>
+                <div class="trust-item" role="listitem"><strong>24h</strong><span>Typical response time</span></div>
+            </div>
+        </div>
+    </section>
+
+    
     <div class="service-nav-wrapper" data-component="nav/services">
         <div class="container">
             <nav class="service-nav" role="navigation" aria-label="Service categories">
@@ -133,12 +169,12 @@
                 <p>Scalable web and mobile ecosystems built to convert users, drive engagement, and support business growth.</p>
             </div>
             <div class="service-cards-grid" data-layout="auto">
-                <div class="service-card challenge-card reveal" data-component="card/glass" style="position: relative; overflow: hidden;">
+                <div class="service-card signature-panel challenge-card reveal" data-component="card/glass" style="position: relative; overflow: hidden;">
                     <img src="assets/images/img5.png" alt="Digital Product Development" loading="lazy" decoding="async" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.85; z-index: 0;">
                     <span class="ui-label" style="position: relative; z-index: 1; text-shadow: 0 2px 4px rgba(0,0,0,0.8); font-weight: bold; color: white;">The Challenge</span>
                     <p style="position: relative; z-index: 1; text-shadow: 0 2px 4px rgba(0,0,0,0.8); font-weight: bold; color: white;">Modern businesses require digital platforms that are fast, secure, and scalable. A poorly built website or mobile application can result in slow performance, poor user experience, and lost opportunities. Companies need reliable technology solutions that not only look great but also deliver measurable business results.</p>
                 </div>
-                <div class="service-card deliverables-card accent-blue reveal" data-component="card/glass" style="background: rgba(255, 255, 255, 0.05);">
+                <div class="service-card signature-panel deliverables-card accent-blue reveal" data-component="card/glass" style="background: rgba(255, 255, 255, 0.05);">
                     <span class="ui-label">What We Deliver</span>
                     <ul class="detail-list">
                         <li>High-performance business websites</li>
@@ -167,12 +203,12 @@
                 <p>Smart systems that automate workflows, improve efficiency, and help businesses scale faster.</p>
             </div>
             <div class="service-cards-grid" data-layout="auto">
-                <div class="service-card challenge-card reveal" data-component="card/glass" style="position: relative; overflow: hidden;">
+                <div class="service-card signature-panel challenge-card reveal" data-component="card/glass" style="position: relative; overflow: hidden;">
                     <img src="assets/images/img9.png" alt="Business Automation" loading="lazy" decoding="async" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.85; z-index: 0;">
                     <span class="ui-label" style="position: relative; z-index: 1; text-shadow: 0 2px 4px rgba(0,0,0,0.8); font-weight: bold; color: white;">The Challenge</span>
                     <p style="position: relative; z-index: 1; text-shadow: 0 2px 4px rgba(0,0,0,0.8); font-weight: bold; color: white;">Many businesses rely on manual processes and disconnected tools that slow down operations and create inefficiencies. Without automation, teams waste valuable time on repetitive tasks, data management, and operational bottlenecks.</p>
                 </div>
-                <div class="service-card deliverables-card accent-blue reveal" data-component="card/glass" style="background: rgba(255, 255, 255, 0.05);">
+                <div class="service-card signature-panel deliverables-card accent-blue reveal" data-component="card/glass" style="background: rgba(255, 255, 255, 0.05);">
                     <span class="ui-label">What We Deliver</span>
                     <ul class="detail-list">
                         <li>Workflow automation for business operations</li>
@@ -197,12 +233,12 @@
                 <p>Growth strategies designed to drive measurable traffic, leads, and revenue.</p>
             </div>
             <div class="service-cards-grid" data-layout="auto">
-                <div class="service-card challenge-card reveal" data-component="card/glass" style="position: relative; overflow: hidden;">
+                <div class="service-card signature-panel challenge-card reveal" data-component="card/glass" style="position: relative; overflow: hidden;">
                     <img src="assets/images/img8.png" alt="Digital Marketing" loading="lazy" decoding="async" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.85; z-index: 0;">
                     <span class="ui-label" style="position: relative; z-index: 1; text-shadow: 0 2px 4px rgba(0,0,0,0.8); font-weight: bold; color: white;">The Challenge</span>
                     <p style="position: relative; z-index: 1; text-shadow: 0 2px 4px rgba(0,0,0,0.8); font-weight: bold; color: white;">In a competitive digital environment, simply having a product or service is not enough. Businesses need targeted marketing strategies that reach the right audience and generate consistent results.</p>
                 </div>
-                <div class="service-card deliverables-card accent-orange reveal" data-component="card/glass" style="background: rgba(255, 255, 255, 0.05);">
+                <div class="service-card signature-panel deliverables-card accent-orange reveal" data-component="card/glass" style="background: rgba(255, 255, 255, 0.05);">
                     <span class="ui-label">What We Deliver</span>
                     <ul class="detail-list">
                         <li>SEO strategy and search engine optimization</li>
@@ -226,12 +262,12 @@
                 <p>User-centered design systems that combine aesthetics, usability, and conversion optimization.</p>
             </div>
             <div class="service-cards-grid" data-layout="auto">
-                <div class="service-card challenge-card reveal" data-component="card/glass" style="position: relative; overflow: hidden;">
+                <div class="service-card signature-panel challenge-card reveal" data-component="card/glass" style="position: relative; overflow: hidden;">
                     <img src="assets/images/img4.png" alt="UI / UX Design" loading="lazy" decoding="async" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.85; z-index: 0;">
                     <span class="ui-label" style="position: relative; z-index: 1; text-shadow: 0 2px 4px rgba(0,0,0,0.8); font-weight: bold; color: white;">The Challenge</span>
                     <p style="position: relative; z-index: 1; text-shadow: 0 2px 4px rgba(0,0,0,0.8); font-weight: bold; color: white;">Design is more than visual appeal. A successful digital product must provide a smooth, intuitive experience that aligns with user behavior and business goals.</p>
                 </div>
-                <div class="service-card deliverables-card accent-blue reveal" data-component="card/glass" style="background: rgba(255, 255, 255, 0.05);">
+                <div class="service-card signature-panel deliverables-card accent-blue reveal" data-component="card/glass" style="background: rgba(255, 255, 255, 0.05);">
                     <span class="ui-label">What We Deliver</span>
                     <ul class="detail-list">
                         <li>User research and behavioral analysis</li>
@@ -254,12 +290,12 @@
                 <p>Strategic brand development that builds recognition, trust, and long-term growth.</p>
             </div>
             <div class="service-cards-grid" data-layout="auto">
-                <div class="service-card challenge-card reveal" data-component="card/glass" style="position: relative; overflow: hidden;">
+                <div class="service-card signature-panel challenge-card reveal" data-component="card/glass" style="position: relative; overflow: hidden;">
                     <img src="assets/images/img5.png" alt="Branding & Strategy" loading="lazy" decoding="async" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.85; z-index: 0;">
                     <span class="ui-label" style="position: relative; z-index: 1; text-shadow: 0 2px 4px rgba(0,0,0,0.8); font-weight: bold; color: white;">The Challenge</span>
                     <p style="position: relative; z-index: 1; text-shadow: 0 2px 4px rgba(0,0,0,0.8); font-weight: bold; color: white;">Standing out in a crowded market requires more than a logo. Businesses need a clear brand identity, strong positioning, and a consistent message across all digital platforms.</p>
                 </div>
-                <div class="service-card deliverables-card accent-gold reveal" data-component="card/glass" style="background: rgba(255, 255, 255, 0.05);">
+                <div class="service-card signature-panel deliverables-card accent-gold reveal" data-component="card/glass" style="background: rgba(255, 255, 255, 0.05);">
                     <span class="ui-label">What We Deliver</span>
                     <ul class="detail-list">
                         <li>Brand identity design and guidelines</li>
@@ -369,9 +405,9 @@
     <!-- 9. Services CTA (Component: CTA / Primary) -->
     <section class="services-cta" data-component="cta/primary">
         <div class="container">
-            <h2>Ready to build a system that scales?</h2>
+            <h2>Ready to unlock your next growth phase?</h2>
             <p>Let's explore how NueEra can support your growth.</p>
-            <a class='btn btn-primary' href='contact.html'>👉 Get a Free Strategy Call</a>
+            <a class='btn btn-primary' href='contact.html'>👉 Book Your Growth Blueprint</a>
         </div>
     </section>
 
@@ -428,6 +464,7 @@
         </div>
     </footer>
 
+    <script src="js/premium-upgrade.js"></script>
     <script src="js/main.js"></script>
 
     <!-- Scroll to Top Button -->
@@ -438,3 +475,5 @@
 
 <!-- Mirrored from nueera.netlify.app/services by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 22 Feb 2026 06:29:24 GMT -->
 </html>
+
+
