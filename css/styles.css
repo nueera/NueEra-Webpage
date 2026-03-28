@@ -10116,3 +10116,40 @@ img, video, canvas, svg {
   65% { color: #ff9a1f; }
   100% { color: #e65100; }
 }
+
+/* ==========================================
+   MOBILE NAV TEXT = EXACT H2 GRADIENT SHIFT
+   ========================================== */
+@media (max-width: 1024px) {
+  html body .mobile-menu-overlay .mobile-nav-links a,
+  html body .mobile-nav-links a {
+    font-size: clamp(1.02rem, 3.9vw, 1.22rem) !important;
+    font-weight: 900 !important;
+    letter-spacing: 0.02em !important;
+    line-height: 1.24 !important;
+
+    background: linear-gradient(135deg, #0038a8 0%, #1f6aff 35%, #ff9a1f 65%, #e65100 100%) !important;
+    background-size: 200% auto !important;
+    animation: gradientShift 2.8s ease infinite alternate !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    color: transparent !important;
+
+    text-shadow: none !important;
+    -webkit-text-stroke: 0.25px rgba(255, 255, 255, 0.18) !important;
+  }
+
+  html body .mobile-menu-overlay .mobile-nav-links a.active,
+  html body .mobile-nav-links a.active {
+    animation-duration: 2.1s !important;
+    filter: saturate(1.18) brightness(1.06) !important;
+  }
+}
+
+@media (max-width: 520px) {
+  html body .mobile-menu-overlay .mobile-nav-links a,
+  html body .mobile-nav-links a {
+    font-size: clamp(0.96rem, 4vw, 1.12rem) !important;
+  }
+}
