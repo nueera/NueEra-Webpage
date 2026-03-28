@@ -9472,8 +9472,12 @@ body.reduce-animations * {
 @media (max-width: 1024px) {
   .mobile-nav-links a::before,
   .mobile-nav-links a::after,
+  .mobile-nav-links li::before,
+  .mobile-nav-links li::after,
   .mobile-menu-overlay .mobile-nav-links a::before,
-  .mobile-menu-overlay .mobile-nav-links a::after {
+  .mobile-menu-overlay .mobile-nav-links a::after,
+  .mobile-menu-overlay .mobile-nav-links li::before,
+  .mobile-menu-overlay .mobile-nav-links li::after {
     content: none !important;
     display: none !important;
     width: 0 !important;
@@ -9495,5 +9499,17 @@ body.reduce-animations * {
     gap: 0 !important;
     min-height: 54px !important;
     padding: 12px 10px !important;
+  }
+
+  .mobile-nav-links a i,
+  .mobile-nav-links a svg,
+  .mobile-menu-overlay .mobile-nav-links a i,
+  .mobile-menu-overlay .mobile-nav-links a svg {
+    display: none !important;
+    opacity: 0 !important;
+    width: 0 !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
 }
