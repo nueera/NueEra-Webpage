@@ -18,8 +18,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="NueEra Help Center - FAQs, how it works, and support resources.">
-<link rel="stylesheet" href="css/styles.css?v=20260328r">
-    <link rel="stylesheet" href="css/premium-upgrade.css?v=20260328r">
+<link rel="stylesheet" href="css/styles.css?v=20260328t">
+    <link rel="stylesheet" href="css/premium-upgrade.css?v=20260328t">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -108,7 +108,7 @@
     <main id="main">
 
     <!-- 1. Help Center Hero -->
-    <section class="section help-hero-premium">
+    <section class="section help-hero-premium help-hero-v2">
         <div class="container">
             <div class="help-hero-grid">
                 <div class="help-hero-copy reveal">
@@ -122,21 +122,24 @@
                 </div>
 
                 <div class="help-hero-visual reveal" aria-hidden="true">
-                    <div class="help-console-stage">
-                        <div class="help-console-head">Support Console</div>
-                        <div class="help-status-chip">Avg response: under 24h</div>
-                        <div class="help-ticket-row row-a"><span>New inquiry</span><i></i></div>
-                        <div class="help-ticket-row row-b"><span>In progress</span><i></i></div>
-                        <div class="help-ticket-row row-c"><span>Resolved</span><i></i></div>
-                        <div class="help-ticket-row row-d"><span>Follow-up</span><i></i></div>
-                        <div class="help-scan-line"></div>
+                    <div class="help-route-stage">
+                        <div class="route-title">Support Route Map</div>
+                        <div class="route-line route-line-a"><i></i></div>
+                        <div class="route-line route-line-b"><i></i></div>
+                        <div class="route-line route-line-c"><i></i></div>
+                        <div class="route-node node-intake">Intake</div>
+                        <div class="route-node node-triage">Triage</div>
+                        <div class="route-node node-solve">Solve</div>
+                        <div class="route-node node-followup">Follow-up</div>
+                        <div class="route-pulse route-pulse-a"></div>
+                        <div class="route-pulse route-pulse-b"></div>
                     </div>
                 </div>
             </div>
-            <div class="help-quick-stats reveal" role="list" aria-label="Support highlights">
-                <div role="listitem"><strong>24h</strong><span>Typical response</span></div>
-                <div role="listitem"><strong>Guided</strong><span>Onboarding support</span></div>
-                <div role="listitem"><strong>Dedicated</strong><span>Technical escalation</span></div>
+            <div class="help-support-lanes reveal" role="list" aria-label="Support lanes">
+                <article role="listitem"><strong>Fast Lane</strong><span>Urgent issue triage and status clarity</span></article>
+                <article role="listitem"><strong>Guided Lane</strong><span>Onboarding and decision support for new clients</span></article>
+                <article role="listitem"><strong>Expert Lane</strong><span>Technical escalation with solution ownership</span></article>
             </div>
         </div>
     </section>
