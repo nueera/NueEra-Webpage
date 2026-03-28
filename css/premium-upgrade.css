@@ -1735,3 +1735,47 @@ h1, h2, h3, h4 { letter-spacing: -0.02em; }
   50% { color: #ff9a1f; }
   100% { color: #1f6aff; }
 }
+
+/* ==========================================
+   MOBILE LOGO CENTER LOCK (LIGHT + DARK)
+   ========================================== */
+@media (max-width: 1024px) {
+  html body .mobile-menu-overlay .mobile-menu-top {
+    position: relative !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-height: 72px !important;
+    padding: 6px 0 10px !important;
+  }
+
+  html body .mobile-menu-overlay .mobile-menu-top .mobile-logo {
+    position: absolute !important;
+    left: 50% !important;
+    right: auto !important;
+    transform: translateX(-50%) !important;
+    margin: 0 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    z-index: 9 !important;
+  }
+
+  html body .mobile-menu-overlay .mobile-menu-top .mobile-theme-switch {
+    position: absolute !important;
+    left: 0 !important;
+    right: auto !important;
+    z-index: 10 !important;
+  }
+
+  html body .mobile-menu-overlay .mobile-menu-top .mobile-menu-close {
+    position: absolute !important;
+    right: 0 !important;
+    left: auto !important;
+    z-index: 10 !important;
+  }
+
+  html body .mobile-menu-overlay .mobile-menu-top .mobile-nav-action-btn {
+    display: none !important;
+  }
+}
