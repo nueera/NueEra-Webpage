@@ -676,7 +676,7 @@ if (document.readyState === 'complete') {
 
 // Add console welcome message
 console.log(
-    '%cNueEra%c â€” A New Era of Digital Growth',
+    '%cNueEra%c — A New Era of Digital Growth',
     'font-size: 24px; font-weight: bold; color: #00a8ff;',
     'font-size: 14px; color: #ff9500;'
 );
@@ -795,7 +795,7 @@ class CookieConsent {
         banner.className = 'cookie-banner';
         banner.innerHTML = `
             <div class="cookie-content">
-                <h3>ðŸª Cookie Settings</h3>
+                <h3>🍪 Cookie Settings</h3>
                 <p>We use cookies to enhance your browsing experience, serve personalized ads or content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.</p>
             </div>
             <div class="cookie-buttons">
@@ -937,7 +937,9 @@ class SoundManager {
                 const AudioContext = window.AudioContext || window.webkitAudioContext;
                 if (AudioContext) {
                     this.ctx = new AudioContext();
-                    this.enabled = true;
+                    // Keep sounds disabled by default (opt-in via localStorage)
+                    // this.enabled = true;
+                    this.enabled = localStorage.getItem('nueera-sound-enabled') === 'true';
                 }
             }
             if (this.ctx && this.ctx.state === 'suspended') {
