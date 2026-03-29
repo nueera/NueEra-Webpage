@@ -613,7 +613,7 @@ a:hover {
 
 .logo-icon {
     width: auto;
-    height: 60px;
+    height: 44px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -628,7 +628,8 @@ a:hover {
 
 .logo-icon img {
     width: auto;
-    height: 200%;
+    height: 100%;
+    max-height: 44px;
     object-fit: contain;
     filter: drop-shadow(0 4px 8px rgba(0, 168, 255, 0.15));
 }
@@ -3934,7 +3935,7 @@ button:focus, .btn:focus, a:focus { outline: 3px solid rgba(0,168,255,0.12); out
 
     .logo-icon {
         width: auto;
-        height: 40px;
+        height: 36px;
     }
 
     .nav-links {
@@ -8572,11 +8573,12 @@ html {
     }
     
     .logo-icon {
-        height: 45px;
+        height: 38px;
     }
     
     .logo-icon img {
-        height: 180%;
+        height: 100%;
+        max-height: 38px;
     }
 }
 
@@ -8673,7 +8675,7 @@ html {
     }
     
     .logo-icon {
-        height: 40px;
+        height: 34px;
     }
     
     .btn {
