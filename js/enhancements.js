@@ -638,17 +638,29 @@ class MobileEnhancer {
         }
 
         const navbar = document.querySelector('.navbar');
+        if (!navbar) return;
+
+        // Use opacity/pointer-events instead of translateY to prevent layout shift
+        // translateY(-100%) was causing content to jump on scroll
         let lastScrollY = window.scrollY;
         let scrollTimeout;
+        let hideTimer;
 
         window.addEventListener('scroll', () => {
             const currentScrollY = window.scrollY;
 
-            // Hide/show navbar on scroll (mobile behavior)
-            if (currentScrollY > lastScrollY && currentScrollY > 100) {
-                navbar.style.transform = 'translateY(-100%)';
+            clearTimeout(hideTimer);
+
+            if (currentScrollY > lastScrollY && currentScrollY > 200) {
+                // Scrolling down — hide navbar with opacity (no layout shift)
+                hideTimer = setTimeout(() => {
+                    navbar.style.opacity = '0';
+                    navbar.style.pointerEvents = 'none';
+                }, 50);
             } else {
-                navbar.style.transform = 'translateY(0)';
+                // Scrolling up — show navbar immediately
+                navbar.style.opacity = '1';
+                navbar.style.pointerEvents = 'auto';
             }
 
             lastScrollY = currentScrollY;

@@ -556,7 +556,7 @@ a:hover {
     padding: 0 32px;
     display: flex;
     align-items: center;
-    transition: background var(--motion-fast) var(--ease-standard), box-shadow var(--motion-fast) var(--ease-standard), padding var(--motion-fast) var(--ease-standard);
+    transition: background var(--motion-fast) var(--ease-standard), box-shadow var(--motion-fast) var(--ease-standard), padding var(--motion-fast) var(--ease-standard), opacity var(--motion-base) var(--ease-standard);
 }
 
 [data-theme="dark"] .navbar {
