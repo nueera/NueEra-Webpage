@@ -18,7 +18,8 @@
     <meta name="description" content="Why Your Digital Systems Cost More Than They Should — and how to fix it. NueEra blog.">
 <link rel="stylesheet" href="css/styles.css?v=20260329">
     <link rel="stylesheet" href="css/premium-upgrade.css?v=20260329">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
 </head>
 <body>
     <!-- Page Loader -->
@@ -38,10 +39,6 @@
                     <div class="nav-left">
                         <a aria-label='NueEra home' class='logo' href='index.html'>
                             <div class="logo-icon">
-                                <img src="assets/images/lightlogo.png" alt="NueEra Logo" class="logo-light" loading="eager">
-                                <img src="assets/images/darklogo.png" alt="NueEra Logo" class="logo-dark" loading="eager">
-                            </div>
-                            <span>NueEra</span
                                 <img src="assets/images/lightlogo.png" alt="NueEra Logo" class="logo-light" loading="eager">
                                 <img src="assets/images/darklogo.png" alt="NueEra Logo" class="logo-dark" loading="eager">
                             </div>
@@ -68,7 +65,7 @@
                     </div>
 
                     <div class="nav-right">
-                        
+                        <button class="theme-toggle" type="button" aria-label="Toggle theme"></button>
                     </div>
                 </div>
             </div>
@@ -79,7 +76,10 @@
             <div class="mobile-menu-inner">
                 <div class="mobile-menu-top">
                     <a aria-label='NueEra home' class='logo mobile-logo' href='index.html'>
-                        <div class="logo-icon"><img src="assets/images/logo.png" alt="NueEra Logo" loading="lazy"></div>
+                        <div class="logo-icon">
+                            <img src="assets/images/lightlogo.png" alt="NueEra Logo" class="logo-light" loading="lazy">
+                            <img src="assets/images/darklogo.png" alt="NueEra Logo" class="logo-dark" loading="lazy">
+                        </div>
                     </a>
                     
                     <div class="mobile-menu-account">
@@ -131,7 +131,7 @@
                     <div class="blog-post-meta">
                         <span><i class="fas fa-calendar"></i> January 28, 2026</span>
                         <span><i class="fas fa-user"></i> Ravi Kambale</span>
-                        <span><i class="fas fa-clock"></i> <span id="reading-time">Loading...</span></span>
+                        <span><i class="fas fa-clock"></i> <span id="reading-time-2">Loading...</span></span>
                     </div>
                     <div class="blog-post-excerpt">
                         The average business now uses 50+ software tools. Most of them don't talk to each other. That's not just inconvenient—it's expensive. Here's why, and what to do about it.
@@ -358,7 +358,7 @@
     <button class="scroll-top-btn" aria-label="Scroll to top">
         <i class="fas fa-arrow-up"></i>
     </button>
-    <button class="theme-toggle floating-theme-toggle" type="button" aria-label="Toggle theme"></button>
+
 </body>
 </html>
 
