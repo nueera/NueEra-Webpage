@@ -22,6 +22,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;900&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css?v=20260329">
     <link rel="stylesheet" href="css/premium-upgrade.css?v=20260329">
+    <link rel="stylesheet" href="css/home-v2.css?v=2">
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style"
         onload="this.rel='stylesheet'">
     <noscript>
@@ -86,9 +87,7 @@
                         </ul>
                     </div>
 
-                    <div class="nav-right">
-                        <button class="theme-toggle" type="button" aria-label="Toggle theme"></button>
-                    </div>
+                    <div class="nav-right">                    </div>
                 </div>
             </div>
         </nav>
@@ -123,747 +122,312 @@
     </header>
 
     <main id="main">
-        <!-- Hero Section -->
-        <section class="hero" id="home">
-            <div class="hero-background">
-                <div class="glow-orb glow-orb-blue" aria-hidden="true"></div>
-                <div class="glow-orb glow-orb-orange" aria-hidden="true"></div>
-                <canvas id="hero-particles" aria-hidden="true"></canvas>
-                <div class="hero-gradient-overlay"></div>
-            </div>
+        <!-- ============ V2 HOME REDESIGN ============ -->
 
-            <div class="container hero-container">
-                <div class="hero-layout">
-                    <!-- Left Column: Premium Content -->
-                    <div class="hero-content">
-                        <!-- Animated Badge -->
-                        <div class="hero-badge premium-badge">
-                            <span class="badge-shine"></span>
-                            <span class="badge-icon">⚡</span>
-                            <span class="badge-text">Transforming Digital Futures</span>
-                        </div>
-
-                        <!-- Main Hero Title -->
-                        <h1 class="premium-title">
-                            Build Your<br>
-                            <span class="gradient-future-large">Digital Empire</span>
-                        </h1>
-
-                        <!-- Subtitle with better hierarchy -->
-                        <p class="hero-subtitle premium-subtitle">
-                            We're not just building websites—we're architecting scalable digital systems that drive exponential growth. Strategic thinking meets cutting-edge technology.
-                        </p>
-
-                        <!-- Enhanced CTA Buttons -->
-                        <div class="hero-buttons premium-buttons">
-                            <a class='btn btn-primary premium-cta' href='contact.html'>
-                                <span class="btn-text">Book Strategy Call</span>
-                                <span class="btn-arrow"><i class="fas fa-arrow-right"></i></span>
-                            </a>
-                            <a class='btn btn-ghost premium-secondary' href='services.html'>
-                                <span>Explore Our Services</span>
-                            </a>
-                        </div>
-
-                        <!-- Metrics Row -->
-                        <div class="hero-metrics">
-                            <div class="metric-item">
-                                <div class="metric-value">16+</div>
-                                <div class="metric-label">Projects Delivered</div>
-                            </div>
-                            <div class="metric-divider"></div>
-                            <div class="metric-item">
-                                <div class="metric-value">100%</div>
-                                <div class="metric-label">Satisfaction Rate</div>
-                            </div>
-                            <div class="metric-divider"></div>
-                            <div class="metric-item">
-                                <div class="metric-value">4+</div>
-                                <div class="metric-label">Happy Clients</div>
-                            </div>
-                        </div>
-                        <div class="hero-proof-strip">
-                            <span><i class="fas fa-check-circle"></i> Strategy-led execution</span>
-                            <span><i class="fas fa-check-circle"></i> Security-by-default builds</span>
-                            <span><i class="fas fa-check-circle"></i> KPI-first delivery model</span>
+        <!-- 1. HERO SECTION -->
+        <section class="v2-hero v2-section" id="home">
+            <div class="container">
+                <div class="v2-hero-grid">
+                    <!-- Left: Copy -->
+                    <div class="v2-reveal">
+                        <div class="v2-hero-badge">⚡ Digital Growth Agency</div>
+                        <h1>Build Scalable Digital Systems That Drive Real Growth</h1>
+                        <p class="v2-hero-sub">We don't just build websites — we create high-converting systems that generate leads, automate processes, and scale your business.</p>
+                        <div class="v2-hero-buttons">
+                            <a class="v2-btn-primary" href="contact.html">Book Strategy Call <i class="fas fa-arrow-right"></i></a>
+                            <a class="v2-btn-ghost" href="#case-study">View Case Studies</a>
                         </div>
                     </div>
-
-                    <!-- Right Column: Interactive Visual -->
-                    <div class="hero-visual premium-visual">
-                        <div class="hero-visual-container enhanced">
-                            <div class="hero-3d-shell" id="hero3dShell">
-                                <canvas id="hero-3d-canvas" aria-label="Interactive 3D visual"></canvas>
-                                <img src="assets/images/home2.png" alt="NueEra visual" class="hero-3d-fallback" loading="lazy" decoding="async">
-                            </div>
-                            <!-- Floating Cards with Icons -->
-                            <div class="floating-card floating-card-1 animated-float">
-                                <div class="card-inner">
-                                    <div class="card-icon gradient-icon-blue">
-                                        <i class="fas fa-rocket"></i>
-                                    </div>
-                                    <div class="card-text">
-                                        <p class="card-title">Lightning Fast</p>
-                                        <p class="card-desc">Performance optimized</p>
-                                    </div>
+                    <!-- Right: Animated Orb + Floating Stats -->
+                    <div class="v2-hero-visual v2-reveal v2-reveal-delay-2">
+                        <div class="v2-orb">
+                            <div class="v2-orb-stat v2-orb-stat--1">
+                                <div class="v2-orb-stat-icon v2-orb-stat-icon--blue"><i class="fas fa-rocket"></i></div>
+                                <div class="v2-orb-stat-text">
+                                    <span class="v2-orb-stat-val">16+</span>
+                                    <span class="v2-orb-stat-label">Projects</span>
                                 </div>
                             </div>
-
-                            <div class="floating-card floating-card-2 animated-float-delayed">
-                                <div class="card-inner">
-                                    <div class="card-icon gradient-icon-orange">
-                                        <i class="fas fa-chart-line"></i>
-                                    </div>
-                                    <div class="card-text">
-                                        <p class="card-title">Data Driven</p>
-                                        <p class="card-desc">Analytics powered</p>
-                                    </div>
+                            <div class="v2-orb-stat v2-orb-stat--2">
+                                <div class="v2-orb-stat-icon v2-orb-stat-icon--orange"><i class="fas fa-chart-line"></i></div>
+                                <div class="v2-orb-stat-text">
+                                    <span class="v2-orb-stat-val">100%</span>
+                                    <span class="v2-orb-stat-label">Satisfaction</span>
                                 </div>
                             </div>
-
-                            <div class="floating-card floating-card-3 animated-float">
-                                <div class="card-inner">
-                                    <div class="card-icon gradient-icon-cyan">
-                                        <i class="fas fa-shield-alt"></i>
-                                    </div>
-                                    <div class="card-text">
-                                        <p class="card-title">Enterprise Security</p>
-                                        <p class="card-desc">Bank-grade protection</p>
-                                    </div>
+                            <div class="v2-orb-stat v2-orb-stat--3">
+                                <div class="v2-orb-stat-icon v2-orb-stat-icon--mixed"><i class="fas fa-bolt"></i></div>
+                                <div class="v2-orb-stat-text">
+                                    <span class="v2-orb-stat-val">3x</span>
+                                    <span class="v2-orb-stat-label">Avg Growth</span>
                                 </div>
                             </div>
-
-                            <!-- Central Visual Element -->
-                            
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="section story-section" id="storytelling" data-animate-section>
+        <!-- 2. TRUST SECTION -->
+        <section class="v2-trust v2-section">
             <div class="container">
-                <div class="section-header">
-                    <span class="section-badge">Growth Story</span>
-                    <h2>From Ambition to Scalable Results</h2>
-                    <p>We combine strategy, systems, and execution to move businesses through clear growth stages.</p>
-                </div>
-                <div class="story-grid">
-                    <article class="story-step signature-panel" data-parallax="0.06">
-                        <span class="story-step-kicker">Step 01</span>
-                        <h3>Diagnose</h3>
-                        <p>We audit your funnel, product, and operations to identify the highest-leverage bottlenecks.</p>
-                    </article>
-                    <article class="story-step signature-panel" data-parallax="0.1">
-                        <span class="story-step-kicker">Step 02</span>
-                        <h3>Design</h3>
-                        <p>We craft a conversion-focused roadmap spanning UX, automation, and growth channels.</p>
-                    </article>
-                    <article class="story-step signature-panel" data-parallax="0.14">
-                        <span class="story-step-kicker">Step 03</span>
-                        <h3>Deploy</h3>
-                        <p>We ship fast with measurable KPI checkpoints so every release compounds business impact.</p>
-                    </article>
+                <h2 class="v2-reveal">Trusted by Growing Brands</h2>
+                <div class="v2-trust-grid v2-reveal">
+                    <div class="v2-trust-item">
+                        <div class="v2-trust-value">16+</div>
+                        <div class="v2-trust-label">Projects Delivered</div>
+                    </div>
+                    <div class="v2-trust-item">
+                        <div class="v2-trust-value">100%</div>
+                        <div class="v2-trust-label">Client Satisfaction</div>
+                    </div>
+                    <div class="v2-trust-item">
+                        <div class="v2-trust-value">3x</div>
+                        <div class="v2-trust-label">Average Growth</div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Welcome Section -->
-        <section class="welcome-section" id="welcome">
+        <!-- 3. PROBLEM SECTION -->
+        <section class="v2-section">
             <div class="container">
-                <div class="welcome-badge">
-                    <span class="badge-shine"></span>
-                    <span class="badge-text">Welcome to the Future</span>
+                <div class="v2-header v2-reveal">
+                    <span class="v2-badge">The Problem</span>
+                    <h2>Why Most Businesses Fail to Scale Online</h2>
                 </div>
-                <div class="welcome-content">
-                    <h2 class="welcome-title">Your Vision, <span class="gradient-future">Our Mission</span></h2>
-                    <p class="welcome-description">At NueEra, we don't just build digital solutions—we architect the future. Combining cutting-edge technology with innovative thinking, we transform ambitious ideas into industry-leading digital experiences that drive real results.</p>
-                    <div class="welcome-grid">
-                        <div class="welcome-item">
-                            
-                            <h4>Lightning Innovation</h4>
-                            <p>Speed meets excellence in every project we undertake</p>
+                <div class="v2-grid-3">
+                    <div class="v2-problem-card v2-reveal v2-reveal-delay-1">
+                        <div class="v2-problem-icon"><i class="fas fa-chart-line"></i></div>
+                        <h3>Poor Converting Websites</h3>
+                        <p>Most websites look good but fail to convert visitors into leads or customers.</p>
+                    </div>
+                    <div class="v2-problem-card v2-reveal v2-reveal-delay-2">
+                        <div class="v2-problem-icon"><i class="fas fa-filter"></i></div>
+                        <h3>No Lead Generation System</h3>
+                        <p>Without structured funnels, businesses rely on random traffic and hope for results.</p>
+                    </div>
+                    <div class="v2-problem-card v2-reveal v2-reveal-delay-3">
+                        <div class="v2-problem-icon"><i class="fas fa-cogs"></i></div>
+                        <h3>No Automation in Place</h3>
+                        <p>Manual processes eat up time and money. Without systems, growth stalls.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. SOLUTION SECTION -->
+        <section class="v2-section v2-section--alt">
+            <div class="container">
+                <div class="v2-header v2-reveal">
+                    <span class="v2-badge">The Solution</span>
+                    <h2>We Build Systems — Not Just Websites</h2>
+                </div>
+                <div class="v2-grid-3">
+                    <div class="v2-solution-card v2-reveal v2-reveal-delay-1">
+                        <div class="v2-solution-icon"><i class="fas fa-globe"></i></div>
+                        <h3>Website Growth System</h3>
+                        <div class="v2-solution-row">
+                            <span class="v2-solution-row-label v2-solution-row-label--problem">Problem</span>
+                            <p>Your website isn't converting visitors</p>
                         </div>
-                        <div class="welcome-item">
-                           
-                            <h4>Fortress Security</h4>
-                            <p>Your data protected with enterprise-grade standards</p>
+                        <div class="v2-solution-row">
+                            <span class="v2-solution-row-label v2-solution-row-label--solution">Solution</span>
+                            <p>High-performance, conversion-optimized website with built-in lead capture</p>
                         </div>
-                        <div class="welcome-item">
-                           
-                            <h4>Data Intelligence</h4>
-                            <p>Every decision backed by powerful insights and analytics</p>
+                        <div class="v2-solution-row">
+                            <span class="v2-solution-row-label v2-solution-row-label--result">Result</span>
+                            <p>More leads, lower bounce rate, higher ROI</p>
                         </div>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Key Features Section -->
-        <section class="features-section" id="features">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-badge">Premium Solutions</span>
-                    <h2>Why Businesses Choose NueEra</h2>
-                    <p>Advanced digital solutions that drive measurable results</p>
-                </div>
-                <div class="features-grid">
-                    <div class="feature-card signature-panel feature-card-1">
-                        <div class="feature-card-bg"></div>
-                       
-                        <h3>Lightning Fast</h3>
-                        <p>Optimized performance with modern tech stack ensuring blazing-fast load times and seamless user experiences.</p>
-                        <div class="feature-card-corner"></div>
+                    <div class="v2-solution-card v2-reveal v2-reveal-delay-2">
+                        <div class="v2-solution-icon"><i class="fas fa-chart-line"></i></div>
+                        <h3>Marketing System</h3>
+                        <div class="v2-solution-row">
+                            <span class="v2-solution-row-label v2-solution-row-label--problem">Problem</span>
+                            <p>You're not generating consistent leads</p>
+                        </div>
+                        <div class="v2-solution-row">
+                            <span class="v2-solution-row-label v2-solution-row-label--solution">Solution</span>
+                            <p>Data-driven marketing funnels that attract and nurture qualified prospects</p>
+                        </div>
+                        <div class="v2-solution-row">
+                            <span class="v2-solution-row-label v2-solution-row-label--result">Result</span>
+                            <p>Predictable pipeline, scalable acquisition</p>
+                        </div>
                     </div>
-                    <div class="feature-card signature-panel feature-card-2">
-                        <div class="feature-card-bg"></div>
-                       
-                        <h3>Enterprise Security</h3>
-                        <p>Bank-grade security protocols, SSL encryption, and compliance standards protecting your data 24/7.</p>
-                        <div class="feature-card-corner"></div>
-                    </div>
-                    <div class="feature-card signature-panel feature-card-3">
-                        <div class="feature-card-bg"></div>
-                        
-                        <h3>Mobile First</h3>
-                        <p>Responsive design that looks perfect on all devices, from smartphones to desktops and everything in between.</p>
-                        <div class="feature-card-corner"></div>
-                    </div>
-                    <div class="feature-card signature-panel feature-card-4">
-                        <div class="feature-card-bg"></div>
-                        
-                        <h3>Data Driven</h3>
-                        <p>Every decision backed by analytics and user insights, ensuring maximum ROI and conversion rates.</p>
-                        <div class="feature-card-corner"></div>
-                    </div>
-                    <div class="feature-card signature-panel feature-card-5">
-                        <div class="feature-card-bg"></div>
-                       
-                        <h3>Expert Team</h3>
-                        <p>Dedicated professionals with years of experience in digital transformation and modern web technologies.</p>
-                        <div class="feature-card-corner"></div>
-                    </div>
-                    <div class="feature-card signature-panel feature-card-6">
-                        <div class="feature-card-bg"></div>
-                       
-                        <h3>24/7 Support</h3>
-                        <p>Round-the-clock technical support and maintenance to keep your digital presence running smoothly.</p>
-                        <div class="feature-card-corner"></div>
+                    <div class="v2-solution-card v2-reveal v2-reveal-delay-3">
+                        <div class="v2-solution-icon"><i class="fas fa-cogs"></i></div>
+                        <h3>Automation System</h3>
+                        <div class="v2-solution-row">
+                            <span class="v2-solution-row-label v2-solution-row-label--problem">Problem</span>
+                            <p>Manual processes are slowing growth</p>
+                        </div>
+                        <div class="v2-solution-row">
+                            <span class="v2-solution-row-label v2-solution-row-label--solution">Solution</span>
+                            <p>Custom automation workflows that eliminate repetition and save hours weekly</p>
+                        </div>
+                        <div class="v2-solution-row">
+                            <span class="v2-solution-row-label v2-solution-row-label--result">Result</span>
+                            <p>Faster operations, lower costs, more capacity</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Trusted By Strip -->
-        <section class="logo-strip">
+        <!-- 5. CASE STUDY SECTION -->
+        <section class="v2-section" id="case-study">
             <div class="container">
-                <p class="text-center mb-2 opacity-75" style="font-size: 0.9rem; letter-spacing: 1px; text-transform: uppercase;">Trusted by innovation-driven teams</p>
-                <div class="logo-grid">
-                    <div class="trust-chip">SaaS & Product Teams</div>
-                    <div class="trust-chip">Service Businesses</div>
-                    <div class="trust-chip">Founder-led Brands</div>
-                    <div class="trust-chip">Growth-Stage Startups</div>
+                <div class="v2-header v2-reveal">
+                    <span class="v2-badge">Real Results</span>
+                    <h2>What Happens When Systems Are Built Right</h2>
                 </div>
-                <div class="trust-statement signature-panel">
-                    <div class="trust-statement-item">
-                        <strong>Delivery Confidence</strong>
-                        <p>Clear milestones, accountable owners, and transparent weekly progress.</p>
+                <div class="v2-case-dashboard v2-reveal">
+                    <div class="v2-case-row">
+                        <span class="v2-case-metric">Leads</span>
+                        <div class="v2-case-values">
+                            <span class="v2-case-before">20/month</span>
+                            <i class="fas fa-arrow-right v2-case-arrow"></i>
+                            <span class="v2-case-after">120/month</span>
+                        </div>
+                        <span class="v2-case-badge">+500%</span>
                     </div>
-                    <div class="trust-statement-item">
-                        <strong>Business Fit</strong>
-                        <p>Solutions shaped around real operating constraints, not generic templates.</p>
+                    <div class="v2-case-row">
+                        <span class="v2-case-metric">Revenue</span>
+                        <div class="v2-case-values">
+                            <span class="v2-case-before">₹50K</span>
+                            <i class="fas fa-arrow-right v2-case-arrow"></i>
+                            <span class="v2-case-after">₹3L/month</span>
+                        </div>
+                        <span class="v2-case-badge">+500%</span>
                     </div>
-                    <div class="trust-statement-item">
-                        <strong>Scale Readiness</strong>
-                        <p>Architecture decisions made for reliability, growth, and long-term maintainability.</p>
+                    <div class="v2-case-row">
+                        <span class="v2-case-metric">Conversion Rate</span>
+                        <div class="v2-case-values">
+                            <span class="v2-case-before">0.8%</span>
+                            <i class="fas fa-arrow-right v2-case-arrow"></i>
+                            <span class="v2-case-after">4.2%</span>
+                        </div>
+                        <span class="v2-case-badge">+425%</span>
                     </div>
+                    <div class="v2-case-chart">
+                        <div class="v2-case-bar-group">
+                            <div class="v2-case-bar v2-case-bar--before"></div>
+                            <span class="v2-case-bar-label">Before</span>
+                        </div>
+                        <div class="v2-case-bar-group">
+                            <div class="v2-case-bar v2-case-bar--after"></div>
+                            <span class="v2-case-bar-label">After</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="v2-case-cta v2-reveal">
+                    <a href="contact.html">Ready for results like these? Let's talk →</a>
                 </div>
             </div>
         </section>
 
-    
-
-        <!-- Our Approach / Authority Layer -->
-        <section class="section" id="approach">
+        <!-- 6. PRICING PREVIEW -->
+        <section class="v2-section v2-section--alt">
             <div class="container">
-                <div class="section-header">
-                    <span class="section-badge">Our Philosophy</span>
-                    <h2>How We Think</h2>
-                    <p class="section-sub">Principles that guide our work — clear, pragmatic, and outcome-focused.</p>
+                <div class="v2-header v2-reveal">
+                    <span class="v2-badge">Pricing</span>
+                    <h2>Simple, Transparent Pricing</h2>
                 </div>
-                <div class="approach-grid">
-                    <div class="approach-item">
-                        
-                        <h4>Systems Over Features</h4>
-                        <p>We build connected systems that scale, instead of isolated features that break over time.</p>
-                    </div>
-                    <div class="approach-item">
-                        
-                        <h4>Measure, Then Move</h4>
-                        <p>Every decision is guided by data and clear KPIs — no guesswork, only insight.</p>
-                    </div>
-                    <div class="approach-item">
-                        
-                        <h4>Design for Reliability</h4>
-                        <p>Performance, security, and stability are non-negotiable foundations of everything we build.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section strategic-architecture" id="architecture">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-badge">Execution Architecture</span>
-                    <h2>Structured Delivery for Predictable Growth</h2>
-                    <p>We organize every engagement into clear business layers so stakeholders, teams, and outcomes stay aligned.</p>
-                </div>
-                <div class="architecture-grid">
-                    <article class="architecture-card signature-panel">
-                        <span class="architecture-kicker">Layer 01</span>
-                        <h3>Business Context</h3>
-                        <p>We map market, audience, revenue model, and bottlenecks to define what matters before design and development begin.</p>
-                        <ul>
-                            <li>Goals, constraints, and risk alignment</li>
-                            <li>North-star metrics and timeline mapping</li>
+                <div class="v2-pricing-grid">
+                    <!-- Starter -->
+                    <div class="v2-pricing-card v2-reveal v2-reveal-delay-1">
+                        <div class="v2-pricing-name">Starter</div>
+                        <div class="v2-pricing-price">₹49K</div>
+                        <p class="v2-pricing-desc">Perfect for getting started with a professional online presence.</p>
+                        <ul class="v2-pricing-features">
+                            <li>1-Page Website</li>
+                            <li>Basic SEO Setup</li>
+                            <li>Contact Form</li>
+                            <li>1 Round of Revisions</li>
+                            <li>Delivery: 7 Days</li>
                         </ul>
-                    </article>
-                    <article class="architecture-card signature-panel">
-                        <span class="architecture-kicker">Layer 02</span>
-                        <h3>System Blueprint</h3>
-                        <p>We design the conversion system, technical architecture, and automation flow required for scale-ready operations.</p>
-                        <ul>
-                            <li>UX flows and conversion points</li>
-                            <li>Stack, integrations, and governance</li>
+                        <a class="v2-pricing-cta" href="contact.html">Get Started</a>
+                    </div>
+                    <!-- Growth (Featured) -->
+                    <div class="v2-pricing-card v2-pricing-card--featured v2-reveal v2-reveal-delay-2">
+                        <span class="v2-pricing-popular">Most Popular</span>
+                        <div class="v2-pricing-name">Growth</div>
+                        <div class="v2-pricing-price">₹1.5L</div>
+                        <p class="v2-pricing-desc">For businesses ready to scale with marketing systems.</p>
+                        <ul class="v2-pricing-features">
+                            <li>Multi-Page Website</li>
+                            <li>Lead Gen System</li>
+                            <li>Marketing Setup</li>
+                            <li>3 Rounds of Revisions</li>
+                            <li>Analytics Dashboard</li>
+                            <li>Delivery: 14 Days</li>
                         </ul>
-                    </article>
-                    <article class="architecture-card signature-panel">
-                        <span class="architecture-kicker">Layer 03</span>
-                        <h3>Compounding Execution</h3>
-                        <p>We ship in measurable phases with weekly feedback loops so improvements keep stacking instead of stalling.</p>
-                        <ul>
-                            <li>Release milestones and KPI checkpoints</li>
-                            <li>Optimization cadence and owner clarity</li>
+                        <a class="v2-pricing-cta v2-pricing-cta--filled" href="contact.html">Book Strategy Call</a>
+                    </div>
+                    <!-- Scale -->
+                    <div class="v2-pricing-card v2-reveal v2-reveal-delay-3">
+                        <div class="v2-pricing-name">Scale</div>
+                        <div class="v2-pricing-price">₹3L+</div>
+                        <p class="v2-pricing-desc">Custom solutions for businesses demanding full-scale transformation.</p>
+                        <ul class="v2-pricing-features">
+                            <li>Custom Web Application</li>
+                            <li>Full Marketing System</li>
+                            <li>Automation Workflows</li>
+                            <li>Unlimited Revisions</li>
+                            <li>Priority Support</li>
+                            <li>Delivery: 30+ Days</li>
                         </ul>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section class="section premium-3d-showcase" id="premium-3d">
-            <div class="container">
-                <div class="showcase-layout">
-                    <div class="showcase-copy">
-                        <span class="section-badge">3D Experience Layer</span>
-                        <h2>Immersive Visual Language for Premium Brand Perception</h2>
-                        <p>We combine motion, depth, and conversion clarity to create interfaces that feel modern, trustworthy, and high-value from the first scroll.</p>
-                        <div class="showcase-metrics">
-                            <div class="showcase-metric">
-                                <strong>+42%</strong>
-                                <span>Higher interaction depth</span>
-                            </div>
-                            <div class="showcase-metric">
-                                <strong>3x</strong>
-                                <span>Faster value communication</span>
-                            </div>
-                            <div class="showcase-metric">
-                                <strong>100%</strong>
-                                <span>Responsive-first composition</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="showcase-visual" aria-hidden="true">
-                        <div class="showcase-cube-wrap">
-                            <div class="showcase-cube">
-                                <div class="cube-face cube-front">Scale</div>
-                                <div class="cube-face cube-back">Trust</div>
-                                <div class="cube-face cube-right">Speed</div>
-                                <div class="cube-face cube-left">Systems</div>
-                                <div class="cube-face cube-top">Growth</div>
-                                <div class="cube-face cube-bottom">Precision</div>
-                            </div>
-                        </div>
-                        <div class="showcase-glow"></div>
+                        <a class="v2-pricing-cta" href="contact.html">Contact Us</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Services Overview -->
-        <section class="services-section" id="services">
+        <!-- 7. LEAD MAGNET SECTION -->
+        <section class="v2-section">
             <div class="container">
-                <div class="section-header">
-                    <span class="section-badge">Our Expertise</span>
-                    <h2>Comprehensive Digital Solutions</h2>
-                    <p>Complete digital solutions designed for your success</p>
-                </div>
-                <div class="services-grid">
-                    <!-- Productized service: Website Launch System -->
-                    <div class="service-card signature-panel service-card-gradient-1">
-                        <div class="service-card-bg"></div>
-                        <div class="service-card-content">
-                            
-                            <h3>Website And Mobile App Launch System</h3>
-                            <p class="service-sub">What it solves:
-Rapid, high-performance website and mobile app launches designed for growth-stage companies. We focus on speed, scalability, and conversion-optimized user experiences to help your business go live faster and perform better.</p>
-                            <a class='btn btn-ghost' href='services.html#product'>👉 See more →</a>
-                        </div>
+                <div class="v2-lead-grid">
+                    <div class="v2-reveal">
+                        <span class="v2-badge">Free Audit</span>
+                        <h2>Get a Free Website Audit Worth ₹10,000</h2>
+                        <p style="color: var(--text-secondary); font-size: 1.05rem; line-height: 1.7; margin: 1rem 0 0;">We'll analyze your website's performance, SEO, conversion rate, and user experience — and give you a detailed report with actionable recommendations.</p>
+                        <ul class="v2-lead-checklist">
+                            <li>Performance &amp; Speed Analysis</li>
+                            <li>SEO &amp; Visibility Audit</li>
+                            <li>Conversion Rate Recommendations</li>
+                        </ul>
                     </div>
-
-                    <!-- Productized service: Growth Marketing System -->
-                    <div class="service-card signature-panel service-card-gradient-2">
-                        <div class="service-card-bg"></div>
-                        <div class="service-card-content">
-                            
-                            <h3>Growth Marketing System</h3>
-                            <p class="service-sub">What it solves:
-Predictable customer acquisition with measurable ROI. We design scalable marketing funnels and data-driven campaigns that continuously generate leads, sales, and sustainable growth.</p>
-                            <a class='btn btn-ghost' href='services.html#marketing'>👉 See more →</a>
-                        </div>
-                    </div>
-
-                    <!-- Productized service: Tech Modernization System -->
-                    <div class="service-card signature-panel service-card-gradient-3">
-                        <div class="service-card-bg"></div>
-                        <div class="service-card-content">
-                            
-                            <h3>Tech Automation System</h3>
-                            <p class="service-sub">What it solves:
-Eliminate legacy bottlenecks, improve system performance, and automate inefficient processes. Our automation solutions streamline operations and boost productivity across your business.</p>
-                            <a class='btn btn-ghost' href='services.html#product'>👉 See more →</a>
-                        </div>
-                    </div>
-
-                    <div class="service-card signature-panel service-card-gradient-4">
-                        <div class="service-card-bg"></div>
-                        <div class="service-card-content">
-                            
-                            <h3>UI/UX Design</h3>
-                            <p>We craft beautiful, intuitive, and user-centered interfaces that enhance user engagement and maximize conversion rates across websites and mobile applications.</p>
-                        </div>
-                    </div>
-
-                    <div class="service-card signature-panel service-card-gradient-5">
-                        <div class="service-card-bg"></div>
-                        <div class="service-card-content">
-                            
-                            <h3>Branding & Strategy</h3>
-                            <p>Build a powerful brand identity and long-term digital strategy that differentiates your business and positions it for sustainable growth in competitive markets.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="centered mt-3">
-                    <a class='btn btn-secondary' href='services.html'>View All Services</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Why Choose NueEra -->
-        <section class="why-choose-section" id="why">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-badge">Our Advantages</span>
-                    <h2>Why Choose NueEra</h2>
-                    <p>What sets us apart</p>
-                </div>
-                <div class="why-grid">
-                    <div class="why-item">
-                        <div class="why-icon">
-                            <i class="fas fa-medal"></i>
-                        </div>
-                        <h3>Expert Team</h3>
-                        <p>Award-winning engineers and designers with proven track records in digital transformation</p>
-                    </div>
-
-                    <div class="why-item">
-                        <div class="why-icon">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
-                        <h3>Enterprise Security</h3>
-                        <p>Bank-grade security, compliance standards, and 99.9% uptime guarantees</p>
-                    </div>
-
-                    <div class="why-item">
-                        <div class="why-icon">
-                            <i class="fas fa-bolt"></i>
-                        </div>
-                        <h3>Performance First</h3>
-                        <p>Lightning-fast solutions optimized for scale, built on modern technology stack</p>
-                    </div>
-
-                    <div class="why-item">
-                        <div class="why-icon">
-                            <i class="fas fa-handshake"></i>
-                        </div>
-                        <h3>True Partnership</h3>
-                        <p>Transparent collaboration with regular updates, strategic guidance, and ongoing support</p>
-                    </div>
-
-                    <div class="why-item">
-                        <div class="why-icon">
-                            <i class="fas fa-rocket"></i>
-                        </div>
-                        <h3>Fast Delivery</h3>
-                        <p>Agile methodology ensures quick turnaround without compromising on quality</p>
-                    </div>
-
-                    <div class="why-item">
-                        <div class="why-icon">
-                            <i class="fas fa-chart-bar"></i>
-                        </div>
-                        <h3>Proven Results</h3>
-                        <p>Data-driven approach with measurable ROI and impact on your bottom line</p>
+                    <div class="v2-lead-form-card v2-reveal v2-reveal-delay-2">
+                        <h3>Claim Your Free Audit</h3>
+                        <form onsubmit="event.preventDefault();">
+                            <div class="v2-form-group">
+                                <label for="audit-name">Full Name</label>
+                                <input type="text" id="audit-name" placeholder="John Doe" required>
+                            </div>
+                            <div class="v2-form-group">
+                                <label for="audit-email">Email Address</label>
+                                <input type="email" id="audit-email" placeholder="john@company.com" required>
+                            </div>
+                            <div class="v2-form-group">
+                                <label for="audit-url">Website URL</label>
+                                <input type="url" id="audit-url" placeholder="https://yourwebsite.com" required>
+                            </div>
+                            <button type="submit" class="v2-form-submit">Get Free Audit</button>
+                            <p class="v2-form-note">No spam. Your data is safe.</p>
+                        </form>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Process Section -->
-        <section class="process-section" id="process">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-badge">Proven Methodology</span>
-                    <h2>Our Process</h2>
-                    <p>From concept to success, we follow a proven methodology</p>
-                </div>
-                <ol class="process-steps">
-                    <li class="process-step">
-                        <div class="step-number">01</div>
-                        <h3>Discovery</h3>
-                        <p>We understand your business, goals, and challenges</p>
-                    </li>
-
-                    <div class="process-arrow">
-                        <i class="fas fa-arrow-right"></i>
-                    </div>
-
-                    <li class="process-step">
-                        <div class="step-number">02</div>
-                        <h3>Strategy</h3>
-                        <p>Develop a tailored roadmap for your digital growth</p>
-                    </li>
-
-                    <div class="process-arrow">
-                        <i class="fas fa-arrow-right"></i>
-                    </div>
-
-                    <li class="process-step">
-                        <div class="step-number">03</div>
-                        <h3>Design</h3>
-                        <p>Create beautiful, user-centric experiences</p>
-                    </li>
-
-                    <div class="process-arrow">
-                        <i class="fas fa-arrow-right"></i>
-                    </div>
-
-                    <li class="process-step">
-                        <div class="step-number">04</div>
-                        <h3>Build</h3>
-                        <p>Develop scalable, high-performance solutions</p>
-                    </li>
-
-                    <div class="process-arrow">
-                        <i class="fas fa-arrow-right"></i>
-                    </div>
-
-                    <li class="process-step">
-                        <div class="step-number">05</div>
-                        <h3>Test</h3>
-                        <p>Rigorous QA and optimization for excellence</p>
-                    </li>
-
-                    <div class="process-arrow">
-                        <i class="fas fa-arrow-right"></i>
-                    </div>
-
-                    <li class="process-step">
-                        <div class="step-number">06</div>
-                        <h3>Launch</h3>
-                        <p>Seamless deployment and ongoing support</p>
-                    </li>
-                </ol>
-            </div>
-        </section>
-
-        <!-- Testimonials Section -->
-        <section class="testimonials-section" id="testimonials">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-badge">Success Stories</span>
-                    <h2>Trusted by Business Leaders</h2>
-                    <p>See how we've helped companies like yours grow</p>
-                </div>
-                
-                <div class="testimonials-stats">
-                    <div class="stat-box">
-                        <div class="stat-number">4.9/5</div>
-                        <div class="stat-label">Average Rating</div>
-                    </div>
-                    <div class="stat-box">
-                        <div class="stat-number">4+</div>
-                        <div class="stat-label">Happy Clients</div>
-                    </div>
-                    <div class="stat-box">
-                        <div class="stat-number">100%</div>
-                        <div class="stat-label">Satisfaction Rate</div>
-                    </div>
-                </div>
-                <div class="centered mt-3">
-                    <a class='btn btn-primary' href='testimonials.html' style='display: inline-block;'>Read More Stories</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Latest from Blog -->
-        <section class="section" id="latest-blog">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-badge">Latest Insights</span>
-                    <h2>Industry Trends & Growth Strategies</h2>
-                    <p>Trends and strategies for digital growth</p>
-                </div>
-                <div class="blog-grid">
-                    <!-- Article 1 -->
-                    <article class="blog-card">
-                        <div class="blog-image"><i class="fas fa-code"></i></div>
-                        <div class="blog-content">
-                            <span class="blog-category">Development</span>
-                            <h3>The Future of Web Development in 2026</h3>
-                            <p class="blog-excerpt">Explore the latest web development trends including AI-powered development tools and edge computing.</p>
-                            <div class="blog-meta">
-                                <span>15 Jan 2026</span>
-                                <a href='blog-post.html' style='color: var(--accent-blue);'>Read More →</a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Article 2 -->
-                    <article class="blog-card">
-                        <div class="blog-image"><i class="fas fa-chart-line"></i></div>
-                        <div class="blog-content">
-                            <span class="blog-category">Marketing</span>
-                            <h3>Digital Marketing ROI: Measuring What Matters</h3>
-                            <p class="blog-excerpt">Discover how to track, measure, and optimize your digital marketing campaigns for maximum ROI.</p>
-                            <div class="blog-meta">
-                                <span>10 Jan 2026</span>
-                                <a href='blog-post.html' style='color: var(--accent-blue);'>Read More →</a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Article 3 -->
-                    <article class="blog-card">
-                        <div class="blog-image"><i class="fas fa-brain"></i></div>
-                        <div class="blog-content">
-                            <span class="blog-category">AI & Innovation</span>
-                            <h3>AI in Business: A Practical Guide</h3>
-                            <p class="blog-excerpt">Explore practical applications of artificial intelligence for business automation and analytics.</p>
-                            <div class="blog-meta">
-                                <span>2 Jan 2026</span>
-                                <a href='blog-post.html' style='color: var(--accent-blue);'>Read More →</a>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-                <div class="centered mt-3">
-                    <a class='btn btn-secondary' href='blog.html'>View All Articles</a>
-                </div>
-            </div>
-        </section>
-
-        <section class="section premium-faq-section" id="premium-faq">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-badge">Decision Support</span>
-                    <h2>Questions Teams Ask Before Partnering With Us</h2>
-                    <p>Practical answers that help you evaluate fit, timeline, and expected outcomes.</p>
-                </div>
-                <div class="premium-faq-grid">
-                    <article class="faq-item active signature-panel">
-                        <button class="faq-question" type="button" aria-expanded="true">
-                            <h3>How quickly can we start and ship first outcomes?</h3>
-                            <span class="faq-toggle">+</span>
-                        </button>
-                        <div class="faq-answer">
-                            <p>Most projects begin within days. We define a 2- to 4-week first milestone so your team sees measurable movement early.</p>
-                        </div>
-                    </article>
-                    <article class="faq-item active signature-panel">
-                        <button class="faq-question" type="button" aria-expanded="true">
-                            <h3>Do you handle strategy only, or complete execution too?</h3>
-                            <span class="faq-toggle">+</span>
-                        </button>
-                        <div class="faq-answer">
-                            <p>Both. We can align business strategy, design systems, development, automation, and growth operations as one integrated track.</p>
-                        </div>
-                    </article>
-                    <article class="faq-item active signature-panel">
-                        <button class="faq-question" type="button" aria-expanded="true">
-                            <h3>How do you report progress and impact?</h3>
-                            <span class="faq-toggle">+</span>
-                        </button>
-                        <div class="faq-answer">
-                            <p>You get milestone reviews, KPI updates, and next-step planning with clear accountability so decisions are always data-backed.</p>
-                        </div>
-                    </article>
-                    <article class="faq-item active signature-panel">
-                        <button class="faq-question" type="button" aria-expanded="true">
-                            <h3>Is your process suitable for lean startup teams?</h3>
-                            <span class="faq-toggle">+</span>
-                        </button>
-                        <div class="faq-answer">
-                            <p>Yes. We tailor sprint scope, stack choices, and release cadence to budget and team capacity while keeping enterprise-grade quality.</p>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- CTA Section -->
-        <section class="cta-section" aria-labelledby="cta-heading">
-            <div class="cta-background">
-                <div class="cta-gradient"></div>
-                <div class="cta-particles"></div>
-                <div class="cta-glow-1"></div>
-                <div class="cta-glow-2"></div>
-            </div>
-            <div class="container">
-                <div class="cta-content">
-                    <div class="cta-badge premium-cta-badge">
-                        <span class="cta-badge-shine"></span>
-                        <span class="badge-icon">âœ¨</span>
-                        <span>Transform Your Digital Future</span>
-                    </div>
-                    <h2 id="cta-heading" class="cta-main-heading">Ready to Transform Your Business?</h2>
-                    <p class="cta-subtitle">Let's discuss how NueEra can accelerate your digital growth with a free strategy session</p>
-                    <div class="cta-features">
-                        <div class="cta-feature">
-                            <div class="cta-feature-icon">
-                                <i class="fas fa-brain"></i>
-                            </div>
-                            <span>Strategic Roadmap</span>
-                        </div>
-                        <div class="cta-feature">
-                            <div class="cta-feature-icon">
-                                <i class="fas fa-bolt"></i>
-                            </div>
-                            <span>30-min Consultation</span>
-                        </div>
-                        <div class="cta-feature">
-                            <div class="cta-feature-icon">
-                                <i class="fas fa-handshake"></i>
-                            </div>
-                            <span>Zero Obligation</span>
-                        </div>
-                    </div>
-                    <div class="intent-cta">
-                        <a class='btn btn-primary cta-main-btn pulse-btn' data-intent='end' href='contact.html'>
-                            <span class="cta-label">Start Your Free Consultation</span>
-                            <i class="fas fa-arrow-right"></i>
-                        </a>
-                        <span class="cta-microcopy">âœ¨ We respond within 24 hours</span>
-                    </div>
-                </div>
+        <!-- 8. FINAL CTA SECTION -->
+        <section class="v2-final-cta v2-section">
+            <div class="container v2-reveal">
+                <h2>Ready to Scale Your Business?</h2>
+                <p>Let's build a system that generates leads, automates growth, and compounds results — month after month.</p>
+                <a class="v2-btn-primary" href="contact.html">Book Your Free Strategy Call <i class="fas fa-arrow-right"></i></a>
+                <p class="v2-final-note">No commitment required. Free 30-min consultation.</p>
             </div>
         </section>
 
@@ -925,32 +489,29 @@ Eliminate legacy bottlenecks, improve system performance, and automate inefficie
     <script src="js/premium-upgrade.js?v=20260328f"></script>
     <script src="js/main.js"></script>
     <script src="js/enhancements.js"></script>
+    <!-- V2 Scroll Reveal -->
+    <script>
+        (function() {
+            const reveals = document.querySelectorAll('.v2-reveal');
+            if (!reveals.length) return;
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('revealed');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+            reveals.forEach(function(el) { observer.observe(el); });
+        })();
+    </script>
     <!-- Hero parallax removed to honor 'no parallax' motion principle -->
 
     <!-- Scroll to Top Button -->
     <button class="scroll-top-btn" aria-label="Scroll to top">
         <i class="fas fa-arrow-up"></i>
     </button>
+    <button class="theme-toggle floating-theme-toggle" type="button" aria-label="Toggle theme"></button>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
