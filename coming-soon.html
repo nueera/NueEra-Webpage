@@ -15,10 +15,11 @@
     <title>Coming Soon | NueEra</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Something amazing is coming soon - NueEra">
+    <meta name="description" content="NueEra is building something extraordinary. Stay tuned for our upcoming AI-powered platform launch and be the first to experience next-generation business intelligence.">
 <link rel="stylesheet" href="css/styles.css?v=20260329">
     <link rel="stylesheet" href="css/premium-upgrade.css?v=20260329">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
     <style>
         @keyframes colorCycle {
             0%, 25% { color: #ff9500; } /* Orange */
@@ -38,7 +39,7 @@
     <div id="page-loader">
         <div class="loader-content">
             <div class="loader-circle"></div>
-            <img src="assets\images\loader.png" alt="Loading..." class="loader-logo">
+            <img src="assets/images/loader.png" alt="Loading..." class="loader-logo">
         </div>
     </div>
 
@@ -73,7 +74,9 @@
                     </div>
 
                     <div class="nav-right">
-                        
+                        <button class="theme-toggle" aria-label="Toggle dark/light theme" onclick="toggleTheme()">
+    <i class="fas fa-moon"></i>
+</button>
                     </div>
                 </div>
             </div>
