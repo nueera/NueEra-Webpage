@@ -575,7 +575,8 @@ class MobileEnhancer {
         this.enhanceTouchTargets();
         this.addSwipeGestures();
         this.optimizeMobileNav();
-        this.addPullToRefresh();
+        // PullToRefresh disabled — swipe-to-reload is destructive
+        // this.addPullToRefresh();
     }
 
     fixViewportHeight() {
@@ -1088,17 +1089,7 @@ class AccessibilityEnhancer {
 // UTILITY FUNCTIONS
 // ==========================================
 
-function debounce(func, wait) {
-    let timeout;
-    return function executedFunction(...args) {
-        const later = () => {
-            clearTimeout(timeout);
-            func(...args);
-        };
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
-    };
-}
+// debounce() is defined in main.js — removed duplicate
 
 function throttle(func, limit) {
     let inThrottle;

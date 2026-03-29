@@ -19,17 +19,3 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
-document.addEventListener('DOMContentLoaded', function() {
-    // Calculate reading time for the blog detail page
-    const content = document.querySelector('.blog-post-content');
-    const timeDisplay = document.getElementById('reading-time');
-
-    if (content && timeDisplay) {
-        const text = content.innerText || content.textContent;
-        const wordCount = text.trim().split(/\s+/).length;
-        const readingSpeed = 225; // Average reading speed (words per minute)
-        const minutes = Math.ceil(wordCount / readingSpeed);
-        
-        timeDisplay.innerText = `${minutes} min read`;
-    }
-});
