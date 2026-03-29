@@ -20,11 +20,11 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             if (toggleButton) toggleButton.innerHTML = sunIcon;
         }
-        localStorage.setItem('theme', theme);
+        localStorage.setItem('nueera-theme', theme);
     };
 
     // Initialize
-    const savedTheme = localStorage.getItem('theme');
+    const savedTheme = localStorage.getItem('nueera-theme');
     const systemPrefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
     
     if (savedTheme) {

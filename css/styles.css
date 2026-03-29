@@ -25,7 +25,7 @@
     --core-light: rgba(255,209,102,0.6);
 
     --text-primary: #0B0F14;
-    --text-secondary: #333b45;;
+    --text-secondary: #333b45;
     --text-muted: #6B7280;
 
     --border-soft: rgba(0,0,0,0.08);
@@ -114,7 +114,7 @@
     --orange-glow: rgba(255,154,31,0.45);
 
     --text-primary: #FFFFFF;
-    --text-secondary: #282b30;
+    --text-secondary: #a8b2c1;
     --text-muted: #8B949E;
 
     --border-soft: rgba(255,255,255,0.08);
@@ -233,6 +233,7 @@ html {
         --body-sm: 0.8rem;
     }
 }
+.skip-link {
     position: absolute;
     left: -9999px;
     top: auto;
@@ -250,8 +251,7 @@ html {
     background: var(--accent-blue);
     color: #fff;
     border-radius: 6px;
-    z-index: 2000;
-    z-index: 2002;
+    z-index: 10000;
 }
 
 body {
@@ -308,6 +308,8 @@ body::before {
     }
 }
 
+/* Note: .hero-container is redefined later (~line 1357) which overrides
+   position/z-index. The flex properties below still apply unless overridden. */
 .hero-container {
     position: relative;
     z-index: 3;
@@ -391,7 +393,7 @@ p {
    ========================================== */
 
 img {
-    max-width: 60%;
+    max-width: 100%;
     height: auto;
     display: block;
 }
@@ -447,7 +449,6 @@ a:hover {
    ========================================== */
 
 .btn {
-    display: inline-block;
     padding: 14px 32px;
     border-radius: 10px;
     font-weight: 600;
@@ -547,11 +548,9 @@ a:hover {
     width: 100%;
     height: 80px;
     z-index: 2001;
-    background: rgba(255,255,255,0.2);
     background: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    border-bottom: 1px solid rgba(255,255,255,0.2);
     border-bottom: 1px solid var(--border-color);
     box-shadow: 0 2px 30px rgba(0,0,0,0.15);
     padding: 0 32px;
@@ -752,7 +751,6 @@ a:hover {
 }
 
 /* Mobile hamburger button */
-.mobile-menu-btn { display:none; background: rgba(255,255,255,0.03); border-radius: 10px; padding:10px; border:1px solid transparent; }
 .mobile-menu-btn { display:none; background: var(--bg-mobile-btn); border-radius: 10px; padding:10px; border:1px solid transparent; }
 .mobile-menu-btn span { display:block; width:20px; height:2px; background:var(--accent-blue); margin:4px 0; transition: transform 0.35s cubic-bezier(0.4,0,0.2,1), opacity 0.2s; }
 .mobile-menu-btn.open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
@@ -1184,48 +1182,7 @@ html[data-theme='light'] .mobile-nav-links a {
     transform: rotate(-45deg);
 }
 
-.mobile-nav-links { 
-    list-style:none; 
-    padding:0; 
-    margin:0; 
-    display:flex; 
-    flex-direction:column; 
-    gap: 1.4rem; /* tighter spacing */
-    align-items: flex-start;
-    overflow-y: auto; 
-    max-height: 80vh;
-}
-
-.mobile-nav-links a { 
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: rgba(255,255,255,0.75);
-    text-decoration: none;
-    transition: color 0.3s ease, transform 0.3s ease, background 0.25s ease;
-    border: none;
-    padding: 0.8rem 0.75rem;
-    letter-spacing: -0.02em;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 0.8rem;
-    border-radius: 14px;
-    background: rgba(255,255,255,0.06);
-    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.1);
-}
-
-/* disable previous list item bubble icon and use icon span in content */
-.mobile-nav-links a::before {
-    content: none;
-}
-.mobile-menu-link-text {
-    color: #ffffff;
-    font-size: 1rem;
-    font-weight: 700;
-    text-align: center;
-    white-space: nowrap;
-}
+/* Duplicate .mobile-nav-links removed – see earlier declaration */
 .mobile-menu-footer { 
     position: absolute;
     bottom: 40px;
@@ -1311,7 +1268,6 @@ html[data-theme='light'] .mobile-nav-links a {
 }
 
 .mobile-menu-btn:hover {
-    background: rgba(255, 255, 255, 0.1);
     background: var(--bg-tertiary);
     border-color: var(--accent-blue);
     box-shadow: 0 4px 12px rgba(0, 168, 255, 0.15);
@@ -1324,6 +1280,15 @@ html[data-theme='light'] .mobile-nav-links a {
     border-radius: 2px;
     transition: var(--transition);
     margin: 3px 0;
+}
+
+@media (max-width: 1024px) {
+    .mobile-menu-btn {
+        display: flex;
+    }
+    .nav-center {
+        display: none;
+    }
 }
 
 /* ==========================================
@@ -1543,7 +1508,7 @@ html[data-theme='light'] .mobile-nav-links a {
 }
 
 .slider-card:hover {
-    /* No scaling â€” subtle lift and glow only */
+    /* No scaling — subtle lift and glow only */
     background: rgba(255, 255, 255, 0.04);
     border-color: var(--border-active);
     box-shadow: var(--shadow-hover), var(--effect-glow-blue);
@@ -3003,7 +2968,7 @@ button:focus, .btn:focus, a:focus { outline: 3px solid rgba(0,168,255,0.12); out
 }
 
 .pricing-features li::before {
-    content: 'âœ“';
+    content: '✓';
     position: absolute;
     left: 0;
     color: var(--accent-orange);
@@ -6531,7 +6496,7 @@ input:checked + .slider:before {
 }
 /* ==================================================
      NUEERA - Global Design Tokens & Premium Styles
-     Appended: 2026-02-08 â€” brand-aligned tokens + UI
+     Appended: 2026-02-08 — brand-aligned tokens + UI
      ================================================== */
 
 :root {
@@ -6666,7 +6631,7 @@ p { color: var(--text-secondary); }
 
 /* ===============================================
      NUEERA - Luxury Dark Mode Theme
-     Appended: 2026-02-08 â€” deep navy-charcoal, soft contrast
+     Appended: 2026-02-08 — deep navy-charcoal, soft contrast
      Use via: <body class="dark"> or [data-theme="dark"]
      =============================================== */
 
@@ -7713,7 +7678,7 @@ a { transition: color 160ms cubic-bezier(0,0,0.2,1); }
 
 /* ==========================================
    SERVICES PAGE - FIGMA COMPONENT ARCHITECTURE
-   Auto-layout Â· Scalable Â· Dev-friendly
+   Auto-layout · Scalable · Dev-friendly
    ========================================== */
 
 /* RESPONSIVE BREAKPOINTS
@@ -7935,7 +7900,7 @@ a { transition: color 160ms cubic-bezier(0,0,0.2,1); }
 }
 
 .detail-list li::before {
-    content: 'â€¢';
+    content: '•';
     position: absolute;
     left: 0;
     color: var(--accent-blue);
@@ -8087,7 +8052,7 @@ a { transition: color 160ms cubic-bezier(0,0,0.2,1); }
 }
 
 .for-you li::before {
-    content: 'âœ“';
+    content: '✓';
     position: absolute;
     left: 0;
     color: var(--accent-blue);
