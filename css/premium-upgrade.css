@@ -1883,7 +1883,10 @@ body[data-theme='dark'] .floating-theme-toggle {
   }
 }
 
-/* keep nav-right visible for theme toggle + CTA */
+/* remove old nav-based theme buttons area spacing */
+.nav-right {
+  display: none !important;
+}
 
 .mobile-theme-switch {
   display: none !important;
