@@ -1127,8 +1127,6 @@ document.addEventListener('DOMContentLoaded', () => {
     new LoadingStateManager();
     new SmoothScrollEnhancer();
     new AccessibilityEnhancer();
-    
-    console.log('%c✨ NueEra Enhancements Loaded', 'color: #00a8ff; font-weight: bold;');
 });
 
 // Export for use in other modules

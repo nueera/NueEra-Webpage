@@ -19,7 +19,6 @@ class AnalyticsManager {
 
     loadAnalytics() {
         if (!this.measurementId) {
-            console.log('Analytics: No Measurement ID configured');
             return;
         }
 
@@ -38,8 +37,6 @@ class AnalyticsManager {
         script.async = true;
         script.src = `https://www.googletagmanager.com/gtag/js?id=${this.measurementId}`;
         document.head.appendChild(script);
-
-        console.log('Analytics: Loaded with consent');
     }
 
     trackCookieConsent() {
