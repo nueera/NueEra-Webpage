@@ -795,8 +795,8 @@ class CookieConsent {
         banner.className = 'cookie-banner';
         banner.innerHTML = `
             <div class="cookie-content">
-                <h3>🍪 Cookie Settings</h3>
-                <p>We use cookies to enhance your browsing experience, serve personalized ads or content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.</p>
+                <h3><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 8px;"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg>Cookie Settings</h3>
+                <p>We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.</p>
             </div>
             <div class="cookie-buttons">
                 <button class="btn btn-ghost" id="declineCookies">Decline</button>
@@ -817,6 +817,10 @@ class CookieConsent {
 
     accept(banner) {
         localStorage.setItem('nueera-cookie-consent', 'accepted');
+        // Grant analytics consent
+        if (window.analyticsManager) {
+            window.analyticsManager.grantConsent();
+        }
         this.hide(banner);
     }
 
@@ -1227,10 +1231,6 @@ document.addEventListener('DOMContentLoaded', () => new ServiceScrollSpy());
 // EXPORT FOR EXTERNAL USE
 // ==========================================
 
-window.NueEra = {
-    theme: themeManager,
-    copyToClipboard: copyToClipboard
-};
 window.NueEra = {
     theme: themeManager,
     copyToClipboard: copyToClipboard
