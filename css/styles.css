@@ -10114,3 +10114,335 @@ textarea:focus-visible {
     }
 }
 
+/* ==========================================
+   3D SUN DESIGN WITH SERVICES
+   ========================================== */
+
+.sun-services-container {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Central Sun */
+.central-sun {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #FF9A1F 0%, #FF6B00 50%, #FF3D00 100%);
+    box-shadow: 
+        0 0 60px rgba(255, 154, 31, 0.8),
+        0 0 120px rgba(255, 107, 0, 0.6),
+        inset 0 0 30px rgba(255, 255, 255, 0.3);
+    z-index: 10;
+    animation: sunPulse 3s ease-in-out infinite;
+}
+
+.sun-core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #FFD166 0%, #FF9A1F 100%);
+    box-shadow: 0 0 30px rgba(255, 209, 102, 0.8);
+}
+
+.sun-glow {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 154, 31, 0.4) 0%, transparent 70%);
+    animation: sunGlow 2s ease-in-out infinite alternate;
+}
+
+.sun-rays {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200%;
+    height: 200%;
+    transform: translate(-50%, -50%);
+    background: conic-gradient(
+        from 0deg,
+        transparent 0deg,
+        rgba(255, 154, 31, 0.1) 10deg,
+        transparent 20deg,
+        transparent 30deg,
+        rgba(255, 154, 31, 0.1) 40deg,
+        transparent 50deg,
+        transparent 60deg,
+        rgba(255, 154, 31, 0.1) 70deg,
+        transparent 80deg,
+        transparent 90deg,
+        rgba(255, 154, 31, 0.1) 100deg,
+        transparent 110deg,
+        transparent 120deg,
+        rgba(255, 154, 31, 0.1) 130deg,
+        transparent 140deg,
+        transparent 150deg,
+        rgba(255, 154, 31, 0.1) 160deg,
+        transparent 170deg,
+        transparent 180deg,
+        rgba(255, 154, 31, 0.1) 190deg,
+        transparent 200deg,
+        transparent 210deg,
+        rgba(255, 154, 31, 0.1) 220deg,
+        transparent 230deg,
+        transparent 240deg,
+        rgba(255, 154, 31, 0.1) 250deg,
+        transparent 260deg,
+        transparent 270deg,
+        rgba(255, 154, 31, 0.1) 280deg,
+        transparent 290deg,
+        transparent 300deg,
+        rgba(255, 154, 31, 0.1) 310deg,
+        transparent 320deg,
+        transparent 330deg,
+        rgba(255, 154, 31, 0.1) 340deg,
+        transparent 350deg,
+        transparent 360deg
+    );
+    animation: sunRaysRotate 20s linear infinite;
+    opacity: 0.5;
+}
+
+/* Orbit Rings */
+.orbit-ring {
+    position: absolute;
+    border-radius: 50%;
+    border: 1px dashed rgba(255, 154, 31, 0.3);
+}
+
+.orbit-ring-1 {
+    width: 220px;
+    height: 220px;
+    animation: orbitRotate 15s linear infinite;
+}
+
+.orbit-ring-2 {
+    width: 320px;
+    height: 320px;
+    border-style: dotted;
+    animation: orbitRotate 25s linear infinite reverse;
+}
+
+/* Service Nodes */
+.service-node {
+    position: absolute;
+    z-index: 20;
+}
+
+.service-node-inner {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #1F6AFF 0%, #0a0e27 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 
+        0 4px 20px rgba(31, 106, 255, 0.4),
+        0 0 30px rgba(31, 106, 255, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-node-inner i {
+    font-size: 1.2rem;
+    color: white;
+}
+
+.service-node-label {
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-primary, #0B0F14);
+    background: rgba(255, 255, 255, 0.9);
+    padding: 2px 8px;
+    border-radius: 4px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.service-node:hover .service-node-label {
+    opacity: 1;
+}
+
+.service-node:hover .service-node-inner {
+    transform: scale(1.2);
+    box-shadow: 
+        0 6px 30px rgba(31, 106, 255, 0.6),
+        0 0 40px rgba(31, 106, 255, 0.3);
+}
+
+/* Node Positions - Circular Distribution */
+.service-node-1 {
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    animation: orbitFloat1 6s ease-in-out infinite;
+}
+
+.service-node-2 {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: orbitFloat2 6s ease-in-out infinite 0.5s;
+}
+
+.service-node-3 {
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    animation: orbitFloat1 6s ease-in-out infinite 1s;
+}
+
+.service-node-4 {
+    bottom: 0;
+    right: 15%;
+    transform: translateY(50%);
+    animation: orbitFloat2 6s ease-in-out infinite 1.5s;
+}
+
+.service-node-5 {
+    bottom: 0;
+    left: 15%;
+    transform: translateY(50%);
+    animation: orbitFloat1 6s ease-in-out infinite 2s;
+}
+
+.service-node-6 {
+    bottom: 20%;
+    left: 0;
+    transform: translateX(-50%);
+    animation: orbitFloat2 6s ease-in-out infinite 2.5s;
+}
+
+/* Sun Animations */
+@keyframes sunPulse {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 
+            0 0 60px rgba(255, 154, 31, 0.8),
+            0 0 120px rgba(255, 107, 0, 0.6);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 
+            0 0 80px rgba(255, 154, 31, 0.9),
+            0 0 150px rgba(255, 107, 0, 0.7);
+    }
+}
+
+@keyframes sunGlow {
+    0% { opacity: 0.5; transform: scale(1); }
+    100% { opacity: 0.8; transform: scale(1.1); }
+}
+
+@keyframes sunRaysRotate {
+    from { transform: translate(-50%, -50%) rotate(0deg); }
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@keyframes orbitRotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes orbitFloat1 {
+    0%, 100% { transform: translateY(-50%) translateX(0); }
+    50% { transform: translateY(-50%) translateX(10px); }
+}
+
+@keyframes orbitFloat2 {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(-10px); }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .sun-services-container {
+        width: 300px;
+        height: 300px;
+    }
+    
+    .central-sun {
+        width: 90px;
+        height: 90px;
+    }
+    
+    .sun-core {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .orbit-ring-1 {
+        width: 160px;
+        height: 160px;
+    }
+    
+    .orbit-ring-2 {
+        width: 240px;
+        height: 240px;
+    }
+    
+    .service-node-inner {
+        width: 48px;
+        height: 48px;
+    }
+    
+    .service-node-inner i {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .sun-services-container {
+        width: 280px;
+        height: 280px;
+        margin: 0 auto;
+    }
+    
+    .central-sun {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .sun-core {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .orbit-ring-1 {
+        width: 140px;
+        height: 140px;
+    }
+    
+    .orbit-ring-2 {
+        width: 210px;
+        height: 210px;
+    }
+    
+    .service-node-inner {
+        width: 44px;
+        height: 44px;
+    }
+    
+    .service-node-label {
+        display: none;
+    }
+}
+
