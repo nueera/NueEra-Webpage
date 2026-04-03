@@ -4,6 +4,17 @@
 // ==========================================
 
 // ==========================================
+// UTILITY: Dynamic Copyright Year
+// ==========================================
+
+(function() {
+    const yearEl = document.querySelector('.copyright-year');
+    if (yearEl) {
+        yearEl.textContent = new Date().getFullYear();
+    }
+})();
+
+// ==========================================
 // THEME MANAGEMENT
 // ==========================================
 
@@ -478,11 +489,9 @@ class FormManager {
             
             this.showMessage(form, 'success', 'Thank you! We\'ll be in touch within 24 hours.');
             form.reset();
-            console.log('Form submitted:', data);
             
         } catch (error) {
             this.showMessage(form, 'error', 'Something went wrong. Please try again.');
-            console.error('Form error:', error);
         } finally {
             submitBtn.textContent = originalText;
             submitBtn.disabled = false;
@@ -673,17 +682,6 @@ if (document.readyState === 'complete') {
 } else {
     window.addEventListener('load', handlePageLoader);
 }
-
-// Add console welcome message
-console.log(
-    '%cNueEra%c — A New Era of Digital Growth',
-    'font-size: 24px; font-weight: bold; color: #00a8ff;',
-    'font-size: 14px; color: #ff9500;'
-);
-console.log(
-    '%cPremium Digital Solutions Platform',
-    'color: #00a8ff; font-size: 12px; margin-top: 10px;'
-);
 
 // ==========================================
 // SCROLL TO TOP BUTTON
@@ -920,86 +918,6 @@ class MagneticInteraction {
 }
 
 document.addEventListener('DOMContentLoaded', () => new MagneticInteraction());
-
-// ==========================================
-// SOUND MANAGER (Web Audio API)
-// ==========================================
-
-class SoundManager {
-    constructor() {
-        this.ctx = null;
-        this.enabled = false;
-        // Only enable on desktop/non-touch primarily
-        this.isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
-        this.init();
-    }
-
-    init() {
-        // Initialize AudioContext on first user interaction
-        const enableAudio = () => {
-            if (!this.ctx) {
-                const AudioContext = window.AudioContext || window.webkitAudioContext;
-                if (AudioContext) {
-                    this.ctx = new AudioContext();
-                    // Keep sounds disabled by default (opt-in via localStorage)
-                    // this.enabled = true;
-                    this.enabled = localStorage.getItem('nueera-sound-enabled') === 'true';
-                }
-            }
-            if (this.ctx && this.ctx.state === 'suspended') {
-                this.ctx.resume();
-            }
-            ['click', 'keydown', 'touchstart'].forEach(e => 
-                window.removeEventListener(e, enableAudio)
-            );
-        };
-
-        ['click', 'keydown', 'touchstart'].forEach(e => 
-            window.addEventListener(e, enableAudio)
-        );
-
-        this.attachListeners();
-    }
-
-    attachListeners() {
-        if (this.isTouch) return; // Skip hover sounds on touch devices
-
-        const selectors = [
-            'a', '.btn', 'button', '.slider-card', '.service-card', 
-            '.blog-card', '.pricing-card', '.faq-question', '.social-icon',
-            '.theme-toggle', '.project-card', '.team-card'
-        ];
-        
-        const elements = document.querySelectorAll(selectors.join(','));
-        elements.forEach(el => {
-            el.addEventListener('mouseenter', () => this.playTone(800, 'sine', 0.02));
-            el.addEventListener('mousedown', () => this.playTone(300, 'triangle', 0.05));
-        });
-    }
-
-    playTone(freq, type, vol) {
-        if (!this.enabled || !this.ctx) return;
-
-        const osc = this.ctx.createOscillator();
-        const gain = this.ctx.createGain();
-        const now = this.ctx.currentTime;
-
-        osc.connect(gain);
-        gain.connect(this.ctx.destination);
-
-        osc.type = type;
-        osc.frequency.setValueAtTime(freq, now);
-        osc.frequency.exponentialRampToValueAtTime(freq * 1.5, now + 0.05);
-
-        gain.gain.setValueAtTime(vol, now);
-        gain.gain.exponentialRampToValueAtTime(0.001, now + 0.05);
-
-        osc.start(now);
-        osc.stop(now + 0.05);
-    }
-}
-
-document.addEventListener('DOMContentLoaded', () => new SoundManager());
 
 // ==========================================
 // PARTICLE SYSTEM

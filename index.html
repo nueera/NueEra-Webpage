@@ -27,6 +27,33 @@
     <meta name="twitter:title" content="NueEra - A New Era of Digital Growth">
     <meta name="twitter:description" content="Premium IT & Digital Solutions for ambitious businesses.">
     <meta name="twitter:image" content="https://nueera.io/assets/images/og-image.png">
+    <link rel="canonical" href="https://nueera.io/">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "NueEra",
+        "url": "https://nueera.io",
+        "logo": "https://nueera.io/assets/images/lightlogo.png",
+        "description": "Premium IT & Digital Solutions for ambitious businesses.",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Kothrud",
+            "addressRegion": "Pune",
+            "addressCountry": "IN"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "email": "hello@nueera.io",
+            "contactType": "customer service"
+        },
+        "sameAs": [
+            "https://www.facebook.com/nueera",
+            "https://www.instagram.com/nueera",
+            "https://www.linkedin.com/company/nueera"
+        ]
+    }
+    </script>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <link rel="preconnect" href="https://fonts.googleapis.com/">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
@@ -925,12 +952,17 @@ Eliminate legacy bottlenecks, improve system performance, and automate inefficie
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 NueEra. All rights reserved. | <a href='privacy.html'>Privacy Policy</a> | <a href='terms.html'>Terms of Service</a></p>
+                <p><span class="copyright-year">2026</span> NueEra. All rights reserved. | <a href='privacy.html'>Privacy Policy</a> | <a href='terms.html'>Terms of Service</a></p>
             </div>
         </div>
     </footer>
 
-    <script src="https://unpkg.com/three@0.160.0/build/three.min.js"></script>
+    <script src="js/vendor/three.min.js"></script>
+    <script>
+        if (typeof THREE === 'undefined') {
+            document.write('<script src="https://unpkg.com/three@0.160.0/build/three.min.js"><\/script>');
+        }
+    </script>
     <script src="js/premium-upgrade.js?v=20260328f"></script>
     <script src="js/main.js"></script>
     <script src="js/enhancements.js"></script>
