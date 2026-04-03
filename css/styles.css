@@ -9859,3 +9859,168 @@ body[data-theme='dark'] .floating-theme-toggle {
     bottom: max(72px, env(safe-area-inset-bottom)) !important;
   }
 }
+
+/* ==========================================
+   SKELETON LOADERS FOR IMAGES
+   ========================================== */
+.img-loading {
+    background: linear-gradient(90deg, var(--bg-secondary) 25%, var(--bg-glass) 50%, var(--bg-secondary) 75%);
+    background-size: 200% 100%;
+    animation: skeleton-shimmer 1.5s ease-in-out infinite;
+}
+
+@keyframes skeleton-shimmer {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+.img-loaded {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+img:not([src]) {
+    visibility: hidden;
+}
+
+/* ==========================================
+   KEYBOARD NAVIGATION IMPROVEMENTS
+   ========================================== */
+
+/* Visible focus indicator for keyboard navigation */
+*:focus-visible {
+    outline: 2px solid var(--accent-blue, #1F6AFF);
+    outline-offset: 2px;
+}
+
+*:focus:not(:focus-visible) {
+    outline: none;
+}
+
+/* Skip link improvements */
+.skip-link {
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--accent-blue, #1F6AFF);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0 0 8px 8px;
+    z-index: 100000;
+    font-weight: 600;
+    text-decoration: none;
+    transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* Enhanced focus for interactive elements */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid var(--accent-blue, #1F6AFF);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+/* Remove default outline and add custom for mouse users */
+*:focus {
+    outline: none;
+}
+
+/* ==========================================
+   PRINT STYLES
+   ========================================== */
+
+@media print {
+    /* Hide non-essential elements */
+    .navbar,
+    .footer,
+    .theme-toggle,
+    .scroll-top-btn,
+    .cookie-banner,
+    .mobile-menu-overlay,
+    .breadcrumb-nav,
+    .btn,
+    .social-icons,
+    .newsletter-section,
+    video,
+    audio,
+    iframe,
+    .hero-background {
+        display: none !important;
+    }
+
+    /* Reset backgrounds and colors */
+    body {
+        background: white !important;
+        color: black !important;
+        font-size: 12pt;
+        line-height: 1.5;
+    }
+
+    .container {
+        max-width: 100% !important;
+        padding: 0 !important;
+    }
+
+    /* Typography */
+    h1, h2, h3, h4, h5, h6 {
+        page-break-after: avoid;
+        color: black !important;
+    }
+
+    h1 { font-size: 24pt; }
+    h2 { font-size: 20pt; }
+    h3 { font-size: 16pt; }
+
+    p, li {
+        orphans: 3;
+        widows: 3;
+    }
+
+    /* Links */
+    a {
+        color: black !important;
+        text-decoration: underline;
+    }
+
+    a[href^="http"]::after {
+        content: " (" attr(href) ")";
+        font-size: 10pt;
+        color: #666;
+    }
+
+    /* Images */
+    img {
+        max-width: 100% !important;
+        page-break-inside: avoid;
+    }
+
+    /* Cards and sections */
+    .card,
+    .service-card,
+    .pricing-card,
+    .blog-card,
+    .team-card {
+        break-inside: avoid;
+        box-shadow: none !important;
+        border: 1px solid #ddd;
+    }
+
+    /* Header */
+    header {
+        position: static !important;
+    }
+
+    /* Show URLs after links */
+    .blog-post-content a[href]::after {
+        content: " (" attr(href) ")";
+    }
+}
+
