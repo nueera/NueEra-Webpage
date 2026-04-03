@@ -10070,6 +10070,30 @@ textarea:focus-visible {
 }
 
 /* ==========================================
+   CLEAN HERO VISUAL
+   ========================================== */
+
+.hero-visual-container.clean-visual {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-main-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+    .hero-visual-container.clean-visual {
+        margin-top: 2rem;
+    }
+    
+    .hero-main-image {
+        max-width: 90%;
    FLOATING WHATSAPP BUTTON
    ========================================== */
 
