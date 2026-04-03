@@ -15,6 +15,27 @@
 })();
 
 // ==========================================
+// SKELETON LOADERS FOR IMAGES
+// ==========================================
+
+(function() {
+    const images = document.querySelectorAll('img[loading="lazy"]');
+    
+    images.forEach(img => {
+        if (!img.complete) {
+            img.classList.add('img-loading');
+            img.addEventListener('load', () => {
+                img.classList.remove('img-loading');
+                img.classList.add('img-loaded');
+            });
+            img.addEventListener('error', () => {
+                img.classList.remove('img-loading');
+            });
+        }
+    });
+})();
+
+// ==========================================
 // THEME MANAGEMENT
 // ==========================================
 

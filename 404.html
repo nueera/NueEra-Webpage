@@ -16,6 +16,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="The page you're looking for doesn't exist. Return to NueEra's homepage to explore our AI-powered business solutions and services.">
+<link rel="preconnect" href="https://cdnjs.cloudflare.com/" crossorigin>
 <link rel="stylesheet" href="css/styles.css?v=20260329">
     <link rel="stylesheet" href="css/premium-upgrade.css?v=20260329">
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -106,11 +107,38 @@
             </div>
             <div class="container" style="text-align: center; position: relative; z-index: 2;">
                 <div style="font-size: 8rem; font-weight: 900; line-height: 1; margin-bottom: 1rem;" class="gradient-text">404</div>
-                <h1 style="margin-bottom: 1.5rem;">Page Not Found</h1>
-                <p style="max-width: 600px; margin: 0 auto 2.5rem; font-size: 1.2rem;">The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.</p>
-                <a href="index.html" class="btn btn-primary">
-                    <i class="fas fa-home" style="margin-right: 0.5rem;"></i> Go Home
-                </a>
+                <h1 style="margin-bottom: 1rem;">Oops! Page Not Found</h1>
+                <p style="max-width: 600px; margin: 0 auto 1.5rem; font-size: 1.1rem; opacity: 0.8;">The page you're looking for doesn't exist, has been moved, or is temporarily unavailable.</p>
+                
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2rem;">
+                    <a href="index.html" class="btn btn-primary">
+                        <i class="fas fa-home"></i> Go Home
+                    </a>
+                    <a href="contact.html" class="btn btn-secondary">
+                        <i class="fas fa-envelope"></i> Contact Us
+                    </a>
+                </div>
+
+                <div style="max-width: 400px; margin: 0 auto; padding: 1.5rem; background: rgba(255,255,255,0.05); border-radius: 12px;">
+                    <h3 style="margin-bottom: 1rem; font-size: 1rem;">Looking for something?</h3>
+                    <form action="search.html" method="get" style="display: flex; gap: 0.5rem;">
+                        <input type="search" name="q" placeholder="Search..." aria-label="Search" style="flex: 1; padding: 0.75rem 1rem; border-radius: 8px; border: 1px solid var(--border-color); background: var(--bg-secondary);">
+                        <button type="submit" class="btn btn-primary" style="padding: 0.75rem 1.25rem;">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </form>
+                </div>
+
+                <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1);">
+                    <p style="font-size: 0.9rem; opacity: 0.6; margin-bottom: 1rem;">Popular pages you might be looking for:</p>
+                    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                        <a href="services.html" class="btn btn-ghost btn-sm">Services</a>
+                        <a href="pricing.html" class="btn btn-ghost btn-sm">Pricing</a>
+                        <a href="about.html" class="btn btn-ghost btn-sm">About</a>
+                        <a href="blog.html" class="btn btn-ghost btn-sm">Blog</a>
+                        <a href="help-center.html" class="btn btn-ghost btn-sm">Help Center</a>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
