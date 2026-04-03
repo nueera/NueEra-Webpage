@@ -10029,7 +10029,7 @@ textarea:focus-visible {
    ========================================== */
 
 .nav-right {
-    display: flex;
+    display: flex !important;
     align-items: center;
     gap: 0.75rem;
 }
