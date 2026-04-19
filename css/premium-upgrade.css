@@ -1,4 +1,4 @@
-﻿:root {
+﻿﻿:root {
   --font-display: "Outfit", "Segoe UI", sans-serif;
   --step--1: clamp(0.82rem, 0.8rem + 0.12vw, 0.92rem);
   --step-0: clamp(1rem, 0.95rem + 0.25vw, 1.12rem);
@@ -3076,7 +3076,8 @@ html[data-theme='dark'] #team-slider-section .team-tag {
 /* Force full-size team photos on About page (override conflicting global rules) */
 #team-slider-section .team-avatar {
   width: 100% !important;
-  height: clamp(300px, 33vw, 360px) !important;
+  height: auto !important;
+  aspect-ratio: 1 / 1.15 !important;
   max-height: none !important;
   object-fit: cover !important;
   object-position: center top !important;
@@ -3095,10 +3096,6 @@ html[data-theme='dark'] #team-slider-section .team-tag {
 
   #team-slider-section .team-grid {
     gap: 0.85rem !important;
-  }
-
-  #team-slider-section .team-avatar {
-    height: clamp(260px, 62vw, 320px) !important;
   }
 }
 
