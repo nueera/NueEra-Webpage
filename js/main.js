@@ -1,4 +1,4 @@
-﻿// ==========================================
+// ==========================================
 // NUEERA - PREMIUM JAVASCRIPT
 // Theme Toggle, Navigation, Interactivity
 // ==========================================
@@ -62,6 +62,7 @@ class ThemeManager {
         document.documentElement.setAttribute('data-theme', theme);
         localStorage.setItem('nueera-theme', theme);
         this.updateToggleButton();
+        window.dispatchEvent(new CustomEvent('themeChanged'));
     }
 
     toggle() {
@@ -497,6 +498,7 @@ class FormManager {
         e.preventDefault();
         
         const submitBtn = form.querySelector('button[type="submit"]');
+        if (!submitBtn) return;
         const originalText = submitBtn.textContent;
         submitBtn.disabled = true;
         submitBtn.textContent = 'Sending...';
@@ -660,6 +662,7 @@ function debounce(func, wait) {
 
 // Copy to clipboard
 function copyToClipboard(text) {
+    if (!navigator.clipboard) return;
     navigator.clipboard.writeText(text).then(() => {
         // Show toast notification
         const toast = document.createElement('div');
@@ -732,17 +735,21 @@ class ScrollTopButton {
     init() {
         if (!this.btn) return;
 
+        this.scrollTicking = false;
         window.addEventListener('scroll', () => {
-            const currentScrollY = window.scrollY;
-            
-            // Show only when scrolling up and past 300px
-            if (currentScrollY > 300 && currentScrollY < this.lastScrollY) {
-                this.btn.classList.add('visible');
-            } else {
-                this.btn.classList.remove('visible');
+            if (!this.scrollTicking) {
+                window.requestAnimationFrame(() => {
+                    const currentScrollY = window.scrollY;
+                    if (currentScrollY > 300 && currentScrollY < this.lastScrollY) {
+                        this.btn.classList.add('visible');
+                    } else {
+                        this.btn.classList.remove('visible');
+                    }
+                    this.lastScrollY = currentScrollY;
+                    this.scrollTicking = false;
+                });
+                this.scrollTicking = true;
             }
-            
-            this.lastScrollY = currentScrollY;
         }, { passive: true });
 
         this.btn.addEventListener('click', () => {
@@ -772,11 +779,18 @@ class ScrollProgressBar {
         container.appendChild(bar);
         document.body.appendChild(container);
 
+        let progressTicking = false;
         window.addEventListener('scroll', () => {
-            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            const scrolled = (winScroll / height) * 100;
-            bar.style.width = scrolled + "%";
+            if (!progressTicking) {
+                window.requestAnimationFrame(() => {
+                    const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                    const scrolled = height > 0 ? (winScroll / height) * 100 : 0;
+                    bar.style.width = scrolled + "%";
+                    progressTicking = false;
+                });
+                progressTicking = true;
+            }
         }, { passive: true });
     }
 }
@@ -960,8 +974,14 @@ class ParticleSystem {
 
         this.lastScrollY = window.scrollY;
 
+        this.cachedTheme = document.documentElement.getAttribute('data-theme') || 'light';
+
         this.init();
         this.animate();
+
+        window.addEventListener('themeChanged', () => {
+            this.cachedTheme = document.documentElement.getAttribute('data-theme') || 'light';
+        });
         
         window.addEventListener('resize', debounce(() => this.resize(), 200));
     }
@@ -1007,7 +1027,7 @@ class ParticleSystem {
         const scrollDelta = currentScrollY - this.lastScrollY;
         this.lastScrollY = currentScrollY;
 
-        const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+        const isLight = this.cachedTheme === 'light';
         const rgb = isLight ? '0, 0, 0' : '255, 255, 255';
 
         this.particles.forEach(p => {

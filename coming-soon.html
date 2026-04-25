@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
     <link rel="icon" href="/favicon.ico" sizes="any">
@@ -19,8 +19,8 @@
 <link rel="preconnect" href="https://cdnjs.cloudflare.com/" crossorigin>
 <link rel="stylesheet" href="css/styles.css?v=20260329">
     <link rel="stylesheet" href="css/premium-upgrade.css?v=20260329">
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     <style>
         @keyframes colorCycle {
             0%, 25% { color: #ff9500; } /* Orange */
@@ -32,6 +32,17 @@
             background: none !important;
             -webkit-text-fill-color: initial !important;
             animation: colorCycle 3s linear infinite;
+        }
+        .notify-form {
+            max-width: clamp(280px, 90vw, 450px);
+            margin: 0 auto 2.5rem;
+            display: flex;
+            gap: 10px;
+            animation: fadeInUp 0.8s ease-out 0.6s backwards;
+            flex-wrap: wrap;
+        }
+        .notify-form .btn {
+            flex-shrink: 0;
         }
     </style>
 </head>
@@ -51,8 +62,11 @@
             <div class="container">
                 <div class="nav-container">
                     <div class="nav-left">
-                        <a href="index.html" class="logo" aria-label="NueEra home">
-                            <div class="logo-icon"><img src="assets/images/logo.png" alt="NueEra Logo" loading="lazy"></div>
+                        <a aria-label='NueEra home' class='logo' href='index.html'>
+                            <div class="logo-icon">
+                                <img src="assets/images/lightlogo.png" alt="NueEra Logo" class="logo-light" loading="lazy">
+                                <img src="assets/images/darklogo.png" alt="NueEra Logo" class="logo-dark" loading="lazy">
+                            </div>
                         </a>
                     </div>
 
@@ -75,9 +89,10 @@
                     </div>
 
                     <div class="nav-right">
-                        <button class="theme-toggle" aria-label="Toggle dark/light theme" onclick="toggleTheme()">
-    <i class="fas fa-moon"></i>
-</button>
+                        <a href="contact.html" class="btn btn-primary nav-cta">Book Call</a>
+                        <a href="https://wa.me/917066607424" target="_blank" rel="noopener" class="whatsapp-btn" aria-label="Chat on WhatsApp">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -87,8 +102,11 @@
         <div id="mobileMenu" class="mobile-menu-overlay" aria-hidden="true">
             <div class="mobile-menu-inner">
                 <div class="mobile-menu-top">
-                    <a href="index.html" class="logo mobile-logo" aria-label="NueEra home">
-                        <div class="logo-icon"><img src="assets/images/logo.png" alt="NueEra Logo" loading="lazy"></div>
+                    <a aria-label='NueEra home' class='logo mobile-logo' href='index.html'>
+                        <div class="logo-icon">
+                            <img src="assets/images/lightlogo.png" alt="NueEra Logo" class="logo-light" loading="lazy">
+                            <img src="assets/images/darklogo.png" alt="NueEra Logo" class="logo-dark" loading="lazy">
+                        </div>
                     </a>
                     
                     <div class="mobile-menu-account">
@@ -113,7 +131,7 @@
     </header>
 
     <main id="main">
-        <section class="hero" style="min-height: 80vh; align-items: center;">
+        <section class="hero" style="min-height: 60vh; align-items: center;">
              <div class="hero-background">
                 <div class="glow-orb glow-orb-blue" aria-hidden="true"></div>
                 <div class="glow-orb glow-orb-orange" aria-hidden="true"></div>
@@ -123,12 +141,12 @@
                     <span class="badge-icon">🚀</span>
                     <span>Launch Imminent</span>
                 </div>
-                <h1 style="font-size: 4rem; margin-bottom: 1.5rem; animation: fadeInDown 0.8s ease-out 0.2s backwards;">Something <span class="gradient-text cycling-text">Amazing</span> is Coming</h1>
+                <h1 style="font-size: clamp(2rem, 8vw, 4rem); margin-bottom: 1.5rem; animation: fadeInDown 0.8s ease-out 0.2s backwards;">Something <span class="gradient-text cycling-text">Amazing</span> is Coming</h1>
                 <p style="max-width: 600px; margin: 0 auto 2.5rem; font-size: 1.2rem; animation: fadeInDown 0.8s ease-out 0.4s backwards;">We are building a new digital experience to help your business grow. Stay tuned for updates.</p>
                 
                 <!-- Notify Form -->
-                <form style="max-width: 450px; margin: 0 auto 2.5rem; display: flex; gap: 10px; animation: fadeInUp 0.8s ease-out 0.6s backwards;" onsubmit="event.preventDefault(); alert('Thanks for subscribing!');">
-                    <input type="email" placeholder="Enter your email address" required style="flex: 1; padding: 12px 16px; border-radius: 10px; border: 1px solid var(--border-color); background: var(--bg-glass); color: var(--text-primary); backdrop-filter: blur(10px); font-size: 1rem;">
+                <form class="notify-form" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Subscribed!'; this.querySelector('input').disabled=true; this.querySelector('button').disabled=true;">
+                    <input type="email" placeholder="Enter your email address" required style="flex: 1; padding: 12px 16px; border-radius: 10px; border: 1px solid var(--border-color); background: var(--bg-glass); color: var(--text-primary); backdrop-filter: blur(10px); font-size: clamp(0.9rem, 2vw, 1rem); min-width: 0;">
                     <button type="submit" class="btn btn-primary" style="white-space: nowrap;">Notify Me</button>
                 </form>
 
@@ -151,8 +169,8 @@
                     </div>
                     <p class="tagline">A New Era of Digital Growth</p>
                     <div class="social-icons">
-                        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" class="social-icon" title="Facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="social-icon" title="Instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/nueera" target="_blank" rel="noopener noreferrer" class="social-icon" title="Facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/nueera" target="_blank" rel="noopener noreferrer" class="social-icon" title="Instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                         <a href="https://www.linkedin.com/company/nueera" target="_blank" rel="noopener noreferrer" class="social-icon" title="LinkedIn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>

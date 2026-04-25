@@ -1,4 +1,4 @@
-﻿/* ==========================================
+/* ==========================================
    NUEERA - PREMIUM LOGO-ALIGNED DESIGN
    Dark & Light Theme System
    ========================================== */
@@ -9223,6 +9223,25 @@ body.reduce-animations * {
     border-radius: 16px;
 }
 
+.service-bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.85;
+    z-index: 0;
+}
+
+.service-overlay-text {
+    position: relative;
+    z-index: 1;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+    font-weight: bold;
+    color: white;
+}
+
 .help-category-card .help-icon {
     color: var(--accent-blue);
     background: rgba(31, 106, 255, 0.12);
@@ -10143,3 +10162,211 @@ textarea:focus-visible {
     }
 }
 
+
+/* ============================================
+   MOBILE RESPONSIVENESS FIXES
+   ============================================ */
+
+/* Fix glow orbs overflowing on mobile */
+.glow-orb-blue,
+.glow-orb-orange {
+    width: min(500px, 90vw) !important;
+    height: min(500px, 90vw) !important;
+}
+.glow-orb-orange {
+    width: min(600px, 90vw) !important;
+    height: min(600px, 90vw) !important;
+}
+
+/* Fix hero grid for mobile */
+@media (max-width: 768px) {
+    .hero-layout {
+        grid-template-columns: 1fr !important;
+        text-align: center;
+    }
+    .hero-visual {
+        display: none !important;
+    }
+    .hero-metrics {
+        justify-content: center;
+    }
+    .hero-buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .hero-proof-strip {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+/* Fix about team grid for mobile */
+@media (max-width: 768px) {
+    .team-grid {
+        grid-template-columns: 1fr !important;
+    }
+    .about-hero-grid {
+        grid-template-columns: 1fr !important;
+    }
+    .about-hero-visual {
+        display: none;
+    }
+    .about-framework-grid {
+        grid-template-columns: 1fr 1fr !important;
+    }
+    .about-delivery-layout {
+        grid-template-columns: 1fr !important;
+    }
+    .stats-grid {
+        grid-template-columns: 1fr !important;
+    }
+    .vm-grid {
+        grid-template-columns: 1fr !important;
+    }
+    .benefits-grid {
+        grid-template-columns: 1fr 1fr !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-framework-grid {
+        grid-template-columns: 1fr !important;
+    }
+    .benefits-grid {
+        grid-template-columns: 1fr !important;
+    }
+    .hero-metrics {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .metric-divider {
+        display: none;
+    }
+}
+
+/* Fix services page inline style classes */
+.service-bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.85;
+    z-index: 0;
+}
+
+.service-overlay-text {
+    position: relative;
+    z-index: 1;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+    font-weight: bold;
+    color: white;
+}
+
+/* Fix testimonials reasons grid */
+.reasons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.reason-card {
+    padding: 1.5rem;
+    background: var(--bg-glass);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+}
+
+/* Fix coming-soon notify form */
+.notify-form {
+    max-width: clamp(280px, 90vw, 450px);
+    margin: 0 auto;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.notify-form input {
+    flex: 1;
+    min-width: 0;
+    padding: 12px 16px;
+    border-radius: 10px;
+    font-size: clamp(0.9rem, 2vw, 1rem);
+}
+
+/* Fix stat-desc class (replaces inline styles) */
+.stat-desc {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-top: 0.5rem;
+}
+
+/* Fix team overview stats */
+.about-team-stat strong {
+    font-size: 1.8rem;
+    color: var(--accent-blue);
+    display: block;
+}
+
+/* Better mobile nav touch targets */
+@media (max-width: 768px) {
+    .nav-links a,
+    .mobile-nav-links a {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+    }
+    
+    .btn {
+        min-height: 44px;
+    }
+}
+
+/* Fix background-attachment for tablets */
+@media (max-width: 1024px) {
+    .hero,
+    .hero-background {
+        background-attachment: scroll !important;
+    }
+}
+
+/* Improve prefers-reduced-motion support */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    .glow-orb,
+    .showcase-cube,
+    .floating-card {
+        animation: none !important;
+        transform: none !important;
+    }
+}
+
+/* Fix scroll progress bar visibility */
+.scroll-progress-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    z-index: 10000;
+    background: transparent;
+}
+
+.scroll-progress-bar {
+    height: 100%;
+    width: 0%;
+    background: var(--accent-blue, #00a8ff);
+    transition: width 0.1s linear;
+}
