@@ -1,0 +1,921 @@
+/* ==========================================
+   NUEERA - ENHANCEMENT FEATURES
+   Complementary styles for new site features
+   Depends on: styles.css, premium-upgrade.css
+   ========================================== */
+
+/* ==========================================
+   1. PAGE TRANSITIONS
+   Smooth overlay transitions between pages
+   ========================================== */
+
+.page-transition-overlay {
+    position: fixed;
+    inset: 0;
+    background: var(--bg-primary);
+    z-index: 99999;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.page-transition-overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+/* ==========================================
+   2. GRADIENT BORDER CARDS (ANIMATED)
+   Conic-gradient spinning border on card hover
+   Animated via JS (--gradient-angle: 0deg -> 360deg)
+   ========================================== */
+
+/* Base gradient-border-hover wrapper — applied to .service-card or .feature-card */
+.gradient-border-hover {
+    position: relative;
+    isolation: isolate;
+    border: none !important; /* remove default border so gradient shows through */
+}
+
+/* Rotating conic-gradient pseudo-element behind card content */
+.gradient-border-hover::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border-radius: inherit;
+    z-index: -1;
+    opacity: 0;
+    background: conic-gradient(
+        from var(--gradient-angle, 0deg),
+        var(--accent-blue),
+        var(--accent-orange),
+        var(--accent-blue)
+    );
+    transition: opacity var(--motion-base) var(--ease-out);
+    will-change: opacity;
+}
+
+/* Fallback: linear-gradient for browsers without conic-gradient support */
+@supports not (background: conic-gradient(from 0deg, red, blue)) {
+    .gradient-border-hover::before {
+        background: linear-gradient(
+            135deg,
+            var(--accent-blue),
+            var(--accent-orange),
+            var(--accent-blue)
+        );
+    }
+}
+
+/* Show gradient border on hover */
+.gradient-border-hover:hover::before,
+.gradient-border-hover:focus-within::before {
+    opacity: 1;
+}
+
+/* Inner fill — sits on top of pseudo to create "border only" illusion */
+.gradient-border-hover::after {
+    content: "";
+    position: absolute;
+    inset: 2px;
+    border-radius: inherit;
+    background: var(--bg-glass);
+    z-index: -1;
+    transition: background var(--motion-base) var(--ease-standard);
+}
+
+[data-theme="dark"] .gradient-border-hover::after {
+    background: var(--bg-secondary);
+}
+
+/* Apply to existing card types */
+.service-card.gradient-border-hover,
+.feature-card.gradient-border-hover {
+    border: none !important;
+}
+
+/* ==========================================
+   3. BOTTOM NAVIGATION BAR (MOBILE)
+   Fixed glassmorphic tab bar — hidden on desktop
+   ========================================== */
+
+.mobile-bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2000;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding: 6px 8px 8px;
+    padding-bottom: calc(8px + env(safe-area-inset-bottom, 0px));
+    background: rgba(255, 255, 255, 0.72);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    border-top: 1px solid var(--border-soft);
+    box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.08);
+    transition: background var(--motion-base) var(--ease-standard),
+                border-color var(--motion-base) var(--ease-standard);
+}
+
+[data-theme="dark"] .mobile-bottom-nav {
+    background: rgba(11, 15, 20, 0.82);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* Hide on desktop */
+@media (min-width: 769px) {
+    .mobile-bottom-nav {
+        display: none !important;
+    }
+}
+
+/* Prevent body content from being hidden behind the nav */
+@media (max-width: 768px) {
+    body {
+        padding-bottom: calc(72px + env(safe-area-inset-bottom, 0px));
+    }
+}
+
+/* Individual tab item */
+.mobile-bottom-nav__tab {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    flex: 1;
+    min-width: 0;
+    padding: 4px 0;
+    color: var(--text-muted);
+    font-size: 10px;
+    font-weight: 600;
+    text-decoration: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color var(--motion-fast) var(--ease-out);
+    -webkit-tap-highlight-color: transparent;
+}
+
+.mobile-bottom-nav__tab-icon {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    border-radius: 50%;
+    transition: color var(--motion-fast) var(--ease-out),
+                background var(--motion-fast) var(--ease-out),
+                box-shadow var(--motion-fast) var(--ease-out);
+}
+
+/* Active tab */
+.mobile-bottom-nav__tab--active,
+.mobile-bottom-nav__tab.active {
+    color: var(--accent-blue);
+}
+
+.mobile-bottom-nav__tab--active .mobile-bottom-nav__tab-icon,
+.mobile-bottom-nav__tab.active .mobile-bottom-nav__tab-icon {
+    color: var(--accent-blue);
+    background: rgba(31, 106, 255, 0.1);
+    box-shadow: 0 0 12px rgba(31, 106, 255, 0.2);
+}
+
+[data-theme="dark"] .mobile-bottom-nav__tab--active .mobile-bottom-nav__tab-icon,
+[data-theme="dark"] .mobile-bottom-nav__tab.active .mobile-bottom-nav__tab-icon {
+    background: rgba(77, 141, 255, 0.15);
+    box-shadow: 0 0 12px rgba(77, 141, 255, 0.25);
+}
+
+/* Center CTA — elevated button */
+.mobile-bottom-nav__cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: none;
+    background: linear-gradient(135deg, var(--accent-blue), var(--accent-orange));
+    color: #ffffff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transform: translateY(-12px);
+    box-shadow: 0 4px 20px var(--glow-blue), 0 2px 8px rgba(255, 154, 31, 0.3);
+    transition: transform var(--motion-base) var(--ease-emphasis),
+                box-shadow var(--motion-base) var(--ease-out);
+    -webkit-tap-highlight-color: transparent;
+}
+
+.mobile-bottom-nav__cta:hover,
+.mobile-bottom-nav__cta:focus {
+    transform: translateY(-14px);
+    box-shadow: 0 6px 28px var(--glow-blue), 0 4px 12px rgba(255, 154, 31, 0.4);
+}
+
+.mobile-bottom-nav__cta:active {
+    transform: translateY(-10px) scale(0.95);
+}
+
+/* ==========================================
+   4. CUSTOM CURSOR (DESKTOP ONLY)
+   Enhanced cursor for pointer devices
+   ========================================== */
+
+.custom-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: rgba(31, 106, 255, 0.2);
+    border: 2px solid var(--accent-blue);
+    pointer-events: none;
+    z-index: 99998;
+    transform: translate(-50%, -50%);
+    transition: transform 0.15s ease,
+                width 0.2s ease,
+                height 0.2s ease,
+                background 0.2s ease,
+                border-color 0.2s ease;
+    will-change: transform, width, height;
+    mix-blend-mode: difference;
+}
+
+/* Near-CTA state — grows and changes appearance */
+.custom-cursor.near-cta {
+    width: 48px;
+    height: 48px;
+    background: rgba(31, 106, 255, 0.12);
+    border-color: var(--accent-orange);
+    mix-blend-mode: normal;
+}
+
+/* Only show on devices with fine pointer (mouse/trackpad) */
+@media (hover: hover) and (pointer: fine) {
+    .custom-cursor-active body,
+    body.custom-cursor-active {
+        cursor: none;
+    }
+
+    .custom-cursor-active a,
+    .custom-cursor-active button,
+    .custom-cursor-active .btn,
+    .custom-cursor-active [role="button"] {
+        cursor: none;
+    }
+}
+
+/* Hide custom cursor on touch/coarse devices */
+@media (hover: none), (pointer: coarse) {
+    .custom-cursor {
+        display: none !important;
+    }
+}
+
+/* ==========================================
+   5. HIGH CONTRAST MODE
+   Accessibility overrides for [data-contrast="high"]
+   ========================================== */
+
+/* --- Text colors: maximum contrast --- */
+[data-contrast="high"] {
+    --text-primary: #000000;
+    --text-secondary: #1a1a1a;
+    --text-muted: #333333;
+}
+
+[data-theme="dark"][data-contrast="high"] {
+    --text-primary: #ffffff;
+    --text-secondary: #e6e6e6;
+    --text-muted: #cccccc;
+}
+
+/* --- Card borders: solid, high visibility --- */
+[data-contrast="high"] .service-card,
+[data-contrast="high"] .feature-card,
+[data-contrast="high"] .floating-card,
+[data-contrast="high"] .proof-card {
+    border: 2px solid var(--text-primary);
+    box-shadow: none;
+}
+
+/* --- Button borders: thicker, solid --- */
+[data-contrast="high"] .btn {
+    border: 3px solid var(--text-primary);
+    box-shadow: none;
+}
+
+[data-contrast="high"] .btn-primary {
+    border: 3px solid #000000;
+    color: #000000;
+}
+
+[data-theme="dark"][data-contrast="high"] .btn-primary {
+    border-color: #ffffff;
+    color: #ffffff;
+}
+
+/* --- Remove subtle shadows, replace with solid borders --- */
+[data-contrast="high"] .navbar,
+[data-contrast="high"] .signature-panel,
+[data-contrast="high"] .mobile-menu-inner {
+    box-shadow: none;
+    border: 2px solid var(--text-primary);
+}
+
+/* --- Links: underline by default --- */
+[data-contrast="high"] a {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+[data-contrast="high"] .nav-links a,
+[data-contrast="high"] .mobile-nav-links a {
+    text-decoration: underline;
+}
+
+/* --- Focus indicators: prominent outline --- */
+[data-contrast="high"] *:focus-visible {
+    outline: 3px solid #0055ff;
+    outline-offset: 2px;
+}
+
+[data-theme="dark"][data-contrast="high"] *:focus-visible {
+    outline-color: #66aaff;
+}
+
+/* --- Input fields: solid borders --- */
+[data-contrast="high"] input,
+[data-contrast="high"] textarea,
+[data-contrast="high"] select {
+    border: 2px solid var(--text-primary);
+    box-shadow: none;
+}
+
+/* ==========================================
+   6. SECTION SKIP LINKS
+   Focus-only navigation links for accessibility
+   ========================================== */
+
+.section-skip-link {
+    position: absolute;
+    left: -9999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    z-index: 10001;
+}
+
+.section-skip-link:focus {
+    position: fixed;
+    left: 1rem;
+    top: 3.5rem; /* slightly lower than .skip-link (top: 1rem) */
+    width: auto;
+    height: auto;
+    padding: 0.5rem 1rem;
+    background: var(--accent-blue);
+    color: #ffffff;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.875rem;
+    text-decoration: none;
+    box-shadow: 0 4px 12px var(--glow-blue);
+    outline: 2px solid var(--accent-orange);
+    outline-offset: 2px;
+}
+
+/* ==========================================
+   7. SKELETON LOADING STATES
+   Shimmer placeholders while content loads
+   ========================================== */
+
+/* Base skeleton */
+.skeleton-card {
+    position: relative;
+    overflow: hidden;
+    background: var(--bg-glass);
+    border-radius: 20px;
+    padding: 1.5rem;
+    border: 1px solid var(--border-soft);
+    min-height: 260px;
+}
+
+/* Shimmer overlay */
+.skeleton-card::before,
+.skeleton-img::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(255, 255, 255, 0.08) 40%,
+        rgba(255, 255, 255, 0.15) 50%,
+        rgba(255, 255, 255, 0.08) 60%,
+        transparent 100%
+    );
+    background-size: 200% 100%;
+    animation: skeleton-shimmer 1.8s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 1;
+}
+
+[data-theme="dark"] .skeleton-card::before,
+[data-theme="dark"] .skeleton-img::before {
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(255, 255, 255, 0.04) 40%,
+        rgba(255, 255, 255, 0.08) 50%,
+        rgba(255, 255, 255, 0.04) 60%,
+        transparent 100%
+    );
+    background-size: 200% 100%;
+}
+
+@keyframes skeleton-shimmer {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+/* Image skeleton placeholder */
+.skeleton-img {
+    position: relative;
+    overflow: hidden;
+    background: var(--bg-glass);
+    border-radius: 12px;
+    aspect-ratio: 16 / 9;
+    width: 100%;
+}
+
+/* Skeleton inner shapes */
+.skeleton-card__icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 20px;
+    background: var(--border-soft);
+    margin: 0 auto 1rem;
+}
+
+.skeleton-card__title {
+    width: 60%;
+    height: 1.25rem;
+    border-radius: 6px;
+    background: var(--border-soft);
+    margin: 0 auto 0.75rem;
+}
+
+.skeleton-card__text {
+    width: 90%;
+    height: 0.875rem;
+    border-radius: 4px;
+    background: var(--border-soft);
+    margin: 0 auto 0.5rem;
+}
+
+.skeleton-card__text--short {
+    width: 65%;
+}
+
+/* ==========================================
+   8. DARK MODE HERO
+   Overrides for [data-hero-theme="dark"] on hero section
+   ========================================== */
+
+/* Dark hero: stronger overlay for readability on light backgrounds */
+[data-hero-theme="dark"] .hero-background {
+    position: relative;
+}
+
+[data-hero-theme="dark"] .hero-background::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        180deg,
+        rgba(11, 15, 20, 0.65) 0%,
+        rgba(11, 15, 20, 0.45) 50%,
+        rgba(11, 15, 20, 0.75) 100%
+    );
+    z-index: 1;
+    display: block !important;
+}
+
+/* Ensure text is light on dark hero */
+[data-hero-theme="dark"] .hero {
+    color: #ffffff;
+}
+
+[data-hero-theme="dark"] .hero h1,
+[data-hero-theme="dark"] .hero h2 {
+    -webkit-text-fill-color: initial;
+    background: none;
+    color: #ffffff;
+}
+
+[data-hero-theme="dark"] .hero p,
+[data-hero-theme="dark"] .hero .hero-subtitle {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+/* ==========================================
+   9. TESTIMONIAL CAROUSEL
+   Horizontal sliding carousel with dots + arrows
+   ========================================== */
+
+.testimonial-carousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.testimonial-track {
+    display: flex;
+    transition: transform var(--motion-slow) var(--ease-emphasis);
+    will-change: transform;
+}
+
+.testimonial-slide {
+    flex: 0 0 100%;
+    min-width: 100%;
+    padding: var(--space-xs);
+    box-sizing: border-box;
+}
+
+/* Tablet: 2 slides visible */
+@media (min-width: 768px) {
+    .testimonial-slide {
+        flex: 0 0 50%;
+        min-width: 50%;
+    }
+}
+
+/* Desktop: 3 slides visible */
+@media (min-width: 1025px) {
+    .testimonial-slide {
+        flex: 0 0 33.333%;
+        min-width: 33.333%;
+    }
+}
+
+/* Dot indicators */
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: var(--space-sm);
+    padding: 0;
+    list-style: none;
+}
+
+.carousel-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid var(--accent-blue);
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+    transition: background var(--motion-fast) var(--ease-out),
+                transform var(--motion-fast) var(--ease-out);
+}
+
+.carousel-dot:hover {
+    transform: scale(1.2);
+}
+
+.carousel-dot--active,
+.carousel-dot.active {
+    background: var(--accent-blue);
+    box-shadow: 0 0 8px var(--glow-blue);
+}
+
+/* Navigation arrows */
+.carousel-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1px solid var(--border-soft);
+    background: var(--bg-glass);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    color: var(--text-primary);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    transition: background var(--motion-fast) var(--ease-out),
+                border-color var(--motion-fast) var(--ease-out),
+                transform var(--motion-fast) var(--ease-out),
+                box-shadow var(--motion-fast) var(--ease-out);
+    box-shadow: var(--shadow-soft);
+}
+
+.carousel-nav:hover {
+    border-color: var(--accent-blue);
+    background: var(--bg-tertiary);
+    transform: translateY(-50%) scale(1.08);
+    box-shadow: var(--shadow-hover);
+}
+
+.carousel-nav:active {
+    transform: translateY(-50%) scale(0.96);
+}
+
+.carousel-nav--prev {
+    left: 8px;
+}
+
+.carousel-nav--next {
+    right: 8px;
+}
+
+/* Hide arrows on small mobile */
+@media (max-width: 480px) {
+    .carousel-nav {
+        display: none;
+    }
+}
+
+/* ==========================================
+   10. MICRO-INTERACTION ANIMATIONS
+   Subtle motion feedback for user actions
+   ========================================== */
+
+/* Icon bounce on hover */
+.icon-bounce:hover {
+    animation: iconBounce 0.5s ease;
+}
+
+@keyframes iconBounce {
+    0% { transform: scale(1); }
+    30% { transform: scale(1.2); }
+    60% { transform: scale(0.95); }
+    100% { transform: scale(1); }
+}
+
+/* Button focus bounce */
+.btn-focus-bounce:focus-visible {
+    animation: btnFocusBounce 0.35s ease;
+}
+
+@keyframes btnFocusBounce {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.03); }
+    100% { transform: scale(1); }
+}
+
+/* Card hover lift — enhanced shadow + translate */
+.card-hover-lift {
+    transition: transform var(--motion-base) var(--ease-out),
+                box-shadow var(--motion-base) var(--ease-out);
+}
+
+.card-hover-lift:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+[data-theme="dark"] .card-hover-lift:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* Staggered animation delays for grid children */
+.stagger-children > *:nth-child(1) { transition-delay: 0ms; }
+.stagger-children > *:nth-child(2) { transition-delay: 60ms; }
+.stagger-children > *:nth-child(3) { transition-delay: 120ms; }
+.stagger-children > *:nth-child(4) { transition-delay: 180ms; }
+.stagger-children > *:nth-child(5) { transition-delay: 240ms; }
+.stagger-children > *:nth-child(6) { transition-delay: 300ms; }
+.stagger-children > *:nth-child(7) { transition-delay: 360ms; }
+.stagger-children > *:nth-child(8) { transition-delay: 420ms; }
+
+/* ==========================================
+   11. GENERAL ENHANCEMENT UTILITIES
+   Scroll reveal animations + stagger support
+   ========================================== */
+
+/* Base reveal class — hidden until scrolled into view */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity var(--motion-xslow) var(--ease-out),
+                transform var(--motion-xslow) var(--ease-out);
+}
+
+.reveal.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Slide in from left */
+.reveal-left {
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: opacity var(--motion-xslow) var(--ease-out),
+                transform var(--motion-xslow) var(--ease-out);
+}
+
+.reveal-left.in-view {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Slide in from right */
+.reveal-right {
+    opacity: 0;
+    transform: translateX(40px);
+    transition: opacity var(--motion-xslow) var(--ease-out),
+                transform var(--motion-xslow) var(--ease-out);
+}
+
+.reveal-right.in-view {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Scale in */
+.reveal-scale {
+    opacity: 0;
+    transform: scale(0.85);
+    transition: opacity var(--motion-xslow) var(--ease-out),
+                transform var(--motion-xslow) var(--ease-out);
+}
+
+.reveal-scale.in-view {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Stagger delays — increasing transition-delay per element */
+.stagger-1 { transition-delay: 0ms; }
+.stagger-2 { transition-delay: 80ms; }
+.stagger-3 { transition-delay: 160ms; }
+.stagger-4 { transition-delay: 240ms; }
+.stagger-5 { transition-delay: 320ms; }
+.stagger-6 { transition-delay: 400ms; }
+
+/* ==========================================
+   12. MOBILE MENU ENHANCEMENTS
+   Section headers within the mobile nav drawer
+   ========================================== */
+
+.mobile-nav-section-header {
+    display: block;
+    padding: var(--space-xs) var(--space-xs) 4px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-soft);
+    margin-top: var(--space-xs);
+}
+
+.mobile-nav-section-header:first-child {
+    border-top: none;
+    margin-top: 0;
+}
+
+[data-theme="dark"] .mobile-nav-section-header {
+    color: rgba(255, 255, 255, 0.4);
+    border-top-color: rgba(255, 255, 255, 0.08);
+}
+
+/* ==========================================
+   13. PERFORMANCE — REDUCED MOTION
+   Disable animations for users who prefer reduced motion
+   ========================================== */
+
+/* System preference */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    .page-transition-overlay {
+        transition: none !important;
+    }
+
+    .gradient-border-hover::before {
+        transition: none !important;
+        will-change: auto;
+    }
+
+    .custom-cursor {
+        transition: none !important;
+        will-change: auto;
+    }
+
+    .testimonial-track {
+        transition: none !important;
+        will-change: auto;
+    }
+
+    .reveal,
+    .reveal-left,
+    .reveal-right,
+    .reveal-scale {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+
+    .skeleton-card::before,
+    .skeleton-img::before {
+        animation: none !important;
+    }
+
+    .icon-bounce:hover {
+        animation: none !important;
+    }
+
+    .btn-focus-bounce:focus-visible {
+        animation: none !important;
+    }
+
+    .card-hover-lift {
+        transition: none !important;
+    }
+
+    .mobile-bottom-nav__cta {
+        transition: none !important;
+    }
+}
+
+/* JS-triggered class — same as above but toggled manually */
+.reduce-animations *,
+.reduce-animations *::before,
+.reduce-animations *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+}
+
+.reduce-animations .page-transition-overlay {
+    transition: none !important;
+}
+
+.reduce-animations .gradient-border-hover::before {
+    transition: none !important;
+    will-change: auto;
+}
+
+.reduce-animations .custom-cursor {
+    transition: none !important;
+    will-change: auto;
+}
+
+.reduce-animations .testimonial-track {
+    transition: none !important;
+    will-change: auto;
+}
+
+.reduce-animations .reveal,
+.reduce-animations .reveal-left,
+.reduce-animations .reveal-right,
+.reduce-animations .reveal-scale {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+}
+
+.reduce-animations .skeleton-card::before,
+.reduce-animations .skeleton-img::before {
+    animation: none !important;
+}
+
+.reduce-animations .icon-bounce:hover {
+    animation: none !important;
+}
+
+.reduce-animations .btn-focus-bounce:focus-visible {
+    animation: none !important;
+}
+
+.reduce-animations .card-hover-lift {
+    transition: none !important;
+}
+
+.reduce-animations .mobile-bottom-nav__cta {
+    transition: none !important;
+}
