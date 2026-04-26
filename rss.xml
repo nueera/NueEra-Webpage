@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>NueEra Blog - Digital Innovation &amp; Technology Insights</title>
+    <description>Expert insights on digital transformation, AI integration, and modern technology solutions from NueEra.</description>
+    <link>https://nueera.in/blog.html</link>
+    <atom:link href="https://nueera.in/rss.xml" rel="self" type="application/rss+xml"/>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 26 Apr 2026 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>The AI-First Business Model: Redefining Digital Strategy for 2026</title>
+      <description>How forward-thinking companies are integrating AI not as a tool, but as the core of their business strategy.</description>
+      <link>https://nueera.in/blog-post.html</link>
+      <guid isPermaLink="true">https://nueera.in/blog-post.html#ai-first</guid>
+      <pubDate>Mon, 21 Apr 2026 00:00:00 +0000</pubDate>
+      <category>AI</category>
+      <category>Strategy</category>
+    </item>
+    <item>
+      <title>From Legacy to Cloud-Native: A CTO's Migration Playbook</title>
+      <description>A step-by-step framework for migrating legacy systems to cloud-native architectures without disrupting operations.</description>
+      <link>https://nueera.in/blog-post.html#cloud-native</link>
+      <guid isPermaLink="true">https://nueera.in/blog-post.html#cloud-native</guid>
+      <pubDate>Thu, 10 Apr 2026 00:00:00 +0000</pubDate>
+      <category>Cloud</category>
+      <category>Architecture</category>
+    </item>
+    <item>
+      <title>Design Systems That Scale: Building for 10x Growth</title>
+      <description>How to create and maintain design systems that grow with your organization without becoming technical debt.</description>
+      <link>https://nueera.in/blog-post.html#design-systems</link>
+      <guid isPermaLink="true">https://nueera.in/blog-post.html#design-systems</guid>
+      <pubDate>Wed, 02 Apr 2026 00:00:00 +0000</pubDate>
+      <category>Design</category>
+      <category>Systems</category>
+    </item>
+    <item>
+      <title>Zero-Trust Security: Beyond the Buzzword</title>
+      <description>Implementing practical zero-trust security models that actually protect your digital assets.</description>
+      <link>https://nueera.in/blog-post.html#zero-trust</link>
+      <guid isPermaLink="true">https://nueera.in/blog-post.html#zero-trust</guid>
+      <pubDate>Mon, 24 Mar 2026 00:00:00 +0000</pubDate>
+      <category>Security</category>
+    </item>
+    <item>
+      <title>The ROI of UX: Measuring What Matters</title>
+      <description>Quantifying the business impact of user experience improvements with data-driven methodologies.</description>
+      <link>https://nueera.in/blog-post.html#roi-ux</link>
+      <guid isPermaLink="true">https://nueera.in/blog-post.html#roi-ux</guid>
+      <pubDate>Thu, 13 Mar 2026 00:00:00 +0000</pubDate>
+      <category>UX</category>
+      <category>Analytics</category>
+    </item>
+    <item>
+      <title>API-First Development: The Foundation of Digital Ecosystems</title>
+      <description>Why API-first development is critical for building scalable, interconnected digital platforms.</description>
+      <link>https://nueera.in/blog-post.html#api-first</link>
+      <guid isPermaLink="true">https://nueera.in/blog-post.html#api-first</guid>
+      <pubDate>Tue, 04 Mar 2026 00:00:00 +0000</pubDate>
+      <category>API</category>
+      <category>Development</category>
+    </item>
+  </channel>
+</rss>

@@ -5,7 +5,7 @@
 
 class AnalyticsManager {
     constructor() {
-        this.measurementId = ''; // Set your GA4 Measurement ID (e.g., 'G-XXXXXXXXXX')
+        this.measurementId = ''; // TODO: Set your GA4 Measurement ID (e.g., 'G-XXXXXXXXXX') to enable analytics // Set your GA4 Measurement ID (e.g., 'G-XXXXXXXXXX')
         this.consentGiven = localStorage.getItem('nueera-analytics-consent') === 'granted';
         this.init();
     }

@@ -15,12 +15,13 @@ const MAX_AGE_MS = 7 * 24 * 60 * 60 * 1000; // 7 days in milliseconds
 // Critical assets to pre-cache on install
 const PRECACHE_URLS = [
   '/',
-  '/css/styles.css',
-  '/css/premium-upgrade.css',
-  '/css/enhancements.css',
+  '/css/combined.css',
+  
+  
   '/js/main.js',
   '/js/enhancements.js',
   '/js/enhancements-v2.js',
+      '/js/enhancements-v3.js',
   '/assets/images/lightlogo.png',
   '/assets/images/darklogo.png',
 ];

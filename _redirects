@@ -1,0 +1,22 @@
+# Clean URL redirects (remove .html extension)
+/home / 301
+/index / 301
+/about /about.html 301
+/services /services.html 301
+/portfolio /portfolio.html 301
+/pricing /pricing.html 301
+/blog /blog.html 301
+/contact /contact.html 301
+/team /team.html 301
+/testimonials /testimonials.html 301
+/help-center /help-center.html 301
+/case-study /case-study.html 301
+/privacy /privacy.html 301
+/terms /terms.html 301
+
+# Blog feed
+/feed /rss.xml 301
+/rss /rss.xml 301
+
+# Legacy redirects
+/coming-soon / 302

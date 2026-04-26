@@ -696,7 +696,7 @@ const handlePageLoader = () => {
             setTimeout(() => {
                 loader.remove();
             }, 600);
-        }, 500); // Minimum display time
+        }, 100); // Minimum display time (reduced for faster perceived load)
     }
     document.body.style.opacity = '1';
 };
