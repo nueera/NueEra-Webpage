@@ -19202,224 +19202,130 @@ html[data-theme='dark'] .case-v1-next-card {
 }
 
 /* ==========================================
-   ENHANCEMENT: Mobile Bottom Navigation
+   MOBILE BOTTOM NAVIGATION (Unified)
    ========================================== */
 .mobile-bottom-nav {
-    display: none;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 9998;
-    background: var(--bg-primary, #0a0a0f);
-    border-top: 1px solid var(--border-color, rgba(255,255,255,0.08));
-    padding: 8px 0;
-    padding-bottom: calc(8px + env(safe-area-inset-bottom, 0px));
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    justify-content: space-around;
-    align-items: center;
-}
-.mobile-bottom-nav .bottom-nav-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2px;
-    color: var(--text-secondary, #888);
-    text-decoration: none;
-    font-size: 10px;
-    font-weight: 500;
-    padding: 4px 8px;
-    border-radius: 8px;
-    transition: color 0.2s, background 0.2s;
-    touch-action: manipulation;
-    -webkit-tap-highlight-color: transparent;
-}
-.mobile-bottom-nav .bottom-nav-item:hover,
-.mobile-bottom-nav .bottom-nav-item:focus {
-    color: var(--accent-blue, #00a8ff);
-    background: rgba(0, 168, 255, 0.08);
-}
-.mobile-bottom-nav .bottom-nav-item.active {
-    color: var(--accent-blue, #00a8ff);
-}
-.mobile-bottom-nav .bottom-nav-item svg {
-    width: 20px;
-    height: 20px;
+    display: none; /* Hidden on desktop, shown on mobile */
 }
 
 @media (max-width: 768px) {
     .mobile-bottom-nav {
         display: flex;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 2000;
+        align-items: center;
+        justify-content: space-around;
+        padding: 6px 8px;
+        padding-bottom: calc(8px + env(safe-area-inset-bottom, 0px));
+        background: rgba(255, 255, 255, 0.82);
+        -webkit-backdrop-filter: blur(20px) saturate(180%);
+        backdrop-filter: blur(20px) saturate(180%);
+        border-top: 1px solid rgba(0, 0, 0, 0.06);
+        box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.06);
     }
+
+    [data-theme="dark"] .mobile-bottom-nav {
+        background: rgba(11, 15, 20, 0.88);
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.4);
+    }
+
     body {
-        padding-bottom: 72px !important;
+        padding-bottom: calc(72px + env(safe-area-inset-bottom, 0px)) !important;
     }
+
     .scroll-top-btn {
         bottom: 80px !important;
     }
+
     .cookie-banner {
-        bottom: 70px !important;
+        bottom: 72px !important;
     }
+
     .whatsapp-float {
         bottom: 80px !important;
     }
 }
 
-/* ==========================================
-   ENHANCEMENT: High Contrast Mode
-   ========================================== */
-[data-theme="high-contrast"] {
-    --bg-primary: #000000;
-    --bg-secondary: #1a1a1a;
-    --bg-card: #111111;
-    --text-primary: #ffffff;
-    --text-secondary: #e0e0e0;
-    --accent-blue: #4db8ff;
-    --accent-orange: #ffaa44;
-    --border-color: rgba(255,255,255,0.3);
-}
-[data-theme="high-contrast"] .glass {
-    background: rgba(0,0,0,0.9) !important;
-    border: 2px solid rgba(255,255,255,0.3) !important;
-}
-[data-theme="high-contrast"] .navbar {
-    background: rgba(0,0,0,0.95) !important;
-    border-bottom: 2px solid rgba(255,255,255,0.3) !important;
-}
-[data-theme="high-contrast"] .btn-primary {
-    border: 2px solid #fff !important;
-    font-weight: 700 !important;
-}
-[data-theme="high-contrast"] .service-card,
-[data-theme="high-contrast"] .pricing-card,
-[data-theme="high-contrast"] .blog-card {
-    border: 2px solid rgba(255,255,255,0.3) !important;
-}
-[data-theme="high-contrast"] input,
-[data-theme="high-contrast"] textarea,
-[data-theme="high-contrast"] select {
-    border: 2px solid rgba(255,255,255,0.5) !important;
-    color: #fff !important;
-}
-[data-theme="high-contrast"] .faq-question {
-    color: #fff !important;
-    border: 1px solid rgba(255,255,255,0.3) !important;
-}
-.high-contrast-toggle {
+/* Bottom nav item styles */
+.mobile-bottom-nav .bottom-nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    flex: 1;
+    min-width: 0;
+    padding: 6px 0;
+    color: #888;
+    font-size: 10px;
+    font-weight: 600;
+    text-decoration: none;
     background: none;
     border: none;
-    color: var(--text-secondary);
     cursor: pointer;
-    padding: 8px;
-    border-radius: 8px;
-    transition: color 0.2s, background 0.2s;
-    touch-action: manipulation;
-}
-.high-contrast-toggle:hover {
-    color: var(--accent-blue);
-    background: rgba(0,168,255,0.1);
-}
-
-/* ==========================================
-   ENHANCEMENT: Touch Action & Safe Area
-   ========================================== */
-.btn, .filter-btn, .faq-question, .mobile-menu-btn,
-.nav-links a, .mobile-nav-links a, .theme-toggle,
-.scroll-top-btn, .bottom-nav-item, button, a {
+    transition: color 0.2s ease, background 0.2s ease;
     touch-action: manipulation;
     -webkit-tap-highlight-color: transparent;
-}
-
-/* Safe area padding for iPhone notch */
-@supports (padding: env(safe-area-inset-top)) {
-    .navbar {
-        padding-left: calc(1rem + env(safe-area-inset-left));
-        padding-right: calc(1rem + env(safe-area-inset-right));
-    }
-    .hero {
-        padding-top: calc(80px + env(safe-area-inset-top));
-    }
-    .footer {
-        padding-bottom: calc(2rem + env(safe-area-inset-bottom));
-    }
-}
-
-/* ==========================================
-   ENHANCEMENT: Skeleton Loading States
-   ========================================== */
-.skeleton {
-    position: relative;
-    overflow: hidden;
-    background: var(--bg-secondary, #1a1a2e);
-    border-radius: 8px;
-    min-height: 1em;
-    min-width: 3em;
-}
-.skeleton::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(
-        90deg,
-        transparent 0%,
-        rgba(255,255,255,0.04) 50%,
-        transparent 100%
-    );
-    animation: skeleton-shimmer 1.5s infinite;
-}
-@keyframes skeleton-shimmer {
-    0% { transform: translateX(-100%); }
-    100% { transform: translateX(100%); }
-}
-.skeleton-text {
-    height: 1em;
-    margin-bottom: 0.5em;
-    width: 80%;
-}
-.skeleton-text:last-child {
-    width: 60%;
-}
-.skeleton-card {
-    height: 200px;
     border-radius: 12px;
 }
-.skeleton-avatar {
-    width: 48px;
-    height: 48px;
+
+[data-theme="dark"] .mobile-bottom-nav .bottom-nav-item {
+    color: rgba(255,255,255,0.5);
+}
+
+.mobile-bottom-nav .bottom-nav-item:hover,
+.mobile-bottom-nav .bottom-nav-item:focus {
+    color: var(--accent-blue, #00a8ff);
+    background: rgba(0, 168, 255, 0.06);
+}
+
+.mobile-bottom-nav .bottom-nav-item.active {
+    color: var(--accent-blue, #1f6aff);
+}
+
+[data-theme="dark"] .mobile-bottom-nav .bottom-nav-item.active {
+    color: var(--accent-blue, #4d8dff);
+}
+
+.mobile-bottom-nav .bottom-nav-item svg {
+    width: 22px;
+    height: 22px;
+}
+
+/* Active indicator dot */
+.mobile-bottom-nav .bottom-nav-item.active::after {
+    content: '';
+    display: block;
+    width: 4px;
+    height: 4px;
     border-radius: 50%;
+    background: var(--accent-blue, #1f6aff);
+    margin-top: 1px;
+}
+
+.mobile-bottom-nav .bottom-nav-item span {
+    line-height: 1;
 }
 
 /* ==========================================
-   ENHANCEMENT: Focus Trap Styles
+   MOBILE FLOATING ELEMENTS — Above Bottom Nav
    ========================================== */
-.mobile-menu.open .mobile-menu-inner {
-    /* Ensures focus outline is visible inside menu */
-}
-.mobile-menu.open .mobile-menu-inner *:focus {
-    outline: 2px solid var(--accent-blue, #00a8ff) !important;
-    outline-offset: 2px;
-}
-
-/* ==========================================
-   ENHANCEMENT: FAQ Accordion ARIA Styles
-   ========================================== */
-.faq-question[role="button"] {
-    cursor: pointer;
-}
-.faq-question[aria-expanded="true"] .faq-icon {
-    transform: rotate(180deg);
-}
-.faq-icon {
-    transition: transform 0.3s ease;
-}
-
-/* ==========================================
-   ENHANCEMENT: Bottom Nav Active State Detection
-   ========================================== */
-.mobile-bottom-nav .bottom-nav-item[data-page] {
-    position: relative;
+@media (max-width: 768px) {
+    .floating-theme-toggle {
+        bottom: calc(80px + env(safe-area-inset-bottom, 0px)) !important;
+        right: 16px !important;
+    }
+    .whatsapp-float,
+    .whatsapp-button,
+    a[href*="wa.me"],
+    a[href*="whatsapp"] {
+        bottom: calc(80px + env(safe-area-inset-bottom, 0px)) !important;
+    }
+    .high-contrast-toggle {
+        bottom: calc(140px + env(safe-area-inset-bottom, 0px)) !important;
+    }
 }
