@@ -222,9 +222,17 @@
             this.init();
         }
 
+        shouldSkipImage(img) {
+            return Boolean(img.closest(
+                '#page-loader, .navbar, .mobile-menu, .logo, .logo-icon, .footer-logo, .footer-logo-img'
+            ));
+        }
+
         init() {
             // Add skeleton class to images that haven't loaded yet
             document.querySelectorAll('img[loading="lazy"]').forEach(img => {
+                if (this.shouldSkipImage(img)) return;
+
                 if (!img.complete) {
                     const wrapper = img.parentElement;
                     if (wrapper && !wrapper.querySelector('.skeleton')) {
@@ -243,6 +251,7 @@
                         
                         img.addEventListener('load', () => skeleton.remove());
                         img.addEventListener('error', () => skeleton.remove());
+                        setTimeout(() => skeleton.remove(), 3000);
                     }
                 }
             });
