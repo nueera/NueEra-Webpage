@@ -1538,7 +1538,8 @@
         try { new GradientBorderCards(); } catch (e) { console.warn('[NueEra V2] GradientBorderCards:', e); }
         try { new CustomCursorEffects(); } catch (e) { console.warn('[NueEra V2] CustomCursorEffects:', e); }
 
-        try { new BottomNavBar(); } catch (e) { console.warn('[NueEra V2] BottomNavBar:', e); }
+        // BottomNavBar disabled — using HTML-based mobile-bottom-nav instead
+        // try { new BottomNavBar(); } catch (e) { console.warn('[NueEra V2] BottomNavBar:', e); }
         try { new SwipeGestureExtension(); } catch (e) { console.warn('[NueEra V2] SwipeGestureExtension:', e); }
         try { new AppLikeMobileMenu(); } catch (e) { console.warn('[NueEra V2] AppLikeMobileMenu:', e); }
         try { new HapticFeedback(); } catch (e) { console.warn('[NueEra V2] HapticFeedback:', e); }

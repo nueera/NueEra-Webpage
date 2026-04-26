@@ -151,7 +151,7 @@
             if (!nav) return;
 
             const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-            const items = nav.querySelectorAll('.bottom-nav-item');
+            const items = nav.querySelectorAll('.bottom-nav-item, .bottom-nav-cta');
             
             items.forEach(item => {
                 const page = item.getAttribute('data-page');
@@ -161,6 +161,12 @@
                 if (currentPage === page + '.html' || 
                     (currentPage === '' && page === 'index') ||
                     (currentPage === 'index.html' && page === 'index')) {
+                    item.classList.add('active');
+                    item.setAttribute('aria-current', 'page');
+                }
+
+                // Special: highlight CTA on contact page
+                if (page === 'contact' && currentPage === 'contact.html') {
                     item.classList.add('active');
                     item.setAttribute('aria-current', 'page');
                 }
