@@ -1169,15 +1169,17 @@ class ServiceScrollSpy {
         
         if (currentSection) {
             currentSection.link.classList.add('active');
-            
-            // Auto-scroll horizontal nav on mobile
+
+            // Auto-scroll horizontal nav on mobile (only scroll the nav, not the page)
             const nav = document.querySelector('.service-nav');
             if (nav && window.innerWidth < 768) {
                 const navRect = nav.getBoundingClientRect();
                 const linkRect = currentSection.link.getBoundingClientRect();
-                
+
                 if (linkRect.left < navRect.left || linkRect.right > navRect.right) {
-                    currentSection.link.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+                    // Calculate scroll position relative to nav container
+                    const scrollLeft = currentSection.link.offsetLeft - (nav.clientWidth / 2) + (currentSection.link.clientWidth / 2);
+                    nav.scrollTo({ left: scrollLeft, behavior: 'smooth' });
                 }
             }
         }

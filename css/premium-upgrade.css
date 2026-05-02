@@ -61,15 +61,15 @@ h1, h2, h3, h4 { letter-spacing: -0.02em; }
 }
 
 .signature-panel {
-  border: 1px solid rgba(31,106,255,.15);
-  background: linear-gradient(160deg, rgba(255,255,255,.65), rgba(255,255,255,.35));
-  backdrop-filter: blur(12px);
+  border: 1px solid var(--border-soft);
+  background: var(--bg-glass);
+  backdrop-filter: blur(16px);
   border-radius: 18px;
 }
 
 [data-theme="dark"] .signature-panel {
-  border: 1px solid rgba(255,255,255,.12);
-  background: linear-gradient(160deg, rgba(20,24,40,.75), rgba(20,24,40,.5));
+  border: 1px solid var(--border-soft);
+  background: var(--bg-glass);
 }
 
 .hero-3d-shell {
