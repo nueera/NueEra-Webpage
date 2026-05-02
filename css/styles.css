@@ -1670,7 +1670,7 @@ html[data-theme='light'] .mobile-nav-links a {
 
 .hero-subtitle {
     font-size: 1.125rem;
-    color: var(--text-secondary);
+    color: var(#ffffff);
     margin-bottom: 2rem;
     line-height: 1.7;
     /* page-load animation controlled via `body.hero-animated` */
@@ -1784,7 +1784,7 @@ html[data-theme='light'] .mobile-nav-links a {
 
 .premium-subtitle {
     font-size: 1.2rem !important;
-    color: var(--text-secondary);
+    color: #ffffff;
     margin-bottom: 2.5rem !important;
     line-height: 1.8;
     max-width: 550px;
@@ -2627,8 +2627,12 @@ body.hero-animated .hero-stats {
     left: 0;
     right: 0;
     bottom: 0;
-    background: transparent;
+    background: rgba(255,255,255,0.7);
     z-index: 1;
+}
+
+[data-theme="dark"] .hero-gradient-overlay {
+    background: transparent;
 }
 
 .hero-content-wrapper {
@@ -7286,7 +7290,7 @@ html, body {
 .blog-hero { background-image: url('../assets/images/hero1.png'); background-size: cover; background-position: center; padding: 80px 0 40px; text-align: left; }
 .blog-hero .container { max-width: 1100px; margin: 0 auto; }
 .hero-title { font-size: 2.6rem; margin: 0 0 12px; color: var(--text-primary); animation: fadeUp 600ms var(--ease-out) both; }
-.hero-subtitle { font-size: 1.05rem; margin: 0 0 8px; color: var(--text-secondary); animation: fadeUp 600ms var(--ease-out) 120ms both; }
+.hero-subtitle { font-size: 1.05rem; margin: 0 0 8px; color: var(#FFFFFF); animation: fadeUp 600ms var(--ease-out) 120ms both; }
 .hero-micro { font-size: 0.85rem; color: var(--text-muted); margin-top: 8px; animation: fadeUp 600ms var(--ease-out) 200ms both; }
 
 /* Category Filter */
@@ -9169,9 +9173,27 @@ body.reduce-animations * {
     color: var(--text-muted);
 }
 
+/* Light mode - ensure text is visible against hero wallpaper */
+.hero-subtitle,
+.premium-subtitle {
+    color: #ffffff !important;
+    font-weight: 600;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+    background: rgba(0,0,0,0.25);
+    backdrop-filter: blur(8px);
+    padding: 0.75rem 1.25rem;
+    border-radius: 8px;
+    display: inline-block;
+}
+
 [data-theme="dark"] .hero-subtitle,
 [data-theme="dark"] .premium-subtitle {
-    color: rgba(255, 255, 255, 0.8) !important;
+    color: rgba(255, 255, 255, 0.9) !important;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    background: transparent;
+    backdrop-filter: none;
+    padding: 0;
+    border-radius: 0;
 }
 
 [data-theme="dark"] .metric-value,
