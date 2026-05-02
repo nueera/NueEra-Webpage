@@ -813,79 +813,7 @@
 
         AppLikeMobileMenu.prototype.init = function () {
             if (!this.mobileMenuLinks) return;
-            this.addSectionHeaders();
             this.addScrollBlur();
-        };
-
-        AppLikeMobileMenu.prototype.addSectionHeaders = function () {
-            var links = this.mobileMenuLinks;
-            var items = Array.from(links.querySelectorAll('li'));
-            if (items.length === 0) return;
-
-            // Define section groupings
-            var navigationPages = ['index.html', '', 'about.html', 'team.html'];
-            var servicePages = ['services.html', 'pricing.html', 'portfolio.html', 'case-study.html'];
-            var supportPages = ['contact.html', 'blog.html', 'blog-post.html', 'help-center.html'];
-
-            var sections = [
-                { label: 'Navigation', pages: navigationPages },
-                { label: 'Services', pages: servicePages },
-                { label: 'Support', pages: supportPages }
-            ];
-
-            // Find insertion points
-            var firstService = null;
-            var firstSupport = null;
-
-            items.forEach(function (li) {
-                var link = li.querySelector('a');
-                if (!link) return;
-                var href = link.getAttribute('href') || '';
-                var page = href.split('/').pop();
-
-                if (!firstService && servicePages.indexOf(page) !== -1) {
-                    firstService = li;
-                }
-                if (!firstSupport && supportPages.indexOf(page) !== -1) {
-                    firstSupport = li;
-                }
-            });
-
-            // Insert section headers
-            if (firstService) {
-                var header1 = document.createElement('li');
-                header1.className = 'mobile-section-header';
-                header1.textContent = 'Services';
-                header1.setAttribute('role', 'presentation');
-                links.insertBefore(header1, firstService);
-            }
-
-            if (firstSupport) {
-                var header2 = document.createElement('li');
-                header2.className = 'mobile-section-header';
-                header2.textContent = 'Support';
-                header2.setAttribute('role', 'presentation');
-                links.insertBefore(header2, firstSupport);
-            }
-
-            // Insert "Navigation" header at the beginning
-            var navHeader = document.createElement('li');
-            navHeader.className = 'mobile-section-header';
-            navHeader.textContent = 'Navigation';
-            navHeader.setAttribute('role', 'presentation');
-            links.insertBefore(navHeader, links.firstChild);
-
-            // Style the headers
-            injectStyles('v2-mobile-section-headers', [
-                '.mobile-section-header {',
-                '  font-size: 0.7rem; font-weight: 700;',
-                '  text-transform: uppercase; letter-spacing: 0.1em;',
-                '  color: var(--text-muted, #888);',
-                '  padding: 1rem 1.5rem 0.3rem; margin-top: 0.5rem;',
-                '  pointer-events: none;',
-                '}',
-                '.mobile-section-header:first-child { margin-top: 0; }'
-            ].join('\n'));
         };
 
         AppLikeMobileMenu.prototype.addScrollBlur = function () {
